@@ -1,13 +1,12 @@
 import React from "react";
 import "./Footer.css";
 
-const Footer = ({ author }) => (
+const Footer = () => (
   <footer className="hero hero-sm">
     <div className="navbar">
       <section className="navbar-section">
         <div className="text-gray">
-          Copyright © 2022 <strong>Binary Studio</strong>. All rights reserved.
-          {/* Copyright © 2020 <strong>{author || ""}</strong>. All rights reserved. */}
+          Copyright © {new Date().getFullYear()} <strong>Binary Studio</strong>. All rights reserved.
         </div>
       </section>
       <section className="navbar-section">
