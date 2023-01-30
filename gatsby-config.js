@@ -1,8 +1,8 @@
 module.exports = {
   pathPrefix: `/lecture-abstracts`,
   siteMetadata: {
-    title: `Binary Studio Academy 2022`,
-    description: `Lectures for the 2nd stage of the Binary Studio Academy 2022`,
+    title: `Binary Studio Academy`,
+    description: `Lectures for the 2nd stage of the Binary Studio Academy`,
     author: ``
   },
   plugins: [

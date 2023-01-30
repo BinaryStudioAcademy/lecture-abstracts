@@ -1,1 +1,1 @@
-# Binary Studio Academy 2022 Stage 2
+# Binary Studio Academy Stage 2
