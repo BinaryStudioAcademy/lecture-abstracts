@@ -267,7 +267,7 @@ import {
      </body>
    </html>
    ```
-   
+
    <div class="bubble small subtle">
      That's right, <code>&amp;#x1F609;</code> is a <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609"><strong>Unicode code for an emoji</strong></a>. BTW, please give your commits meaningful messages, i.e. 🤗"Updated Résumé Contacts block (fixes #23)" instead of 🤮"qwerty12%._3456". Maybe even <a href="https://help.github.com/articles/closing-issues-using-keywords/"><strong>use keywords to close issues</strong></a>!
    </div>
@@ -291,13 +291,13 @@ import {
      Умение хорошо составлять задания, четко описывать проблемы и отчитываться об их решении поможет найти общий язык с проджект-менеджером заказчика, если студент когда-нибудь будет работать в аутсорсе или фрилансе (а когда-нибудь он будет). Кроме  того, в мире open source большинство полезных разговоров и информация насчет решения проблем находится как раз в Issues, поэтому понимать как это работает — залог успеха. Теперь это ваш Google (ну, может ещё немного StackOverflow). Google всё ещё полезен для быстрого старта работы с технологией, но когда что-то пошло не так, то искать сначала надо ближе к коду той технологии и её документации, а уже потом по всей сети
    </div>
 
-   1. **Составить интро**  
+   1. **Составить интро**
       Составить интро _(вступление)_, где в 2-4 предложениях описать, что заказчик делает, что нравится делать, что хочется делать лучше, что важно делать, и т.д.
-   2. **Составить блок контактной информации**  
+   2. **Составить блок контактной информации**
       Ссылки на соцсети _(Facebook или Instagram, и т.п.)_, номер телефона или адрес электронной почты, т.п. Может не все ссылки в мире, а только те, которые действительно уместны.
-   3. **Составить таймлайн**  
+   3. **Составить таймлайн**
       Составить список всех _(важных)_ жизненных событий, памятных дат, достижений, периодов, которые дали приятный и неприятный опыт, и т.п. В этом конкретном случае длинных списков не бывает, бывают плохо свернутые, поэтому пакуем сюда всё подряд, а про _"лишние"_ события можно будет промолчать позже. Список должен быть систематизирован и отсортирован таким образом, чтоб читатель быстро понял _"паттерн"_ и мог легко ориентироваться в пространстве и времени этого резюме.
-   4. **Составить дополнительные информационные блоки**  
+   4. **Составить дополнительные информационные блоки**
       Можно сделать резюме менее формальным, добавив дополнительные блоки, которые содержат полезную информацию, но подают её в _"развлекательной"_ форме. Например, что нравится и не нравится, сильные и слабые стороны, перечень навыков или хобби, инфографика или же интерактивные модули, и т.п. Стоит написать контент такого блока раньше, чем начинать верстку, потому что его размеры будут влиять на размещение элементов на странице.
 
 2. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones, close issues and tasks when done
@@ -329,11 +329,11 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 4. Use `git checkout patch/README.md` to switch branch
 
    <div class="bubble small subtle">
-     Команду <code>git checkout</code> очень часто используют с ключом <code>-b</code>, чтоб создать и переключиться на новую ветку 
+     Команду <code>git checkout</code> очень часто используют с ключом <code>-b</code>, чтоб создать и переключиться на новую ветку
    </div>
 
 5. Edit README.md — add "**🧙Hocus-pocus!**" — and stage it with `git add README.md`
-   
+
    <div class="bubble small subtle">
      Аргументом этой команды является <em>pathspec</em> <sup><strong><a href="https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec" title="pathspec">[1]</a></strong></sup>, поэтому можно указывать как абсолютный путь, так и паттерн (например, <code>.</code> 😈). Между прочим, <code>git stash</code> спасёт, если нужно временно запомнить "грязное" рабочее дерево (то есть, изменения в файлах сделаны и сохранены, но ещё не коммитнуты)
    </div>
@@ -365,7 +365,7 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
     </div>
 
 12. Try to `git fetch`, `git status`, use GitHub online editor to create a new file named **dummy.html** in `develop` branch, and then try to `git fetch` and `git status` again. Finally, use `git pull --rebase`.
-    
+
     <div class="bubble small subtle">
        Обычно ключ <code>--rebase</code> не указывают, поэтому мерж происходит или фаст-форвардом, или через мерж коммит
     </div>
@@ -391,23 +391,23 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 1. Use [**GitHub Desktop**](https://desktop.github.com/) to clone the repository on your PC
 2. Build a website using [this stylesheet](/assets/stylesheets/base.css) as a foundation _(see [**Résumé Wiki**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9) for reference)_:
    1. Create a new branch named `feature/head` _(see [**GitFlow workflow**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for reasons why)_ and use it to update [**`<head>`**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#head):
-      
+
       <div class="bubble small subtle">
         Разделяя свою работу на много веток, можно быстро и ловко исправлять баги на сервере, иметь отдельно стабильную версию (<code>release</code>), которая готова к релизу (путем слияния в <code>main</code>), а также ещё версию, в которой ведется основная разработка (<code>develop</code>). А в одной единственной ветке так не выйдет. Мержите свои ветки pull request-ами, потому что так нужно. И потом, так можно частично снять с себя ответственность, ведь тот, кто approve-нул плохой код, допустил не меньшую ошибку, чем тот, кто его написал 😁
       </div>
-      
-      1. At the very least add `<link rel="stylesheet" href="https://binary-studio-academy.github.io/stage-2/assets/stylesheets/base.css">`, but you may also add other meta tags
+
+      1. At the very least add `<link rel="stylesheet" href="https://binary-studio-academy.github.io/lecture-abstracts/assets/stylesheets/base.css">`, but you may also add other meta tags
       2. When done ― push the branch to the remote, create a new pull request and merge into `develop`
 
-         <div class="bubble small subtle">		
-           Еслии ветку не пушнуть наверх, а смержить локально через <code>git merge</code>, то удаленный сервер не будет ничего знать про существование ветки, следовательно не покажет её в Insights → Network		
+         <div class="bubble small subtle">
+           Еслии ветку не пушнуть наверх, а смержить локально через <code>git merge</code>, то удаленный сервер не будет ничего знать про существование ветки, следовательно не покажет её в Insights → Network
          </div>
 
    2. Create a new branch named `feature/body` and use it to edit [**`<body>`**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#body):
       1. Add [**`<main>`**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#main)
       2. Add [**Content**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#content)
       3. Preview the website in a browser
-         
+
          <div class="bubble small subtle">
            One way to do it is to <code>npm install --global serve</code> and then <code>cd</code> to your working directory and run <code>serve</code>
          </div>
@@ -418,7 +418,7 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
       7. Merge both branches into `feature/body` using pull requests
       8. Merge `feature/body` into `develop` using pull request
    4. Open a pull request and merge `develop` into `main`. 💥**Boom, done, готово!**
-   
+
 <div className="grading-hometask">
   <Accordion>
     <Accordion.Header>
@@ -597,13 +597,13 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 
 1. <div>Exclude <strong>.DS_Store</strong> from the repository by either adding it to <strong>.gitignore</strong> <sup><strong><a href="https://git-scm.com/docs/gitignore" title="gitignore">[1]</a><a href="https://github.com/github/gitignore" title="github/gitignore">[2]</a></strong></sup> or by setting an <code>export-ignore</code> attribute for it in <strong>.gitattributes</strong> <sup><strong><a href="https://git-scm.com/docs/gitattributes" title="gitattributes">[1]</a><a href="https://github.com/alexkaratarakis/gitattributes" title="alexkaratarakis/gitattributes">[2]</a></strong></sup></div>
 2. Add <strong>volodymyrkushnir.com</strong> as a submodule by running <code>git submodule add git@github.com:volodymyr-kushnir/volodymyrkushnir.com.git dependencies/volodymyrkushnir.com</code> <sup><strong><a href="https://git-scm.com/docs/git-submodule" title="git-submodule">[1]</a></strong></sup>
-   
+
    <div class="bubble small subtle">
      If you run into errors — try to use <strong>https://</strong> endpoint. Also, keep in mind that <a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/7646931"><strong>removing a submodule</strong></a> is somewhat a tricky process
    </div>
 
 3. <div>Use <strong>pre-commit</strong> git hook <sup><strong><a href="https://git-scm.com/docs/githooks" title="githooks">[1]</a></strong></sup> to generate new <strong>Service Worker</strong> based on <a href="https://developers.google.com/web/tools/workbox/" title="Workbox"><strong>Workbox</strong></a> before each commit</div>
-   
+
    1. Run `npm install --global workbox-cli` to install Workbox globally
    2. Create **workbox-config.js** with the following content:
       ```json
@@ -630,11 +630,11 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
         Make sure it's executable, <code>chmod +x .git/hooks/pre-commit</code> if necessary. Keep in mind that Windows is definitely not a Unix-like OS, so you'd have to fix the script by providing the proper path to the <code>sh</code> executable on your system
       </div>
 4. Add a webhook by setting up a basic CI/CD process using [**Travis CI**](https://travis-ci.org) and [**AWS**](https://aws.amazon.com)
-   
+
    <div class="bubble small subtle">
      Travis is free for public repositories. AWS has an <a href="https://aws.amazon.com/s3/pricing/" title="Amazon S3 Pricing"><strong>AWS Free Usage Tier</strong></a>, which should cover the needs of this tutorial, but you can also get $30 in AWS credits if you join the <a href="https://aws.amazon.com/education/awseducate/" title="AWS Educate"><strong>AWS Educate</strong></a> program. Or you can get a <a href="https://education.github.com/pack" title="GitHub Student Developer Pack"><strong>GitHub Student Developer Pack</strong></a>.
    </div>
-   
+
    1. Log in to [**AWS Console**](https://console.aws.amazon.com/), go to **S3** service, create two buckets for **staging** and **production** (choose unique names!), edit their public access settings (uncheck everything), go to bucket properties and enable static website hosting, then go to **My Security Credentials** and generate a new set of access keys. Phew! 😌
    <div class="bubble small subtle">
      <strong>S3 bucket names are globally unique.</strong> This means that if someone else has a bucket of a certain name, you cannot have a bucket with that same name
