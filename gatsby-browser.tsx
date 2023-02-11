@@ -14,7 +14,7 @@ import {
   ThatsAllFolks,
   VideoWrapper,
   Flute,
-} from '~/components/common';
+} from '~/components';
 
 import '~/assets/stylesheets/index.css';
 
