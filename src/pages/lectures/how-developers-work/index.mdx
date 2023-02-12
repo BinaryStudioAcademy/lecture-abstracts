@@ -1,9 +1,21 @@
-import { Lecture, VideoWrapper, SlackMessage, FacebookMessage, TimelineOfContents, Level, Accordion, RadarChart, ThatsAllFolks, Language } from "../../../components";
+---
+orderId: 2
+author: "Володимир Кушнір"
+title: "How developers work"
+description: "Воркшоп по <strong><code>git</code></strong> та <strong>GitHub</strong>, в ході якого Володя показує, як створити і доглядати за репозиторієм, вести проект і документацію, працювати в команді, коммітити, використовуючи термінал та клієнти з графічним інтерфейсом, а також складає просту веб-сторінку і хостить її через <strong>GitHub Pages</strong>."
+keywords: ["hola", "guapa"]
+duration: "1 год 28 хв"
+publishedAt: "2022-01-01T00:00:00"
+hiddenFromMainPage: true
+---
+
+import { Lecture } from "~/layouts";
+import { SEO } from '~/partials';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faGlobe, faQuestionCircle } from "@fortawesome/pro-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
 import { faFacebookSquare, faGithub, faSkype } from "@fortawesome/free-brands-svg-icons";
-import { volodymyrKushnir2017Avatar } from "../../../assets/images/avatars/intro-rounded";
+import { volodymyrKushnir2017Avatar } from "~/assets/images/avatars/intro-rounded";
 import {
   ryuAvatar,
   donaldTrumpAvatar,
@@ -22,7 +34,7 @@ import {
   pavelNemchenkoAvatar,
   vitaliyOleynikovAvatar,
   yuriyStetsulaAvatar
-} from "../../../assets/images/avatars/slack-squared";
+} from "~/assets/images/avatars/slack-squared";
 
 <div><h1><strong>How developers work</strong></h1></div>
 
@@ -36,20 +48,20 @@ import {
 </VideoWrapper>
 
 <div>
-  <div class="author">
-    <div class="avatar-wrapper">
-      <object class="avatar-object" data={volodymyrKushnir2017Avatar} role="img" aria-label="Volodymyr Kushnir"></object>
+  <div className="author">
+    <div className="avatar-wrapper">
+      <object className="avatar-object" data={volodymyrKushnir2017Avatar} role="img" aria-label="Volodymyr Kushnir"></object>
     </div>
-    <div class="profile">
-      <h3 class="name">Володимир Кушнір</h3>
-      <p class="about">
+    <div className="profile">
+      <h3 className="name">Володимир Кушнір</h3>
+      <p className="about">
 	  	Володя, фулл-стек розробник з неабияким досвідом, який будує точні, адаптивні, швидкі, зручні в користуванні середовища, які гарно виглядають та добре виконують свої завдання. Улюбленими технологіями вважає <a href="https://reactjs.org/"><strong>React</strong></a> та <a href="https://graphql.org/"><strong>GraphQL</strong></a>. Російською говорить із смішним акцентом <em>(англійською теж)</em>.
       </p>
     </div>
   </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
+  <div className="bubble" style={{ margin: "-0.5em, 1em 1em"}}>
     <strong>Hey, hola, привіт!</strong> 👋<br />Вже за два абзаци розпочнеться лекція. Але! Спочатку пара коротеньких дісклеймерів:
-    <ol class="compact inverted">
+    <ol className="compact inverted">
       <li>деякі терміни та технології не пояснюються;</li>
       <li>лінки на документацію та ґайдлайни опціональні <em>(їх можна повністю проігнорувати, маючи сильну інтуїцію, багаж знань чи достатньо часу на експерименти)</em>;</li>
       <li>лекція намагається бути суперфановою, добре структурованою і максимально корисною, але не завжди так буде виходити в результаті &#x1F937;&#x200D;&#x2642;&#xFE0F;;</li>
@@ -60,14 +72,14 @@ import {
   </div>
 </div>
 
-<div class="messages">
+<div className="messages">
   Отже, уявімо собі таку ситуацію — студент підписує контракт із аутсорсинговою чи продуктовою компанією, наступного ранку приходить у офіс/коворк/cloffice ("closet office"), вмикає комп'ютер, запускає месенджер (наприклад, Slack), і отримує своє перше мега-завдання ("таску") від замовника (
-  <input type="radio" class="messages__from" name="from" id="ryu" defaultChecked />
-  <label for="ryu">Ryu</label>
-  <input type="radio" class="messages__from" name="from" id="donald-trump" />
-  <label for="donald-trump">Donald Trump</label>
-  <input type="radio" class="messages__from" name="from" id="you" />
-  <label for="you">"я сам собі замовник!"</label>) ―
+  <input type="radio" className="messages__from" name="from" id="ryu" defaultChecked />
+  <label htmlFor="ryu">Ryu</label>
+  <input type="radio" className="messages__from" name="from" id="donald-trump" />
+  <label htmlFor="donald-trump">Donald Trump</label>
+  <input type="radio" className="messages__from" name="from" id="you" />
+  <label htmlFor="you">"я сам собі замовник!"</label>
   <SlackMessage
     senderId="ryu"
     senderName="Ryu"
@@ -90,7 +102,7 @@ import {
       { name: "Denis Beketsky", avatarUrl: denisBeketskyAvatar }
     ]}
   >
-    <p>Hadouken! Pleased to meet you. After defeating Sagat and M. Bison for the nth time, I’ve decided to downshift my martial arts career a little bit and get into this IT thing ― sensei tells me that there’s a lot of money on the Internet, and a whole lot less getting punched in the face. I’d like to build a little website to market my personal brand, then maybe sell a few t-shirts, nunchucks, that sort of thing ― I think it’ll be a big hit <em>(TO THE SOLAR PLEXUS IYKWIM HAHAHA!.. woo, goddamn, I love hitting people...)</em>. Anyhow, here's what I want to build ― for starters just a quick intro page to let me know <a href="https://github.com/binary-studio-academy/stage-2-how-developers-work/blob/master/ryu"><strong>what I’m all about</strong></a>. By the way, can you do animated GIFs of me kicking people across the screen? No? Well, fine, I trust your judgement. Just make sure I look badass, okay? Thanks, man, I’m off to the Shaolin temple for a few weeks (teambuilding excersice, such bullshit, ugh). And remember, <strong>winners never lose</strong>! &#x270c;Peace!</p>
+    <p>Hadouken! Pleased to meet you. After defeating Sagat and M. Bison for the nth time, I’ve decided to downshift my martial arts career a little bit and get into this IT thing ― sensei tells me that there’s a lot of money on the Internet, and a whole lot less getting punched in the face. I’d like to build a little website to market my personal brand, then maybe sell a few t-shirts, nunchucks, that sort of thing ― I think it’ll be a big hit <em>(TO THE SOLAR PLEXUS IYKWIM HAHAHA!.. woo, goddamn, I love hitting people...)</em>. Anyhow, here's what I want to build ― for starters just a quick intro page to let me know [what I'm all about](/assets/zip/ryu.zip). By the way, can you do animated GIFs of me kicking people across the screen? No? Well, fine, I trust your judgement. Just make sure I look badass, okay? Thanks, man, I’m off to the Shaolin temple for a few weeks (teambuilding excersice, such bullshit, ugh). And remember, <strong>winners never lose</strong>! &#x270c;Peace!</p>
   </SlackMessage>
   <SlackMessage
     senderId="donald-trump"
@@ -114,7 +126,7 @@ import {
       { name: "Pavel Nemchenko", avatarUrl: pavelNemchenkoAvatar }
     ]}
   >
-    <p>We have a 5 billion dollar website. I have so many websites. I have them all over the place... I hire people... it costs me three dollars. The beauty of me is that I'm <em>very rich</em>. You know, it really doesn't matter what the media write, as long as you've got <em>a young and beautiful piece of ass</em>. Despite the constant negative press covfefe. <a href="https://github.com/binary-studio-academy/stage-2-how-developers-work/blob/master/donald-trump/"><strong>Anyway, shut up, build me a website</strong></a>. We will build a great website ― and nobody builds websites better than me, believe me ― and I'll build them very inexpensively. I will build a great, great website on our southern border, and I will make Mexico pay for that website. Mark my words. Your fake news! What you’re seeing and what you’re reading is not what’s happening. Nobody has ever done so much in the first two years of a presidency as this administration. Nobody. <em>Nobody</em>. <strong>Make America great again!</strong></p>
+    <p>We have a 5 billion dollar website. I have so many websites. I have them all over the place... I hire people... it costs me three dollars. The beauty of me is that I'm <em>very rich</em>. You know, it really doesn't matter what the media write, as long as you've got <em>a young and beautiful piece of ass</em>. Despite the constant negative press covfefe. [Anyway, shut up, build me a website](/assets/zip/donald-trump.zip). We will build a great website ― and nobody builds websites better than me, believe me ― and I'll build them very inexpensively. I will build a great, great website on our southern border, and I will make Mexico pay for that website. Mark my words. Your fake news! What you’re seeing and what you’re reading is not what’s happening. Nobody has ever done so much in the first two years of a presidency as this administration. Nobody. <em>Nobody</em>. <strong>Make America great again!</strong></p>
   </SlackMessage>
   <SlackMessage
     senderId="you"
@@ -176,7 +188,7 @@ import {
 
 ...і береться за створення сайту по цій інструкції:
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 2em;">
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + 'em'}}>
   <h2><strong>How to create and host your own website using GitHub</strong></h2>
   <TimelineOfContents timeline={[{
     linkTo: "#setting-up-the-repository",
@@ -186,7 +198,7 @@ import {
     title: "Researching and planning"
   }, {
     linkTo: "#learning-git",
-    title: <span>Learning <code>git</code></span>
+    title: "<span>Learning <code>git</code></span>",
   }, {
     linkTo: "#putting-the-website-together",
     title: "Putting the website together"
@@ -217,12 +229,12 @@ import {
 
    > A typical résumé contains a "summary" of relevant job experience and education, as its French origin implies. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants. ****The goal of this project is to create an online version of the résumé using HTML, CSS, and the minimum amount of JavaScript.****
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       Alright, mate, from now on for every step of this mission you have to create a task in GitHub Projects! That way you remember what you are going to do, and your customer is aware of the work you are doing.
    </div>
 
 5. Update **README.md** _(you might want to take a look at [**GitHub Flavored Markdown**](https://guides.github.com/features/mastering-markdown/) and [**Documenting your projects on GitHub**](https://guides.github.com/features/wikis/))_
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       Psst, don't forget to add this as a task to <strong>Homepage</strong> project, bruv. Oh, also convert it to an issue while you're at it
    </div>
 
@@ -247,7 +259,7 @@ import {
       </Accordion.Body>
     </Accordion>
    </div>
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       Hey, c'mon fam, are you even trying?! I've asked you to put tasks into projects, so puh-leeeeeze!
    </div>
 
@@ -268,14 +280,14 @@ import {
    </html>
    ```
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      That's right, <code>&amp;#x1F609;</code> is a <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609"><strong>Unicode code for an emoji</strong></a>. BTW, please give your commits meaningful messages, i.e. 🤗"Updated Résumé Contacts block (fixes #23)" instead of 🤮"qwerty12%._3456". Maybe even <a href="https://help.github.com/articles/closing-issues-using-keywords/"><strong>use keywords to close issues</strong></a>!
    </div>
 
 11. Create a pull request into <code>main</code> and set title _"First release to production"_, set metadata _(reviewers, assignees, labels, projects, milestones)_, merge pull request using **Create merge commit**
 12. Go to **Settings — Options** and set up **GitHub Pages**, update repository description with the proper **website** link _(you might also want to learn how to host a static website powered by Jekyll in [**Getting Started with GitHub Pages**](https://guides.github.com/features/pages/))_
 13. Now that your repository is set up, you could share the link with the customer, poke around with your repository, see what's possible, explore, follow people, [**Be social**](https://guides.github.com/activities/socialize/)
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       Given that the customer is imaginary you can't actually share the links, but keep them somewhere close, you might need 'em
     </div>
 
@@ -287,7 +299,7 @@ import {
 
 1. Add the following tasks to the **"Resume"** project and convert them to issues — it would be very nice if you could use GitHub's **Labels**, **Assignees**, and **Milestones** features at this point _([**Mastering Issues**](https://guides.github.com/features/issues/) explains why and how)_:
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Вміння добре складати завдання, чітко описувати проблеми і звітувати про їх вирішення допоможе знайти спільну мову з проджект-менеджером замовника, якщо студент коли-небудь буде працювати в аутсорсі або фрілансі (а коли-небудь він буде). Окрім  того, в світі open source більшість корисних розмов та інформація щодо вирішення проблем знаходиться якраз в Issues, тому розуміти як це працює — запорука успіху. Тепер це ваш Google (ну, може ще трошки StackOverflow). Google все ще корисний для швидкого старту роботи з технологією, але коли щось пішло не так, то шукати спочатку треба ближче до коду тої технології і її документації, а вже потім по всій мережі
    </div>
 
@@ -302,7 +314,7 @@ import {
 
 2. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones, close issues and tasks when done
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Інформація про замовника доступна по посиланню у повідомленні від замовника 👆 (крім випадків, коли "я сам собі замовник", ясне діло). Відповідальним за issue можна призначити будь-якого коллаборатора або ж себе, але працювати над issue треба буде самостійно.
    </div>
 
@@ -314,39 +326,39 @@ import {
 
 Let's download the repository using the command line. [**Git Handbook**](https://guides.github.com/introduction/git-handbook/) won't help us much here, so let's just keep [**Git Reference Manual**](https://git-scm.com/docs) open in case we get stuck with something and need assistance. Open your favorite terminal, change working directory (<code>cd</code>) to where you'd like to keep the repository <em>(check directory content with</em> <code>ls</code> <em>or</em> <code>dir</code><em>)</em>
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Хороші новини! В цьому розділі тасків у проектах створювати не потрібно! Happy days!
 </div>
 
 1. Execute `git clone` to copy the repository (use https endpoint)
 2. Check current status with `git status`
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      origin — це псевдонім групи URL-ів, які використовуються для вивантаження і завантаження репозиторію до віддаленого серверу. переглянути ті URL-и можна командою <code>git remote show origin</code>
    </div>
 
 3. Create new branch with `git branch patch/README.md`, list branches with `git branch`
 4. Use `git checkout patch/README.md` to switch branch
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Команду <code>git checkout</code> дуже часто використовують із ключем <code>-b</code>, щоб створити і переключитись на нову гілку
    </div>
 
 5. Edit README.md — add "**🧙Hocus-pocus!**" — and stage it with `git add README.md`
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Аргументом цієї команди є <em>pathspec</em> <sup><strong><a href="https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec" title="pathspec">[1]</a></strong></sup>, тому можна вказувати як абсолютний шлях, так і паттерн (наприклад, <code>.</code> 😈). Між іншим, <code>git stash</code> врятує, якщо треба тимчасово запам'ятати "брудне" робоче дерево (тобто, зміни у файлах зроблені і збережені, але ще не коммітнуті)
    </div>
 
 6. Commit staged file to Git history with `git commit -m "Abracadabra"` (add a tag with `git tag abracadabra`)
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      <code>--all</code> можна використовувати для того, щоби закоммітити всі змінені і видалені файли (нові файли не коммітнуться). <code>--amend</code> можна використати, щоби змінити повідомлення комміту (обережно, ця операція переписує історію!)
    </div>
 
 7. Try to upload your local changes with `git push --tags` and `git push`. If it fails, it's most likely because there's no such branch on the remote server. Follow Git suggestion and use `--set-upstream origin patch/README.md`
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      По замовчуванню <code>git</code> не пушить теги, тому ключ <code>--tags</code> корисний для того, щоб запушити теги, якщо вони є. У випадку, якщо їх немає, можна просто використовувати <code>git push</code>
    </div>
 
@@ -354,31 +366,31 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 9. Remove last line from the README.md and see the difference! Using `git diff`, that is. Commit with `git commit -a -m "Undobracadabra"`, add a tag to the latest commit with `git tag undobracadabra`
 10. Revert the latest commit with `git revert undobracadabra`, add a tag `git tag redobracadabra`
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       На майбутнє — зміни, які ще не були коммітнуті (файли відредаговані і збережені, але не коммітнуті до історії), можна відмінити командою <code>git checkout .</code> (також замість <code>.</code> можна вказувати конкретні файли)
     </div>
 
 11. Now switch to your primary branch (`git checkout develop`) and merge your latest developments into this branch by running `git merge patch/README.md`. Push to the remote with `git push --tags`
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       Також можна мерджити гілки, використовуючи <code>git merge --squash patch/README.md</code> (зліпить всі локальні комміти в один і накатає поверх базової гілки, тим самим "замовчує" локальну історію), або ж <code>git rebase</code> (спочатку переключиться на останній комміт базової гілки, а потім вже поверху "переграє" всі локальні зміни)
     </div>
 
 12. Try to `git fetch`, `git status`, use GitHub online editor to create a new file named **dummy.html** in `develop` branch, and then try to `git fetch` and `git status` again. Finally, use `git pull --rebase`.
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
        Зазвичай ключ <code>--rebase</code> не вказують, тому мердж відбувається або фаст-форвардом, або через мердж комміт
     </div>
 
 13. Dismiss everything you did with `git reset --hard abracadabra^`, do `git clean --force` if necessary
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       Режим за промовчанням — <code>--mixed</code> — ресетне індекс, але не робоче дерево, тому всі зміни будуть збережені, а файли треба буде самостійно застейджити для комміту. <code>--hard</code> ресетне все, тому всі зміни будуть втрачені. <code>--soft</code> переставить HEAD на вказаний комміт, але не зачіпатиме індекс чи робоче дерево
     </div>
 
 14. Force-push your local repository to the origin with `git push --force`
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       Мммммм, обережно з цим... З іншої сторони — я сам, поки записував цю лекцію, кілька разів ресетив репозиторій, переписував історію і пушив нагору, тому свої випадки для використання команди звичайно ж є. Треба лиш пам'ятати, що якщо історія затреться ще й на віддаленому сервері, то дістати її назад вже не буде звідки <em>(насправді можна з кешу, але то дуже залежить)</em>
     </div>
 
@@ -392,14 +404,14 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 2. Build a website using [this stylesheet](/assets/stylesheets/base.css) as a foundation _(see [**Résumé Wiki**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9) for reference)_:
    1. Create a new branch named `feature/head` _(see [**GitFlow workflow**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for reasons why)_ and use it to update [**`<head>`**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#head):
 
-      <div class="bubble small subtle">
+      <div className="bubble small subtle">
         Розділяючи свою роботу на багато гілок, можна швидко і вправно виправляти баги на сервері, мати окремо стабільну версію (<code>release</code>), яка готова до релізу (шляхом злиття в <code>main</code>), а також ще версію, в якій ведеться основна розробка (<code>develop</code>). А в одній єдиній гілці так не вийде. Мерджіть свої гілки pull request-ами, бо так треба. І потім, так можна частково зняти з себе відповідальність, адже той, хто approve-нув поганий код, допустив не меншу помилку, аніж той, хто його написав 😁
       </div>
 
-      1. At the very least add `<link rel="stylesheet" href="https://binary-studio-academy.github.io/lecture-abstracts/assets/stylesheets/base.css">`, but you may also add other meta tags
+      1. At the very least add `<link rel="stylesheet" href="https://binarystudioacademy.github.io/lecture-abstracts/assets/stylesheets/base.css">`, but you may also add other meta tags
       2. When done ― push the branch to the remote, create a new pull request and merge into `develop`
 
-         <div class="bubble small subtle">
+         <div className="bubble small subtle">
            Якщо гілку не пушнути нагору, а змерджити локально через <code>git merge</code>, то віддалений сервер не буде нічого знати про існування гілки, відтак і не покаже її у Insights → Network
          </div>
 
@@ -408,7 +420,7 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
       2. Add [**Content**](https://github.com/volodymyr-kushnir/volodymyrkushnir.com/wiki/R%C3%A9sum%C3%A9#content)
       3. Preview the website in a browser
 
-         <div class="bubble small subtle">
+         <div className="bubble small subtle">
            One way to do it is to <code>npm install --global serve</code> and then <code>cd</code> to your working directory and run <code>serve</code>
          </div>
 
@@ -585,7 +597,7 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
   </Accordion>
 </div>
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Не хвилюйся 😌, якщо твій репозиторій не отримав 10 — самотужки за короткий проміжок часу репозиторії на 10 не складаються 😝. Хтось вкладе весь свій час і сили в сам проект, але не встигне оформити репозиторій, а хтось зробить навпаки. В першу чергу варто робити те, що подобається, і отримати максимум задоволення від процесу. Якщо при цьому всьому ще й зайти в незнайому чи некомфортну для cебе область і досягти успіхів там — то це взагалі супер! В кінці кінців, ми більше зацікавлені в тому, щоби побачити, що розробники можуть створити в короткий строк, аніж нав'язувати наше бачення правильного чи неправильного способу виконання абстрактних завдань
 </div>
 
@@ -598,7 +610,7 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
 1. <div>Exclude <strong>.DS_Store</strong> from the repository by either adding it to <strong>.gitignore</strong> <sup><strong><a href="https://git-scm.com/docs/gitignore" title="gitignore">[1]</a><a href="https://github.com/github/gitignore" title="github/gitignore">[2]</a></strong></sup> or by setting an <code>export-ignore</code> attribute for it in <strong>.gitattributes</strong> <sup><strong><a href="https://git-scm.com/docs/gitattributes" title="gitattributes">[1]</a><a href="https://github.com/alexkaratarakis/gitattributes" title="alexkaratarakis/gitattributes">[2]</a></strong></sup></div>
 2. Add <strong>volodymyrkushnir.com</strong> as a submodule by running <code>git submodule add git@github.com:volodymyr-kushnir/volodymyrkushnir.com.git dependencies/volodymyrkushnir.com</code> <sup><strong><a href="https://git-scm.com/docs/git-submodule" title="git-submodule">[1]</a></strong></sup>
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      If you run into errors — try to use <strong>https://</strong> endpoint. Also, keep in mind that <a href="https://stackoverflow.com/questions/1260748/how-do-i-remove-a-submodule/7646931"><strong>removing a submodule</strong></a> is somewhat a tricky process
    </div>
 
@@ -626,17 +638,17 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
         echo "Aborting"
       fi
       ```
-      <div class="bubble small subtle">
+      <div className="bubble small subtle">
         Make sure it's executable, <code>chmod +x .git/hooks/pre-commit</code> if necessary. Keep in mind that Windows is definitely not a Unix-like OS, so you'd have to fix the script by providing the proper path to the <code>sh</code> executable on your system
       </div>
 4. Add a webhook by setting up a basic CI/CD process using [**Travis CI**](https://travis-ci.org) and [**AWS**](https://aws.amazon.com)
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Travis is free for public repositories. AWS has an <a href="https://aws.amazon.com/s3/pricing/" title="Amazon S3 Pricing"><strong>AWS Free Usage Tier</strong></a>, which should cover the needs of this tutorial, but you can also get $30 in AWS credits if you join the <a href="https://aws.amazon.com/education/awseducate/" title="AWS Educate"><strong>AWS Educate</strong></a> program. Or you can get a <a href="https://education.github.com/pack" title="GitHub Student Developer Pack"><strong>GitHub Student Developer Pack</strong></a>.
    </div>
 
    1. Log in to [**AWS Console**](https://console.aws.amazon.com/), go to **S3** service, create two buckets for **staging** and **production** (choose unique names!), edit their public access settings (uncheck everything), go to bucket properties and enable static website hosting, then go to **My Security Credentials** and generate a new set of access keys. Phew! 😌
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      <strong>S3 bucket names are globally unique.</strong> This means that if someone else has a bucket of a certain name, you cannot have a bucket with that same name
    </div>
 
@@ -689,19 +701,9 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
   <iframe src="https://www.youtube.com/embed/tEYBK7FKGCk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div class="bubble">
+<div className="bubble">
   Дякую за увагу 🙏! Cподобалася лекція? Лайк, шейр, репост, сабскра-а-а-айб! Коментуй та задавай питання під цією лекцією у свому особистому кабінеті <a href="https://academy.binary-studio.com/"><strong>Binary Studio Academy</strong></a>. Успіхів у виконанні домашнього завдання і до нових зустрічей, чірз! 👋
 </div>
 
-export const metadata = {
-  orderId: 1,
-  author: "Володимир Кушнір",
-  title: "How developers work",
-  description: "Воркшоп по <strong><code>git</code></strong> та <strong>GitHub</strong>, в ході якого Володя показує, як створити і доглядати за репозиторієм, вести проект і документацію, працювати в команді, коммітити, використовуючи термінал та клієнти з графічним інтерфейсом, а також складає просту веб-сторінку і хостить її через <strong>GitHub Pages</strong>.",
-  keywords: ["hola", "guapa"],
-  duration: "1 год 28 хв",
-  publishedAt: "2022-01-01T00:00:00",
-  hiddenFromMainPage: true
-}
-
 export default Lecture;
+export { SEO as Head };

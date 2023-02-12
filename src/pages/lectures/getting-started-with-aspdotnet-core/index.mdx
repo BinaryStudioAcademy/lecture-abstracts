@@ -1,29 +1,40 @@
-import { Lecture, SlackMessage, TimelineOfContents, Level, ThatsAllFolks, VideoWrapper, Language } from "../../../../components";
-import { serhiiYanchuk2023Avatar } from "../../../../assets/images/avatars/intro-rounded";
+---
+orderId: 5
+author: "Сергій Янчук"
+title: "Getting started with ASP.NET Core"
+description: "Після невеликого вступу, де мова піде про переваги <strong>.NET</strong>, Сергій продемонструє, як створити додаток на <strong>ASP.NET Core</strong> з використанням <strong>ASP.NET Core Web API</strong>, закодить сервіси та контроллери, а потім пояснить, що таке dependency injection, маршрутизацію, middleware та minimal API."
+keywords: ["hola", "guapa"]
+duration: "30 хв"
+publishedAt: "2022-01-02T00:00:00"
+hiddenFromMainPage: false
+---
+
+import { Lecture } from "~/layouts";
+import { SEO } from '~/partials';
+import { serhiiYanchuk2023Avatar } from "~/assets/images/avatars/intro-rounded";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/pro-solid-svg-icons";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import SnippetL02S01 from "../assets/snippets/snippet-l02-s01.mdx";
-import SnippetL03S01 from "../assets/snippets/snippet-l03-s01.mdx";
-import SnippetL03S02 from "../assets/snippets/snippet-l03-s02.mdx";
-import SnippetL03S03 from "../assets/snippets/snippet-l03-s03.mdx";
-import SnippetL03S04 from "../assets/snippets/snippet-l03-s04.mdx";
-import SnippetL03S05 from "../assets/snippets/snippet-l03-s05.mdx";
-import SnippetL03S06 from "../assets/snippets/snippet-l03-s06.mdx";
-import SnippetL04S01 from "../assets/snippets/snippet-l04-s01.mdx";
-import SnippetL04S02 from "../assets/snippets/snippet-l04-s02.mdx";
-import SnippetL04S03 from "../assets/snippets/snippet-l04-s03.mdx";
-import SnippetL04S04 from "../assets/snippets/snippet-l04-s04.mdx";
-import SnippetL04S05 from "../assets/snippets/snippet-l04-s05.mdx";
-import SnippetL04S06 from "../assets/snippets/snippet-l04-s06.mdx";
-import '../styles.css';
+import SnippetL02S01 from "./assets/snippets/snippet-l02-s01.mdx";
+import SnippetL03S01 from "./assets/snippets/snippet-l03-s01.mdx";
+import SnippetL03S02 from "./assets/snippets/snippet-l03-s02.mdx";
+import SnippetL03S03 from "./assets/snippets/snippet-l03-s03.mdx";
+import SnippetL03S04 from "./assets/snippets/snippet-l03-s04.mdx";
+import SnippetL03S05 from "./assets/snippets/snippet-l03-s05.mdx";
+import SnippetL03S06 from "./assets/snippets/snippet-l03-s06.mdx";
+import SnippetL04S01 from "./assets/snippets/snippet-l04-s01.mdx";
+import SnippetL04S02 from "./assets/snippets/snippet-l04-s02.mdx";
+import SnippetL04S03 from "./assets/snippets/snippet-l04-s03.mdx";
+import SnippetL04S04 from "./assets/snippets/snippet-l04-s04.mdx";
+import SnippetL04S05 from "./assets/snippets/snippet-l04-s05.mdx";
+import SnippetL04S06 from "./assets/snippets/snippet-l04-s06.mdx";
 
 <div><h1><strong>Getting started with ASP.NET Core</strong></h1></div>
 
 <Language
   currentLanguage="ua"
   languages={{
-    "ua": "lectures/getting-started-with-aspdotnet-core/ua",
+    "ua": "lectures/getting-started-with-aspdotnet-core/",
     "en": "lectures/getting-started-with-aspdotnet-core/en"
   }}
 />
@@ -33,25 +44,25 @@ import '../styles.css';
 </VideoWrapper>
 
 <div>
-  <div class="author">
-    <div class="avatar-wrapper">
-      <object class="avatar-object" data={serhiiYanchuk2023Avatar} role="img" aria-label="Serhii Yanchuk"></object>
+  <div className="author">
+    <div className="avatar-wrapper">
+      <object className="avatar-object" data={serhiiYanchuk2023Avatar} role="img" aria-label="Serhii Yanchuk"></object>
     </div>
-    <div class="profile">
-      <h3 class="name">Сергій Янчук</h3>
-      <ul class="contacts">
-        <li><a href="https://www.linkedin.com/in/serhii-yanchuk-b304331a6/" rel="author" class="linkedin"><FontAwesomeIcon icon={faLinkedin} className="icon" /><span>serhii-yanchuk</span></a></li>
-        <li><a href="https://www.instagram.com/serhii._.yanchuk/" rel="author" class="instagram"><FontAwesomeIcon icon={faInstagram} className="icon" /><span>serhii._.yanchuk</span></a></li>
+    <div className="profile">
+      <h3 className="name">Сергій Янчук</h3>
+      <ul className="contacts">
+        <li><a href="https://www.linkedin.com/in/serhii-yanchuk-b304331a6/" rel="author" className="linkedin"><FontAwesomeIcon icon={faLinkedin} className="icon" /><span>serhii-yanchuk</span></a></li>
+        <li><a href="https://www.instagram.com/serhii._.yanchuk/" rel="author" className="instagram"><FontAwesomeIcon icon={faInstagram} className="icon" /><span>serhii._.yanchuk</span></a></li>
       </ul>
-      <p class="about">
+      <p className="about">
         Сергій працює в <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> backend розробником. Він полюбляє кодити та закидувати триочкові в баскетболі. Тому, якщо ти з Києва та хочеш поєднати розмову про програмування з грою у баскетбол, звертайся до нього :D
       </p>
     </div>
   </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
+  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
     <strong>Привіт!</strong> 👋<br />
     Під час розповіді я дам вам поради та рекомендації, щоб ви краще розуміли як працює наш технічний стек, і до кінця цього уроку у вас буде веб-додаток на ASP.NET Core. Це - ознайомча лекція, тому:
-    <ol class="compact inverted">
+    <ol className="compact inverted">
       <li>деякі речі потрібно буде загуглити власноруч;</li>
       <li>можливо ви вже все це знаєте (повторити все одно не завадить).</li>
     </ol>
@@ -59,7 +70,7 @@ import '../styles.css';
   </div>
 </div>
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 1em;">
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 1 + "em"}}>
   <TimelineOfContents timeline={[{
     linkTo: "#intro-to-dotnet",
     title: "Знайомство з .NET"
@@ -99,23 +110,23 @@ import '../styles.css';
 
 <h5>Що можна створити за допомогою .NET</h5>
 
-<div class="columns">
-  <div class="column col-6">
-    <div class="panel">
-      <div class="panel-header">
+<div className="columns">
+  <div className="column col-6">
+    <div className="panel">
+      <div className="panel-header">
         <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview"><strong>ASP.NET Core MVC</strong></a>
       </div>
-      <div class="panel-body">
+      <div className="panel-body">
         Веб-програми, які реалізують патерн Model-View-Controller і використовують Razor для розмітки HTML із фрагментами C#
       </div>
     </div>
   </div>
-  <div class="column col-6">
-    <div class="panel">
-      <div class="panel-header">
+  <div className="column col-6">
+    <div className="panel">
+      <div className="panel-header">
         <a href="https://docs.microsoft.com/en-us/aspnet/core/web-api/"><strong>ASP.NET Core Web API</strong></a>
       </div>
-      <div class="panel-body">
+      <div className="panel-body">
        Backend-програма, яка реалізує бізнес-логіку та може використовуватися будь-яким клієнтом <em>(чи це Angular-, React-, або інший frontend фреймворк, mobile apps, тощо.)</em>
       </div>
     </div>
@@ -161,12 +172,12 @@ import '../styles.css';
 <h5>Створіть нову програму, запустивши <code>dotnet new webapi</code> або використавши функції вашого IDE <sup><strong><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup">[1]</a></strong></sup></h5>
 
 <ul>
-  <li class="details">
+  <li className="details">
     <input type="checkbox" id="accordion-2-1" />
-    <label class="summary" for="accordion-2-1">
+    <label className="summary" htmlFor="accordion-2-1">
       <strong>Program.cs</strong>
     </label>
-    <div class="details-body">
+    <div className="details-body">
       Ось так виглядає точка входу:
       <SnippetL02S01 />
       Тут ми можемо налаштувати сервіси, які використовує програма, і визначити, як програма буде оброблювати запити HTTP (ви можете налаштувати конвеєр, який оброблятиме запити).
@@ -180,67 +191,67 @@ import '../styles.css';
 
 1.  По-перше, давайте створимо просту програму, яка повертає всіх студентів Binary. Створіть нові файли під назвою **BinaryStudentsController.cs** у папці **Controllers** та **BinaryStudent.cs**, де хочете
     <ul>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-1" />
-        <label class="summary" for="accordion-3-1">
+        <label className="summary" htmlFor="accordion-3-1">
           <strong>BinaryStudentsController.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S01 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-2" />
-        <label class="summary" for="accordion-3-2">
+        <label className="summary" htmlFor="accordion-3-2">
           <strong>BinaryStudent.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S02 />
         </div>
       </li>
     </ul>
 
 2.  Для запуску сервера можна використати команду `dotnet run`. Щоб переконатися, що наш API працює, ми повинні надіслати запит до `BinaryStudentsController`. Відкрийте [**https://localhost:7088/binarystudents**](https://localhost:7088/binarystudents) — ви повинні отримати студентів у форматі JSON (номер порту можна знайти у файлі launchSettings.json).
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       Ви можете використовувати Postman для тестування свого API або, наприклад, використовувати розширення для VSCode ― <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client"><strong>REST Client</strong></a>
     </div>
 
 3. Давайте ще трохи попрактикуємось і ускладнимо наш додаток, додамо більше кінцевих точок (endpoints) і залежностей. Модифікований контролер буде повним CRUD (C - create, R - read, U - update, D - delete) контролером.
   Писати бізнес-логіку в контролерах – не найкраща ідея, тому було б краще, якби ми створили для цього окремий сервіс.
     <ul>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-3" />
-        <label class="summary" for="accordion-3-3">
+        <label className="summary" htmlFor="accordion-3-3">
           <strong>IBinaryStudentService.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S03 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-4" />
-        <label class="summary" for="accordion-3-4">
+        <label className="summary" htmlFor="accordion-3-4">
           <strong>BinaryStudentService.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S04 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-5" />
-        <label class="summary" for="accordion-3-5">
+        <label className="summary" htmlFor="accordion-3-5">
           <strong>BinaryStudentsController.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S05 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-6" />
-        <label class="summary" for="accordion-3-6">
+        <label className="summary" htmlFor="accordion-3-6">
           <strong>Program.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           Нам потрібно зареєструвати наш сервіс. Докладніше про це в параграфі Dependency Injection. 
           <SnippetL03S06 />
         </div>
@@ -316,18 +327,9 @@ Minimal API - це новий спосіб створення API без вел�
 <SnippetL04S06 />
 
 <ThatsAllFolks />
-<div class="bubble">
+<div className="bubble">
   Ось так коротко про ASP.NET Core. На цьому все, дуже дякую за увагу🎩! Ставте питання та залишайте відгуки на лекцію на сайті академії. Успіхів з домашкою, скоро побачимося, бувай!
 </div>
 
-export const metadata = {
-  orderId: 5,
-  author: "Сергій Янчук",
-  title: "Getting started with ASP.NET Core",
-  description: "Після невеликого вступу, де мова піде про переваги <strong>.NET</strong>, Сергій продемонструє, як створити додаток на <strong>ASP.NET Core</strong> з використанням <strong>ASP.NET Core Web API</strong>, закодить сервіси та контроллери, а потім пояснить, що таке dependency injection, маршрутизацію, middleware та minimal API.",
-  keywords: ["hola", "guapa"],
-  duration: "30 хв",
-  publishedAt: "2022-01-02T00:00:00"
-}
-
 export default Lecture;
+export { SEO as Head };

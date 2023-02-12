@@ -1,19 +1,20 @@
-import {
-  Lecture,
-  VideoWrapper,
-  FacebookMessage,
-  TimelineOfContents,
-  Level,
-  Accordion,
-  RadarChart,
-  ThatsAllFolks,
-  Language,
-} from "../../../../components";
+---
+orderId: 1
+author: "Viktoriia Vasylenko"
+title: "Git Homework"
+description: "Вікторія розповідає про основи Git та найбільш поширені команди. А також показує весь процес роботи з Git: від клонування репозиторію до створення пул-реквестів."
+keywords: ["hola", "guapa"]
+duration: "31 min"
+publishedAt: "2021-11-18T10:00:00"
+hiddenFromMainPage: true
+---
+
+import { Lecture } from "~/layouts";
+import { SEO } from '~/partials';
+import resume_template from "~/assets/images/resume_template.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/pro-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
-import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/intro-rounded";
-import resume_template from "../assets/resume_template.png";
 
 <div>
   <h1>
@@ -25,51 +26,39 @@ import resume_template from "../assets/resume_template.png";
   currentLanguage="ua"
   languages={{
     en: "lectures/git/en",
-    ua: "lectures/git/ua",
+    ua: "lectures/git/ ",
   }}
 />
 
 <div>
-  <div class="author">
-    <div class="avatar-wrapper">
-      <object
-        class="avatar-object"
-        role="img"
-        data={viktoriiaVasylenko2021Avatar}
-        aria-label="Viktoriia Vasylenko"
-      />
-    </div>
-    <div class="profile">
-      <h3 class="name">Вікторія Василенко</h3>
-      <p class="about">
+  <div className="author">
+    <Avatar name="Viktoriia Vasylenko" />
+    <div className="profile">
+      <h3 className="name">Вікторія Василенко</h3>
+      <p className="about">
         Вікторія працює в Binary Studio як Full stack developer після закінчення
         Binary Studio Academy в 2020.
       </p>
     </div>
   </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
-    <strong>Привіт!</strong> 👋
-    <br />
+  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
+    <strong>Привіт!</strong> 👋 <br />
     Тут ти знайдеш детальну інструкцію до домашки по Git - тож тобі потрібно лиш
     виконувати інструкції і готово ✅. Але спочатку, зверни увагу, що:
-    <ol class="compact inverted">
+    <ol className="compact inverted">
       <li>
         це <strong>не</strong> є конспект до лекції - деякі пояснення можуть
         бути упущені
-        <em> (ви ж щойно переглянути лекцію, правда?)</em>;
+        <em> (ви ж щойно переглянути лекцію, правда?)</em>
       </li>
       <li>
         я дійсно рекомендую вам ознайомитися з усіма завданнями, перш ніж
-        почати виконувати домашнє завдання. Зверніть увагу, що{" "}
+        почати виконувати домашнє завдання. Зверніть увагу, що 
         <strong>у вас є лише 3 спроби </strong>
-        для запуску автоматизованого тесту.
+        для запуску автоматизованого тесту
       </li>
       <li>
-        посилання на документацію та інструкції необов'язкові{" "}
-        <em>
-          (ви можете ігнорувати їх, якщо відчуваєте себе достатньо просунутими)
-        </em>
-        ;
+        посилання на документацію та інструкції необов'язкові <em>(ви можете ігнорувати їх, якщо відчуваєте себе достатньо просунутими)</em>
       </li>
       <li>
         будь ласка, <strong>не пропускайте</strong> жодних кроків
@@ -79,17 +68,13 @@ import resume_template from "../assets/resume_template.png";
       </li>
       <li>і якщо виникатимуть питання - не соромтеся писати у чат!</li>
     </ol>
-    До речі, не забудьте взяти з собою:{" "}
-    <a href="https://git-scm.com/">
-      <strong>Git</strong>
-    </a>
-    , <a href="https://code.visualstudio.com/">
-      <strong>Visual Studio Code</strong>
-    </a>. Тепер поїхали!
+
+    До речі, не забудьте взяти з собою: <a href="https://git-scm.com/">  <strong>Git</strong></a>, <a href="https://code.visualstudio.com/">  <strong>Visual Studio Code</strong></a>. Тепер поїхали!
   </div>
 </div>
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 2em;">
+
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + "em"}}>
   <h2>
     <strong>Створи та захости власне резюме використовуючи GitHub</strong>
   </h2>
@@ -101,11 +86,7 @@ import resume_template from "../assets/resume_template.png";
       },
       {
         linkTo: "#practicing-git",
-        title: (
-          <span>
-            Practicing <code>git</code>
-          </span>
-        ),
+        title: '<span>Practicing <code>git</code></span>',
       },
       {
         linkTo: "#project-management-and-planning",
@@ -131,21 +112,12 @@ import resume_template from "../assets/resume_template.png";
   objectives="Get to the &#x1F681; Internet! Learn the GitHub platform while you're at it."
 />
 
+
 1. Переконайтеся, що у вас встановлено <a href="https://git-scm.com/downloads"><strong>Git</strong></a> - він вам знадобиться 😉.
 
-   <div>
-     {" "}
-     Ми будемо використовувати <strong>GitHub</strong> сьогодні. Для початку, переглянь{" "}
-     <a href="https://guides.github.com/activities/hello-world/">
-       <strong>Hello World</strong>
-     </a> гайди, щоб отримати огляд термінології та основних понять <sup>
-       <strong>
-         <a href="https://git-scm.com/docs/gitglossary" title="gitglossary">
-           [1]
-         </a>
-       </strong>
-     </sup>
-   </div>
+
+     Ми будемо використовувати <strong>GitHub</strong> сьогодні. Для початку, переглянь <a href="https://guides.github.com/activities/hello-world/"><strong>Hello World</strong></a> гайди, щоб отримати огляд термінології та основних понять <sup><strong><a href="https://git-scm.com/docs/gitglossary" title="gitglossary">[1]</a></strong></sup>
+
 
 2. Відкрий [**GitHub**](https://github.com/) та авторизуйся. Створи новий репозиторій
    із назвою **"homepage"** (e.g. **your-username/homepage**),
@@ -186,11 +158,7 @@ import resume_template from "../assets/resume_template.png";
              <div className="column">
                Не хвилюйтеся, обидва протоколи безпечні у використанні. Основна
                відмінність полягає в тому, що https вимагає аутентифікації на
-               основі пароля щоразу при push змін{" "}
-               <em>
-                 (проте ви також можете кешувати свої облікові дані git 🤔)
-               </em>
-               , але ssh ви налаштовуєте лише один раз і жодної повторної
+               основі пароля щоразу при push змін <em>(проте ви також можете кешувати свої облікові дані git 🤔)</em>, але ssh ви налаштовуєте лише один раз і жодної повторної
                автентифікації не потрібно.
              </div>
            </div>
@@ -255,7 +223,7 @@ import resume_template from "../assets/resume_template.png";
 
 11. Повернись назад на `main` гілку - `git checkout main`.
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Хороша робота! Тепер ти маєш почувати себе більш впевнено з командами Git. Ходімо далі!
 </div>  
   
@@ -275,20 +243,15 @@ import resume_template from "../assets/resume_template.png";
 
    > A typical résumé contains a "summary" of relevant job experience and education, as its French origin implies. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants. \***\*The goal of this project is to create an online version of the résumé using HTML, CSS, and the minimum amount of JavaScript.\*\***
 
-   <div class="bubble small subtle">
-     Добре, друже, відтепер ти повинен{" "}
-     <strong>
-       створювати завдання в GitHub Projects для кожного кроку цієї місії
-     </strong>
-     ! Таким чином ти пам’ятатимеш, що збираєшся зробити, і твій клієнт знатиме про
-     роботу, яку ти виконуєш.
+   <div className="bubble small subtle">
+     Добре, друже, відтепер ти повинен <strong>створювати завдання в GitHub Projects для кожного кроку цієї місії</strong>! Таким чином ти пам’ятатимеш, що збираєшся зробити, і твій клієнт знатиме про роботу, яку ти виконуєш.
    </div>
 
 2. Додай наступні завдання до проекту **"Resume"** проекту та перетвори їх на issues —
    використовуй GitHub **Labels**, **Assignees**, і **Milestones** _([**Mastering Issues**](https://guides.github.com/features/issues/) пояснює як і чому)_:
    Додай задані **описи** до завдань. (Інструкції, виділені жирним - важливі, не ігноруй їх 😉)
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Вміння добре складати завдання, чітко описувати проблеми і звітувати про їх
      вирішення допоможе знайти спільну мову з проджект-менеджером замовника.
      Окрім того, в світі open source більшість корисних розмов та інформація
@@ -333,15 +296,11 @@ import resume_template from "../assets/resume_template.png";
    </html>
    ```
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      That's right, <code>&amp;#x1F609;</code> is a{" "}
-     <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609">
-       <strong>Unicode code for an emoji</strong>
-     </a>
-     .
-   </div>
-     
-   <div class="bubble small subtle">
+     <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609"><strong>Unicode code for an emoji</strong></a>.
+   </div>     
+   <div className="bubble small subtle">
       Psst, please add this task to <strong>Homepage</strong> project. Oh, also convert it to an issue while you're at it
    </div>
 
@@ -349,7 +308,7 @@ import resume_template from "../assets/resume_template.png";
 
 4. Застейдж та закоміть зміни - `git add index.html` та `git commit -m "Added index.html template"`
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Між іншим, будь ласка, надавайте своїм комітам змістовні повідомлення, i.e.
      🤗"Updated Résumé Contacts block".
    </div>
@@ -360,14 +319,14 @@ import resume_template from "../assets/resume_template.png";
    Постав title _"First release to production"_, визнач метаданні _(assignees, labels, projects)_.
    Потім <strong>змердж</strong> pull request.
 
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       This looks like a task too - add it to <strong>Homepage</strong> project.
    </div>
 
 7. Перейди до **Settings** репозиторію і налаштуй **GitHub Pages** (з `main` гілки), онови опис репозиторію з коректним **посиланням**.
    Перейди за посиланням, щоб перевірити, чи все в порядку – ви повинні побачити вміст index.html.
    
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       Create a task for this in <strong>Homepage</strong> project.
    </div>
 
@@ -385,7 +344,7 @@ import resume_template from "../assets/resume_template.png";
 
 1. Створи нову гілку `feature/head` (на основі `develop` гілки).
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Розділяючи свою роботу на багато гілок, можна швидко і вправно виправляти баги
   на сервері, мати окремо стабільну версію (<code>release</code>), яка готова до
   релізу (шляхом злиття в <code>main</code>), а також ще версію, в якій ведеться
@@ -698,7 +657,7 @@ import resume_template from "../assets/resume_template.png";
 
 4. Як закінчиш ― <strong>закоміть</strong> свої зміни, <strong>запуш</strong> гілку, створи новий <strong>pull request</strong> і <strong>змердж</strong> в `develop`
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Якщо гілку не пушнути нагору, а змерджити локально через{" "}
   <code>git merge</code>, то віддалений сервер не буде нічого знати про
   існування гілки, відтак і не покаже її у Insights → Network
@@ -712,7 +671,7 @@ import resume_template from "../assets/resume_template.png";
 
     1. Відкрий прев'ю index.html в браузері
 
-      <div class="bubble small subtle">
+      <div className="bubble small subtle">
         Одним зі способів є встановити http-server{" "}
         <code>npm install --global http-server</code> і потім заранити
         <code> http-server -c-1</code> в робочій папці.
@@ -918,7 +877,7 @@ import resume_template from "../assets/resume_template.png";
     10. Продовжуй далі та заповни резюме <strong>ВЛАСНОЮ</strong> інформацією -
        Сміливо додавай нові блоки, змінюй структуру, стилі. Пасхалки також вітаються 😉
 
-        <div class="bubble small subtle">
+        <div className="bubble small subtle">
           Ми дуже любимо Булку, але ми б також хотіли познайомитися з тобою ближче.
           Тож, будь ласка, створи власне резюме – і отримай додаткові бали 😉
         </div>
@@ -929,7 +888,7 @@ import resume_template from "../assets/resume_template.png";
 
 4.  Відкрий pull request і <strong>змредж `develop` в `main` гілку</strong>.
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Будь ласка, не забудьте об’єднати останні зміни в main гілку – ми
   перевірятимемо лише її.
 </div>
@@ -1108,7 +1067,7 @@ import resume_template from "../assets/resume_template.png";
   </Accordion>
 </div>
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Не хвилюйся 😌, якщо твій репозиторій не отримав 10 — самотужки за короткий
   проміжок часу репозиторії на 10 не складаються 😝. Хтось вкладе весь свій час
   і сили в сам проект, але не встигне оформити репозиторій, а хтось зробить
@@ -1117,15 +1076,5 @@ import resume_template from "../assets/resume_template.png";
   некомфортну для cебе область і досягти успіхів там — то це взагалі супер!
 </div>
 
-export const metadata = {
-  orderId: 1,
-  author: "Viktoriia Vasylenko",
-  title: "Git Homework",
-  description: "",
-  keywords: ["hola", "guapa"],
-  duration: "31 min",
-  publishedAt: "2021-11-18T10:00:00",
-  hiddenFromMainPage: true,
-};
-
 export default Lecture;
+export { SEO as Head };

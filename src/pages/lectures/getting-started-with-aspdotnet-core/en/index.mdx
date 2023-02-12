@@ -1,5 +1,17 @@
-import { Lecture, SlackMessage, TimelineOfContents, Level, ThatsAllFolks, VideoWrapper, Language } from "../../../../components";
-import { serhiiYanchuk2023Avatar } from "../../../../assets/images/avatars/intro-rounded";
+---
+orderId: 5
+author: "Serhii Yanchuk"
+title: "Getting started with ASP.NET Core"
+description: "After a short introduction about the advantages of <strong>.NET</strong>, Serhii will demonstrate how to create an application on <strong>ASP.NET Core</strong> using <strong>ASP.NET Core Web API</strong>, will code services and controllers, and then explain what dependency injection, routing, middleware and minimal API."
+keywords: ["hola", "guapa"]
+duration: "30 хв"
+publishedAt: "2022-01-02T00:00:00"
+hiddenFromMainPage: true
+---
+
+import { Lecture } from '~/layouts';
+import { SEO } from '~/partials';
+import { serhiiYanchuk2023Avatar } from "~/assets/images/avatars/intro-rounded";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/pro-solid-svg-icons";
 import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -16,14 +28,13 @@ import SnippetL04S03 from "../assets/snippets/snippet-l04-s03.mdx";
 import SnippetL04S04 from "../assets/snippets/snippet-l04-s04.mdx";
 import SnippetL04S05 from "../assets/snippets/snippet-l04-s05.mdx";
 import SnippetL04S06 from "../assets/snippets/snippet-l04-s06.mdx";
-import '../styles.css';
 
 <div><h1><strong>Getting started with ASP.NET Core</strong></h1></div>
 
 <Language
   currentLanguage="en"
   languages={{
-    "ua": "lectures/getting-started-with-aspdotnet-core/ua",
+    "ua": "lectures/getting-started-with-aspdotnet-core/",
     "en": "lectures/getting-started-with-aspdotnet-core/en"
   }}
 />
@@ -33,25 +44,25 @@ import '../styles.css';
 </VideoWrapper>
 
 <div>
-  <div class="author">
-    <div class="avatar-wrapper">
-      <object class="avatar-object" data={serhiiYanchuk2023Avatar} role="img" aria-label="Serhii Yanchuk"></object>
+  <div className="author">
+    <div className="avatar-wrapper">
+      <object className="avatar-object" data={serhiiYanchuk2023Avatar} role="img" aria-label="Serhii Yanchuk"></object>
     </div>
-    <div class="profile">
-      <h3 class="name">Serhii Yanchuk</h3>
-      <ul class="contacts">
-        <li><a href="https://www.linkedin.com/in/serhii-yanchuk-b304331a6/" rel="author" class="linkedin"><FontAwesomeIcon icon={faLinkedin} className="icon" /><span>serhii-yanchuk</span></a></li>
-        <li><a href="https://www.instagram.com/serhii._.yanchuk/" rel="author" class="instagram"><FontAwesomeIcon icon={faInstagram} className="icon" /><span>serhii._.yanchuk</span></a></li>
+    <div className="profile">
+      <h3 className="name">Serhii Yanchuk</h3>
+      <ul className="contacts">
+        <li><a href="https://www.linkedin.com/in/serhii-yanchuk-b304331a6/" rel="author" className="linkedin"><FontAwesomeIcon icon={faLinkedin} className="icon" /><span>serhii-yanchuk</span></a></li>
+        <li><a href="https://www.instagram.com/serhii._.yanchuk/" rel="author" className="instagram"><FontAwesomeIcon icon={faInstagram} className="icon" /><span>serhii._.yanchuk</span></a></li>
       </ul>
-      <p class="about">
+      <p className="about">
         Serhii works at <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> as backend developer. He enjoys coding and making three-point shots in basketball. Therefore, if you are from Kyiv and want to combine a conversation about code with a game in basketball, contact him :D
       </p>
     </div>
   </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
+  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
     <strong>Hello!</strong> 👋<br />
     I'll give you tips and tricks to better understand how our tech stack works. You'll have an ASP.NET Core web application by the end of this lesson. This is an introductory lecture, so:
-    <ol class="compact inverted">
+    <ol className="compact inverted">
       <li>some things may have to be googled yourself;</li>
       <li>maybe you already know all this (repetition won't hurt anyway).</li>
     </ol>
@@ -59,7 +70,7 @@ import '../styles.css';
   </div>
 </div>
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 1em;">
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 1 + "em"}}>
   <TimelineOfContents timeline={[{
     linkTo: "#intro-to-dotnet",
     title: "Intro to .NET"
@@ -99,23 +110,23 @@ There were times when the term ".NET" meant Windows platform only. This platform
 
 <h5>What you can build with .NET</h5>
 
-<div class="columns">
-  <div class="column col-6">
-    <div class="panel">
-      <div class="panel-header">
+<div className="columns">
+  <div className="column col-6">
+    <div className="panel">
+      <div className="panel-header">
         <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview"><strong>ASP.NET Core MVC</strong></a>
       </div>
-      <div class="panel-body">
+      <div className="panel-body">
         Web apps which implement Model-View-Controller pattern and use Razor for HTML markdown with C# snippets
       </div>
     </div>
   </div>
-  <div class="column col-6">
-    <div class="panel">
-      <div class="panel-header">
+  <div className="column col-6">
+    <div className="panel">
+      <div className="panel-header">
         <a href="https://docs.microsoft.com/en-us/aspnet/core/web-api/"><strong>ASP.NET Core Web API</strong></a>
       </div>
-      <div class="panel-body">
+      <div className="panel-body">
         Backend app which implements business logic and can be used by any client <em>(whether it’s Angular-, React-, or WhateverFramework-based frontend, mobile apps, etc.)</em>
       </div>
     </div>
@@ -163,12 +174,12 @@ There were times when the term ".NET" meant Windows platform only. This platform
 <h5>Create a new app by running <code>dotnet new webapi</code> or using features of your IDE <sup><strong><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup">[1]</a></strong></sup></h5>
 
 <ul>
-  <li class="details">
+  <li className="details">
     <input type="checkbox" id="accordion-2-1" />
-    <label class="summary" for="accordion-2-1">
+    <label className="summary" htmlFor="accordion-2-1">
       <strong>Program.cs</strong>
     </label>
-    <div class="details-body">
+    <div className="details-body">
       This is how the entry point looks like:
       <SnippetL02S01 />
       Here we can configure services that are used by your application and define how the application will respond to individual HTTP requests (you can setup pipelines which will process requests).
@@ -182,67 +193,67 @@ I’m going to show you how we can write API using **ASP.NET Core Web API**.
 
 1.  First, let’s create the simple application that retrives all binary students. Create new files called **BinaryStudentsController.cs** in the **Controllers** folder and **BinaryStudent.cs** where you want
     <ul>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-1" />
-        <label class="summary" for="accordion-3-1">
+        <label className="summary" htmlFor="accordion-3-1">
           <strong>BinaryStudentsController.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S01 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-2" />
-        <label class="summary" for="accordion-3-2">
+        <label className="summary" htmlFor="accordion-3-2">
           <strong>BinaryStudent.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S02 />
         </div>
       </li>
     </ul>
 
 2.  You can use `dotnet run` command to start the server. To make sure that our API is working, we should send a request to the `BinaryStudentsController`. Open [**https://localhost:7088/binarystudents**](https://localhost:7088/binarystudents) — you should receive students in JSON format as a response (you can find your port number in launchSettings.json file).
-    <div class="bubble small subtle">
+    <div className="bubble small subtle">
       You can use Postman to test your API or, for example, use an extension for VSCode ― <a href="https://marketplace.visualstudio.com/items?itemName=humao.rest-client"><strong>REST Client</strong></a>
     </div>
 
 3. Let’s practice a bit more and complicate our application, add more endpoints and dependencies. The modified controller will be a complete CRUD (C - create, R - read, U - update, D - delete) controller.
   Writing business logic in controllers isn’t the best idea, so it would be better if we created a separate service for this purpose.
     <ul>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-3" />
-        <label class="summary" for="accordion-3-3">
+        <label className="summary" htmlFor="accordion-3-3">
           <strong>IBinaryStudentService.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S03 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-4" />
-        <label class="summary" for="accordion-3-4">
+        <label className="summary" htmlFor="accordion-3-4">
           <strong>BinaryStudentService.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S04 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-5" />
-        <label class="summary" for="accordion-3-5">
+        <label className="summary" htmlFor="accordion-3-5">
           <strong>BinaryStudentsController.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           <SnippetL03S05 />
         </div>
       </li>
-      <li class="details">
+      <li className="details">
         <input type="checkbox" id="accordion-3-6" />
-        <label class="summary" for="accordion-3-6">
+        <label className="summary" htmlFor="accordion-3-6">
           <strong>Program.cs</strong>
         </label>
-        <div class="details-body">
+        <div className="details-body">
           We need to register our service. Read more about this in Dependency Injection paragraph 
           <SnippetL03S06 />
         </div>
@@ -318,19 +329,9 @@ In order to use them, we have to wrap the return value type in the `ActionResult
 <SnippetL04S06 />
 
 <ThatsAllFolks />
-<div class="bubble">
+<div className="bubble">
   That's it in brief about ASP.NET Core. That's all, thank you very much for your attention🎩! Ask questions and leave feedback on the lecture on the academy's website. Good luck with homework, see you soon, bye!
 </div>
 
-export const metadata = {
-  orderId: 5,
-  author: "Serhii Yanchuk",
-  title: "Getting started with ASP.NET Core",
-  description: "After a short introduction about the advantages of <strong>.NET</strong>, Serhii will demonstrate how to create an application on <strong>ASP.NET Core</strong> using <strong>ASP.NET Core Web API</strong>, will code services and controllers, and then explain what dependency injection, routing, middleware and minimal API.",
-  keywords: ["hola", "guapa"],
-  duration: "30 хв",
-  publishedAt: "2022-01-02T00:00:00",
-  hiddenFromMainPage: true,
-}
-
 export default Lecture;
+export { SEO as Head };

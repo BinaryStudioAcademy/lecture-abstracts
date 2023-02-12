@@ -1,0 +1,7 @@
+```js
+app.get('/:param', function (req, res) {
+  console.log(req.query); // query-params object
+  console.log(req.params.value); // value of param, located in the URL at the specified position '/:param'
+  res.status(200).json({ message: 'Hello World' }); // method "status()", sets status code for response, and "json()" configures Content-Type header for JSON format
+})
+```

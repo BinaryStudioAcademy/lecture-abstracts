@@ -1,5 +1,17 @@
-import { Lecture, VideoWrapper, Level, Language, TimelineOfContents } from "../../../../components";
-import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/intro-rounded";
+---
+orderId: 1
+author: "Viktoriia Vasylenko"
+title: "How to work with Git"
+description: "Вікторія розповідає про основи <strong>Git</strong> та найбільш поширені команди. А також показує весь процес роботи з Git: від клонування репозиторію до створення пул-реквестів."
+keywords: ["hola", "guapa"]
+duration: "38 min"
+publishedAt: "2021-12-08T10:00:00"
+hiddenFromMainPage: false
+---
+
+import { Lecture } from "~/layouts";
+import { SEO } from '~/partials';
+
 
 <div>
   <h1>
@@ -11,35 +23,33 @@ import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/
   currentLanguage="ua"
   languages={{
     en: "lectures/how-to-work-with-git/en",
-    ua: "lectures/how-to-work-with-git/ua",
+    ua: "lectures/how-to-work-with-git/",
   }}
 />
 
 <div>
-  <div class="author">
-      <div class="avatar-wrapper">
-        <object class="avatar-object" role="img" data={viktoriiaVasylenko2021Avatar} aria-label="Viktoriia Vasylenko"></object>
-      </div>
-      <div class="profile">
-        <h3 class="name">Вікторія Василенко</h3>
-        <p class="about">
+  <div className="author">
+      <Avatar name="Viktoriia Vasylenko" />
+      <div className="profile">
+        <h3 className="name">Вікторія Василенко</h3>
+        <p className="about">
           Вікторія працює в Binary Studio як Full stack developer після закінчення Binary Studio Academy в 2020.
         </p>
       </div>
     </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
+  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
     <strong>Привіт!</strong> 👋<br />Вітаємо на лекції по Git. Тут ти знайдеш короткий конспект до лекції з основними Git командами та корисними посиланнями. Поїхали!
   </div>
 </div>
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 2em;">
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + "em"}}>
   <h2><strong>План лекції</strong></h2>
   <TimelineOfContents timeline={[{
     linkTo: "#setting-up-the-repository",
     title: "Налаштування репозиторію"
   }, {
     linkTo: "#practicing-git",
-    title: <span>Основні <code>git</code> команди</span>
+    title: "<span>Основні <code>git</code> команди</span>",
   }, {
     linkTo: "#git-flow",
     title: "Git flow"
@@ -50,7 +60,7 @@ import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/
 </div>
 
 <VideoWrapper duration="38m 2s">
-  <iframe src="https://www.youtube.com/embed/HJ7NW6zatXo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/HJ7NW6zatXo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
 <Level id="setting-up-the-repository" number="1" name="Налаштування репозиторію" difficulty="Beginner" objectives="How to create and clone the repo" />
@@ -127,16 +137,5 @@ import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/
 
 2. `git reset <commit>` очищує історію комітів впритул до заданого.
 
-
-export const metadata = {
-  orderId: 1,
-  author: "Viktoriia Vasylenko",
-  title: "How to work with Git",
-  description: "Вікторія розповідає про основи <strong>Git</strong> та найбільш поширені команди. А також показує весь процес роботи з Git: від клонування репозиторію до створення пул-реквестів.",
-  keywords: ["hola", "guapa"],
-  duration: "38 min",
-  publishedAt: "2021-12-08T10:00:00",
-  hiddenFromMainPage: false,
-}
-
 export default Lecture;
+export { SEO as Head };
