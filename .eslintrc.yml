@@ -4,8 +4,8 @@ env:
   es2021: true
 
 ignorePatterns:
-  - 'public/**/*.js'
-  - '.cache/**/*.js'
+  - 'public/'
+  - '.cache/'
   - 'src/pages/**/*.mdx'
 
 extends:
@@ -13,13 +13,26 @@ extends:
   - plugin:import/recommended
   - plugin:import/typescript
   - plugin:@typescript-eslint/recommended
-  - plugin:mdx/recommended
   - plugin:prettier/recommended
-  - plugin:react/recommended
 
-settings:
-  'mdx/code-blocks':
-    - true
+overrides:
+  - files:
+    - 'gatsby-config.ts'
+    rules:
+      '@typescript-eslint/quotes':
+        - off
+  - files:
+    - '*.json'
+    rules:
+      '@typescript-eslint/quotes':
+        - off
+      '@typescript-eslint/comma-dangle':
+        - off
+      '@typescript-eslint/semi':
+        - off 
+
+
+
 
 parser: "@typescript-eslint/parser"
 
