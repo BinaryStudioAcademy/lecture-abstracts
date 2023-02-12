@@ -38,27 +38,3 @@
   align-items: flex-end;
   display: flex;
 }
-/* .lectureLink {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-}
-.lectureLink::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-
-  width: 0%;
-  height: 100%;
-
-  border-bottom: 2px solid black;
-
-  transition: width 0.3s ease;
-}
-
-.lectureLink:hover::after {
-  left: 0;
-  width: 100%;
-  transition: width 0.3s ease;
-} */
