@@ -31,9 +31,6 @@ overrides:
       '@typescript-eslint/semi':
         - off 
 
-
-
-
 parser: "@typescript-eslint/parser"
 
 rules:
