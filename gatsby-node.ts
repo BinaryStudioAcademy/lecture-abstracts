@@ -1,7 +1,7 @@
 import { createFilePath } from 'gatsby-source-filesystem';
 import { GatsbyNode } from 'gatsby';
 
-export const onCreateNode: GatsbyNode['onCreateNode'] = ({
+const onCreateNode: GatsbyNode['onCreateNode'] = ({
   node,
   actions,
   getNode,
@@ -16,7 +16,7 @@ export const onCreateNode: GatsbyNode['onCreateNode'] = ({
   }
 };
 
-export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
+const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   stage,
   loaders,
   actions,
@@ -34,3 +34,5 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
     });
   }
 };
+
+export { onCreateNode, onCreateWebpackConfig };
