@@ -111,7 +111,8 @@
     "url": "https://github.com/binarystudioacademy/lecture-abstracts/issues"
   },
   "engines": {
-    "node": "18.x"
+    "node": "18.x",
+    "npm": "8.x"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
