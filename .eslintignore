@@ -1,5 +1,0 @@
-**/*.md
-**/*.mdx
-node_modules
-public
-.cache
