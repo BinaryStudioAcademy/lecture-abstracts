@@ -3,7 +3,26 @@ import { TimeUnit } from './constants/time-unit';
 
 import './SlackMessage.css';
 
-const SlackMessage: React.FC<SlackMessageProps> = ({
+type Emotion = {
+  emoji: string;
+  count: number;
+};
+
+type ReplyAuthor = {
+  name: string;
+  avatarUrl: string;
+};
+
+type SlackMessageProps = {
+  senderId: string;
+  senderName: string;
+  senderAvatarUrl: string;
+  reactions: Emotion[];
+  replies: ReplyAuthor[];
+  senderDate: number;
+};
+
+const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
   senderId = '',
   senderName = '',
   senderAvatarUrl = '',
@@ -87,26 +106,6 @@ const SlackMessage: React.FC<SlackMessageProps> = ({
       </div>
     </div>
   );
-};
-
-type Emotion = {
-  emoji: string;
-  count: number;
-};
-
-type ReplyAuthor = {
-  name: string;
-  avatarUrl: string;
-};
-
-type SlackMessageProps = {
-  senderId: string;
-  children: React.ReactNode;
-  senderName: string;
-  senderAvatarUrl: string;
-  reactions: Emotion[];
-  replies: ReplyAuthor[];
-  senderDate: number;
 };
 
 export default SlackMessage;
