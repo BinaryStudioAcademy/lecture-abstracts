@@ -2,21 +2,21 @@ import type { GatsbyConfig } from 'gatsby';
 import remarkGfm from 'remark-gfm';
 
 const config: GatsbyConfig = {
-  pathPrefix: `/lecture-abstracts`,
+  pathPrefix: '/lecture-abstracts',
   siteMetadata: {
-    title: `Binary Studio Academy`,
-    description: `Lectures for the 2nd stage of the Binary Studio Academy`,
-    author: `Bulka`,
+    title: 'Binary Studio Academy',
+    description: 'Lectures for the 2nd stage of the Binary Studio Academy',
+    author: 'Bulka',
   },
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        extensions: [`.mdx`, `.md`],
+        extensions: ['.mdx', '.md'],
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
               classPrefix: 'language-',
               inlineCodeMarker: '±',
@@ -33,21 +33,21 @@ const config: GatsbyConfig = {
     },
     'gatsby-plugin-sass',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-135348958-2',
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Binary Studio Academy'`,
-        short_name: `BSA`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/icon-48x48.png`,
+        name: 'Binary Studio Academy',
+        short_name: 'BSA',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/assets/icon-48x48.png',
       },
     },
     {

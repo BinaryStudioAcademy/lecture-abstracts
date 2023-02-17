@@ -17,11 +17,6 @@ extends:
 
 overrides:
   - files:
-    - 'gatsby-config.ts'
-    rules:
-      '@typescript-eslint/quotes':
-        - off
-  - files:
     - '*.json'
     rules:
       '@typescript-eslint/quotes':

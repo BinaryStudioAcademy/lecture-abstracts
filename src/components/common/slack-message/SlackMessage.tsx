@@ -19,7 +19,7 @@ type SlackMessageProps = {
   senderAvatarUrl: string;
   reactions: Emotion[];
   replies: ReplyAuthor[];
-  senderDate: number;
+  senderDate?: number;
 };
 
 const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
