@@ -1,5 +1,5 @@
-@import "node_modules/spectre.css/src/spectre";
-@import "node_modules/spectre.css/src/spectre-exp";
+@import 'node_modules/spectre.css/src/spectre';
+@import 'node_modules/spectre.css/src/spectre-exp';
 
 /* Spectre.css overrides */
 .content ul,
@@ -14,8 +14,8 @@
   list-style: none outside none;
 }
 .content ul:not(.step) > li:before {
-  content: "●";
-  font-family: "Arial";
+  content: '●';
+  font-family: 'Arial';
   float: left;
   width: 1.5em;
   margin-left: -1.5em;
@@ -72,7 +72,7 @@
   outline: none;
 }
 .details > input:after {
-  content: " ";
+  content: ' ';
   border-top: 0.35em solid transparent;
   border-bottom: 0.35em solid transparent;
   border-left: 0.5em solid black;
@@ -97,7 +97,7 @@
   margin-top: 0.5em;
 }
 .details > div:after {
-  content: " ";
+  content: ' ';
   clear: both;
   display: block;
 }
@@ -230,7 +230,8 @@ div.details > input:first-child + label + .details-body {
   background: none;
   font-size: 85%;
   line-height: 1.4;
-  font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace;
+  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier,
+    monospace;
   color: inherit;
 }
 .content :not(pre) > code {
@@ -408,26 +409,26 @@ div.details > input:first-child + label + .details-body {
 }
 .content
   .messages
-  input[id="lionel-messi"]:checked
-  ~ div[data-from="lionel-messi"] {
+  input[id='lionel-messi']:checked
+  ~ div[data-from='lionel-messi'] {
   display: block;
 }
 .content
   .messages
-  input[id="andres-iniesta"]:checked
-  ~ div[data-from="andres-iniesta"] {
+  input[id='andres-iniesta']:checked
+  ~ div[data-from='andres-iniesta'] {
   display: block;
 }
 .content
   .messages
-  input[id="donald-trump"]:checked
-  ~ div[data-from="donald-trump"] {
+  input[id='donald-trump']:checked
+  ~ div[data-from='donald-trump'] {
   display: block;
 }
-.content .messages input[id="ryu"]:checked ~ div[data-from="ryu"] {
+.content .messages input[id='ryu']:checked ~ div[data-from='ryu'] {
   display: block;
 }
-.content .messages input[id="you"]:checked ~ div[data-from="you"] {
+.content .messages input[id='you']:checked ~ div[data-from='you'] {
   display: block;
 }
 .content .messages .message {
@@ -444,7 +445,7 @@ div.details > input:first-child + label + .details-body {
   padding: 0;
 }
 .content .table-of-contents .step .step-item:before {
-  content: "";
+  content: '';
   height: 2px;
   left: 10px;
   position: absolute;
@@ -552,21 +553,22 @@ div.details > input:first-child + label + .details-body {
 .content table {
   border-collapse: collapse;
   border-style: hidden;
-  border: 2px solid rgba(201,209,217,.5);
- }
+  border: 2px solid rgba(201, 209, 217, 0.5);
+}
 
- .content table td {
+.content table td {
   padding: 0.5rem;
-  border: 2px solid rgba(201,209,217,.5);
+  border: 2px solid rgba(201, 209, 217, 0.5);
 }
 .content table th {
   padding: 0.5rem;
-  border: 2px solid rgba(201,209,217,.5);
+  border: 2px solid rgba(201, 209, 217, 0.5);
 }
-.content td:first-child, .content th:first-child {
+.content td:first-child,
+.content th:first-child {
   border-left: none;
 }
 
- .content thead {
-  background-color: rgba(201,209,217,.5);
+.content thead {
+  background-color: rgba(201, 209, 217, 0.5);
 }

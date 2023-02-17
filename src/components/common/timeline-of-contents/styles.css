@@ -17,29 +17,29 @@
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
-  margin: .2rem 0;
+  margin: 0.2rem 0;
   width: 100%;
 }
 
 .step .step-item a::before {
   background: #5755d9;
-  border: .1rem solid #fff;
+  border: 0.1rem solid #fff;
   border-radius: 50%;
-  content: "";
+  content: '';
   display: block;
-  height: .6rem;
+  height: 0.6rem;
   left: 50%;
   position: absolute;
-  top: .2rem;
+  top: 0.2rem;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: .6rem;
+  width: 0.6rem;
   z-index: 1;
 }
 
 .content .table-of-contents .step .step-item::before {
   background: #5755d9;
-  content: "";
+  content: '';
   height: 2px;
   left: 10px;
   position: absolute;
