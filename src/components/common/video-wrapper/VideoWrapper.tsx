@@ -34,4 +34,4 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
   );
 };
 
-export default VideoWrapper;
+export { VideoWrapper };

@@ -50,4 +50,4 @@ const Level: React.FC<Props> = ({
   );
 };
 
-export default Level;
+export { Level };

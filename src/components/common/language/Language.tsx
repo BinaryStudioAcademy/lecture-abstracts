@@ -38,4 +38,4 @@ const Language: React.FC<Props> = ({ languages, currentLanguage }) => (
   </div>
 );
 
-export default Language;
+export { Language };

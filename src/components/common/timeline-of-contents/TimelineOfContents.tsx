@@ -44,4 +44,4 @@ const TimelineOfContents: React.FC<TimeLineProps> = ({
   </div>
 );
 
-export default TimelineOfContents;
+export { TimelineOfContents };

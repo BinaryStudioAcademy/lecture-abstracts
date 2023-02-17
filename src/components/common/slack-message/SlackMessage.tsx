@@ -108,4 +108,4 @@ const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
   );
 };
 
-export default SlackMessage;
+export { SlackMessage };

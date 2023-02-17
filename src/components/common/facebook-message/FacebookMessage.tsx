@@ -20,4 +20,4 @@ const FacebookMessage: React.FC<Props> = ({ children, small, subtle }) => {
   );
 };
 
-export default FacebookMessage;
+export { FacebookMessage };

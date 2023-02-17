@@ -20,4 +20,4 @@ const Flute: React.FC = () => {
   );
 };
 
-export default Flute;
+export { Flute };

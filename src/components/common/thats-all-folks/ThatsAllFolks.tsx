@@ -32,4 +32,4 @@ const ThatsAllFolks: React.FC<Props> = ({ source, children }) => {
   );
 };
 
-export default ThatsAllFolks;
+export { ThatsAllFolks };

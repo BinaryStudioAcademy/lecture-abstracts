@@ -21,4 +21,4 @@ const Avatar: React.FC<Props> = ({ name, className }) => {
   );
 };
 
-export default Avatar;
+export { Avatar };

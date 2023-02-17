@@ -11,4 +11,4 @@ const ShrugMessage: React.FC<{ children: ReactNode }> = ({ children }) => (
   </div>
 );
 
-export default ShrugMessage;
+export { ShrugMessage };

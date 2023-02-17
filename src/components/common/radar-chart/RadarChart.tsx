@@ -148,4 +148,4 @@ const RadarChart: React.FC<Props> = ({ labels, datasets }) => {
   );
 };
 
-export default RadarChart;
+export { RadarChart };
