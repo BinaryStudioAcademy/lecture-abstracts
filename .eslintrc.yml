@@ -14,6 +14,14 @@ extends:
   - plugin:@typescript-eslint/recommended
   - plugin:prettier/recommended
 
+overrides:
+  - files:
+    - gatsby-config.ts
+    - index.d.ts
+    - src/pages/**
+    rules: 
+      import/no-default-export:
+      - off
 
 rules:
   no-multiple-empty-lines:

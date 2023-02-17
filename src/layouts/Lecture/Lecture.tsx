@@ -46,4 +46,4 @@ const Lecture: React.FC<LectureProps> = ({
   );
 };
 
-export default Lecture;
+export { Lecture };

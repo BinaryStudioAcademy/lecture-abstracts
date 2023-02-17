@@ -24,4 +24,4 @@ const Page: React.FC<Props> = ({ children }) => (
   </>
 );
 
-export default Page;
+export { Page };
