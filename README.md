@@ -1,1 +1,2 @@
-# Binary Studio Academy Stage 2
+# Binary Studio Academy
+## Lectures for the second stage
