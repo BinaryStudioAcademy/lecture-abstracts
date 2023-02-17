@@ -1,7 +1,7 @@
 import React from 'react';
 import { TimeUnit } from './constants/time-unit';
 
-import './slackMessage.css';
+import './slack-message.css';
 
 type Emotion = {
   emoji: string;

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/pro-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/pro-regular-svg-icons';
 
-import './videoWrapper.css';
+import './video-wrapper.css';
 
 type VideoWrapperProps = {
   children: React.ReactNode;

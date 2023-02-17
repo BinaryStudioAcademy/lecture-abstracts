@@ -8,7 +8,7 @@ import { feedbackStarters } from './data/feedback-starters';
 import { ChartDatasets } from '~/types';
 import 'chartjs-plugin-dragdata';
 
-import './radarChart.css';
+import './radar-chart.css';
 
 type Props = {
   labels: string[];

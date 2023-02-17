@@ -69,6 +69,7 @@
     "spectre.css": "0.5.9"
   },
   "devDependencies": {
+    "@ls-lint/ls-lint": "1.11.2",
     "@types/chart.js": "2.9.37",
     "@types/node": "18.11.19",
     "@types/react": "18.0.27",
@@ -102,6 +103,7 @@
     "pre-commit": "npx lint-staged",
     "lint:type": "npx tsc --noEmit",
     "lint:js": "npx eslint . --resolve-plugins-relative-to .",
+    "lint:fs": "ls-lint",
     "lint:editorconfig": "editorconfig-checker -exclude '\\.mdx$'",
     "lint": "npm run lint:js && npm run lint:type"
   },

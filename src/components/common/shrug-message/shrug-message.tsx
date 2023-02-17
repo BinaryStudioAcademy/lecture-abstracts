@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import shrugGif from '~/assets/images/shrug.gif';
-import './shrugMessage.css';
+import './shrug-message.css';
 
 const ShrugMessage: React.FC<{ children: ReactNode }> = ({ children }) => (
   <div className="hero hero-lg">
