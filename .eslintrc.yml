@@ -6,7 +6,6 @@ env:
 ignorePatterns:
   - 'public/'
   - '.cache/'
-  - 'src/pages/**/*.mdx'
 
 extends:
   - eslint:recommended
@@ -15,18 +14,6 @@ extends:
   - plugin:@typescript-eslint/recommended
   - plugin:prettier/recommended
 
-overrides:
-  - files:
-    - '*.json'
-    rules:
-      '@typescript-eslint/quotes':
-        - off
-      '@typescript-eslint/comma-dangle':
-        - off
-      '@typescript-eslint/semi':
-        - off 
-
-parser: "@typescript-eslint/parser"
 
 rules:
   no-multiple-empty-lines:
@@ -79,4 +66,4 @@ rules:
   import/no-unresolved:
     - off
   import/no-default-export:
-    - off
+    - error
