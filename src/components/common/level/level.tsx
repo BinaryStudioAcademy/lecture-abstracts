@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowUp } from '@fortawesome/pro-regular-svg-icons';
-import './Level.css';
+import './level.css';
 
 type Labels = {
   level: string;

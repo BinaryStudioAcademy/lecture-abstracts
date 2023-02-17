@@ -74,4 +74,4 @@ const LecturesGrid: React.FC = () => {
   );
 };
 
-export default LecturesGrid;
+export { LecturesGrid };

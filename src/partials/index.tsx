@@ -1,3 +1,3 @@
-export { Header } from './header/Header';
-export { Footer } from './footer/Footer';
-export { SEO } from './seo/SEO';
+export { Header } from './header/header';
+export { Footer } from './footer/footer';
+export { SEO } from './seo/seo';

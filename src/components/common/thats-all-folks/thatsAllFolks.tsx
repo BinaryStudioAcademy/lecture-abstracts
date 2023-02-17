@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import thatsAllFolksAudio from '~/assets/audio/thats-all-folks.mp3';
 
-import './ThatsAllFolks.css';
+import './thatsAllFolks.css';
 
 type Props = {
   source?: string;

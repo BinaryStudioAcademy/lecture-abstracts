@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
 
-import './Language.css';
+import './language.css';
 
 type Props = {
   currentLanguage: string;

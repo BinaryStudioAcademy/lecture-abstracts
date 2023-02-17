@@ -48,4 +48,4 @@ const LogoLink: React.FC = () => {
   );
 };
 
-export default LogoLink;
+export { LogoLink };

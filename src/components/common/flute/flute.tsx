@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import rodrigoRodriguezShakuhachiFluteAudio from '~/assets/audio/rodrigo-rodriguez-shakuhachi-flute.mp3';
-import './Flute.css';
+import './flute.css';
 
 const Flute: React.FC = () => {
   const audio = useRef<HTMLAudioElement | null>(null);

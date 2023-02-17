@@ -1,2 +1,2 @@
-export { Lecture } from './Lecture/Lecture';
-export { Page } from './Page/Page';
+export { Lecture } from './lecture/lecture';
+export { Page } from './page/page';
