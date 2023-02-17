@@ -75,6 +75,7 @@
     "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.50.0",
+    "editorconfig-checker": "5.0.1",
     "eslint": "8.33.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -101,6 +102,7 @@
     "pre-commit": "npx lint-staged",
     "lint:type": "npx tsc --noEmit",
     "lint:js": "npx eslint . --resolve-plugins-relative-to .",
+    "lint:editorconfig": "editorconfig-checker -exclude '\\.mdx$'",
     "lint": "npm run lint:js && npm run lint:type"
   },
   "repository": {
