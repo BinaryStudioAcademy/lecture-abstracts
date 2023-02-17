@@ -1,5 +1,5 @@
 import React from 'react';
-import Accordion from '../accordion/Accordion';
+import { Accordion } from '../accordion/Accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/pro-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/pro-regular-svg-icons';
@@ -17,7 +17,7 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
   return (
     <div className="video-wrapper">
       <Accordion>
-        <Accordion.Header>
+        <React.Fragment>
           <FontAwesomeIcon icon={faVideo} fixedWidth />
           <span className="title">
             <strong>{duration}</strong>
@@ -25,10 +25,10 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
           <span className="icon">
             <FontAwesomeIcon icon={faAngleRight} fixedWidth />
           </span>
-        </Accordion.Header>
-        <Accordion.Body>
+        </React.Fragment>
+        <React.Fragment>
           <div className="iframe-wrapper">{children}</div>
-        </Accordion.Body>
+        </React.Fragment>
       </Accordion>
     </div>
   );

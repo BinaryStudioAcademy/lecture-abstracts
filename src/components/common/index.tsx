@@ -3,7 +3,7 @@ export { default as Language } from './language/Language';
 export { default as TimelineOfContents } from './timeline-of-contents/TimelineOfContents';
 export { default as Level } from './level/Level';
 export { default as FacebookMessage } from './facebook-message/FacebookMessage';
-export { default as Accordion } from './accordion/Accordion';
+export { Accordion } from './accordion/Accordion';
 export { default as RadarChart } from './radar-chart/RadarChart';
 export { default as SlackMessage } from './slack-message/SlackMessage';
 export { default as ThatsAllFolks } from './thats-all-folks/ThatsAllFolks';

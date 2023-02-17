@@ -1,27 +1,21 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Body } from './accordion-body/AccordionBody';
-import { Header } from './accordion-header/AccordionHeader';
 
 type Props = {
+  children: [React.ReactNode, React.ReactNode];
   className?: string;
 };
-interface AccordionFC extends React.FC<React.PropsWithChildren<Props>> {
-  Body: typeof Body;
-  Header: typeof Header;
-}
 
-const Accordion: AccordionFC = ({ children, ...props }) => {
-  const { className, ...otherProps } = props;
+const Accordion: React.FC<Props> = ({ children, className }) => {
+  const [heading, content] = children;
   const classNames = classnames('accordion', className);
+
   return (
-    <div className={classNames} {...otherProps}>
-      {children}
-    </div>
+    <details className={classNames}>
+      <summary className="accordion-header">{heading}</summary>
+      <div className="accordion-body">{content}</div>
+    </details>
   );
 };
 
-Accordion.Body = Body;
-Accordion.Header = Header;
-
-export default Accordion;
+export { Accordion };
