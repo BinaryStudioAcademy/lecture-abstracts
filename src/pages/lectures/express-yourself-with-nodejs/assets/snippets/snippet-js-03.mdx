@@ -1,0 +1,21 @@
+```js
+/* express.js */
+
+// import of express
+const express = require('express')
+// express-app initialization
+const app = express()
+
+// listener for GET-requests to "/" route
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+// listener for PUT-requests to "/test" route
+app.put('/test', function (req, res) {
+  res.send('Hello World PUT')
+})
+
+// run the server
+app.listen(3000)
+```

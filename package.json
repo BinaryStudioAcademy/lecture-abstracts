@@ -1,127 +1,77 @@
 {
-  "name": "binary-studio-academy-lecture-abstracts",
+  "name": "lecture-abstracts",
   "private": true,
-  "description": "Lecture Abstracts for Binary Studio Academy",
-  "version": "0.1.0",
-  "author": {
-    "name": "Volodymyr Kushnir",
-    "email": "volodymyr.kushnir@me.com",
-    "url": "https://volodymyrkushnir.com"
-  },
-  "contributors": [
-    {
-      "name": "Roman Sahan"
-    },
-    {
-      "name": "Alexandr Tovmach",
-      "email": "alexandrtovmach@gmail.com",
-      "url": "https://alexandrtovmach.com"
-    },
-    {
-      "name": "Pavel Nemchenko"
-    },
-    {
-      "name": "Rostyslav Diakiv"
-    },
-    {
-      "name": "Nikita Krasnov"
-    },
-    {
-      "name": "Kyrylo Lesohorskyi"
-    },
-    {
-      "name": "Dasha Korotkykh",
-      "email": "dasha.korotkykh@me.com",
-      "url": "https://dariakorotkykh.com"
-    },
-    {
-      "name": "Oleksandr Danylchenko",
-      "email": "danylchenko.oleksandr@gmail.com"
-    }
-  ],
+  "version": "1.0.0",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.18",
-    "@fortawesome/free-brands-svg-icons": "5.8.2",
-    "@fortawesome/free-regular-svg-icons": "5.8.2",
-    "@fortawesome/free-solid-svg-icons": "5.8.2",
-    "@fortawesome/pro-light-svg-icons": "5.8.2",
-    "@fortawesome/pro-regular-svg-icons": "5.8.2",
-    "@fortawesome/pro-solid-svg-icons": "5.8.2",
-    "@fortawesome/react-fontawesome": "0.1.16",
-    "@gatsbyjs/reach-router": "^1.3.6",
-    "@mdx-js/mdx": "1.6.22",
-    "@mdx-js/react": "1.6.22",
-    "@mdx-js/tag": "0.20.3",
-    "chart.js": "2.8.0",
-    "chartjs-plugin-dragdata": "0.3.1",
-    "classnames": "2.2.6",
-    "copy-to-clipboard": "3.2.0",
-    "gatsby": "^4.0.0",
-    "gatsby-image": "3.11.0",
-    "gatsby-link": "^4.3.0",
-    "gatsby-plugin-google-analytics": "4.3.0",
-    "gatsby-plugin-manifest": "4.3.0",
-    "gatsby-plugin-mdx": "^3.3.0",
-    "gatsby-plugin-offline": "5.3.0",
-    "gatsby-plugin-react-helmet": "5.3.0",
-    "gatsby-plugin-sass": "5.3.0",
-    "gatsby-plugin-sharp": "4.3.0",
-    "gatsby-react-router-scroll": "^5.3.0",
-    "gatsby-remark-prismjs": "6.3.0",
-    "gatsby-source-filesystem": "4.3.0",
-    "gatsby-transformer-remark": "5.3.0",
-    "gatsby-transformer-sharp": "4.3.0",
-    "lodash": "4.17.11",
-    "node-sass": "6.0.1",
-    "prism-themes": "1.1.0",
-    "prismjs": "1.25.0",
-    "prop-types": "15.7.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-helmet": "5.2.1",
-    "react-markdown": "4.0.8",
+    "@fortawesome/free-brands-svg-icons": "6.3.0",
+    "@fortawesome/free-regular-svg-icons": "6.2.1",
+    "@fortawesome/pro-light-svg-icons": "6.2.1",
+    "@fortawesome/pro-regular-svg-icons": "6.2.1",
+    "@fortawesome/pro-solid-svg-icons": "6.2.1",
+    "@fortawesome/react-fontawesome": "0.2.0",
+    "@mdx-js/react": "2.2.1",
+    "chart.js": "2.9.3",
+    "chartjs-plugin-dragdata": "1.1.3",
+    "classnames": "2.3.2",
+    "copy-to-clipboard": "3.3.3",
+    "gatsby": "5.6.0",
+    "gatsby-plugin-alias-imports": "1.0.5",
+    "gatsby-plugin-google-analytics": "5.6.0",
+    "gatsby-plugin-manifest": "5.6.0",
+    "gatsby-plugin-mdx": "5.5.0",
+    "gatsby-plugin-sass": "6.5.0",
+    "gatsby-remark-prismjs": "7.5.0",
+    "gatsby-source-filesystem": "5.5.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark-gfm": "1.0.0",
     "spectre.css": "0.5.9"
   },
   "devDependencies": {
-    "gh-pages": "2.0.1",
-    "husky": "2.3.0",
-    "lint-staged": "8.1.7",
-    "prettier": "1.17.1"
+    "@ls-lint/ls-lint": "1.11.2",
+    "@types/chart.js": "2.9.37",
+    "@types/node": "18.11.19",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.50.0",
+    "editorconfig-checker": "5.0.1",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "gh-pages": "5.0.0",
+    "lint-staged": "13.1.1",
+    "prettier": "2.8.3",
+    "simple-git-hooks": "2.8.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "build": "gatsby clean && gatsby build --prefix-paths",
+    "build:local": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
     "prettify": "prettier --write {src/**/*.{js,jsx,json,css,scss},gatsby*.js}",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit",
     "predeploy": "gatsby clean && gatsby build --prefix-paths",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "pre-commit": "npx lint-staged",
+    "lint:type": "npx tsc --noEmit",
+    "lint:js": "npx eslint . --resolve-plugins-relative-to .",
+    "lint:fs": "ls-lint",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint": "npm run lint:js && npm run lint:type"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/binary-studio-academy/lecture-abstracts"
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
   },
-  "bugs": {
-    "url": "https://github.com/binary-studio-academy/lecture-abstracts/issues"
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "overrides": {
+    "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
+      "react": "18.2.0"
     }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css,scss},gatsby*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "devEngines": {
-    "node": "17.x",
-    "npm": "7.x"
   }
 }

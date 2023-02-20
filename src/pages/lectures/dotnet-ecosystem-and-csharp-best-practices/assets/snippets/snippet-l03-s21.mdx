@@ -11,7 +11,7 @@ namespace DotNetLecture
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(message);
         }
-        
+
         static void LogGreenMessage(string message)
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -22,13 +22,13 @@ namespace DotNetLecture
         {
             // Create delegate variable and assign method's address to it
             LogMessage logMessage = LogRedMessage;
-            
+
             // Invoke method assigned to this delegate(Invoke syntax)
             logMessage.Invoke("Hello world!\n");
 
             // Add another method to delegate's invocation list
             logMessage += LogGreenMessage;
-            
+
             // Invoke all methods assigned to this delegate
             logMessage("Second message");
 

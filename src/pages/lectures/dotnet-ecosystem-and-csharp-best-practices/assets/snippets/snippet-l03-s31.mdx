@@ -7,7 +7,7 @@ class MyFile : IDisposable
     public MyFile(string filePath)
     {
         MyFileStream = File.Create(filePath);
-        // Open stream for working 
+        // Open stream for working
         MyStream = new StreamWriter(MyFileStream);
     }
 
@@ -20,23 +20,23 @@ class MyFile : IDisposable
         MyFileStream?.Dispose();
     }
 }
-  
-static void Main(string[] args) 
-{  
+
+static void Main(string[] args)
+{
     MyFile file = null;
-    try 
+    try
     {
         file = new MyFile("D://file.txt")
     }
-    finally 
+    finally
     {
         file.Dispose();
     }
 
     // The same - but shorter way
-    using (MyFile file = new MyFile("D://file2.txt")) 
-    {  
-        file.AddTextToFile("Hello"); 
+    using (MyFile file = new MyFile("D://file2.txt"))
+    {
+        file.AddTextToFile("Hello");
     }
 }
 ```

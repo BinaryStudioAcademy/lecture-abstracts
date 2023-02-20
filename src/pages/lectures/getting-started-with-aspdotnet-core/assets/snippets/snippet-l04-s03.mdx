@@ -1,5 +1,5 @@
 ```csharp
-app.Use(async(context, next) => 
+app.Use(async(context, next) =>
 {
   Console.WriteLine("Started handling request");
   await next.Invoke();

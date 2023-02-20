@@ -11,9 +11,9 @@ class MyGenericClass<T>
 
     public T GenericMethod(T genericParameter)
     {
-        Console.WriteLine("Parameter type: {0}, value: {1}", 
+        Console.WriteLine("Parameter type: {0}, value: {1}",
                           typeof(T).ToString(),genericParameter);
-        Console.WriteLine("Return type: {0}, value: {1}", 
+        Console.WriteLine("Return type: {0}, value: {1}",
                           typeof(T).ToString(), genericMemberVariable);
 
         return genericMemberVariable;

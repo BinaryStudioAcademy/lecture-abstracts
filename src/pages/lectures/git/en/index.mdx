@@ -1,19 +1,21 @@
-import {
-  Lecture,
-  VideoWrapper,
-  FacebookMessage,
-  TimelineOfContents,
-  Level,
-  Accordion,
-  RadarChart,
-  ThatsAllFolks,
-  Language,
-} from "../../../../components";
+---
+orderId: 1
+author: "Viktoriia Vasylenko"
+title: "Git Homework"
+description: ""
+keywords: ["hola", "guapa"]
+duration: "31 min"
+publishedAt: "2021-11-18T10:00:00"
+hiddenFromMainPage: true
+---
+
+import { Lecture } from "~/layouts";
+import { SEO } from '~/partials';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/pro-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
-import { viktoriiaVasylenko2021Avatar } from "../../../../assets/images/avatars/intro-rounded";
-import resume_template from "../assets/resume_template.png";
+import resume_template from "~/assets/images/resume-template.png";
+
 
 <div>
   <h1>
@@ -25,35 +27,27 @@ import resume_template from "../assets/resume_template.png";
   currentLanguage="en"
   languages={{
     en: "lectures/git/en",
-    ua: "lectures/git/ua",
+    ua: "lectures/git/",
   }}
 />
 
 <div>
-  <div class="author">
-    <div class="avatar-wrapper">
-      <object
-        class="avatar-object"
-        role="img"
-        data={viktoriiaVasylenko2021Avatar}
-        aria-label="Viktoriia Vasylenko"
-      />
-    </div>
-    <div class="profile">
-      <h3 class="name">Viktoriia Vasylenko</h3>
-      <p class="about">
+  <div className="author">
+    <Avatar name="Viktoriia Vasylenko" />
+    <div className="profile">
+      <h3 className="name">Viktoriia Vasylenko</h3>
+      <p className="about">
         Viktoriia works at Binary Studio as a Full stack developer after
         finishing Binary Studio Academy in 2020.
       </p>
     </div>
   </div>
-  <div class="bubble" style="margin: -0.5em 1em 1em;">
-    <strong>Hi, student!</strong> 👋
-    <br />
+  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
+    <strong>Hi, student!</strong> 👋  <br />
     Here you'll find a detailed instruction to your Git homework - so you just
     need to follow the steps and it's done ✅. But firstly, pay attention to
     that:
-    <ol class="compact inverted">
+    <ol className="compact inverted">
       <li>
         this is <strong>not</strong> a lecture script - some explanations may be
         omitted <em>(because you've just seen the lecture, right?)</em>;
@@ -73,19 +67,11 @@ import resume_template from "../assets/resume_template.png";
       </li>
       <li>and if you have any questions - feel free to ask them in a chat</li>
     </ol>
-    By the way, it's dangerous to go alone! Take this:{" "}
-    <a href="https://git-scm.com/">
-      <strong>Git</strong>
-    </a>
-    ,{" "}
-    <a href="https://code.visualstudio.com/">
-      <strong>Visual Studio Code</strong>
-    </a>
-    . Now let's go!
+    By the way, it's dangerous to go alone! Take this: <a href="https://git-scm.com/"><strong>Git</strong></a>,<a href="https://code.visualstudio.com/"> <strong>Visual Studio Code</strong></a>. Now let's go!
   </div>
 </div>
 
-<div id="table-of-contents" class="table-of-contents" style="margin-top: 2em;">
+<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + "em"}}>
   <h2>
     <strong>Create and host your own resume using GitHub</strong>
   </h2>
@@ -97,11 +83,7 @@ import resume_template from "../assets/resume_template.png";
       },
       {
         linkTo: "#practicing-git",
-        title: (
-          <span>
-            Practicing <code>git</code>
-          </span>
-        ),
+        title: '<span>Practicing <code>git</code></span>',
       },
       {
         linkTo: "#project-management-and-planning",
@@ -129,22 +111,12 @@ import resume_template from "../assets/resume_template.png";
 
 1. Make sure you have <a href="https://git-scm.com/downloads"><strong>Git</strong></a> installed - you'll need it 😉.
 
-   <div>
-     {" "}
-     We'll use <strong>GitHub</strong> to host it. Firstly, skim through <a href="https://guides.github.com/activities/hello-world/">
-       <strong>Hello World</strong>
-     </a> guides to get an overview of terminology and core concepts <sup>
-       <strong>
-         <a href="https://git-scm.com/docs/gitglossary" title="gitglossary">
-           [1]
-         </a>
-       </strong>
-     </sup>
-   </div>
+    We'll use <strong>GitHub</strong> to host it. Firstly, skim through <a href="https://guides.github.com/activities/hello-world/"><strong>Hello World</strong></a>
+    guides to get an overview of terminology and core concepts <sup><strong><a href="https://git-scm.com/docs/gitglossary" title="gitglossary">[1]</a></strong></sup>
 
 2. Open up [**GitHub**](https://github.com/) and sign in. Create a new repository named **"homepage"** (e.g. **your-username/homepage**), set description to "My very own personal website. Basically this is just a résumé.", initialize with **README**, ignore **.gitignore**, but choose **"MIT License"**
 
-3. Add topics: 
+3. Add topics:
     - personal
     - website
     - homepage
@@ -154,15 +126,15 @@ import resume_template from "../assets/resume_template.png";
     - css
     - binary-studio-academy
 
-   <FacebookMessage small subtle>
-     Hmmm, adding proper topics helps to SEO your repository... Good job!
-   </FacebookMessage>
+    <FacebookMessage small subtle>
+      Hmmm, adding proper topics helps to SEO your repository... Good job!
+    </FacebookMessage>
 
 4. Setup either <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"><strong>PAT</strong></a> (personal access token) or <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"><strong>SSH</strong></a> keypair depending on which protocol you want to use: https or ssh.
 
    <div className="grading-hometask">
      <Accordion>
-       <Accordion.Header>
+       <>
          <FontAwesomeIcon icon={faQuestionCircle} />
          <span className="title">
            <strong>https or ssh</strong>
@@ -170,38 +142,36 @@ import resume_template from "../assets/resume_template.png";
          <span className="icon">
            <FontAwesomeIcon icon={faChevronRight} fixedWidth />
          </span>
-       </Accordion.Header>
-       <Accordion.Body>
+       </>
+       <>
          <div className="container">
            <div className="columns">
              <div className="column">
                No worries, both protocols are secure to use. The main difference
                is that https requires password-based authentication every time
-               you push your changes{" "}
-               <em>(however, you may also cache your git credentials 🤔)</em>,
-               but ssh you configure only once and no repetitive authentication
+               you push your changes <em>(however, you may also cache your git credentials 🤔)</em>, but ssh you configure only once and no repetitive authentication
                is required.
              </div>
            </div>
          </div>
-       </Accordion.Body>
+       </>
      </Accordion>
    </div>
 
 5. Open your favorite terminal, change working directory (<code>cd</code>) to where you'd like to keep the repository <em>(check directory content with</em> <code>ls</code> <em>or</em> <code>dir</code><em>)</em>
 
-6. Clone the repo - use `git clone` command for that. It'll look like:  
-   `git clone https://github.com/<my-username>/homepage.git` if you choose https  
-   `git clone git@github.com:<my-username>/homepage.git` if you choose ssh  
+6. Clone the repo - use `git clone` command for that. It'll look like:
+   `git clone https://github.com/<my-username>/homepage.git` if you choose https
+   `git clone git@github.com:<my-username>/homepage.git` if you choose ssh
 
 
-After that go to your repository folder - `cd homepage`. Now you may also open your repository in a code editor like VS Code.  
+After that go to your repository folder - `cd homepage`. Now you may also open your repository in a code editor like VS Code.
 
 <FacebookMessage small subtle>
   Hurray! The first part is done ✅. You've just created and cloned your
   repository. Let's go to have some practice.
-</FacebookMessage>  
-  
+</FacebookMessage>
+
 <Level
   id="practicing-git"
   number="2"
@@ -243,11 +213,11 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
 
 11. Switch to the `main` branch back - `git checkout main`.
 
-<div class="bubble small subtle">
+<div className="bubble small subtle">
   Good job! Now you should feel more confident with Git commands. Let's go
   further!
-</div>  
-  
+</div>
+
 <Level
   id="project-management-and-planning"
   number="3"
@@ -264,19 +234,14 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
 
    > A typical résumé contains a "summary" of relevant job experience and education, as its French origin implies. The résumé is usually one of the first items, along with a cover letter and sometimes an application for employment, which a potential employer sees regarding the job seeker and is typically used to screen applicants. \***\*The goal of this project is to create an online version of the résumé using HTML, CSS, and the minimum amount of JavaScript.\*\***
 
-   <div class="bubble small subtle">
-     Alright, mate, from now on you have to{" "}
-     <strong>
-       create a task in GitHub Projects for every step of this mission
-     </strong>
-     ! That way you remember what you are going to do, and your customer is
-     aware of the work you are doing.
+   <div className="bubble small subtle">
+     Alright, mate, from now on you have to <strong>create a task in GitHub Projects for every step of this mission</strong>! That way you remember what you are going to do, and your customer is aware of the work you are doing.
    </div>
 
 2. Add the following tasks to the **"Resume"** project and **convert them to issues** —  use GitHub's **Labels**, **Assignees**, and **Milestones** features at this point _([**Mastering Issues**](https://guides.github.com/features/issues/) explains why and how)_:
     Add given **descriptions** to the tasks. (Bold instructions are important - don't ignore them 😉)
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      Making clear description of a task is a good skill to have. It'll help you
      to set the requirements better and get along with a project manager.
      Besides, a lot of useful discussions are taking place in comments to GitHub
@@ -284,17 +249,17 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
      is your friend on this path too 😉).
    </div>
 
-   1. **Create an intro**  
+   1. **Create an intro**
       Add an intro about yourself: who are you, what is your strength, why are you here.
-   2. **Create a contact info block**  
+   2. **Create a contact info block**
       Add links to social networks (LinkedIn, Facebook, Instagram), phone number, email, Telegram username, etc.
-   3. **Create a timeline**  
+   3. **Create a timeline**
       Add a list of all your activities, achievements, work experience. Add as much info as you can remember. In case you don't have working experience tell about your pet-projects or student projects. Don't be shy :)
-   4. **Create additional info blocks**  
+   4. **Create additional info blocks**
       You can make your resume less official by adding more entertaining info, like your hobbies and interest, or what do you like, some interactive content or joke, easter egg, etc.
 
-3. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones (provide at least 1 item of each type for every required issue), close issues and tasks when done.  
-  
+3. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones (provide at least 1 item of each type for every required issue), close issues and tasks when done.
+
 <Level
   id="putting-the-website-together"
   number="4"
@@ -320,15 +285,11 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
    </html>
    ```
 
-   <div class="bubble small subtle">
-     That's right, <code>&amp;#x1F609;</code> is a{" "}
-     <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609">
-       <strong>Unicode code for an emoji</strong>
-     </a>
-     .
+   <div className="bubble small subtle">
+     That's right, <code>&amp;#x1F609;</code> is a <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609"><strong>Unicode code for an emoji</strong></a>.
    </div>
-  
-   <div class="bubble small subtle">
+
+   <div className="bubble small subtle">
       Psst, please add this task to <strong>Homepage</strong> project. Oh, also convert it to an issue while you're at it
    </div>
 
@@ -336,7 +297,7 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
 
 4. Stage and commit your changes - `git add index.html` and `git commit -m "Added index.html template"`
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
      BTW, please give your commits meaningful messages, i.e. 🤗"Updated Résumé
      Contacts block".
    </div>
@@ -347,19 +308,19 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
    Set title _"First release to production"_, set metadata _(assignees, labels, projects)_.
    Then <strong>merge</strong> pull request.
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       This looks like a task too - add it to <strong>Homepage</strong> project.
    </div>
 
 7. Go to repository **Settings** and set up **GitHub Pages** (from the `main` branch), update repository description with the proper **website** link.
    Follow the link to check if everything is fine - you should see your index.html content.
 
-   <div class="bubble small subtle">
+   <div className="bubble small subtle">
       Create a task for this in <strong>Homepage</strong> project.
    </div>
 
-Now your repository is set up!  
-  
+Now your repository is set up!
+
 <Level
   id="add-resume-template"
   number="5"
@@ -372,9 +333,9 @@ Now your repository is set up!
 
 1. Create a new branch named `feature/head` (based on `develop` branch).
 
-  <div class="bubble small subtle">
+  <div className="bubble small subtle">
     By dividing your work into many branches, you can quickly and efficiently fix bugs on the server,
-    have a separate stable version (<code> release </code>) that is ready for release, as well as 
+    have a separate stable version (<code> release </code>) that is ready for release, as well as
     the version with the main development (<code> develop </code>).
     Merge your branches with pull requests, because the one who approved bad
     code, made no less error than the one who wrote it 😁
@@ -672,7 +633,7 @@ Now your repository is set up!
 3. Connect styles by adding the next line inside the `<head></head>` section.
    ```
     <link rel="stylesheet" href="styles.css">
-   ```  
+   ```
     Also add this meta tag inside the `<head></head>` section for responsive design.
     ```
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -680,26 +641,26 @@ Now your repository is set up!
 
 4. When done ― <strong>commit</strong> your changes, <strong>push</strong> the branch to the remote, create a new <strong>pull request</strong> and <strong>merge</strong> into `develop`
 
-  <div class="bubble small subtle">
-    If the branch is not pushed, but merged locally via <code>git merge</code>, 
-    the remote server will not know anything about the existence of the branch, 
+  <div className="bubble small subtle">
+    If the branch is not pushed, but merged locally via <code>git merge</code>,
+    the remote server will not know anything about the existence of the branch,
     and therefore will not show it in Insights → Network
   </div>
 
 <h4>Body</h4>
 
-1. Switch to `develop` branch and pull changes using `git pull`.  
+1. Switch to `develop` branch and pull changes using `git pull`.
 
-2. Create a new branch named `feature/body` (based on develop), push it to origin - `git push -u origin feature/body`, and use it to edit main content:  
+2. Create a new branch named `feature/body` (based on develop), push it to origin - `git push -u origin feature/body`, and use it to edit main content:
     1. Preview index.html in a browser
 
-      <div class="bubble small subtle">
+      <div className="bubble small subtle">
         One way to do it is to install http-server <code>npm install --global http-server</code> and
         then run <code> http-server -c-1</code> in working directory.
       </div>
 
-    2. Create `patch/content/primary` (based on `feature/body`) branch.  
-    
+    2. Create `patch/content/primary` (based on `feature/body`) branch.
+
     3. Add a primary content _(e.g. avatar, name, job, contacts, intro, etc.)_ here. Commit small steps, add meaningful messages.
       <details>
         <summary>Primary content template</summary>
@@ -714,7 +675,7 @@ Now your repository is set up!
 
                 <div class="contact_info_container fh">
                   <div class="contact-info__block"></div>
-                
+
                   <div class="contact-info__block contact-info__block--center">
                     <img class="contact-info__avatar" src="assets/avatar.png" alt="Avatar">
                   </div>
@@ -759,7 +720,7 @@ Now your repository is set up!
         </a>
         ```
 
-        You may take SVG icons from [fontawesome](https://fontawesome.com/).  
+        You may take SVG icons from [fontawesome](https://fontawesome.com/).
       </details>
 
       <details>
@@ -777,24 +738,24 @@ Now your repository is set up!
                 </svg>
               </div>
               <p class="intro_text">Meow.
-                I am a Binary Studio cat. Still got 7 lives. Work in IT, Full Stack Evil, 
-                all I do is sleep and try to help out hoomans with their projects whenever 
+                I am a Binary Studio cat. Still got 7 lives. Work in IT, Full Stack Evil,
+                all I do is sleep and try to help out hoomans with their projects whenever
                 they need me.
               </p>
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
     4. Merge branch `patch/content/primary` into `feature/body` using pull request
 
     5. Switch back to `feature/body` branch, pull changes using `git pull`.
-    
-    6. Create `patch/content/secondary` (based on `feature/body`) branch.  
-    
+
+    6. Create `patch/content/secondary` (based on `feature/body`) branch.
+
     7. Add a secondary content _(e.g. languages, skills, character, etc.)_. Commit small steps, add meaningful messages.
-      
+
       <details>
         <summary>Skills block</summary>
 
@@ -807,7 +768,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -824,7 +785,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -851,7 +812,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -881,9 +842,9 @@ Now your repository is set up!
             </p>
           </div>
         </div>
-        ``` 
+        ```
       </details>
-       
+
       As a preview ou should see something like this:
       <details>
         <summary>Preview</summary>
@@ -895,43 +856,44 @@ Now your repository is set up!
 
     9. Switch back to `feature/body` branch, pull changes using `git pull`.
 
-    10. Iterate further and fill up the resume with <strong>YOUR OWN</strong> info - 
+    10. Iterate further and fill up the resume with <strong>YOUR OWN</strong> info -
         feel free to add new blocks, change structure, styles. Easter eggs are welcome too 😉
-    
-      <div class="bubble small subtle">
-        We do like Bulka very much, but we'd like to know you better too. 
+
+      <div className="bubble small subtle">
+        We do like Bulka very much, but we'd like to know you better too.
         So, please, create your own resume - and get your additional points 😉
       </div>
-    
-    11. Merge `feature/body` into `develop` using pull request  
+
+    11. Merge `feature/body` into `develop` using pull request
 
 3. Check if your HTML and CSS are valid. You may use [HTML validator](https://validator.w3.org/) and [CSS validator](https://stylelint.io/demo) for this.
 
-4. Open a pull request and <strong>merge `develop` into `main`</strong>. 
+4. Open a pull request and <strong>merge `develop` into `main`</strong>.
 
-  <div class="bubble small subtle">
+  <div className="bubble small subtle">
     Please, don't forget to merge your final changes to the main branch - we'll check only this one.
   </div>
 
-  
-💥 **Boom, done! That's it! You are awesome!**  
-Send us the link to your GitHub repository and take a look how the task will be evaluated. 
+
+💥 **Boom, done! That's it! You are awesome!**
+Send us the link to your GitHub repository and take a look how the task will be evaluated.
 Pay attention, that **you have only 3 attempts to run the automated tests** - so use it wisely 😉
+
 
 <div className="grading-hometask">
   <Accordion>
-    <Accordion.Header>
+    <>
       <FontAwesomeIcon icon={faQuestionCircle} />
       <span className="title"><strong>How the project will be evaluated</strong></span>
       <span className="icon">
         <FontAwesomeIcon icon={faChevronRight} fixedWidth />
       </span>
-    </Accordion.Header>
-    <Accordion.Body>
+    </>
+    <>
       <div className="container">
         <div className="columns">
           <div className="column">
-            The task is complex, so it will be evaluated in six directions, 
+            The task is complex, so it will be evaluated in six directions,
             and the arithmetic mean of the six numbers will be the final score:
           </div>
         </div>
@@ -947,9 +909,7 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                     </h6>
                   </div>
                 </div>
-                <div className="panel-body">
-                  <p> Repository created, topics added, README.md in place, and GitHub Pages enabled.</p>
-                </div>
+                <div className="panel-body"><p> Repository created, topics added, README.md in place, and GitHub Pages enabled.</p></div>
               </div>
             </div>
             <div className="column col-4 col-md-6 col-sm-12">
@@ -963,8 +923,8 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  Projects have been launched, milestones have been identified, 
-                  tasks have been created, problems have been described, and labels 
+                  Projects have been launched, milestones have been identified,
+                  tasks have been created, problems have been described, and labels
                   have been attached.
                 </div>
               </div>
@@ -984,12 +944,13 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  The work is carried out in several branches, each intuitively clear, and pull 
-                  requests are used to merge them into the main branch. Maybe even commits have 
-                  normal names :)</div>
+                  The work is carried out in several branches, each intuitively clear, and pull
+                  requests are used to merge them into the main branch. Maybe even commits have
+                  normal names :)
+                </div>
               </div>
             </div>
-            <div className="column col-4 col-md-6 col-sm-12">
+             <div className="column col-4 col-md-6 col-sm-12">
               <div className="panel">
                 <div className="panel-header">
                   <div className="panel-title">
@@ -1006,7 +967,8 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  Level 80 copypaste - valid HTML markup, CSS, and JS (if any) does normal things.</div>
+                  Level 80 copypaste - valid HTML markup, CSS, and JS (if any) does normal things.
+                </div>
               </div>
             </div>
             <div className="column col-4 col-md-6 col-sm-12">
@@ -1024,7 +986,8 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast.</div>
+                  The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast.
+                </div>
               </div>
             </div>
             <div className="column col-4 col-md-6 col-sm-12">
@@ -1045,7 +1008,7 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
           </div>
         </small>
       </div>
-      <RadarChart
+            <RadarChart
         labels={[
           "Repository management",
           "Project management",
@@ -1071,7 +1034,7 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
         }, {
           label: "Joe Average",
           data: [6, 5, 5, 5, 2, 0],
-          dragData: false,
+          dragData: true,
           borderColor: "rgba(0, 0, 0, 0.1)",
           backgroundColor: "rgba(0, 0, 0, 0.05)",
           pointRadius: 0,
@@ -1080,31 +1043,21 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
         }]}
       />
       <div className="column">
-        We really appreciate your originality, initiative and humor, so any interesting 
+        We really appreciate your originality, initiative and humor, so any interesting
         idea will be highly appreciated according to the last criterion!
       </div>
-    </Accordion.Body>
+    </>
   </Accordion>
 </div>
 
-<div class="bubble small subtle">
-  Don't worry 😌 if your repository doesn't get 10 - repositories for 10 aren't 
-  compiled on their own in a short period of time 😝. Some will invest all their time 
-  and effort in the project itself, but will not have time to design a repository, 
-  and some will do the opposite. First of all, you should do what you like and get 
-  the most out of the process. If you go into an unfamiliar or uncomfortable area and 
+<div className="bubble small subtle">
+  Don't worry 😌 if your repository doesn't get 10 - repositories for 10 aren't
+  compiled on their own in a short period of time 😝. Some will invest all their time
+  and effort in the project itself, but will not have time to design a repository,
+  and some will do the opposite. First of all, you should do what you like and get
+  the most out of the process. If you go into an unfamiliar or uncomfortable area and
   succeed there - it's great!
 </div>
 
-export const metadata = {
-  orderId: 1,
-  author: "Viktoriia Vasylenko",
-  title: "Git Homework",
-  description: "",
-  keywords: ["hola", "guapa"],
-  duration: "31 min",
-  publishedAt: "2021-11-18T10:00:00",
-  hiddenFromMainPage: true,
-};
-
 export default Lecture;
+export { SEO as Head };

@@ -1,0 +1,13 @@
+.lang-menu {
+  margin: 1rem 0;
+}
+
+.lang-option {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+.lang-option .is-active {
+  color: #000;
+  opacity: 0.4;
+}

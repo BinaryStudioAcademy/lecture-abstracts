@@ -1,0 +1,29 @@
+/* Spectre.css overrides */
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.navbar {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navbar-section {
+  align-items: center;
+  display: flex;
+  flex: 1 0;
+}
+footer .navbar .navbar-section:first-child:not(:last-child) {
+  flex: 1 0 auto;
+  align-items: initial;
+}
+footer .navbar .navbar-section:not(:first-child):last-child {
+  flex: 0 0 auto;
+  align-items: initial;
+  justify-content: initial;
+}
