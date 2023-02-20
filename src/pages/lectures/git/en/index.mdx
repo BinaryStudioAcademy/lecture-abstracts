@@ -110,13 +110,13 @@ import resume_template from "~/assets/images/resume-template.png";
 />
 
 1. Make sure you have <a href="https://git-scm.com/downloads"><strong>Git</strong></a> installed - you'll need it 😉.
-  
+
     We'll use <strong>GitHub</strong> to host it. Firstly, skim through <a href="https://guides.github.com/activities/hello-world/"><strong>Hello World</strong></a>
     guides to get an overview of terminology and core concepts <sup><strong><a href="https://git-scm.com/docs/gitglossary" title="gitglossary">[1]</a></strong></sup>
 
 2. Open up [**GitHub**](https://github.com/) and sign in. Create a new repository named **"homepage"** (e.g. **your-username/homepage**), set description to "My very own personal website. Basically this is just a résumé.", initialize with **README**, ignore **.gitignore**, but choose **"MIT License"**
 
-3. Add topics: 
+3. Add topics:
     - personal
     - website
     - homepage
@@ -160,9 +160,9 @@ import resume_template from "~/assets/images/resume-template.png";
 
 5. Open your favorite terminal, change working directory (<code>cd</code>) to where you'd like to keep the repository <em>(check directory content with</em> <code>ls</code> <em>or</em> <code>dir</code><em>)</em>
 
-6. Clone the repo - use `git clone` command for that. It'll look like:  
-   `git clone https://github.com/<my-username>/homepage.git` if you choose https  
-   `git clone git@github.com:<my-username>/homepage.git` if you choose ssh  
+6. Clone the repo - use `git clone` command for that. It'll look like:
+   `git clone https://github.com/<my-username>/homepage.git` if you choose https
+   `git clone git@github.com:<my-username>/homepage.git` if you choose ssh
 
 
 After that go to your repository folder - `cd homepage`. Now you may also open your repository in a code editor like VS Code.
@@ -170,7 +170,7 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
 <FacebookMessage small subtle>
   Hurray! The first part is done ✅. You've just created and cloned your
   repository. Let's go to have some practice.
-</FacebookMessage>  
+</FacebookMessage>
 
 <Level
   id="practicing-git"
@@ -216,8 +216,8 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
 <div className="bubble small subtle">
   Good job! Now you should feel more confident with Git commands. Let's go
   further!
-</div>  
-  
+</div>
+
 <Level
   id="project-management-and-planning"
   number="3"
@@ -249,17 +249,17 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
      is your friend on this path too 😉).
    </div>
 
-   1. **Create an intro**  
+   1. **Create an intro**
       Add an intro about yourself: who are you, what is your strength, why are you here.
-   2. **Create a contact info block**  
+   2. **Create a contact info block**
       Add links to social networks (LinkedIn, Facebook, Instagram), phone number, email, Telegram username, etc.
-   3. **Create a timeline**  
+   3. **Create a timeline**
       Add a list of all your activities, achievements, work experience. Add as much info as you can remember. In case you don't have working experience tell about your pet-projects or student projects. Don't be shy :)
-   4. **Create additional info blocks**  
+   4. **Create additional info blocks**
       You can make your resume less official by adding more entertaining info, like your hobbies and interest, or what do you like, some interactive content or joke, easter egg, etc.
 
-3. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones (provide at least 1 item of each type for every required issue), close issues and tasks when done.  
-  
+3. Move tasks to <strong>"In progress"</strong> while you're working on them. Leave comments under issues, assign proper labels and milestones (provide at least 1 item of each type for every required issue), close issues and tasks when done.
+
 <Level
   id="putting-the-website-together"
   number="4"
@@ -288,7 +288,7 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
    <div className="bubble small subtle">
      That's right, <code>&amp;#x1F609;</code> is a <a href="http://unicode.org/emoji/charts-12.0/full-emoji-list.html#1f609"><strong>Unicode code for an emoji</strong></a>.
    </div>
-  
+
    <div className="bubble small subtle">
       Psst, please add this task to <strong>Homepage</strong> project. Oh, also convert it to an issue while you're at it
    </div>
@@ -319,8 +319,8 @@ After that go to your repository folder - `cd homepage`. Now you may also open y
       Create a task for this in <strong>Homepage</strong> project.
    </div>
 
-Now your repository is set up!  
-  
+Now your repository is set up!
+
 <Level
   id="add-resume-template"
   number="5"
@@ -335,7 +335,7 @@ Now your repository is set up!
 
   <div className="bubble small subtle">
     By dividing your work into many branches, you can quickly and efficiently fix bugs on the server,
-    have a separate stable version (<code> release </code>) that is ready for release, as well as 
+    have a separate stable version (<code> release </code>) that is ready for release, as well as
     the version with the main development (<code> develop </code>).
     Merge your branches with pull requests, because the one who approved bad
     code, made no less error than the one who wrote it 😁
@@ -633,7 +633,7 @@ Now your repository is set up!
 3. Connect styles by adding the next line inside the `<head></head>` section.
    ```
     <link rel="stylesheet" href="styles.css">
-   ```  
+   ```
     Also add this meta tag inside the `<head></head>` section for responsive design.
     ```
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -642,16 +642,16 @@ Now your repository is set up!
 4. When done ― <strong>commit</strong> your changes, <strong>push</strong> the branch to the remote, create a new <strong>pull request</strong> and <strong>merge</strong> into `develop`
 
   <div className="bubble small subtle">
-    If the branch is not pushed, but merged locally via <code>git merge</code>, 
-    the remote server will not know anything about the existence of the branch, 
+    If the branch is not pushed, but merged locally via <code>git merge</code>,
+    the remote server will not know anything about the existence of the branch,
     and therefore will not show it in Insights → Network
   </div>
 
 <h4>Body</h4>
 
-1. Switch to `develop` branch and pull changes using `git pull`.  
+1. Switch to `develop` branch and pull changes using `git pull`.
 
-2. Create a new branch named `feature/body` (based on develop), push it to origin - `git push -u origin feature/body`, and use it to edit main content:  
+2. Create a new branch named `feature/body` (based on develop), push it to origin - `git push -u origin feature/body`, and use it to edit main content:
     1. Preview index.html in a browser
 
       <div className="bubble small subtle">
@@ -659,8 +659,8 @@ Now your repository is set up!
         then run <code> http-server -c-1</code> in working directory.
       </div>
 
-    2. Create `patch/content/primary` (based on `feature/body`) branch.  
-    
+    2. Create `patch/content/primary` (based on `feature/body`) branch.
+
     3. Add a primary content _(e.g. avatar, name, job, contacts, intro, etc.)_ here. Commit small steps, add meaningful messages.
       <details>
         <summary>Primary content template</summary>
@@ -675,7 +675,7 @@ Now your repository is set up!
 
                 <div class="contact_info_container fh">
                   <div class="contact-info__block"></div>
-                
+
                   <div class="contact-info__block contact-info__block--center">
                     <img class="contact-info__avatar" src="assets/avatar.png" alt="Avatar">
                   </div>
@@ -720,7 +720,7 @@ Now your repository is set up!
         </a>
         ```
 
-        You may take SVG icons from [fontawesome](https://fontawesome.com/).  
+        You may take SVG icons from [fontawesome](https://fontawesome.com/).
       </details>
 
       <details>
@@ -738,24 +738,24 @@ Now your repository is set up!
                 </svg>
               </div>
               <p class="intro_text">Meow.
-                I am a Binary Studio cat. Still got 7 lives. Work in IT, Full Stack Evil, 
-                all I do is sleep and try to help out hoomans with their projects whenever 
+                I am a Binary Studio cat. Still got 7 lives. Work in IT, Full Stack Evil,
+                all I do is sleep and try to help out hoomans with their projects whenever
                 they need me.
               </p>
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
     4. Merge branch `patch/content/primary` into `feature/body` using pull request
 
     5. Switch back to `feature/body` branch, pull changes using `git pull`.
-    
-    6. Create `patch/content/secondary` (based on `feature/body`) branch.  
-    
+
+    6. Create `patch/content/secondary` (based on `feature/body`) branch.
+
     7. Add a secondary content _(e.g. languages, skills, character, etc.)_. Commit small steps, add meaningful messages.
-      
+
       <details>
         <summary>Skills block</summary>
 
@@ -768,7 +768,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -785,7 +785,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -812,7 +812,7 @@ Now your repository is set up!
             </div>
           </div>
         </div>
-        ``` 
+        ```
       </details>
 
       <details>
@@ -842,9 +842,9 @@ Now your repository is set up!
             </p>
           </div>
         </div>
-        ``` 
+        ```
       </details>
-       
+
       As a preview ou should see something like this:
       <details>
         <summary>Preview</summary>
@@ -856,27 +856,27 @@ Now your repository is set up!
 
     9. Switch back to `feature/body` branch, pull changes using `git pull`.
 
-    10. Iterate further and fill up the resume with <strong>YOUR OWN</strong> info - 
+    10. Iterate further and fill up the resume with <strong>YOUR OWN</strong> info -
         feel free to add new blocks, change structure, styles. Easter eggs are welcome too 😉
-    
+
       <div className="bubble small subtle">
-        We do like Bulka very much, but we'd like to know you better too. 
+        We do like Bulka very much, but we'd like to know you better too.
         So, please, create your own resume - and get your additional points 😉
       </div>
-    
-    11. Merge `feature/body` into `develop` using pull request  
+
+    11. Merge `feature/body` into `develop` using pull request
 
 3. Check if your HTML and CSS are valid. You may use [HTML validator](https://validator.w3.org/) and [CSS validator](https://stylelint.io/demo) for this.
 
-4. Open a pull request and <strong>merge `develop` into `main`</strong>. 
+4. Open a pull request and <strong>merge `develop` into `main`</strong>.
 
   <div className="bubble small subtle">
     Please, don't forget to merge your final changes to the main branch - we'll check only this one.
   </div>
 
-  
-💥 **Boom, done! That's it! You are awesome!**  
-Send us the link to your GitHub repository and take a look how the task will be evaluated. 
+
+💥 **Boom, done! That's it! You are awesome!**
+Send us the link to your GitHub repository and take a look how the task will be evaluated.
 Pay attention, that **you have only 3 attempts to run the automated tests** - so use it wisely 😉
 
 
@@ -893,7 +893,7 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
       <div className="container">
         <div className="columns">
           <div className="column">
-            The task is complex, so it will be evaluated in six directions, 
+            The task is complex, so it will be evaluated in six directions,
             and the arithmetic mean of the six numbers will be the final score:
           </div>
         </div>
@@ -923,8 +923,8 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  Projects have been launched, milestones have been identified, 
-                  tasks have been created, problems have been described, and labels 
+                  Projects have been launched, milestones have been identified,
+                  tasks have been created, problems have been described, and labels
                   have been attached.
                 </div>
               </div>
@@ -944,8 +944,8 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
                   </div>
                 </div>
                 <div className="panel-body">
-                  The work is carried out in several branches, each intuitively clear, and pull 
-                  requests are used to merge them into the main branch. Maybe even commits have 
+                  The work is carried out in several branches, each intuitively clear, and pull
+                  requests are used to merge them into the main branch. Maybe even commits have
                   normal names :)
                 </div>
               </div>
@@ -1043,7 +1043,7 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
         }]}
       />
       <div className="column">
-        We really appreciate your originality, initiative and humor, so any interesting 
+        We really appreciate your originality, initiative and humor, so any interesting
         idea will be highly appreciated according to the last criterion!
       </div>
     </>
@@ -1051,11 +1051,11 @@ Pay attention, that **you have only 3 attempts to run the automated tests** - so
 </div>
 
 <div className="bubble small subtle">
-  Don't worry 😌 if your repository doesn't get 10 - repositories for 10 aren't 
-  compiled on their own in a short period of time 😝. Some will invest all their time 
-  and effort in the project itself, but will not have time to design a repository, 
-  and some will do the opposite. First of all, you should do what you like and get 
-  the most out of the process. If you go into an unfamiliar or uncomfortable area and 
+  Don't worry 😌 if your repository doesn't get 10 - repositories for 10 aren't
+  compiled on their own in a short period of time 😝. Some will invest all their time
+  and effort in the project itself, but will not have time to design a repository,
+  and some will do the opposite. First of all, you should do what you like and get
+  the most out of the process. If you go into an unfamiliar or uncomfortable area and
   succeed there - it's great!
 </div>
 

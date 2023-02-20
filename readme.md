@@ -1,3 +1,3 @@
 # Binary Studio Academy
 
-### Lecture Abstracts
+## Lecture Abstracts

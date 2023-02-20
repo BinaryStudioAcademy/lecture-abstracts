@@ -141,7 +141,7 @@ import "./assets/stylesheets/styles.css";
         // cleanup memory by garbage collector
         ```
 
-        Memory is managed dynamically. [Written in Zend engine using C language.](https://github.com/php)  
+        Memory is managed dynamically. [Written in Zend engine using C language.](https://github.com/php)
     </div>
   </li>
   <li className="details">
@@ -156,7 +156,7 @@ import "./assets/stylesheets/styles.css";
       php hello.php
 
       ```
-    
+
     </div>
   </li>
   <li className="details">
@@ -195,13 +195,13 @@ import "./assets/stylesheets/styles.css";
       // procedural
       function header() {
           $title = 'Hello!';
-          
+
           echo '<div>' . $title . '</div>';
       }
       function content() {
           echo '<div>content</div>';
       }
-      ```  
+      ```
     </div>
   </li>
   <li className="details">
@@ -236,7 +236,7 @@ import "./assets/stylesheets/styles.css";
         return [$x, $y];
     }
     ```
-  
+
     </div>
   </li>
   <li className="details">
@@ -247,7 +247,7 @@ import "./assets/stylesheets/styles.css";
     <div className="details-body">
 
       Multi thread with POSIX and `--pthreads` extension. High-load tasks with message queue systems (RabbitMQ, etc.).
-  
+
     </div>
   </li>
   <li className="details">
@@ -265,9 +265,9 @@ import "./assets/stylesheets/styles.css";
       $kernel->terminate($request, $response);
 
       ```
-      
+
       [**Why do we use $ in PHP?**](https://www.quora.com/Why-do-we-use-a-dollar-symbol-before-variables-in-PHP)
-      
+
     </div>
   </li>
 </ul>
@@ -328,18 +328,18 @@ The following are some of the new features in PHP 7 — it is faster ([PHP 5.6 v
     <div className="details-body">
 
       ```php
-      class A 
+      class A
       {
           // bad, PHP 4 syntax
-          public function A() 
+          public function A()
           {
-              
+
           }
-          
+
           // good
-          public function __construct() 
+          public function __construct()
           {
-              
+
           }
       }
       ```
@@ -625,7 +625,7 @@ The following are some of the new features in PHP 7 — it is faster ([PHP 5.6 v
       $a = 5;
       $b = 10;
 
-      // $a == $b : 0 
+      // $a == $b : 0
       // $a > $b : 1
       // $a < $b : -1
       $res = $a <=> $b;
@@ -895,7 +895,7 @@ The following are some of the new features in PHP 7 — it is faster ([PHP 5.6 v
       ```php
 
       // php 7.1
-      function doSomething(): void 
+      function doSomething(): void
       {
         // write to log file
         return;
@@ -943,7 +943,7 @@ The following are some of the new features in PHP 7 — it is faster ([PHP 5.6 v
     <div className="details-body">
 
       `Throwable` is the base interface for any object that can be thrown via a `throw` statement in PHP 7, including `Error` and `Exception`. PHP classes cannot implement the `Throwable` interface directly, and must instead extend `Exception`.
-    
+
       <ul>
         <li>
           Throwable
@@ -1133,22 +1133,22 @@ The [**PHP Standard Recommendation**](https://www.php-fig.org/psr/) <sup><small>
 
 **Composer** is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. _Composer is not a package manager in the same sense as Yum or Apt are_. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. **/vendor**) inside your project. By default it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the `global` command. This idea is not new and Composer is strongly inspired by node's **npm** and ruby's **bundler**.
 
-1. **composer.json**  
+1. **composer.json**
    To start using Composer in your project, all you need is a **composer.json** file. This file describes the dependencies of your project and may contain other metadata as well. Take a look on [**Laravel's composer.json**](https://github.com/laravel/laravel/blob/master/composer.json)
-2. **Composer commands**  
+2. **Composer commands**
    `composer init`, `composer require vendor/package-name`, `composer install`, `composer dump-autoload`
-3. **composer.lock**  
+3. **composer.lock**
    Composer uses the exact versions listed in composer.lock to ensure that the package versions are consistent for everyone working on your project. As a result you will have all dependencies requested by your composer.json file, but they may not all be at the very latest available versions (some of the dependencies listed in the composer.lock file may have released newer versions since the file was created). This is by design, it ensures that your project does not break because of unexpected changes in dependencies. [**Composer: Всё о .lock файле**](https://phpprofi.ru/blogs/post/15)
-4. **Composer autoload & PSR-4**  
-   💩**index.php** before:  
+4. **Composer autoload & PSR-4**
+   💩**index.php** before:
    ```php
    require __DIR__ . '/Academy.php';
    require __DIR__ . '/PHP.php';
- 
+
    Academy::start();
    PHP::rock();
    ```
-   💡**composer.json**:  
+   💡**composer.json**:
    ```json
    "autoload": {
      "psr-4": {
@@ -1171,7 +1171,7 @@ The [**PHP Standard Recommendation**](https://www.php-fig.org/psr/) <sup><small>
    🎉**index.php** after:
    ```php
    require __DIR__ . '/vendor/autoload.php';
- 
+
    Academy::start();
    PHP::rock();
    ```
@@ -1199,9 +1199,9 @@ server {
   listen 80;
   root /var/www/app/public;
   index index.php index.htm index.html;
-  
+
   # ...settings
-  
+
   # proxy files that end with ".php" through php-fpm
   location ~ \.php$ {
     fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
@@ -1237,10 +1237,10 @@ server {
 
 ![i am neo](http://memesmix.net/media/created/6d6gtz.jpg)
 
-<ThatsAllFolks />		
+<ThatsAllFolks />
 
-<div className="bubble">		
-  А на сегодня всё! Свои вопросы и отзывы оставляйте на сайте <a href="https://academy.binary-studio.com/"><strong>Binary Studio Academy</strong></a>. Желаю вам успехов в дальнейшем, не теряйте мотивации и учитесь с удовольствием. Спасибо за внимание! 🤙		
+<div className="bubble">
+  А на сегодня всё! Свои вопросы и отзывы оставляйте на сайте <a href="https://academy.binary-studio.com/"><strong>Binary Studio Academy</strong></a>. Желаю вам успехов в дальнейшем, не теряйте мотивации и учитесь с удовольствием. Спасибо за внимание! 🤙
 </div>
 
 export default Lecture;

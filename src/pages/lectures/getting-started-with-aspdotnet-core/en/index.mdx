@@ -95,17 +95,17 @@ There were times when the term ".NET" meant Windows platform only. This platform
 
 <h5>.NET advantages</h5>
 
-1. **Cross-platform**  
+1. **Cross-platform**
    Runs on Windows, Linux, macOS
-2. **Flexible deployment**  
+2. **Flexible deployment**
    The framework can be included in your app or installed side-by-side user-or machine-wide
-3. **Command-line tools**  
+3. **Command-line tools**
    .NET has great CLI, therefore all product scenarios can be executed using command-line
-4. **Compatibility**  
+4. **Compatibility**
    .NET is compatible with .NET Framework, Xamarin, and Mono, via the .NET Standard Library
-5. **Open-source**  
+5. **Open-source**
    The .NET platform is open source, using MIT and Apache 2 licenses. You are welcome to contribute
-6. **Supported by Microsoft**  
+6. **Supported by Microsoft**
    Huge corporation forces .NET to develop and gain new features
 
 <h5>What you can build with .NET</h5>
@@ -254,14 +254,14 @@ I’m going to show you how we can write API using **ASP.NET Core Web API**.
           <strong>Program.cs</strong>
         </label>
         <div className="details-body">
-          We need to register our service. Read more about this in Dependency Injection paragraph 
+          We need to register our service. Read more about this in Dependency Injection paragraph
           <SnippetL03S06 />
         </div>
       </li>
     </ul>
 4. Run the application and test three endpoints to make sure everything works.
   * [**https://localhost:7088/binarystudents?filter=yan**](https://localhost:7088/binarystudents?filter=yan) - GET request, retrieving  those students whose last names contain the filter string;
-  * [**https://localhost:7088/binarystudents/1**](https://localhost:7088/binarystudents/1) - GET request, retrieving the student by their id; 
+  * [**https://localhost:7088/binarystudents/1**](https://localhost:7088/binarystudents/1) - GET request, retrieving the student by their id;
   * [**https://localhost:7088/binarystudents**](https://localhost:7088/binarystudents) - POST request, adding the new student that you define in the body of request in JSON format.
 
 
@@ -274,7 +274,7 @@ How can we pass dependencies? The answer is DI or Dependency injection.
 
 1. **Singleton** — services are created the first time they're requested (or when an instance is specified with the service registration during web app configuration). Every subsequent request uses the same instance.
 2. **Scoped** — services are created once per client request (connection).
-3. **Transient** — services are created each time they're requested from the service container. This lifetime works best for lightweight, stateless services. 
+3. **Transient** — services are created each time they're requested from the service container. This lifetime works best for lightweight, stateless services.
 
 Let’s apply **Singleton** to our `BinaryStudentService` so that we use the same collection of students:
    1. It can be done using IServiceCollection in **Program.cs**:

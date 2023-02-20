@@ -5,7 +5,7 @@ class Wallet
     public int balance;
     public Wallet(int bal)
     {
-        balance = bal; 
+        balance = bal;
     }
 
     public int GetBalance()
@@ -24,7 +24,7 @@ static void Main(string[] args)
 {
     Console.WriteLine(Wallet.Bonus);      // 100
     Wallet.Bonus += 200;
-     
+
     var wallet1 = new Wallet(150);
     Console.WriteLine(wallet1.GetBalance());   // 450
 }

@@ -65,64 +65,64 @@ import { SEO } from '~/partials';
 
 <Level id="setting-up-the-repository" number="1" name="Налаштування репозиторію" difficulty="Beginner" objectives="How to create and clone the repo" />
 
-1. Перед тим як склонувати репозиторій вам потрібно буде налаштувати токен - PAT (personal access token) або SSH ключі. 
+1. Перед тим як склонувати репозиторій вам потрібно буде налаштувати токен - PAT (personal access token) або SSH ключі.
    Це може стати в нагоді -
-   <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"><strong>How to set up PAT</strong></a>, 
-   <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"><strong>How to set up SSH keys</strong></a>.  
+   <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token"><strong>How to set up PAT</strong></a>,
+   <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"><strong>How to set up SSH keys</strong></a>.
 
-2. Щоб склонувати репозиторій скористайся `git clone` командою + URL на репозиторій.  
+2. Щоб склонувати репозиторій скористайся `git clone` командою + URL на репозиторій.
 
-   За умови https це виглядатиме так:  
+   За умови https це виглядатиме так:
    ```
    git clone https://github.com/<my-username>/homepage.git
-   ``` 
-   За умови SSH: 
+   ```
+   За умови SSH:
    ```
    git clone git@github.com:<my-username>/homepage.git
-   ``` 
+   ```
 
 3. Використовуй `git remote show origin` щоб переглянути посилання на віддалений репозиторій.
 
-4. `git status` команда відобразить стан вашого репозиторію та staging area. 
+4. `git status` команда відобразить стан вашого репозиторію та staging area.
    Використовуй дану команду, щоб перевірити, які файли додано в staging area та буде включено в коміт.
 
 
 <Level id="practicing-git" number="2" name={<span>Основні <code>git</code> команди</span>} difficulty="Beginner" objectives="How to create commits and branches"  />
 
-1. Щоб додати файли до staging area використовуй `git add` команду + назва файлу. 
-   Можеш використовувати `git add .` команду, щоб додати <strong>усі</strong> змінені та нові файли.  
+1. Щоб додати файли до staging area використовуй `git add` команду + назва файлу.
+   Можеш використовувати `git add .` команду, щоб додати <strong>усі</strong> змінені та нові файли.
 
 2. Щоб створити коміт використовуй `git commit` команду. А щоб додати коміт з описом використай
    ```
    git commit -m "Your message here"
-   ```  
+   ```
 
-3. Використовуй `git branch` команду, щоб переглянути локальні гілки та `git checkout branch-name` щоб перемкнутися на гілку.  
-   Щоб створити нову гілку та одразу перемкнутися на неї можеш скористатися `git checkout -b branch-name` командою.  
+3. Використовуй `git branch` команду, щоб переглянути локальні гілки та `git checkout branch-name` щоб перемкнутися на гілку.
+   Щоб створити нову гілку та одразу перемкнутися на неї можеш скористатися `git checkout -b branch-name` командою.
 
-4. `git log` показує історію комітів на гілці.  
+4. `git log` показує історію комітів на гілці.
 
-5. Щоб оновити віддалену гілку використовуй `git push` команду. 
-   Якщо твоєї локальної гілки не існує на віддаленому репозиторій тобі потрібно буде ввести `git push --set-upstream branch-name` 
-   або скорочено `git push -u branch-name`,що означає те ж. Або ж ти можеш явно вказати, в яку remote гілку ти хочеш запушити свої зміни - ось так `git push origin branch-name`.  
+5. Щоб оновити віддалену гілку використовуй `git push` команду.
+   Якщо твоєї локальної гілки не існує на віддаленому репозиторій тобі потрібно буде ввести `git push --set-upstream branch-name`
+   або скорочено `git push -u branch-name`,що означає те ж. Або ж ти можеш явно вказати, в яку remote гілку ти хочеш запушити свої зміни - ось так `git push origin branch-name`.
 
-6. Git stash зручний, якщо ви ще не готові закомітити свої зміни. `git stash` 'застешить' зміни, `git stash list` покаже усі доступні стегі, 
+6. Git stash зручний, якщо ви ще не готові закомітити свої зміни. `git stash` 'застешить' зміни, `git stash list` покаже усі доступні стегі,
    а `git stash pop` застосує останній стеш - поверне зміни назад.
 
 7. Щоб переглянути зміни колег тобі знадобиться `git fetch` команда. `git fetch` завантажує
-   коміти, файли, нові гілки з віддаленого репозиторію до локального. Після цього ви можете захотіти 
+   коміти, файли, нові гілки з віддаленого репозиторію до локального. Після цього ви можете захотіти
    змерджити зміни віддаленої гілки в локальну (для цього є команда  `git merge branch-name`).
    Або ж ви можете скористатися командою `git pull`, щоб завантажити зміни з remote репозиторію і змерджити в локальну гілку за один раз.
 
-8. У випадку якщо ви забули додати файли до останнього коміту або зробили помилку в описі ви можете скористатися командою `git commit --ammend`. 
- 
+8. У випадку якщо ви забули додати файли до останнього коміту або зробили помилку в описі ви можете скористатися командою `git commit --ammend`.
+
 <Level id="git-flow" number="3" name="Git flow" difficulty="Intermediate" objectives="How to create pull requests" />
 
-Існує рекомендаваний сценарій при роботі з репозиторієм:  
+Існує рекомендаваний сценарій при роботі з репозиторієм:
 
-1. Create branches - створювати окрему гілку на кожну таску/feature  
+1. Create branches - створювати окрему гілку на кожну таску/feature
 
-2. Add commits - робити невеликі коміти з зрозумілими описами 
+2. Add commits - робити невеликі коміти з зрозумілими описами
 
 3. Open a Pull request - створювати pull requests для обговорення, перегляду та затвердження ваших змін
 

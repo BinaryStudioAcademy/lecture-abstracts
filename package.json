@@ -59,7 +59,7 @@
     "lint:type": "npx tsc --noEmit",
     "lint:js": "npx eslint . --resolve-plugins-relative-to .",
     "lint:fs": "ls-lint",
-    "lint:editorconfig": "editorconfig-checker -exclude '\\.mdx$'",
+    "lint:editorconfig": "editorconfig-checker",
     "lint": "npm run lint:js && npm run lint:type"
   },
   "engines": {

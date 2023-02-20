@@ -96,7 +96,7 @@ import audio from "~/assets/audio/in_the_end.mp3";
       </ul>
       <p className="about">
         Full-Stack JavaScript Developer at <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>, movie junkie and cat lover.
-        Enjoys appealing UIs, watching the sea, crime comedies and Le Big Mac 🔫💼    
+        Enjoys appealing UIs, watching the sea, crime comedies and Le Big Mac 🔫💼
       </p>
     </div>
   </div>
@@ -482,7 +482,7 @@ Did you notice **npm**? But did we install it? It's a package manager developed 
 
         <div className="bubble small subtle">
 
-          It is not so convenient to copy such amounts of data manually. 
+          It is not so convenient to copy such amounts of data manually.
 
         </div>
 
@@ -537,7 +537,7 @@ Did you notice **npm**? But did we install it? It's a package manager developed 
     <div className="bubble small subtle">
 
       [Article "Yarn vs npm: Everything You Need to Know"](https://www.sitepoint.com/yarn-vs-npm/)
-      
+
     </div>
   </li>
   <li>
@@ -644,9 +644,9 @@ Did you notice **npm**? But did we install it? It's a package manager developed 
 
 **Node.js** - is a **JavaScript** runtime, where we can run scripts. Everything will work <span className="tooltip" data-tooltip='"almost" because they only have V8 in common'><u>almost like in a browser</u></span>, so the transition from frontend to backend should be <span className="tooltip" data-tooltip='compared to learning a new language'><u>as comfortable as possible</u></span>.
 
-To go to the environment you need to run the command `node` in the terminal, then run any JS code. But obviously, this method is not the most convenient one and it is better to write code in files, that can then be run with the command `node file_name.js`.  
+To go to the environment you need to run the command `node` in the terminal, then run any JS code. But obviously, this method is not the most convenient one and it is better to write code in files, that can then be run with the command `node file_name.js`.
 
-Experiment time! We already know how to use all of JS 's power with Node and that's awesome, but now we want to start implementing servers. Let's open [an official documentation](https://nodejs.org/api/), to take a look at the list of built-in **Node.js** packages, and find out how to work with them. As we can see, there are too many of them, but we only need one to get started - [http](https://nodejs.org/api/http.html), that is responsible for working via HTTP. After reading the description we understand that it has many methods and it doesn't make sense for a beginner to consider all of them, instead let's write a practical example of starting an HTTP server: 
+Experiment time! We already know how to use all of JS 's power with Node and that's awesome, but now we want to start implementing servers. Let's open [an official documentation](https://nodejs.org/api/), to take a look at the list of built-in **Node.js** packages, and find out how to work with them. As we can see, there are too many of them, but we only need one to get started - [http](https://nodejs.org/api/http.html), that is responsible for working via HTTP. After reading the description we understand that it has many methods and it doesn't make sense for a beginner to consider all of them, instead let's write a practical example of starting an HTTP server:
 <SnippetJS01 />
 
 <div className="details">
@@ -689,7 +689,7 @@ Experiment time! We already know how to use all of JS 's power with Node and tha
     <div className="bubble small subtle">
 
       ["Postman Introduction"](https://learning.postman.com/docs/getting-started/introduction/)
-      
+
     </div>
 
   </div>
@@ -712,7 +712,7 @@ And what will happen if the writing to the file is not finished yet, and the ser
 <div className="bubble small subtle">
 
   [Article "Node.js Streams: Everything you need to know"](https://medium.com/edge-coders/node-js-streams-everything-you-need-to-know-c9141306be93)
-    
+
 </div>
 
 
@@ -725,7 +725,7 @@ And what will happen if the writing to the file is not finished yet, and the ser
     The circle in the center is a JS thread and it always performs only one operation at a time. On the left we see a queue of requests waiting to be fulfilled. When a synchronous request is received, it starts to be processed and upon completion starts the next request. In cases where the request causes asynchronous operations, it is delegated to the library [libuv](https://github.com/libuv/libuv), which processes it in a separate thread, and upon completion, puts the callback in the same queue.
     <img src={eventloopImg} alt="eventloop" />
     <div className="bubble small subtle">
-      I tried to explain as simply as possible, but I'm not sure that's enough, so here's a more detailed [video](https://youtu.be/8aGhZQkoFbQ)       
+      I tried to explain as simply as possible, but I'm not sure that's enough, so here's a more detailed [video](https://youtu.be/8aGhZQkoFbQ)
     </div>
   </div>
 </div>
@@ -777,7 +777,7 @@ Everything works! If we try to send requests to routes that aren't described in 
 **Express.js** extends common Node objects [request](https://nodejs.org/docs/latest-v18.x/api/http.html#class-httpclientrequest) and [response](https://nodejs.org/docs/latest-v18.x/api/http.html#class-httpserverresponse), adding a lot of useful features right out of the box. For example, it parses _query-parameters_ into an object and can take parts of a URL as parameters. In _response_ there are convenient methods to format response data:
 <SnippetJS04 />
 
-5 lines, and how many benefits! This is how Express.js conquered the world. Currently, there are a huge number of npm packages for express, designed to solve various cases. Let's consider one of these - parsing the body of the query. Earlier to do this, we would need to add a package (officially recognized Best Practice) [body-parser](https://www.npmjs.com/package/body-parser). But since it was widely used,  the methods from it has been re-added under the express methods to provide request body parsing support out-of-the-box. 
+5 lines, and how many benefits! This is how Express.js conquered the world. Currently, there are a huge number of npm packages for express, designed to solve various cases. Let's consider one of these - parsing the body of the query. Earlier to do this, we would need to add a package (officially recognized Best Practice) [body-parser](https://www.npmjs.com/package/body-parser). But since it was widely used,  the methods from it has been re-added under the express methods to provide request body parsing support out-of-the-box.
 <div className="details">
   <input type="checkbox" id="accordion-5-2" />
   <label className="summary" htmlFor="accordion-5-2">
@@ -824,7 +824,7 @@ We explored enough basic **express** functionality to start with, so now we can 
   <iframe src="https://www.youtube.com/embed/wyxUw25CG1k?start=1308&end=2165" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-And the best part 🍎. Here we will talk about the structure of the project, what, where, and why. For a quick start of a project, we can use [express-generator](https://www.npmjs.com/package/express-generator), which is created by the Express team and generates a default starter on **Express.js**. It should be installed globally to be accessible anywhere from any project. To do this, add the `-g` flag to the installation command: 
+And the best part 🍎. Here we will talk about the structure of the project, what, where, and why. For a quick start of a project, we can use [express-generator](https://www.npmjs.com/package/express-generator), which is created by the Express team and generates a default starter on **Express.js**. It should be installed globally to be accessible anywhere from any project. To do this, add the `-g` flag to the installation command:
 
 <SnippetShell07 />
 
@@ -873,7 +873,7 @@ Pay attention to the `scripts` field in _package.json_, which contains npm scrip
 <div className="bubble small subtle">
 
   Article ["Task automation with npm run"](https://blog.nakulrajput.com/task-automation-with-npm-run/)
-    
+
 </div>
 
 
@@ -915,8 +915,8 @@ Let's make our server smart and give it <span className="tooltip" data-tooltip="
   <div className="details-body">
 
 
-    1. Create a folder _/services_  
-    2. Create a file _/services/user.service.js_  
+    1. Create a folder _/services_
+    2. Create a file _/services/user.service.js_
     3. Add a function to the file and export it:
 
     <SnippetJS08 />
@@ -925,7 +925,7 @@ Let's make our server smart and give it <span className="tooltip" data-tooltip="
 
     <SnippetJS09 />
 
-    5. Run the server `npm start`  
+    5. Run the server `npm start`
     6. Send POST-request to the _/users_ route and take a look at the response that contains the sent name
 
     <img src={service_testImg} alt="service_test" />
@@ -942,8 +942,8 @@ Now the server is able to do something, time to think about how we want to store
   <div className="details-body">
 
 
-    1. Create folder _/repositories_  
-    2. Create file _/repositories/user.repository.js_  
+    1. Create folder _/repositories_
+    2. Create file _/repositories/user.repository.js_
     3. Add a function to the file and export it:
 
     <SnippetJS10 />
@@ -960,7 +960,7 @@ Now the server is able to do something, time to think about how we want to store
 
     5. Import the function from the service into the router and use it to work with the request body:
     <SnippetJS12 />
-    6. Run the server `npm start`  
+    6. Run the server `npm start`
     7. Send POST-request to the _/users_ route and take a look at the response "Data is saved"
 
     <img src={repository_testImg} alt="repository_test" />
@@ -977,8 +977,8 @@ And the last layer is **middlewares**, examples of which we have already seen in
   <div className="details-body">
 
 
-    1. Create folder _/middlewares_  
-    2. Create file _/middlewares/auth.middleware.js_  
+    1. Create folder _/middlewares_
+    2. Create file _/middlewares/auth.middleware.js_
     3. Add a function to the file and export it:
 
     <SnippetJS13 />
@@ -992,7 +992,7 @@ And the last layer is **middlewares**, examples of which we have already seen in
 
 
     4. Import the middleware to the router and use it to secure the GET route:
-    
+
     <SnippetJS14 />
 
     <div className="bubble small subtle">
@@ -1001,7 +1001,7 @@ And the last layer is **middlewares**, examples of which we have already seen in
 
     </div>
 
-    5. Run the server `npm start`  
+    5. Run the server `npm start`
     6. Send GET-request to the _/users_ route with the header `Authorization: user` and take a look at response - 401 status
 
       <img src={middleware_test1Img} alt="middleware_test1" />
@@ -1053,7 +1053,7 @@ I was told that you all know how to deploy client applications, so why not learn
   <b>The End!</b>
 </ThatsAllFolks>
 <div className="bubble">
-  	Leave your questions and feedback in the lecture chat at <a href="https://academy.binary-studio.com/"><strong>Binary Studio Academy</strong></a>. Good luck and don't forget about deadlines! 😉 
+  	Leave your questions and feedback in the lecture chat at <a href="https://academy.binary-studio.com/"><strong>Binary Studio Academy</strong></a>. Good luck and don't forget about deadlines! 😉
 </div>
 
 export default Lecture;
