@@ -37,5 +37,7 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
+const Head: HeadFC = () => <SEO />;
+
 export default IndexPage;
-export const Head: HeadFC = () => <SEO />;
+export { Head };

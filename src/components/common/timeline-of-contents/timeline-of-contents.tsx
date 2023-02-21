@@ -7,13 +7,13 @@ type Timeline = {
   time?: string;
 };
 
-export type TimeLineProps = {
+type Props = {
   headerTitle?: string;
   headerClass?: string;
   timeline: Timeline[];
 };
 
-const TimelineOfContents: React.FC<TimeLineProps> = ({
+const TimelineOfContents: React.FC<Props> = ({
   timeline = [],
   headerClass,
   headerTitle,
