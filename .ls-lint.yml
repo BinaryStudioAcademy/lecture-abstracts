@@ -7,10 +7,13 @@ ls:
   .tsx: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .json: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .md: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
+  .mdx: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
+  .mp3: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .woff2: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .svg: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .png: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
   .jpg: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
+  .zip: regex:([.a-z0-9]*)([-.][a-z0-9]+)*
 
 ignore:
   - node_modules
