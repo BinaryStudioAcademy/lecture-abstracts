@@ -74,3 +74,13 @@ rules:
     - off
   import/no-default-export:
     - error
+  no-restricted-syntax:
+    - error
+    - selector: SwitchCase > *.consequent[type!="BlockStatement"]
+      message: Switch cases without blocks are forbidden.
+    - selector: ExportAllDeclaration,ImportAllDeclaration
+      message: Export/Import all (*) is forbidden.
+    - selector: ExportNamedDeclaration[declaration!=null]
+      message: Exports should be at the end of the file.
+    - selector: ImportDeclaration[importKind=type],ExportNamedDeclaration[exportKind=type]
+      message: Avoid import/export type { Type } from './module'. Prefer import/export { type Type } from './module'.
