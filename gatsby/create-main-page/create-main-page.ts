@@ -1,6 +1,6 @@
 import path from 'path';
 import { Actions, CreatePagesArgs } from 'gatsby';
-import { pagesGraphQLRequest } from '../helpers/pages-graphql-request/pages-graphql-request';
+import { pagesGraphQLRequest } from '../helpers/helpers';
 
 const mainPageTemplate = path.resolve('src/templates/main-page.tsx');
 
