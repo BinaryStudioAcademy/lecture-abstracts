@@ -1,13 +1,13 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { isDateInThePast } from '~/utils';
 import { Avatar } from '~/components';
+import { isDateInThePast } from '~/utils';
+import { LectureItem } from '~/types';
+import { Link } from 'gatsby';
 
 import './lectures-grid.css';
-import { LectureEdge } from '~/types';
 
 type Props = {
-  lectures: LectureEdge[];
+  lectures: LectureItem[];
 };
 
 const LecturesGrid: React.FC<Props> = ({ lectures }) => {
@@ -15,18 +15,7 @@ const LecturesGrid: React.FC<Props> = ({ lectures }) => {
     <div className="lectures-wrapper">
       {lectures.map(
         (
-          {
-            node: {
-              fields: { slug },
-              frontmatter: {
-                author,
-                description,
-                duration,
-                publishedAt,
-                title,
-              },
-            },
-          },
+          { author, description, duration, publishedAt, title, slug },
           index,
         ) => {
           const lectureTitle = (

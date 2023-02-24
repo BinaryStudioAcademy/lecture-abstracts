@@ -1,7 +1,7 @@
 import path from 'path';
 import { Actions, CreatePagesArgs, Reporter } from 'gatsby';
 import { lecturesGraphQLRequest } from '../helpers/helpers';
-import { LecturesQuery } from '~/types';
+import { LectureItem, LecturesQuery } from '~/types';
 
 const mainPageTemplate = path.resolve('src/templates/main-page.tsx');
 
@@ -18,10 +18,27 @@ const createMainPage = async (
 
   const mainPageContext = pages.data as LecturesQuery;
 
+  const lectures: LectureItem[] = mainPageContext.allMdx.edges.map((node) => {
+    const {
+      node: {
+        fields: { slug },
+        frontmatter: { author, description, duration, publishedAt, title },
+      },
+    } = node;
+    return {
+      slug,
+      author,
+      description,
+      duration,
+      publishedAt,
+      title,
+    };
+  });
+
   createPage({
     path: '/',
     component: mainPageTemplate,
-    context: { lectures: mainPageContext.allMdx.edges },
+    context: { lectures },
   });
 };
 

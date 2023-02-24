@@ -1,7 +1,7 @@
-import { LectureEdge } from '../graphql/lectures/lectures-query';
+import { LectureItem } from '../lectures/lecture-item/lecture-item';
 
 type MainPageContext = {
-  lectures: LectureEdge[];
+  lectures: LectureItem[];
 };
 
 export { MainPageContext };

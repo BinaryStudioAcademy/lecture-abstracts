@@ -1,5 +1,5 @@
 export { Author } from './lectures/author/author';
-export { Lecture } from './lectures/lecture/lecture';
+export { LectureItem } from './lectures/lecture-item/lecture-item';
 export { LecturesContext, PageContext } from './page-context/page-context';
 export { LectureEdge, LecturesQuery } from './graphql/lectures/lectures-query';
 export {
