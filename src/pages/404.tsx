@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Link, HeadFC, PageProps } from 'gatsby';
+import { Link, PageProps } from 'gatsby';
 import { ShrugMessage } from '~/components/common';
+import { SEO } from '~/partials';
 
 const pageStyles = {
   color: '#232129',
@@ -19,7 +20,7 @@ const codeStyles = {
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
-      <p style={{ marginBottom: 48 }}>
+      <div style={{ marginBottom: 48 }}>
         <ShrugMessage>
           <h4>— Sorry, this page hasn’t hatched yet.</h4>
           <p>
@@ -41,13 +42,10 @@ const NotFoundPage: React.FC<PageProps> = () => {
             <br />
           </>
         ) : null}
-      </p>
+      </div>
     </main>
   );
 };
 
-const Head: HeadFC = () => <title>Not found</title>;
-
 export default NotFoundPage;
-
-export { Head };
+export { SEO as Head };

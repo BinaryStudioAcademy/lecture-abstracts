@@ -1,5 +1,6 @@
 import { createFilePath } from 'gatsby-source-filesystem';
 import { GatsbyNode } from 'gatsby';
+import { createMainPage } from './gatsby/gatsby';
 
 const onCreateNode: GatsbyNode['onCreateNode'] = ({
   node,
@@ -14,6 +15,12 @@ const onCreateNode: GatsbyNode['onCreateNode'] = ({
       value: createFilePath({ node, getNode }),
     });
   }
+};
+
+const createPages: GatsbyNode['createPages'] = async ({ actions, graphql }) => {
+  const { createPage } = actions;
+
+  await createMainPage(createPage, graphql);
 };
 
 const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
@@ -35,4 +42,4 @@ const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   }
 };
 
-export { onCreateNode, onCreateWebpackConfig };
+export { onCreateNode, onCreateWebpackConfig, createPages };
