@@ -7,13 +7,13 @@ import './lectures-grid.css';
 import { LectureEdge } from '~/types';
 
 type Props = {
-  edges: LectureEdge[];
+  lectures: LectureEdge[];
 };
 
-const LecturesGrid: React.FC<Props> = ({ edges }) => {
+const LecturesGrid: React.FC<Props> = ({ lectures }) => {
   return (
     <div className="lectures-wrapper">
-      {edges.map(
+      {lectures.map(
         (
           {
             node: {

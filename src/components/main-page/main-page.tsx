@@ -9,11 +9,7 @@ type Props = {
   pageContext: MainPageContext;
 };
 
-const MainPage: React.FC<Props> = ({
-  pageContext: {
-    allMdx: { edges },
-  },
-}) => {
+const MainPage: React.FC<Props> = ({ pageContext: { lectures } }) => {
   return (
     <div className="container grid-lg">
       <div className="columns">
@@ -36,7 +32,7 @@ const MainPage: React.FC<Props> = ({
                 </p>
               </div>
             </div>
-            <LecturesGrid edges={edges} />
+            <LecturesGrid lectures={lectures} />
           </article>
           <Footer />
         </div>

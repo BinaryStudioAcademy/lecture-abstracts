@@ -1,1 +1,1 @@
-export { pagesGraphQLRequest } from './pages-graphql-request/pages-graphql-request';
+export { lecturesGraphQLRequest } from './lectures-graphql-request/lectures-graphql-request';

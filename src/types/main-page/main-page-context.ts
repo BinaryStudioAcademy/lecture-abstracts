@@ -1,9 +1,7 @@
 import { LectureEdge } from '../graphql/lectures/lectures-query';
 
-interface MainPageContext {
-  allMdx: {
-    edges: LectureEdge[];
-  };
-}
+type MainPageContext = {
+  lectures: LectureEdge[];
+};
 
 export { MainPageContext };

@@ -1,5 +1,5 @@
-const pagesGraphQLRequest = (): string => `
-query MyQuery {
+const lecturesGraphQLRequest = (): string => `
+{
   allMdx(
     sort: { frontmatter: { orderId: ASC } }
     filter: { frontmatter: { hiddenFromMainPage: { eq: false } } }
@@ -23,4 +23,4 @@ query MyQuery {
 }
 `;
 
-export { pagesGraphQLRequest };
+export { lecturesGraphQLRequest };

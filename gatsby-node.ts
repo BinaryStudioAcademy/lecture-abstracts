@@ -17,10 +17,14 @@ const onCreateNode: GatsbyNode['onCreateNode'] = ({
   }
 };
 
-const createPages: GatsbyNode['createPages'] = async ({ actions, graphql }) => {
+const createPages: GatsbyNode['createPages'] = async ({
+  actions,
+  graphql,
+  reporter,
+}) => {
   const { createPage } = actions;
 
-  await createMainPage(createPage, graphql);
+  await createMainPage(createPage, graphql, reporter);
 };
 
 const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
