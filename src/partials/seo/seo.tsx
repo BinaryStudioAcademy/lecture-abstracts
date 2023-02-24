@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageContext } from '~/types';
-import { useGetSiteMetadata } from '~/hooks/use-get-site-metadata';
+import { siteMetadata } from './meta/default-meta';
 
 type SEOProps = {
   pageContext?: PageContext;
@@ -14,7 +14,7 @@ const SEO: React.FC<React.PropsWithChildren<SEOProps>> = ({
     description: defaultDescription,
     title: defaultTitle,
     author: defaultAuthor,
-  } = useGetSiteMetadata();
+  } = siteMetadata;
 
   const seo = {
     title: pageContext?.frontmatter?.title || defaultTitle,

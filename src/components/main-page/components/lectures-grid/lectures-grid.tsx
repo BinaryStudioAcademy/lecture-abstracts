@@ -1,29 +1,21 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Avatar } from '~/components';
 import { isDateInThePast } from '~/utils';
-import { Avatar } from '../../common';
-import { useGetLectures } from '~/hooks/use-get-lectures';
+import { LectureItem } from '~/types';
+import { Link } from 'gatsby';
 
 import './lectures-grid.css';
 
-const LecturesGrid: React.FC = () => {
-  const edges = useGetLectures();
+type Props = {
+  lectures: LectureItem[];
+};
+
+const LecturesGrid: React.FC<Props> = ({ lectures }) => {
   return (
     <div className="lectures-wrapper">
-      {edges.map(
+      {lectures.map(
         (
-          {
-            node: {
-              fields: { slug },
-              frontmatter: {
-                author,
-                description,
-                duration,
-                publishedAt,
-                title,
-              },
-            },
-          },
+          { author, description, duration, publishedAt, title, slug },
           index,
         ) => {
           const lectureTitle = (

@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { HeadFC, PageProps } from 'gatsby';
-import { LecturesGrid, LogoLink } from '~/components';
-import { Footer, Header, SEO } from '~/partials';
+import { LecturesGrid, LogoLink } from './components/components';
+import { Footer, Header } from '~/partials';
+import { MainPageContext } from '~/types';
 
 import '~/assets/stylesheets/index.css';
 
-const IndexPage: React.FC<PageProps> = () => {
+type Props = {
+  pageContext: MainPageContext;
+};
+
+const MainPage: React.FC<Props> = ({ pageContext: { lectures } }) => {
   return (
     <div className="container grid-lg">
       <div className="columns">
@@ -28,7 +32,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </p>
               </div>
             </div>
-            <LecturesGrid />
+            <LecturesGrid lectures={lectures} />
           </article>
           <Footer />
         </div>
@@ -37,7 +41,4 @@ const IndexPage: React.FC<PageProps> = () => {
   );
 };
 
-const Head: HeadFC = () => <SEO />;
-
-export default IndexPage;
-export { Head };
+export { MainPage };

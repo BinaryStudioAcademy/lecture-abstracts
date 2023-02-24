@@ -12,5 +12,3 @@ export {
   TimelineOfContents,
   VideoWrapper,
 } from './common';
-export { LecturesGrid } from './homepage/lectures-grid/lectures-grid';
-export { LogoLink } from './homepage/logo-link/logo-link';
