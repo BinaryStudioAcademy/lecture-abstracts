@@ -25,11 +25,11 @@ h3 {
   font-size: 28px;
 }
 
-ol li,
-ul li {
-  margin-bottom: 0.25rem;
-  margin-top: 0;
-}
+// ol li,
+// ul li {
+//   margin-bottom: 0.25rem;
+//   margin-top: 0;
+// }
 
 // .content pre {
 //   margin: 0.25rem 0;
@@ -67,19 +67,19 @@ ul li {
 // .content a:hover code {
 //   text-decoration: underline;
 // }
-.content ul,
-.content ol {
-  padding-left: 1.5em;
-  list-style: none outside none;
-}
+// .content ul,
+// .content ol {
+//   padding-left: 1.5em;
+//   list-style: none outside none;
+// }
 
-.content ol {
-  counter-reset: ol-counter;
-}
+// .content ol {
+//   counter-reset: ol-counter;
+// }
 
-.content li {
-  list-style: none outside none;
-}
+// .content li {
+//   list-style: none outside none;
+// }
 
 // .content ul:not(.step) > li::before {
 //   float: left;
@@ -90,31 +90,31 @@ ul li {
 //   content: '●';
 // }
 
-.content ol > li::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-top: calc((0.8rem * 1.5 - 1rem) / 2 + 0.05rem);
-  margin-left: calc(-1.5rem + 0.5rem / 2);
-  color: inherit;
-  font-weight: bold;
-  font-size: 0.7em;
-  font-family: inherit;
-  line-height: 1rem;
-  background: transparent;
-  border-radius: 0.25em;
-  counter-increment: ol-counter;
-  content: counter(ol-counter);
-}
+// .content ol > li::before {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   float: left;
+//   width: 0.9rem;
+//   height: 0.9rem;
+//   margin-top: calc((0.8rem * 1.5 - 1rem) / 2 + 0.05rem);
+//   margin-left: calc(-1.5rem + 0.5rem / 2);
+//   color: inherit;
+//   font-weight: bold;
+//   font-size: 0.7em;
+//   font-family: inherit;
+//   line-height: 1rem;
+//   background: transparent;
+//   border-radius: 0.25em;
+//   counter-increment: ol-counter;
+//   content: counter(ol-counter);
+// }
 
-.content ol.inverted > li::before {
-  color: white;
-  font-weight: normal;
-  background: black;
-}
+// .content ol.inverted > li::before {
+//   color: white;
+//   font-weight: normal;
+//   background: black;
+// }
 
 /* Elements */
 .content hr {
@@ -129,44 +129,44 @@ ul li {
   margin: 1rem 0;
 }
 
-.content ol,
-.content ul {
-  margin: 0.25rem 0 0.5rem;
-}
+// .content ol,
+// .content ul {
+//   margin: 0;
+// }
 
-.content ol {
-  list-style: outside decimal;
-}
+// .content ol {
+//   list-style: outside decimal;
+// }
 
-.content ul {
-  list-style: outside disc;
-}
+// .content ul {
+//   list-style: outside disc;
+// }
 
-.content ol li,
-.content ul li {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
+// .content ol li,
+// .content ul li {
+//   margin-top: 0;
+//   margin-bottom: 0.25rem;
+// }
 
-.content ol li:last-child,
-.content ul li:last-child {
-  margin-bottom: 0;
-}
+// .content ol li:last-child,
+// .content ul li:last-child {
+//   margin-bottom: 0;
+// }
 
-.content ol.compact,
-.content ol.compact li,
-.content ul.compact,
-.content ul.compact li {
-  margin: 0;
-}
+// .content ol.compact,
+// .content ol.compact li,
+// .content ul.compact,
+// .content ul.compact li {
+//   margin: 0;
+// }
 
-.content p {
-  margin-bottom: 0.25rem;
-}
+// .content p {
+//   margin-bottom: 0.25rem;
+// }
 
-.content p:last-child {
-  margin-bottom: 0;
-}
+// .content p:last-child {
+//   margin-bottom: 0;
+// }
 
 .content img {
   max-width: 100%;
@@ -215,4 +215,69 @@ ul li {
 
 .content a:hover code {
   text-decoration: underline;
+}
+
+.content .messages {
+  background-color: red;
+}
+.content .messages .messages__from:not(:first-of-type) {
+  margin-left: 0.5em;
+}
+
+.content .messages .messages__from {
+  vertical-align: text-top;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+
+.content .messages .messages__from + label {
+  padding-left: 0.25em;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+
+.content .messages .messages__from:hover,
+.content .messages .messages__from:hover + label,
+.content .messages .messages__from:checked,
+.content .messages .messages__from:checked + label {
+  opacity: 1;
+}
+
+.content
+  .messages
+  input[id='lionel-messi']:checked
+  ~ div[data-from='lionel-messi'] {
+  display: block;
+}
+
+.content
+  .messages
+  input[id='andres-iniesta']:checked
+  ~ div[data-from='andres-iniesta'] {
+  display: block;
+}
+
+.content
+  .messages
+  input[id='donald-trump']:checked
+  ~ div[data-from='donald-trump'] {
+  display: block;
+}
+
+.content .messages input[id='ryu']:checked ~ div[data-from='ryu'] {
+  display: block;
+}
+
+.content .messages input[id='you']:checked ~ div[data-from='you'] {
+  display: block;
+}
+
+.content .messages .message {
+  margin-top: 0.5em;
+}
+
+.content .messages input + label ~ .message {
+  display: none;
 }

@@ -184,60 +184,60 @@ div.details > input:first-child + label + .details-body {
 }
 
 /* Elements */
-.content hr {
-  height: 2px;
-  margin: 2rem 0;
-  background: lightgrey;
-  border: none;
-}
+// .content hr {
+//   height: 2px;
+//   margin: 2rem 0;
+//   background: lightgrey;
+//   border: none;
+// }
 
-.content hr.small {
-  height: 1px;
-  margin: 1rem 0;
-}
+// .content hr.small {
+//   height: 1px;
+//   margin: 1rem 0;
+// }
 
-.content ol,
-.content ul {
-  margin: 0.25rem 0 0.5rem;
-}
+// .content ol,
+// .content ul {
+//   margin: 0.25rem 0 0.5rem;
+// }
 
-.content ol {
-  list-style: outside decimal;
-}
+// .content ol {
+//   list-style: outside decimal;
+// }
 
-.content ul {
-  list-style: outside disc;
-}
+// .content ul {
+//   list-style: outside disc;
+// }
 
-.content ol li,
-.content ul li {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-}
+// .content ol li,
+// .content ul li {
+//   margin-top: 0;
+//   margin-bottom: 0.25rem;
+// }
 
-.content ol li:last-child,
-.content ul li:last-child {
-  margin-bottom: 0;
-}
+// .content ol li:last-child,
+// .content ul li:last-child {
+//   margin-bottom: 0;
+// }
 
-.content ol.compact,
-.content ol.compact li,
-.content ul.compact,
-.content ul.compact li {
-  margin: 0;
-}
+// .content ol.compact,
+// .content ol.compact li,
+// .content ul.compact,
+// .content ul.compact li {
+//   margin: 0;
+// }
 
-.content p {
-  margin-bottom: 0.25rem;
-}
+// .content p {
+//   margin-bottom: 0.25rem;
+// }
 
-.content p:last-child {
-  margin-bottom: 0;
-}
+// .content p:last-child {
+//   margin-bottom: 0;
+// }
 
-.content img {
-  max-width: 100%;
-}
+// .content img {
+//   max-width: 100%;
+// }
 
 // .content blockquote {
 //   margin-top: 0.25rem;
@@ -328,74 +328,74 @@ div.details > input:first-child + label + .details-body {
   flex: 1 0 auto;
 }
 
-/* Contacts */
-.content .contacts {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding: 0;
-  font-weight: 400;
-  font-size: 0.9em;
-  white-space: nowrap;
-  list-style: none outside none;
-}
+// /* Contacts */
+// .content .contacts {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 0;
+//   margin-bottom: 0;
+//   margin-left: 0;
+//   padding: 0;
+//   font-weight: 400;
+//   font-size: 0.9em;
+//   white-space: nowrap;
+//   list-style: none outside none;
+// }
 
-.content .contacts li {
-  margin-top: 0;
-  margin-right: 1em;
-  margin-bottom: 0.25em;
-}
+// .content .contacts li {
+//   margin-top: 0;
+//   margin-right: 1em;
+//   margin-bottom: 0.25em;
+// }
 
-.content .contacts li::before {
-  display: none;
-}
+// .content .contacts li::before {
+//   display: none;
+// }
 
-.content .contacts li a {
-  color: black;
-  transition: color 0.2s ease-in-out;
-}
+// .content .contacts li a {
+//   color: black;
+//   transition: color 0.2s ease-in-out;
+// }
 
-.content .contacts li a:hover {
-  text-decoration: none;
-}
+// .content .contacts li a:hover {
+//   text-decoration: none;
+// }
 
-.content .contacts li a.facebook:hover {
-  color: #3b5998;
-}
+// .content .contacts li a.facebook:hover {
+//   color: #3b5998;
+// }
 
-.content .contacts li a.github:hover {
-  color: dimgrey;
-}
+// .content .contacts li a.github:hover {
+//   color: dimgrey;
+// }
 
-.content .contacts li a.mail:hover {
-  color: dimgrey;
-}
+// .content .contacts li a.mail:hover {
+//   color: dimgrey;
+// }
 
-.content .contacts li a.skype:hover {
-  color: #00aff0;
-}
+// .content .contacts li a.skype:hover {
+//   color: #00aff0;
+// }
 
-.content .contacts li a.linkedin:hover {
-  color: #0077b5;
-}
+// .content .contacts li a.linkedin:hover {
+//   color: #0077b5;
+// }
 
-.content .contacts li a.phone:hover {
-  color: dimgrey;
-}
+// .content .contacts li a.phone:hover {
+//   color: dimgrey;
+// }
 
-.content .contacts li a.website:hover {
-  color: dimgrey;
-}
+// .content .contacts li a.website:hover {
+//   color: dimgrey;
+// }
 
-.content .contacts li a .icon {
-  width: auto;
-  height: 16px;
-  margin-right: 0.25em;
-  vertical-align: bottom;
-  fill: currentcolor;
-}
+// .content .contacts li a .icon {
+//   width: auto;
+//   height: 16px;
+//   margin-right: 0.25em;
+//   vertical-align: bottom;
+//   fill: currentcolor;
+// }
 
 /* Profile */
 .content .profile .name {

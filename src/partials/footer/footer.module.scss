@@ -1,0 +1,16 @@
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  color: var(--gray-200);
+}
+
+.footer-nav {
+  align-items: stretch;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -3,14 +3,13 @@ import * as styles from './accordion.module.scss';
 
 type Props = {
   children: [React.ReactNode, React.ReactNode];
-  className?: string;
 };
 
-const Accordion: React.FC<Props> = ({ children, className }) => {
+const Accordion: React.FC<Props> = ({ children }) => {
   const [heading, content] = children;
 
   return (
-    <details className={`${styles.accordion} ${className}`}>
+    <details className={styles.accordion}>
       <summary className={styles.accordionHeader}>{heading}</summary>
       <div className={styles.accordionBody}>{content}</div>
     </details>

@@ -134,7 +134,9 @@ import SnippetL03S16 from "../assets/snippets/snippet-l03-s16.mdx";
 import SnippetL03S17 from "../assets/snippets/snippet-l03-s17.mdx";
 import SnippetL03S18 from "../assets/snippets/snippet-l03-s18.mdx";
 
-<div><h1><strong>Javascript for everyone</strong></h1></div>
+import { introBubble } from '~/data/lectures/javascript-for-everyone/intro';
+
+# Javascript for everyone
 
 <Language
   currentLanguage="en"
@@ -148,37 +150,7 @@ import SnippetL03S18 from "../assets/snippets/snippet-l03-s18.mdx";
   <iframe src="https://www.youtube.com/embed/wZOizfA6kmw" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={oleksandrDanylchenko2021Avatar} role="img" aria-label="Oleksandr Danylchenko"/>
-    </div>
-    <div className="profile">
-      <h3 className="name">Oleksandr Danylchenko</h3>
-      <ul className="contacts">
-        <li>
-          <a href="https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/" rel="author" className="linkedin">
-            <FontAwesomeIcon icon={faLinkedin} className="icon" />
-            <span>oleksandr-danylchenko</span>
-          </a>
-        </li>
-      </ul>
-      <p className="about">
-        Full-stack developer at Binary Studio. Works on development of a new SPA framework, which generates complex visually-rich sites with just the simple declarative description in the few jsons. Likes to discover and experiment with the new web-platform features. <del>And doesn't like Safari for incompatibilities and obsolescence.</del>
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Hello, world! 👋</strong><br />
-    I will tell you about all the joys of modern JavaScript, starting from the basic syntax and ending <em>(carefully, jargon!)</em> with modules, transpilers, and bundlers. Before you start - a few disclaimers about the content of the lecture:<br />
-    <ol className="compact inverted">
-      <li>Some terms and technologies are covered superficially;</li>
-      <li>"- Should I click on all the links to the documentation and read all the articles?" Well-u-u-u-u, up to you;</li>
-      <li>Everything should be interesting and as informative as possible, but you’ll see how it will turn out ... Have fun! 🙃</li>
-    </ol>
-    <p>And another <strong>heads up</strong> - you will need your favorite <a href="https://www.jetbrains.com/products/#lang=js"><strong>IDE</strong></a>, <a href="https://nodejs.org/en/"><strong>Node.js</strong></a>, and download the [project starter](/assets/zip/es6-for-everyone.zip). Ready? Let's go!</p>
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.en} />
 
 <div className="messages">
   The student is still on probation at his new company and is still using Slack to collaborate with other developers and communicate with customers. Ryu writes in the chat one warm spring evening - a former customer <em>(returning customer, ya-a-a-ay!)</em>, for whom an online resume was previously made. He is completely satisfied with the quality of our work and wants to entrust us with another project &mdash;
