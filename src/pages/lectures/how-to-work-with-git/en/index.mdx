@@ -12,11 +12,9 @@ hiddenFromMainPage: true
 import { Lecture } from "~/layouts";
 import { SEO } from '~/partials';
 
-<div>
-  <h1>
-    <strong>How to work with Git</strong>
-  </h1>
-</div>
+import { introBubble } from '~/data/lectures/how-to-work-with-git/intro';
+
+# How to work with Git
 
 <Language
   currentLanguage="en"
@@ -26,37 +24,25 @@ import { SEO } from '~/partials';
   }}
 />
 
-<div>
-  <div className="author">
-      <Avatar name="Viktoriia Vasylenko" />
-      <div className="profile">
-        <h3 className="name">Viktoriia Vasylenko</h3>
-        <p className="about">
-          Viktoriia works at Binary Studio as a Full stack developer after finishing Binary Studio Academy in 2020.
-        </p>
-      </div>
-    </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Hi, student!</strong> 👋<br />Welcome to the Git lecture. Here you'll find a short script to the lecture with Git commands and useful links. Let's go!
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.en} />
 
-<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + "em"}}>
-  <h2><strong>Lecture plan</strong></h2>
-  <TimelineOfContents timeline={[{
-    linkTo: "#setting-up-the-repository",
-    title: "Setting up the repository"
-  }, {
-    linkTo: "#practicing-git",
-    title: "<span>Common <code>git</code> commands</span>",
-  }, {
-    linkTo: "#git-flow",
-    title: "Git flow"
-  },  {
-    linkTo: "#undo-changes",
-    title: "Undo the changes"
-  }]} />
-</div>
+<br />
+
+## Lecture plan
+
+<TimelineOfContents timeline={[{
+  linkTo: "#setting-up-the-repository",
+  title: "Setting up the repository"
+}, {
+  linkTo: "#practicing-git",
+  title: "<span>Common <code>git</code> commands</span>",
+}, {
+  linkTo: "#git-flow",
+  title: "Git flow"
+},  {
+  linkTo: "#undo-changes",
+  title: "Undo the changes"
+}]} />
 
 <VideoWrapper duration="33m 31s">
   <iframe src="https://www.youtube.com/embed/czNvX0xdFZA" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

@@ -1,10 +1,9 @@
 import React from 'react';
-import { Accordion } from '../accordion/accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVideo } from '@fortawesome/pro-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/pro-regular-svg-icons';
 
-import './video-wrapper.css';
+import * as styles from './video-wrapper.module.scss';
 
 type VideoWrapperProps = {
   children: React.ReactNode;
@@ -15,21 +14,22 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
   duration = '00:00',
 }) => {
   return (
-    <div className="video-wrapper">
-      <Accordion>
-        <React.Fragment>
+    <div className={styles.videoWrapper}>
+      <details className={styles.videoDetails}>
+        <summary className={styles.videoHeader}>
           <FontAwesomeIcon icon={faVideo} fixedWidth />
-          <span className="title">
+          <span className={styles.title}>
             <strong>{duration}</strong>
           </span>
           <span className="icon">
             <FontAwesomeIcon icon={faAngleRight} fixedWidth />
           </span>
-        </React.Fragment>
-        <React.Fragment>
-          <div className="iframe-wrapper">{children}</div>
-        </React.Fragment>
-      </Accordion>
+        </summary>
+        <div className={styles.videoBody}>
+          {' '}
+          <div className={styles.iframeWrapper}>{children}</div>
+        </div>
+      </details>
     </div>
   );
 };

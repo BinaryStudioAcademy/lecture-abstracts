@@ -52,7 +52,7 @@ select {
 
 .h3,
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.64px;
 }
 h1,
 h2,
@@ -89,23 +89,6 @@ a {
   color: #5755d9;
   outline: none;
   text-decoration: none;
-}
-
-/* Handwave */
-.waving-hand {
-  animation: wave 0.4s alternate infinite;
-  animation-timing-function: linear;
-  transform-origin: 50% 100%;
-  display: inline-block;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(-8deg);
-  }
-  100% {
-    transform: rotate(12deg);
-  }
 }
 
 /* Lecture panel */
@@ -158,8 +141,8 @@ a {
   max-width: 976px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
+  padding-left: 8px;
+  padding-right: 8px;
   width: 100%;
 }
 
@@ -167,15 +150,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 .hero-sm {
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 
 .hero-body {
-  padding: 0.4rem;
+  padding: 8px;
   text-align: center;
 }

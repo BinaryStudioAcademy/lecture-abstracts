@@ -1,0 +1,79 @@
+code,
+kbd,
+pre,
+samp {
+  font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier,
+    monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+body {
+  overflow-x: hidden;
+  color: #3b4351;
+  font-size: 0.8rem;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', sans-serif;
+  background: #ffffff;
+  text-rendering: optimizelegibility;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: var(--blue-200);
+  text-decoration: none;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a:visited {
+  color: #807fe2;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -3,7 +3,7 @@ import { LecturesGrid, LogoLink } from './components/components';
 import { Footer, Header } from '~/partials';
 import { MainPageContext } from '~/types';
 
-import '~/assets/stylesheets/index.css';
+import * as styles from './main-page.module.scss';
 
 type Props = {
   pageContext: MainPageContext;
@@ -21,7 +21,7 @@ const MainPage: React.FC<Props> = ({ pageContext: { lectures } }) => {
                 <div>
                   <strong>
                     — Hey, привіт, привет{' '}
-                    <span className="waving-hand">👋</span>!
+                    <span className={styles.wavingHand}>👋</span>!
                   </strong>{' '}
                   Це — лекції другого етапу для
                 </div>

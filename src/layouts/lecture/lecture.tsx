@@ -4,7 +4,10 @@ import { isDateInThePast } from '~/utils';
 import { LecturesContext } from '~/types';
 import { Footer, Header } from '~/partials';
 
-import './lecture.scss';
+import '~/assets/stylesheets/styles.scss';
+
+// import './lecture.scss';
+import * as styles from './lecture.module.scss';
 import 'prismjs/themes/prism.css';
 
 type LectureProps = {
@@ -21,11 +24,11 @@ const Lecture: React.FC<LectureProps> = ({
   const isPublished = isDateInThePast(publishedAt);
   return (
     <>
-      <div className="container grid-lg">
+      <div className={styles.lectureContainer}>
         <div className="columns">
           <div className="column">
             <Header />
-            <article className="content">
+            <article className={styles.content}>
               {isPublished ? (
                 <>{children}</>
               ) : (

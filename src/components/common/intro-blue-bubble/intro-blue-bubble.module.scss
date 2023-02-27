@@ -1,0 +1,63 @@
+.author {
+  display: flex;
+  padding: 1em;
+  font-size: 14px;
+  background: whitesmoke;
+  border-radius: 0.5em;
+}
+
+.bubble ol.inverted > li::before {
+  color: #0084ff;
+  font-weight: bold;
+  background: white;
+  border-radius: 100%;
+}
+
+.bubble {
+  position: relative;
+  display: inline-block;
+  margin: -0.5em 1em 1em;
+  margin-top: 0;
+  padding: 0.4em 0.8em;
+  overflow: visible;
+  color: white;
+  background: linear-gradient(to right, #0084ff, #00c4ff);
+  border-radius: 0.25em 1em 1em;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.bubble.small {
+  font-size: 0.85em;
+}
+
+.bubble.subtle {
+  opacity: 0.5;
+}
+
+.bubble.subtle:hover {
+  opacity: 1;
+}
+
+.bubble a {
+  color: inherit;
+}
+
+.bubble:first-child {
+  margin-top: -0.25rem;
+}
+
+.bubble + p,
+.bubble + div {
+  margin-top: 0.25rem;
+}
+
+.name {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5em;
+}
+
+.about {
+  margin: 0;
+}

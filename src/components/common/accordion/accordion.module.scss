@@ -1,0 +1,37 @@
+.accordion {
+  input:checked ~,
+  &[open] {
+    & .accordion-header > {
+      .icon:first-child {
+        transform: rotate(90deg);
+      }
+    }
+
+    & .accordion-body {
+      max-height: 800px;
+    }
+  }
+
+  .accordion-header {
+    display: block;
+    padding: 3px 6px;
+
+    .icon {
+      transition: transform 0.25s;
+    }
+  }
+
+  .accordion-body {
+    max-height: 0;
+    margin-bottom: 6px;
+    overflow: hidden;
+    transition: max-height 0.25s;
+  }
+}
+
+// Remove default details marker in Webkit
+summary.accordion-header {
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
