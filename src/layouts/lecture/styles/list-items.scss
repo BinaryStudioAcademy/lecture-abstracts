@@ -1,0 +1,52 @@
+.content ol,
+.content ul {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.content ol {
+  list-style: outside decimal;
+}
+
+.content ul {
+  list-style: outside disc;
+}
+
+.content ol li,
+.content ul li {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.content ol li:last-child,
+.content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.content ol.compact,
+.content ol.compact li,
+.content ul.compact,
+.content ul.compact li {
+  margin: 0;
+}
+
+.content p {
+  margin-bottom: 0.25rem;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.5em;
+  list-style: none outside none;
+}
+
+.content ol {
+  counter-reset: ol-counter;
+}
+
+.content li {
+  list-style: none outside none;
+}

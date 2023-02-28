@@ -4,6 +4,15 @@
   padding: var(--page-offset);
 }
 
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 64px;
+  padding-top: 64px;
+  text-align: center;
+}
+
 .waving-hand {
   display: inline-block;
   transform-origin: 50% 100%;

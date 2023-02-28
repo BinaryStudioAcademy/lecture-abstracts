@@ -1,5 +1,4 @@
 .avatar-wrapper {
-  flex: 0 0 6em;
   width: 6em;
   margin-right: 1em;
 }
@@ -8,4 +7,12 @@
   position: relative;
   display: block;
   flex: 1 0 auto;
+}
+
+.small {
+  flex: 0 0 1.25em;
+}
+
+.medium {
+  flex: 0 0 6em;
 }

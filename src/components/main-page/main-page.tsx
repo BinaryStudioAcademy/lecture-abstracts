@@ -16,7 +16,7 @@ const MainPage: React.FC<Props> = ({ pageContext: { lectures } }) => {
         <div className="column">
           <Header />
           <article>
-            <div className="hero">
+            <div className={styles.welcomeText}>
               <div className="hero-body text-center">
                 <div>
                   <strong>

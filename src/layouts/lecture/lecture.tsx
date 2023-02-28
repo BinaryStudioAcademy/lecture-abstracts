@@ -6,8 +6,8 @@ import { Footer, Header } from '~/partials';
 
 import '~/assets/stylesheets/styles.scss';
 
-// import './lecture.scss';
-import * as styles from './lecture.module.scss';
+import './lecture.scss';
+// import * as styles from './lecture.module.scss';
 import 'prismjs/themes/prism.css';
 
 type LectureProps = {
@@ -24,11 +24,11 @@ const Lecture: React.FC<LectureProps> = ({
   const isPublished = isDateInThePast(publishedAt);
   return (
     <>
-      <div className={styles.lectureContainer}>
+      <div className="container grid-lg">
         <div className="columns">
           <div className="column">
             <Header />
-            <article className={styles.content}>
+            <article className="content">
               {isPublished ? (
                 <>{children}</>
               ) : (
