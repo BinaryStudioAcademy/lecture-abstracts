@@ -65,7 +65,7 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
         )}
         {footer && (
           <span
-            style={{ display: 'inline-block' }}
+            className={styles.introFooter}
             dangerouslySetInnerHTML={{ __html: footer }}
           />
         )}

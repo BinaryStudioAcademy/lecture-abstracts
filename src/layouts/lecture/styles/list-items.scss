@@ -1,6 +1,7 @@
 .content ol,
 .content ul {
   margin: 0.25rem 0 0.5rem;
+  padding: 0;
 }
 
 .content ol {
@@ -49,4 +50,13 @@
 
 .content li {
   list-style: none outside none;
+}
+
+ul:not(.timeline):not(.contacts) li::before {
+  float: left;
+  width: 1.5em;
+  margin-left: -1.5em;
+  font-family: Arial;
+  text-align: center;
+  content: '●';
 }

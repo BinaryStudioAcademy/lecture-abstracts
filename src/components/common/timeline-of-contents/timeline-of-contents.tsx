@@ -26,7 +26,7 @@ const TimelineOfContents: React.FC<Props> = ({
         <strong>{headerTitle}</strong>
       </h2>
     )}
-    <ul className={styles.step} {...rest}>
+    <ul className={`${styles.step} timeline`} {...rest}>
       {timeline.map(({ linkTo, title, time }, index) => (
         <li key={`timeline-item-${index}`} className={styles.stepItem}>
           {time && (
