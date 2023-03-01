@@ -1,13 +1,17 @@
 import React from 'react';
 import { Avatar } from '~/components';
 import { Author } from '~/types';
+import { ContactIcon } from '~/enums';
 
 import * as styles from './intro-blue-bubble.module.scss';
+import { nameToIcon } from './utils/name-to-icon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Contacts = {
   ref: string;
   className?: 'darkBlueIcon' | 'blueIcon';
   title: string;
+  iconName: ContactIcon;
 };
 
 type IntroBlueBubbleProps = {
@@ -37,14 +41,19 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
           <h3 className={styles.name}>{author}</h3>
           {contacts && (
             <ul className={styles.contacts}>
-              {contacts.map(({ ref, title, className = 'defaultIcon' }) => (
-                <li key={title}>
-                  <a href={ref} rel="author" className={styles[className]}>
-                    {/* <FontAwesomeIcon icon={faLinkedin} className={styles.icon} /> */}
-                    <span>{title}</span>
-                  </a>
-                </li>
-              ))}
+              {contacts.map(
+                ({ ref, title, className = 'defaultIcon', iconName }) => (
+                  <li key={title} className={styles.contact}>
+                    <a href={ref} rel="author" className={styles[className]}>
+                      <FontAwesomeIcon
+                        icon={nameToIcon[iconName]}
+                        className={styles.icon}
+                      />
+                      <span>{title}</span>
+                    </a>
+                  </li>
+                ),
+              )}
             </ul>
           )}
           <p
@@ -59,7 +68,11 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
         {listItems && (
           <ol>
             {listItems.map((item, index) => (
-              <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+              <li
+                key={index}
+                dangerouslySetInnerHTML={{ __html: item }}
+                className={styles.bubbleListItem}
+              />
             ))}
           </ol>
         )}

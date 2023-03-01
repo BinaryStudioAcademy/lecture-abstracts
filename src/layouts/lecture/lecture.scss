@@ -6,6 +6,7 @@
 @import './styles/typography.scss';
 @import './styles/layout.scss';
 @import './styles/panels.scss';
+@import './styles/tooltips.scss';
 
 /* Spectre.css overrides */
 // .content ul,
@@ -611,20 +612,9 @@ div.details > input:first-child + label + .details-body {
   padding: 0.4rem;
 }
 
-/* Panels */
-.panel .panel-header h6 {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.panel .panel-header,
-.panel .panel-footer {
-  padding: 1em;
-}
-
-.panel .panel-body:last-child {
-  padding: 0 1em 1em;
+// Image :
+.content img {
+  max-width: 100%;
 }
 
 /* Accordions */

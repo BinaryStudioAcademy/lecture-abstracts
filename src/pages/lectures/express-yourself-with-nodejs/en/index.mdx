@@ -70,41 +70,16 @@ import SnippetShell05 from '../assets/snippets/snippet-shell-05.mdx';
 import SnippetShell06 from '../assets/snippets/snippet-shell-06.mdx';
 import SnippetShell07 from '../assets/snippets/snippet-shell-07.mdx';
 import audio from "~/assets/audio/in-the-end.mp3";
+import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro';
 
-<div><h1><strong>Express yourself with Node.js</strong></h1></div>
+# Express yourself with Node.js
 
 <Language
   currentLanguage="en"
   languages={{"ua": "lectures/express-yourself-with-nodejs/", "en": "lectures/express-yourself-with-nodejs/en"}
 }/>
 
-
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={ulianaLobanova2021Avatar} role="img" aria-label="Uliana profile picture"></object>
-    </div>
-    <div className="profile">
-      <h3 className="name">Uliana Lobanova</h3>
-      <ul className="contacts">
-        <li>
-          <a href="https://www.linkedin.com/in/uliana-l-b34129105/" rel="author" className="linkedin">
-            <FontAwesomeIcon icon={faLinkedin} className="icon" />
-            <span>uliana-l</span>
-          </a>
-        </li>
-      </ul>
-      <p className="about">
-        Full-Stack JavaScript Developer at <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>, movie junkie and cat lover.
-        Enjoys appealing UIs, watching the sea, crime comedies and Le Big Mac 🔫💼
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Hello!</strong><br />Remembering the days when I was a student, I tried not to overload the lecture with unnecessary and complicated information that will not be useful to you in the next couple of months. On the other hand, it is encouraged to understand the details, therefore, I will attach links to additional materials and articles. The lecture is divided into blocks that are as independent of each other as possible, so if, after reading a title, you understand you're already familiar with the content, feel free to move on to the next block.<br />Good luck!
-  </div>
-</div>
-
+<IntroBlueBubble {...introBubble.en } />
 
 <div className="messages">
   Ryu, being very happy with the online fighting game, started showing off to his friends. At first, the game caused incredible excitement, but before Ryu had a chance to begin negotiations with Capcom, the hype had subsided. Everyone noted that there are too few characters in the game and their characteristics do not correspond to reality, which is why it became boring to play.

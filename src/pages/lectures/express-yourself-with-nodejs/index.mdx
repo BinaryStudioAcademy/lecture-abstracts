@@ -70,39 +70,16 @@ import SnippetShell05 from './assets/snippets/snippet-shell-05.mdx';
 import SnippetShell06 from './assets/snippets/snippet-shell-06.mdx';
 import SnippetShell07 from './assets/snippets/snippet-shell-07.mdx';
 import audio from "~/assets/audio/in-the-end.mp3";
+import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 
-<div><h1><strong>Express yourself with Node.js</strong></h1></div>
+# Express yourself with Node.js
 
 <Language
   currentLanguage="ua"
   languages={{"ua": "lectures/express-yourself-with-nodejs/", "en": "lectures/express-yourself-with-nodejs/en"}
 }/>
 
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={alexandrTovmach2018Avatar} role="img" aria-label="Alex profile picture"></object>
-    </div>
-    <div className="profile">
-      <h3 className="name">Олександр Товмач</h3>
-      <ul className="contacts">
-        <li>
-          <a href="https://ru.stackoverflow.com/users/312473/alexandr-tovmach?tab=profile" rel="author" className="facebook"><FontAwesomeIcon icon={faStackOverflow} className="icon" /><span>alexandr-tovmach</span></a>
-        </li>
-        <li>
-          <a href="https://github.com/alexandrtovmach" rel="author" className="github"><FontAwesomeIcon icon={faGithub} className="icon" /><span>alexandrtovmach</span></a>
-        </li>
-        <li>
-          <a href="https://alexandrtovmach.com/" rel="author" className="website"><FontAwesomeIcon icon={faGlobe} className="icon" /><span>https://alexandrtovmach.com</span></a>
-        </li>
-      </ul>
-      <p className="about">Full-stack розробник ― Олександр. На <a href="https://dou.ua/users/aleksandr-tovmach/articles/"><strong>DOU</strong></a> і <a href="https://habr.com/ru/users/alexandrtovmach/posts"><strong>Habr</strong></a> пише статті, на <a href="https://reactjs.org/"><strong>React</strong></a> и <a href="https://angular.io/"><strong>Angular</strong></a> пише код, на <a href="https://thumbs.dreamstime.com/b/computer-code-graffiti-abstract-white-brick-wall-52481211.jpg"><strong>стінах</strong></a> і <a href="https://translate.google.com.ua/?hl=ru#view=home&op=translate&sl=hi&tl=en&text=%E0%A4%85%E0%A4%97%E0%A4%B0%20(%E0%A4%B8%E0%A4%9A)%20%7B%0A%20%20%2F%2F%20%E0%A4%87%E0%A4%B8%20%E0%A4%95%E0%A5%8B%E0%A4%A1%20%E0%A4%95%E0%A5%8B%20%E0%A4%B9%E0%A4%B0%20%E0%A4%B8%E0%A4%AE%E0%A4%AF%20%E0%A4%9A%E0%A4%B2%E0%A4%BE%E0%A4%8F%E0%A4%82%0A%7D%20%E0%A4%B5%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%7B%0A%20%20%2F%2F%20%E0%A4%87%E0%A4%B8%20%E0%A4%95%E0%A5%8B%E0%A4%A1%20%E0%A4%95%E0%A5%8B%20%E0%A4%95%E0%A4%AD%E0%A5%80%20%E0%A4%A8%20%E0%A4%9A%E0%A4%B2%E0%A4%BE%E0%A4%8F%E0%A4%82%0A%7D"><strong>хінді</strong></a> не пише нічого. Хоче змінити цей світ, але руки не доходять.</p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Вітаю!</strong><br />Згадуючи себе на місці студента, я намагався не навантажувати лекцію зайвою та <span className="tooltip" data-tooltip="теж запнувся коли читав це слово?"><u>важкозасвоюваною</u></span> інформацією, яка не знадобиться тобі у найближчі пару місяців. З іншого боку, розбиратися у деталях - це похвально. Тому для допитливих, я прикріпляю посилання на матеріали та статті. Лекція поділена на блоки, які максимально незалежні один від одного, тому якщо, прочитавши заголовок, ти розумієш що до чого, сміливо переходь до наступного блоку.<br />Хай щастить!
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.ua } />
 
 
 <div className="messages">

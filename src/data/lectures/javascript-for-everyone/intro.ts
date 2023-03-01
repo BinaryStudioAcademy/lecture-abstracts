@@ -1,5 +1,5 @@
 import { IntroBlueBubbleProps } from '~/components/common/intro-blue-bubble/intro-blue-bubble';
-import { AuthorName } from '~/enums';
+import { AuthorName, ContactIcon } from '~/enums';
 
 type IntroBubble = {
   ua: IntroBlueBubbleProps;
@@ -15,6 +15,7 @@ const introEN: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       className: 'blueIcon',
       title: 'oleksandr-danylchenko',
+      iconName: ContactIcon.LINKEDIN,
     },
   ],
   title: 'Hello, world!',
@@ -37,6 +38,7 @@ const introUA: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       className: 'blueIcon',
       title: 'oleksandr-danylchenko',
+      iconName: ContactIcon.LINKEDIN,
     },
   ],
   title: 'Hello, world!',
