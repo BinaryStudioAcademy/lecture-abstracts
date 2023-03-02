@@ -120,36 +120,33 @@ The student realized that a simple page begins to grow into a serious applicatio
 
 And since the student writes in JS, the choice for the technology becomes obvious - Node.js. There is only one little thing left ― <span className="tooltip" data-tooltip='well, yeah, "little thing"...'><u>to learn this technology</u></span>.
 <hr />
+<br />
 
-<div id="table-of-contents" className="table-of-contents">
-  <h2>
-    <strong>Working with Node.js</strong>
-  </h2>
-  <TimelineOfContents
-    timeline={[{
-      linkTo: "#about-backend",
-      title: "Theory"
-    }, {
-      linkTo: "#preparation",
-      title: "Preparation"
-    }, {
-      linkTo: "#package-manager",
-      title: "Package manager"
-    }, {
-      linkTo: "#basic-node-js",
-      title: "Introduction to Node.js"
-    }, {
-      linkTo: "#basic-express-js",
-      title: "Introduction to Express.js"
-    }, {
-      linkTo: "#first-project",
-      title: "First project"
-    }, {
-      linkTo: "#finish",
-      title: "Conclusion"
-    }]}
-  />
-</div>
+<TimelineOfContents
+  headerTitle="Working with Node.js"
+  timeline={[{
+    linkTo: "#about-backend",
+    title: "Theory"
+  }, {
+    linkTo: "#preparation",
+    title: "Preparation"
+  }, {
+    linkTo: "#package-manager",
+    title: "Package manager"
+  }, {
+    linkTo: "#basic-node-js",
+    title: "Introduction to Node.js"
+  }, {
+    linkTo: "#basic-express-js",
+    title: "Introduction to Express.js"
+  }, {
+    linkTo: "#first-project",
+    title: "First project"
+  }, {
+    linkTo: "#finish",
+    title: "Conclusion"
+  }]}
+/>
 
 <Level
   id="about-backend"
@@ -225,6 +222,7 @@ And since the student writes in JS, the choice for the technology becomes obviou
   </li>
   <li>
     <h5><strong>Server ― "what?" and "why?"</strong></h5>
+
     <DetailsCard>
       <>
         <strong>What</strong> is server?
@@ -234,6 +232,8 @@ And since the student writes in JS, the choice for the technology becomes obviou
         <img src={clientServerModelImage} alt="" />
       </>
     </DetailsCard>
+
+
     <DetailsCard>
       <>
         <strong>Why</strong> do we need a server?
@@ -243,6 +243,7 @@ And since the student writes in JS, the choice for the technology becomes obviou
         <img src={serverRoomImage} alt="" />
       </>
     </DetailsCard>
+
     <p>The modern web server performs many actions for processing and storing information, works with static files and sensitive data that no one should have access to, performs complicated calculations that are too heavy for the client side, and much more. Therefore, depending on the complexity of the project and the tasks to be solved, for convenient work and efficiency, the server would be built according to a certain architecture: <a href="https://en.wikipedia.org/wiki/Monolithic_application"><strong>monolithic</strong></a> or <a href="https://en.wikipedia.org/wiki/Microservices"><strong>microservice</strong></a>.</p>
   </li>
   <li>
@@ -385,6 +386,7 @@ There is no point in writing the full installation process for all operating sys
   </>
 </DetailsCard>
 
+
 <DetailsCard>
   <>
     <strong>If the version is displayed - everything is installed and working properly.</strong>
@@ -460,8 +462,7 @@ Did you notice **npm**? But did we install it? It's a package manager developed 
           Now other programmers just need to know the name of your package / module and use **npm** to add it to their project, delete it if they don't like it, or upgrade to the next version if you implement it.
         </div>
 
-        One more time - what is the difference between `packages` and `modules`? Believe me, even experienced developers are often confused, but the difference is simple - `module` is an atom, `package` is a molecule. In other words, `package` consists of other `modules`, which are the smallest unit that solves one problem. Pretty simple, isn't it?
-
+        > One more time - what is the difference between `packages` and `modules`? Believe me, even experienced developers are often confused, but the difference is simple - `module` is an atom, `package` is a molecule. In other words, `package` consists of other `modules`, which are the smallest unit that solves one problem. Pretty simple, isn't it?
       </>
     </DetailsCard>
 
@@ -776,7 +777,7 @@ We explored enough basic **express** functionality to start with, so now we can 
 
 <div className="bubble small subtle">
 
-  [Repository with the code from this block](https://github.com/uliana-lobanova/nodejs-lecture/tree/expressjs-basics)
+  [Zip file with the code from this block](/assets/zip/nodejs-3-en.zip)
 
 </div>
 
@@ -880,7 +881,7 @@ Let's make our server smart and give it <span className="tooltip" data-tooltip="
   <>
     <strong>Creating and testing the services layer</strong>
   </>
-  <ol className="default-list">
+  <ol>
     <li> Create a folder _/services_</li>
 
     <li> Create a file _/services/user.service.js_ </li>
@@ -1009,7 +1010,7 @@ And that's it, we covered the basics of Node.js applications structure. Now you'
 
 <div className="bubble small subtle">
 
-  [Repository with the code from this block](https://github.com/uliana-lobanova/nodejs-lecture/tree/project-structure)
+  [Zip file with the code from this block](/assets/zip/nodejs-1-en.zip)
 
 </div>
 

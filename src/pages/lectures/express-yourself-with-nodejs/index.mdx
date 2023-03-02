@@ -122,36 +122,33 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 
 І так як студент пише на JS, то і вибір технології стає очевидним ― Node.js. Залишилось зовсім трохи ― <span className="tooltip" data-tooltip='ну таааааак, саме "зовсім трохи"...'><u>вивчити цю технологію</u></span>.
 <hr />
+<br />
 
-<div id="table-of-contents" className="table-of-contents">
-  <h2>
-    <strong>Робота з Node.js</strong>
-  </h2>
-  <TimelineOfContents
-    timeline={[{
-      linkTo: "#about-backend",
-      title: "Теорія"
-    }, {
-      linkTo: "#preparation",
-      title: "Підготовка"
-    }, {
-      linkTo: "#package-manager",
-      title: "Пакетні менеджери"
-    }, {
-      linkTo: "#basic-node-js",
-      title: "Основи Node.js"
-    }, {
-      linkTo: "#basic-express-js",
-      title: "Основи Express.js"
-    }, {
-      linkTo: "#first-project",
-      title: "Перший проект"
-    }, {
-      linkTo: "#finish",
-      title: "Висновок"
-    }]}
-  />
-</div>
+<TimelineOfContents
+  headerTitle="Робота з Node.js"
+  timeline={[{
+    linkTo: "#about-backend",
+    title: "Теорія"
+  }, {
+    linkTo: "#preparation",
+    title: "Підготовка"
+  }, {
+    linkTo: "#package-manager",
+    title: "Пакетні менеджери"
+  }, {
+    linkTo: "#basic-node-js",
+    title: "Основи Node.js"
+  }, {
+    linkTo: "#basic-express-js",
+    title: "Основи Express.js"
+  }, {
+    linkTo: "#first-project",
+    title: "Перший проект"
+  }, {
+    linkTo: "#finish",
+    title: "Висновок"
+  }]}
+/>
 
 <Level
   id="about-backend"
@@ -165,32 +162,29 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
   <iframe src="https://www.youtube.com/embed/8ZTQy-ezIwI?start=54&end=235" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div className="details">
-  <input type="checkbox" id="accordion-1-1" />
-  <label className="summary" htmlFor="accordion-1-1">
-    <strong>Терміни</strong>
-  </label>
-  <div className="details-body">
-    <ul>
-      <li><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BB%D1%96%D1%94%D0%BD%D1%82_(%D1%96%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)"><strong>Клієнт</strong></a> ― це може бути браузер або будь-яке інше програмне забезпечення, що відправляє запити до серверу.</li>
-      <li>
-        <a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%B1%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80"><strong>Сервер</strong></a> ― це програма або її частина, що взаємодіє з клієнтом за принципом запит-відповідь на основі HTTP-протоколу, відправляючи необхідні дані або файли на клієнт.
-        <div className="bubble small subtle">
-          Коли web-розробник каже слово "сервер", він має на увазі "веб-сервер". Те ж саме стосується і "клієнту", "дотатку" і т.д.
-        </div>
-      </li>
-      <li>
-        <a href="https://uk.wikipedia.org/wiki/HTTP"><strong>HTTP-протокол</strong></a> ― набір правил передачі даних в інтернеті.
-      </li>
-      <li>
-        <a href="https://uk.wikipedia.org/wiki/HTTP#Request_methods"><strong>HTTP-метод</strong></a> ― вказує на те, яку операцію необхідно виконати з даним ресурсом. До основних можна віднести <strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong> ― їх трошки більше, але це базис, якого тобі вистачить на перший час.
-      </li>
-      <li>
-        <a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D1%96%D0%B2_%D1%81%D1%82%D0%B0%D0%BD%D1%83_HTTP"><strong>HTTP-статус</strong></a> ― надходить разом із відповіддю з серверу і говорить про статус запитуваної операції. Найбільш часто використовуються: <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#200"><strong>200</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#301"><strong>301</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#401"><strong>401</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#404"><strong>404</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#500"><strong>500</strong></a>.
-      </li>
-    </ul>
-  </div>
-</div>
+<DetailsCard>
+  <strong>Терміни</strong>
+  <ul>
+    <li><a href="https://uk.wikipedia.org/wiki/%D0%9A%D0%BB%D1%96%D1%94%D0%BD%D1%82_(%D1%96%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)"><strong>Клієнт</strong></a> ― це може бути браузер або будь-яке інше програмне забезпечення, що відправляє запити до серверу.</li>
+    <li>
+      <a href="https://uk.wikipedia.org/wiki/%D0%92%D0%B5%D0%B1%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80"><strong>Сервер</strong></a> ― це програма або її частина, що взаємодіє з клієнтом за принципом запит-відповідь на основі HTTP-протоколу, відправляючи необхідні дані або файли на клієнт.
+      <div className="bubble small subtle">
+        Коли web-розробник каже слово "сервер", він має на увазі "веб-сервер". Те ж саме стосується і "клієнту", "дотатку" і т.д.
+      </div>
+    </li>
+    <li>
+      <a href="https://uk.wikipedia.org/wiki/HTTP"><strong>HTTP-протокол</strong></a> ― набір правил передачі даних в інтернеті.
+    </li>
+    <li>
+      <a href="https://uk.wikipedia.org/wiki/HTTP#Request_methods"><strong>HTTP-метод</strong></a> ― вказує на те, яку операцію необхідно виконати з даним ресурсом. До основних можна віднести <strong>GET</strong>, <strong>POST</strong>, <strong>PUT</strong>, <strong>DELETE</strong> ― їх трошки більше, але це базис, якого тобі вистачить на перший час.
+    </li>
+    <li>
+      <a href="https://uk.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D1%96%D0%B2_%D1%81%D1%82%D0%B0%D0%BD%D1%83_HTTP"><strong>HTTP-статус</strong></a> ― надходить разом із відповіддю з серверу і говорить про статус запитуваної операції. Найбільш часто використовуються: <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#200"><strong>200</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#301"><strong>301</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#401"><strong>401</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#404"><strong>404</strong></a>, <a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D0%BA%D0%BE%D0%B4%D0%BE%D0%B2_%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D0%BD%D0%B8%D1%8F_HTTP#500"><strong>500</strong></a>.
+    </li>
+  </ul>
+</DetailsCard>
+
+
 <ol className="inverted">
   <li>
     <h5><strong>Web теорія</strong></h5>
@@ -206,9 +200,14 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
         <em>сервер опрацював запит</em> / <strong>визначив, що запитується файл і знайшов його</strong>
       </li>
       <li>
-        <div className="details">
-          <label className="summary" htmlFor="accordion-1-2"><em>сервер повернув файл</em> / <strong>по HTTP відправив відповідь зі статусом 200 і HTML файлом на клієнт</strong></label><input type="checkbox" id="accordion-1-2" /><div className="details-body"><img src={networkImage} alt="" /></div>
-        </div>
+        <DetailsCard type="inverted">
+          <>
+            <em>сервер повернув файл</em> / <strong>по HTTP відправив відповідь зі статусом 200 і HTML файлом на клієнт</strong>
+          </>
+          <>
+            <img src={networkImage} alt="" />
+          </>
+        </DetailsCard>
       </li>
     </ol>
     <div className="bubble small subtle">
@@ -220,26 +219,28 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
   </li>
   <li>
     <h5><strong>Сервер ― "що?" і "навіщо?"</strong></h5>
-    <div className="details">
-      <input type="checkbox" id="accordion-1-3" />
-      <label className="summary" htmlFor="accordion-1-3">
+
+    <DetailsCard>
+      <>
         <strong>Що</strong> таке сервер?
-      </label>
-      <div className="details-body">
+      </>
+      <>
         Простими словами, коли користувач вводить запит до адресного рядку, браузер запитує дані на віддаленому комп'ютері (сервері) по HTTP. У відповідь він отримує файл або дані, для відображення їх у браузері.
         <img src={clientServerModelImage} alt="" />
-      </div>
-    </div>
-    <div className="details">
-      <input type="checkbox" id="accordion-1-4" />
-      <label className="summary" htmlFor="accordion-1-4">
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
         <strong>Навіщо</strong> потрібен сервер?
-      </label>
-      <div className="details-body">
+      </>
+      <>
         Для збереження та обробки усіх ресурсів, що використовуються у вебі. Неважливо, будь то одна статична сторінка або цілий Facebook, усе розташовано на віддалених серверах або хостінгах, і відображається користувачу тільки по його запиту.
         <img src={serverRoomImage} alt="" />
-      </div>
-    </div>
+      </>
+    </DetailsCard>
+
     <p>Сервер у сучасному вебі виконує безліч функцій з обробки та збереженню інформації, працює зі статичними файлами та конфіденційними даними, до яких ніхто не повинен мати доступу, виконує ресурсовитратні розрахунки, які занадто важкі для клієнтської частини, і ще багато чого іншого. Тому у залежності від складності проекту та вирішуваних задач, для комфортної роботи та збільшенню ККД, сервер буде будуватися за певною архітектурою: <a href="https://en.wikipedia.org/wiki/Monolithic_application"><strong>монолітною</strong></a> або <a href="https://uk.wikipedia.org/wiki/%D0%9C%D1%96%D0%BA%D1%80%D0%BE%D1%81%D0%B5%D1%80%D0%B2%D1%96%D1%81%D0%B8"><strong>мікросервісною</strong></a></p>
   </li>
   <li>
@@ -373,31 +374,27 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 </div>
 
 
-<div className="details">
-  <input type="checkbox" id="accordion-2-1" />
-  <label className="summary" htmlFor="accordion-2-1">
+<DetailsCard>
+  <>
     <strong>Для перевірки успішної інсталяції Node.js використовуйте термінал.</strong>
-  </label>
-  <div className="details-body">
-
+  </>
+  <>
     Введіть наступні команди:
     <SnippetShell01 />
-  </div>
-</div>
+  </>
+</DetailsCard>
 
 
-<div className="details">
-  <input type="checkbox" id="accordion-2-2" />
-  <label className="summary" htmlFor="accordion-2-2">
+<DetailsCard>
+  <>
     <strong>Якщо версія відображається - все встановлено і працює правильно.</strong>
-  </label>
-  <div className="details-body">
-
+  </>
+  <>
     _твої версії можуть відрізнятися у більшу сторону_
 
-  <img src={nodeNpmVersionsImg} alt="nodeNpmVersions" />
-  </div>
-</div>
+    <img src={nodeNpmVersionsImg} alt="nodeNpmVersions" />
+  </>
+</DetailsCard>
 
 
 Помітили **npm**? Ми ж його не встановлювали? Це пакетний менеджер, розроблений командою Node.js, і встановлюється у комплекті для зручної роботи з модулями. Ми гоговоримо про нього детальніше у наступному блоці, а зараз головне переконатися у його працездатності.
@@ -414,35 +411,30 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
   <iframe src="https://www.youtube.com/embed/8ZTQy-ezIwI?start=335&end=774" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div className="details">
-  <input type="checkbox" id="accordion-3-1" />
-  <label className="summary" htmlFor="accordion-3-1">
-    <strong>Терміни</strong>
-  </label>
-  <div className="details-body">
 
+<DetailsCard>
+  <>
+    <strong>Терміни</strong>
+  </>
+  <>
 
     - [Модулі (`modules`)](https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F) — це частини програми/коду, винесені в окремі блоки для подальшого перевикористання.
     - [Пакети (`packages`)](https://uk.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BA%D0%B5%D1%82_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B1%D0%B5%D0%B7%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D1%8F) — це збірник модулів.
     - [Пакетні менеджері](https://uk.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F_%D0%BF%D0%B0%D0%BA%D1%83%D0%BD%D0%BA%D0%B0%D0%BC%D0%B8) ― інструмент для інсталяції, видалення, оновлення, версіонування та валідації пакетів та модулів.
 
-
-  </div>
-</div>
+  </>
+</DetailsCard>
 
 <br />
 
 <ol className="inverted">
   <li>
     <h5><strong>Що за "пакети" і навіщо їм потрібні "менеджери"?</strong></h5>
-
-    <div className="details">
-      <input type="checkbox" id="accordion-3-2" />
-      <label className="summary" htmlFor="accordion-3-2">
+    <DetailsCard>
+      <>
         <strong>Для пояснення того чим є пакет/модуль - розглянемо приклад.</strong>
-      </label>
-      <div className="details-body">
-
+      </>
+      <>
         _1. У свому проекті ти написав функцію для сортування масиву і перевикористовуєш її у декількох місцях._
 
         <div className="bubble small subtle">
@@ -472,9 +464,8 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
         </div>
 
         > Ще раз - у чому різниця між `packages` і `modules`? Повірте, у цьому плутаються навіть досвідчені розробники, а різниця проста, `module` - це атом, `package` - це молекула. Іншими словами `package` складається з інших `modules`, які є наймешною одиницею, що вирішує одну задачу. Все максимально просто!
-
-      </div>
-    </div>
+      </>
+    </DetailsCard>
 
     Буквально [декілька років назад](https://www.javascriptstuff.com/javascript-frontend-package-managers/) блок про пакетні менеджери міг зайняти час цілої лекції, в силу їх величезнох кількості, але станом на сьогодні ситуація стабілізувалася, і теперь для работи з JS у нас є 2 лідери:
 
@@ -629,23 +620,22 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 Час експериментів! Ми вже знаємо як використовувати всю потужність JS з <span className="tooltip" data-tooltip='так розробники називають Node.js'><u>нодами</u></span> і це круто, але ми вже хочемо писати сервери. Відкриємо [офіційну документацію](https://nodejs.org/api/), щоб дізнатися список пакетів, що йдуть у комплекті з **Node.js**, і те, як з ними працювати. Як ми бачимо, пакетів дуже багато, але для початку нам потрібен лише один - [http](https://nodejs.org/api/http.html), який відповідає за роботу з мережею на основі HTTP. З опису ми розуміємо, що методів у нього багато і розглядати кожен новачку просто немає змісту, замість цього давайте напишемо практичний приклад запуску HTTP-серверу:
 <SnippetJS01 />
 
-<div className="details">
-  <input type="checkbox" id="accordion-4-1" />
-  <label className="summary" htmlFor="accordion-4-1">
+
+<DetailsCard>
+  <>
     <strong>Запускаємо файл</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
     <img src={server_startedImg} alt="server_started" />
-  </div>
-</div>
+  </>
+</DetailsCard>
 
-<div className="details">
-  <input type="checkbox" id="accordion-4-2" />
-  <label className="summary" htmlFor="accordion-4-2">
+
+<DetailsCard>
+  <>
     <strong>Перевірка серверу через браузер</strong>
-  </label>
-  <div className="details-body">
-
+  </>
+  <>
     Браузер завжди відправляє GET запит на вказанний URL і в доповнення запитує _favicon.ico_, тому що вважає будь-яку адресу сторінкою.
 
     <img src={get_serverImg} alt="get_server" />
@@ -653,16 +643,15 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
     Логи серверу, які ми отримуємо завдяки функції `requestHandler()`
 
     <img src={get_server_logImg} alt="get_server_log" />
-  </div>
-</div>
+  </>
+</DetailsCard>
 
-<div className="details">
-  <input type="checkbox" id="accordion-4-3" />
-  <label className="summary" htmlFor="accordion-4-3">
+
+<DetailsCard>
+  <>
     <strong>Перевіряємо сервер за допомогою Postman</strong>
-  </label>
-  <div className="details-body">
-
+  </>
+  <>
     ~~На правах реклами~~ представляю [Postman](https://www.getpostman.com/) ― інструмент для зручної відправки HTTP-запитів на сервер. За його допомогою ми можемо легко змінювати URL, методи, заголовки та тіло запиту.
 
     <img src={postmanImg} alt="postman" />
@@ -671,23 +660,25 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
       [Стаття "Введення в Postman"](https://habr.com/ru/company/kolesa/blog/351250/)
 
     </div>
+  </>
+</DetailsCard>
 
-  </div>
-</div>
+
 
 Ми зробили працюючий сервер! Ура! Він дуже простий і не розуміє різницю між GEt та POST запитом, не знає як працювати з тілом запиту і багато чого іншого, але він же перший, і ми ❤️ його просто за це, так? Давайте навчимо сервер зберігати всі логи у файл, а також розглянемо ще один пакет [fs](https://nodejs.org/api/fs.html), призначений для роботи з файловою системою:
 
 <SnippetJS02 />
 
-<div className="details">
-  <input type="checkbox" id="accordion-4-4" />
-  <label className="summary" htmlFor="accordion-4-4">
+
+<DetailsCard>
+  <>
     <strong>Після завершення декількох запитів подивимось у файл <i>log.txt</i></strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
     <img src={server_logsImg} alt="server_logs" />
-  </div>
-</div>
+  </>
+</DetailsCard>
+
 
 А що буде, якщо запис до файлу ще не закінчений, а на сервер прийде інший запит? Забігаючи наперед, скажу що операції роботи з файловою системою є асинхроними потоками(stream) і враховуючи однопотоковість JS вони повинні блокувати сервер до завершення. Але це не так, і ми можемо переконатися у цьому бомбардуючи сервер запитами, а він не відмовить і навіть не затримає жоден з них.
 <div className="bubble small subtle">
@@ -697,23 +688,20 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 </div>
 
 
-<div className="details">
-  <input type="checkbox" id="accordion-4-5" />
-  <label className="summary" htmlFor="accordion-4-5">
+<DetailsCard>
+  <>
     <strong>В чому ж справа? І тут ми повинні нарешті розібратися у тому, як реалізований eventloop у нодах</strong>
-  </label>
-  <div className="details-body">
-
+  </>
+  <>
     Кільце в центрі - це одиничний потік JS і він завжди виконує тільки одну операцію. Зліва ми бачимо чергу запитів, очікуючих свого виконання. При попаданні у потік синхроного запиту, він починає опрацьовуватися і по завершенню дає старт наступному запиту. У випадках, коли запит викликає асинхроні операції, він делегується бібліотеці [libuv](https://github.com/libuv/libuv), яка опрацьовує його в окремому потоці, а по завершенню, викликає коллбек у ту ж саму чергу запитів.
 
     <img src={eventloopImg} alt="eventloop" />
     <div className="bubble small subtle">
-
       Я намагався пояснити як можна простіше, але не впевнений що цього достатьньо, тому ось більш детальна стаття ["Пояснення роботи EventLoop у JavaScript"](https://medium.com/devschacht/javascript-eventloop-explained-f2dcf84e36ee)
-
     </div>
-  </div>
-</div>
+  </>
+</DetailsCard>
+
 
 
 Знижуємо висоту і повертаємось до нашого коду. Для виконуваних ним операцій він виглядає занадто громіздким, тому що оперує занадто [низькорівневими](https://uk.wikipedia.org/wiki/%D0%9D%D0%B8%D0%B7%D1%8C%D0%BA%D0%BE%D1%80%D1%96%D0%B2%D0%BD%D0%B5%D0%B2%D0%B0_%D0%BC%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F) операціями. Про те, як перейти на більш [високий рівень](https://uk.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B2%D0%B0_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F_%D0%B2%D0%B8%D1%81%D0%BE%D0%BA%D0%BE%D0%B3%D0%BE_%D1%80%D1%96%D0%B2%D0%BD%D1%8F) абстракцій за допомогою Express.js ми поговоримо у наступному блоці.
@@ -746,19 +734,23 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 
 <SnippetJS03 />
 
-<div className="details">
-  <input type="checkbox" id="accordion-5-1" />
-  <label className="summary" htmlFor="accordion-5-1">
+
+<DetailsCard>
+  <>
     <strong>Запустимо і перевіримо його роботу</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
 
     <SnippetShell04 />
 
+    <br/>
     <img src={express_getImg} alt="express_get" />
+    <br/>
     <img src={express_postImg} alt="express_post" />
-  </div>
-</div>
+  </>
+</DetailsCard>
+
+
 
 Все працює! Якщо спробувати відправляти запити неописані у коді (наприклад **GET**: _/users_), то ми будем отримувати у відповідь 404-сторінку. Для того, щоб написали щось подібне на нодах, нам би було необхідно приблизно 200 рядків коду. Вражає? Рухаємось далі.
 
@@ -768,18 +760,20 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 
 5 рядків, а скільки користі! Цим і підкорив Express.js світову славу. На даний момент для express нараховується величезна кількість npm-пакетів, покликаних розв'язувати різноманітні кейси. Давайте розглянемо один з таких - парсинг тіла запиту. Для цього додамо пакет (офіційно визнаний Best Practice) [body-parser](https://www.npmjs.com/package/body-parser).
 
-<div className="details">
-  <input type="checkbox" id="accordion-5-2" />
-  <label className="summary" htmlFor="accordion-5-2">
+
+
+<DetailsCard>
+  <>
     <strong>Встановимо і впровадимо <b>body-parser</b></strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
 
     <SnippetShell05 />
 
     <SnippetJS05 />
 
     <SnippetShell06 />
+
 
     Відправляємо POST-запит, з тілом:
 
@@ -788,10 +782,12 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
     Дивимось логи:
 
     <img src={express_body_logImg} alt="express_body_log" />
-  </div>
-</div>
+  </>
+</DetailsCard>
+
 
 Це достатня основа в **Express.js** для новачка, далі ми можемо подивитися на те як масштабується весь цей код в реальному житті.
+
 
 <div className="bubble small subtle">
 
@@ -817,45 +813,44 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 
 <SnippetShell07 />
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-1" />
-  <label className="summary" htmlFor="accordion-6-1">
+
+<DetailsCard>
+  <>
     <strong>Після успішної інсталяції можна перевірити його працездатність класичним методом - дізнатися версію або викликати довідку 🙃</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
+    Версія:
 
-Версія:
+    <img src={express_generator_versionImg} alt="express_generator_version" />
 
-<img src={express_generator_versionImg} alt="express_generator_version" />
+    Довідка:
 
-Довідка:
-
-<img src={express_generator_helpImg} alt="express_generator_help" />
-
-  </div>
-</div>
+    <img src={express_generator_helpImg} alt="express_generator_help" />
+  </>
+</DetailsCard>
 
 
-
-<div className="details">
-  <input type="checkbox" id="accordion-6-2" />
-  <label className="summary" htmlFor="accordion-6-2">
+<DetailsCard>
+  <>
     <strong>Ну і тепер згенеруємо проект без підтримки шаблонів і з файлом .gitignore</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
     <img src={express_generatorImg} alt="express_generator" />
-  </div>
-</div>
+  </>
+</DetailsCard>
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-3" />
-  <label className="summary" htmlFor="accordion-6-3">
+
+
+<DetailsCard>
+  <>
     <strong>Подивимось що вийшло?</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <>
     <img src={express_generator_starterImg} alt="express_generator_starter" />
-  </div>
-</div>
+  </>
+</DetailsCard>
+
+
 
 Зверніть увагу на поле  `scripts`, у _package.json_, в ньому містяться npm-скрипти для роботи з додатком. Для того щоб запустити сервер нам необхідно буде використовувати команду `npm start`.
 
@@ -866,26 +861,27 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 </div>
 
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-4" />
-  <label className="summary" htmlFor="accordion-6-4">
+
+<DetailsCard>
+  <>
     <strong>Для найпростішого API-серверу нам не потрібна папка <i>/public</i> та ініціализація рендеру шаблонів, тому ми їх просто видаляємо.</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <ol className="default-list">
+    <li>
+      видаляємо папку _/public_ з усім вмістом
+    </li>
+    <li>
+      вносимо зміни у _/routes/index.js_
 
-1. видаляємо папку _/public_ з усім вмістом
-2. вносимо зміни у _/routes/index.js_
+      <SnippetJS06 />
+    </li>
+    <li>
+      вносимо зміни в _app.js_
 
-<SnippetJS06 />
-
-3. вносимо зміни в _app.js_
-
-<SnippetJS07 />
-
-  </div>
-</div>
-
-
+      <SnippetJS07 />
+    </li>
+  </ol>
+</DetailsCard>
 Зараз у нашому проекті реалізований тільки один шар **routes**, який повинен відповідати **ТІЛЬКИ** за роботу з HTTP-запитами.
 
 <div className="bubble small subtle">
@@ -897,112 +893,128 @@ import { introBubble } from '~/data/lectures/express-yourself-with-nodejs/intro'
 Давайте зробимо наш сервер розумним і подаруємо йому <span className="tooltip" data-tooltip="🕵️ 007 🔫"><u>логіку, бізнес-логіку</u></span>. У світі Express-додатків за них повинен відповідати шар, що називається **services**, і, оскільки, він не генерується автоматично, ми створимо його самі.
 
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-5" />
-  <label className="summary" htmlFor="accordion-6-5">
+<DetailsCard>
+  <>
     <strong>Створення і тестування шару services</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <ol>
+    <li>Створюємо папку _/services__</li>
 
+    <li>Створюємо файл _/services/user.service.js_ </li>
 
-    1. Створюємо папку _/services_
-    2. Створюємо файл _/services/user.service.js_
-    3. Додаємо функцію у файл та експортуємо її:
+    <li>
+      Додаємо функцію у файл та експортуємо її:
 
-    <SnippetJS08 />
+      <SnippetJS08 />
+    </li>
 
-    4. Імпортуємо функцію з сервіса до роутера, використовуємо її для отримання імені.
+    <li>
+      Імпортуємо функцію з сервіса до роутера, використовуємо її для отримання імені.
 
-    <SnippetJS09 />
+      <SnippetJS09 />
+    </li>
+    <li>Запускаємм сервер `npm start` </li>
+    <li>
+      Відправляємо POST-запит на _/users_ і дивимось на відповідь, що містить передане им'я
 
-    5. Запускаємм сервер `npm start`
-    6. Відправляємо POST-запит на _/users_ і дивимось на відповідь, що містить передане им'я
+      <img src={service_testImg} alt="service_test" />
+    </li>
+  </ol>
+</DetailsCard>
 
-    <img src={service_testImg} alt="service_test" />
-  </div>
-</div>
 
 Сервер вміє щось робити, а що як ми хочему зберігати дані? Для цього існує шар **repositories**, і ми його зараз реалізуємо.
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-6" />
-  <label className="summary" htmlFor="accordion-6-6">
+
+<DetailsCard>
+  <>
     <strong>Створення і тестування шару repositories</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <ol className="default-list">
+    <li> Створюємо папку _/repositories_</li>
 
+    <li> Створюємо файл _/repositories/user.repository.js_ </li>
 
-    1. Створюємо папку _/repositories_
-    2. Створюємо файл _/repositories/user.repository.js_
-    3. Додаємо функцію у файл та експортуємо її:
+    <li>
+      Додаємо функцію у файл та експортуємо її:
 
-    <SnippetJS10 />
+      <SnippetJS10 />
 
-    <div className="bubble small subtle">
+      <div className="bubble small subtle">
+        Ми не розглядаємо Бази Даних у цій лекції, тому наш код є лише імітацією роботи з нею, насправді в цьому шарі повинна відбуватися вся робота з даними: їх отримання зі сховища, запис та оновлення.
+      </div>
+    </li>
 
-      Ми не розглядаємо Бази Даних у цій лекції, тому наш код є лише імітацією роботи з нею, насправді в цьому шарі повинна відбуватися вся робота з даними: їх отримання зі сховища, запис та оновлення.
+    <li>
+      Імпортуємо функцію із репозиторія у сервіс та додаємо функцію `saveName()`:
 
-    </div>
+      <SnippetJS11 />
+    </li>
+    <li>
+      Імпортуємо функцію з сервіса в роутер та використовуємо її для роботи з тілом запиту:
 
-    4. Імпортуємо функцію із репозиторія у сервіс та додаємо функцію `saveName()`:
+      <SnippetJS12 />
+    </li>
+    <li>
+      Запускаємо сервер `npm start`
+    </li>
+    <li>
+      Надсилаємо POST-запит на _/users_ і дивимось на відповідь "Name is saved ― true", тому що функція з репозиторія повернула таке значення
 
-    <SnippetJS11 />
+      <img src={repository_testImg} alt="repository_test" />
+    </li>
+  </ol>
+</DetailsCard>
 
-    5. Імпортуємо функцію з сервіса в роутер та використовуємо її для роботи з тілом запиту:
-
-    <SnippetJS12 />
-
-    6. Запускаємо сервер `npm start`
-    7. Надсилаємо POST-запит на _/users_ і дивимось на відповідь "Name is saved ― true", тому що функція з репозиторія повернула таке значення
-
-    <img src={repository_testImg} alt="repository_test" />
-  </div>
-</div>
 
 І останній шар - це **middlewares**, приклади якого ми вже бачили в цьому проекті. Давайте розберемося як він влаштований і що він робить.
 
-<div className="details">
-  <input type="checkbox" id="accordion-6-7" />
-  <label className="summary" htmlFor="accordion-6-7">
+
+<DetailsCard>
+  <>
     <strong>Створення і тестування шару middlewares</strong>
-  </label>
-  <div className="details-body">
+  </>
+  <ol className="default-list">
+    <li>Створюємо папку _/middlewares_ </li>
+
+    <li> Створюємо файл _/middlewares/auth.middleware.js_ </li>
+
+    <li>
+      Додаємо функцію у файл та експортуємо її:
+
+      <SnippetJS13 />
 
 
-    1. Створюємо папку _/middlewares_
-    2. Створюємо файл _/middlewares/auth.middleware.js_
-    3. Додаємо функцію у файл та експортуємо її:
+      <div className="bubble small subtle">
+        **middlewares** — виконують операції з даними, що проходять крізь них та відправляються їх далі, або переривають потік. Функція middleware приймає три аргументи: (req, res, next). З першими двому ми вже знайомі - це об'єкти запиту та відповіді, а третій - це функція коллбек, яка говорить, що усі поточні операції закінчені і можна переходити до наступного кроку.
+      </div>
+    </li>
 
-    <SnippetJS13 />
+    <li>
+      Імпортуємо мідлвер до роутеру і використовуємо його для роботи з тілом запиту:
 
+      <SnippetJS14 />
 
-    <div className="bubble small subtle">
-
-      **middlewares** — виконують операції з даними, що проходять крізь них та відправляються їх далі, або переривають потік. Функція middleware приймає три аргументи: (req, res, next). З першими двому ми вже знайомі - це об'єкти запиту та відповіді, а третій - це функція коллбек, яка говорить, що усі поточні операції закінчені і можна переходити до наступного кроку.
-
-    </div>
-
-
-    4. Імпортуємо мідлвер до роутеру і використовуємо його для роботи з тілом запиту:
-
-    <SnippetJS14 />
-
-    <div className="bubble small subtle">
-
-      Щоб ініціалізувати **middleware** можна використовувати `app.use` синтаксис, або ж у випадку з роутінгом просто передати його другим аргументом.
-
-    </div>
-
-    5. Запускаємо сервер `npm start`
-    6. Відправляємо POST-запит на _/users_ з заголовком `Authorization: user` і дивимось на відповідь 401
+      <div className="bubble small subtle">
+        Щоб ініціалізувати **middleware** можна використовувати `app.use` синтаксис, або ж у випадку з роутінгом просто передати його другим аргументом.
+      </div>
+    </li>
+    <li>
+      Запускаємо сервер `npm start`
+    </li>
+    <li>
+      Відправляємо POST-запит на _/users_ з заголовком `Authorization: user` і дивимось на відповідь 401
 
       <img src={middleware_test1Img} alt="middleware_test1" />
+    </li>
+    <li>
+      Відправляємо POST-запит на _/users_ с заголовком `Authorization: admin` і отримуємо відповідь, тому що ми пройшли перевірку
 
-    7. Відправляємо POST-запит на _/users_ с заголовком `Authorization: admin` і отримуємо відповідь, тому що ми пройшли перевірку
+      <img src={middleware_test2Img} alt="middleware_test2" />
+    </li>
+  </ol>
+</DetailsCard>
 
-    <img src={middleware_test2Img} alt="middleware_test2" />
-  </div>
-</div>
 
 І це все, що стосується основ у структурі Node.js-застосунку. Тепер ти тру фулстек 😎
 
