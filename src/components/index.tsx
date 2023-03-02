@@ -12,4 +12,5 @@ export {
   TimelineOfContents,
   VideoWrapper,
   IntroBlueBubble,
+  DetailsCard,
 } from './common';

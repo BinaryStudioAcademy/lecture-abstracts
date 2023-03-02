@@ -15,6 +15,7 @@ import {
   VideoWrapper,
   Flute,
   IntroBlueBubble,
+  DetailsCard,
 } from '~/components';
 
 // import '~/assets/stylesheets/index.css';
@@ -33,6 +34,7 @@ const components = {
   VideoWrapper,
   Flute,
   IntroBlueBubble,
+  DetailsCard,
 };
 
 const wrapPageElement = ({

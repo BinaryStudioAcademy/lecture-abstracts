@@ -86,107 +86,74 @@
   padding-top: 64px;
 }
 
-.content ol > li::before {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  float: left;
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-top: calc((0.8rem * 1.5 - 1rem) / 2 + 0.05rem);
-  margin-left: calc(-1.5rem + 0.5rem / 2);
-  color: inherit;
-  font-weight: bold;
-  font-size: 0.7em;
-  font-family: inherit;
-  line-height: 1rem;
-  background: transparent;
-  border-radius: 0.25em;
-  counter-increment: ol-counter;
-  content: counter(ol-counter);
-}
-
-.content ol.inverted > li::before {
-  color: white;
-  font-weight: normal;
-  background: black;
-}
-
-.content .bubble ol.inverted > li::before {
-  color: #0084ff;
-  font-weight: bold;
-  background: white;
-  border-radius: 100%;
-}
-
 /* Alternative to <details> compatible with Safari */
-.details > input {
-  display: inline-flex;
-  flex: 0 0 auto;
-  justify-content: center;
-  align-items: center;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: top;
-  background: none;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  cursor: pointer;
-  transition: 0.2s;
-  appearance: none;
-}
+// .details > input {
+//   display: inline-flex;
+//   flex: 0 0 auto;
+//   justify-content: center;
+//   align-items: center;
+//   width: 1.5em;
+//   height: 1.5em;
+//   vertical-align: top;
+//   background: none;
+//   border: none;
+//   border-radius: 0;
+//   outline: none;
+//   cursor: pointer;
+//   transition: 0.2s;
+//   appearance: none;
+// }
 
-.details > input::after {
-  position: relative;
-  width: 0.5em;
-  height: 0.7em;
-  border-top: 0.35em solid transparent;
-  border-bottom: 0.35em solid transparent;
-  border-left: 0.5em solid black;
-  cursor: pointer;
-  content: ' ';
-}
+// .details > input::after {
+//   position: relative;
+//   width: 0.5em;
+//   height: 0.7em;
+//   border-top: 0.35em solid transparent;
+//   border-bottom: 0.35em solid transparent;
+//   border-left: 0.5em solid black;
+//   cursor: pointer;
+//   content: ' ';
+// }
 
-.details > input:checked {
-  transform: rotate(90deg);
-}
+// .details > input:checked {
+//   transform: rotate(90deg);
+// }
 
-.details > label.summary {
-  cursor: pointer;
-}
+// .details > label.summary {
+//   cursor: pointer;
+// }
 
-.details > input:checked ~ div {
-  display: block;
-}
+// .details > input:checked ~ div {
+//   display: block;
+// }
 
-.details > div {
-  display: none;
-}
+// .details > div {
+//   display: none;
+// }
 
-.details > div.labels {
-  margin-top: 0.5em;
-}
+// .details > div.labels {
+//   margin-top: 0.5em;
+// }
 
-.details > div::after {
-  display: block;
-  clear: both;
-  content: ' ';
-}
+// .details > div::after {
+//   display: block;
+//   clear: both;
+//   content: ' ';
+// }
 
-/* What is this sorcery? */
-.details > input:checked ~ div.details-body-with-image {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-}
+// /* What is this sorcery? */
+// .details > input:checked ~ div.details-body-with-image {
+//   display: flex !important;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
-.details > input:checked ~ div.paralell-blocks {
-  display: flex !important;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
+// .details > input:checked ~ div.paralell-blocks {
+//   display: flex !important;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   align-items: center;
+// }
 
 .top-image {
   margin-bottom: 15px;
@@ -197,41 +164,41 @@
 }
 
 /* Details as a standalone block */
-div.details:not(:last-child) {
-  margin-bottom: 0.25rem;
-}
+// div.details:not(:last-child) {
+//   margin-bottom: 0.25rem;
+// }
 
-div.details > input:first-child {
-  float: left;
-}
+// div.details > input:first-child {
+//   float: left;
+// }
 
-div.details > input:first-child + label {
-  display: inline-block;
-  width: calc(100% - 1.5em);
-  padding: 0;
-}
+// div.details > input:first-child + label {
+//   display: inline-block;
+//   width: calc(100% - 1.5em);
+//   padding: 0;
+// }
 
-div.details > input:first-child + label + .details-body {
-  padding-left: 1.5em;
-}
+// div.details > input:first-child + label + .details-body {
+//   padding-left: 1.5em;
+// }
 
-/* Details as a list item */
-.content li.details {
-  list-style-type: none;
-}
+// /* Details as a list item */
+// .content li.details {
+//   list-style-type: none;
+// }
 
-.content li.details::before {
-  display: none;
-}
+// .content li.details::before {
+//   display: none;
+// }
 
-.content li.details > input {
-  float: left;
-  margin-left: -30px;
-}
+// .content li.details > input {
+//   float: left;
+//   margin-left: -30px;
+// }
 
-.content li.details > label.summary {
-  display: inline-block;
-}
+// .content li.details > label.summary {
+//   display: inline-block;
+// }
 
 /* Navbar */
 .navbar .logo {
