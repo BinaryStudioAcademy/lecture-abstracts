@@ -7,7 +7,7 @@ import * as styles from './not-found-page.module.scss';
 const NotFoundPage: React.FC = () => {
   return (
     <main className={styles.page}>
-      <div className={styles.messageWrapper}>
+      <div>
         <ShrugMessage>
           <h4>— Sorry, this page hasn’t hatched yet.</h4>
           <p>
