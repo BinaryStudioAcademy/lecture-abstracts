@@ -29,6 +29,10 @@
     content: '';
   }
 
+  .step-item:last-child::before {
+    width: calc(100% - 20px);
+  }
+
   .step-level {
     display: inline-block;
     padding: 20px 10px 0;
