@@ -17,11 +17,7 @@ import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
 import resume_template from "~/assets/images/resume-template.png";
 
 
-<div>
-  <h1>
-    <strong>Git Homework</strong>
-  </h1>
-</div>
+# Git Homework
 
 <Language
   currentLanguage="en"
@@ -880,175 +876,173 @@ Send us the link to your GitHub repository and take a look how the task will be 
 Pay attention, that **you have only 3 attempts to run the automated tests** - so use it wisely 😉
 
 
-<div className="grading-hometask">
-  <Accordion>
-    <>
-      <FontAwesomeIcon icon={faQuestionCircle} />
-      <span className="title"><strong>How the project will be evaluated</strong></span>
-      <span className="icon">
-        <FontAwesomeIcon icon={faChevronRight} fixedWidth />
-      </span>
-    </>
-    <>
-      <div className="container">
+<Accordion grading={true}>
+  <>
+    <FontAwesomeIcon icon={faQuestionCircle} />
+    <span className="title"><strong>How the project will be evaluated</strong></span>
+    <span className="icon">
+      <FontAwesomeIcon icon={faChevronRight} fixedWidth />
+    </span>
+  </>
+  <>
+    <div className="container">
+      <div className="columns">
+        <div className="column">
+          The task is complex, so it will be evaluated in six directions,
+          and the arithmetic mean of the six numbers will be the final score:
+        </div>
+      </div>
+      <small>
         <div className="columns">
-          <div className="column">
-            The task is complex, so it will be evaluated in six directions,
-            and the arithmetic mean of the six numbers will be the final score:
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>Repository management</strong>
+                    <span className="text-gray"><small>#1</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body"><p> Repository created, topics added, README.md in place, and GitHub Pages enabled.</p></div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>Project management</strong>
+                    <span className="text-gray"><small>#2</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Projects have been launched, milestones have been identified,
+                tasks have been created, problems have been described, and labels
+                have been attached.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>
+                      <code>git</code>
+                      <span style={{ fontWeight: 300 }}> + </span>
+                      GitFlow
+                    </strong>
+                    <span className="text-gray"><small>#3</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                The work is carried out in several branches, each intuitively clear, and pull
+                requests are used to merge them into the main branch. Maybe even commits have
+                normal names :)
+              </div>
+            </div>
+          </div>
+            <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <span>
+                      <span style={{ fontWeight: 900 }}>HTML</span>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      <strong>CSS</strong>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      JS
+                    </span>
+                    <span className="text-gray"><small>#4</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Level 80 copypaste - valid HTML markup, CSS, and JS (if any) does normal things.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <span>
+                      <strong>UI</strong>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      <span style={{ fontWeight: 900 }}>UX</span>
+                    </span>
+                    <span className="text-gray"><small>#5</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong>
+                    <span className="text-gray"><small>#6</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Creativity, diligence, attention to detail, humor, originality, "wha-a-a-t ?!".
+              </div>
+            </div>
           </div>
         </div>
-        <small>
-          <div className="columns">
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>Repository management</strong>
-                      <span className="text-gray"><small>#1</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body"><p> Repository created, topics added, README.md in place, and GitHub Pages enabled.</p></div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>Project management</strong>
-                      <span className="text-gray"><small>#2</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Projects have been launched, milestones have been identified,
-                  tasks have been created, problems have been described, and labels
-                  have been attached.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>
-                        <code>git</code>
-                        <span style={{ fontWeight: 300 }}> + </span>
-                        GitFlow
-                      </strong>
-                      <span className="text-gray"><small>#3</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  The work is carried out in several branches, each intuitively clear, and pull
-                  requests are used to merge them into the main branch. Maybe even commits have
-                  normal names :)
-                </div>
-              </div>
-            </div>
-             <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <span>
-                        <span style={{ fontWeight: 900 }}>HTML</span>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        <strong>CSS</strong>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        JS
-                      </span>
-                      <span className="text-gray"><small>#4</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Level 80 copypaste - valid HTML markup, CSS, and JS (if any) does normal things.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <span>
-                        <strong>UI</strong>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        <span style={{ fontWeight: 900 }}>UX</span>
-                      </span>
-                      <span className="text-gray"><small>#5</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong>
-                      <span className="text-gray"><small>#6</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Creativity, diligence, attention to detail, humor, originality, "wha-a-a-t ?!".
-                </div>
-              </div>
-            </div>
-          </div>
-        </small>
-      </div>
-            <RadarChart
-        labels={[
-          "Repository management",
-          "Project management",
-          "git + GitFlow",
-          "HTML / CSS / JS",
-          "UI / UX",
-          "Awesomeness"
-        ]}
-        datasets={[{
-          label: "You",
-          data: [6, 5, 5, 5, 2, 0],
-          dragData: true,
-          borderColor: "rgba(0, 173, 238, 1)",
-          backgroundColor: "rgba(0, 173, 238, 0.125)",
-          pointBorderColor: "white",
-          pointBackgroundColor: context => context.dataIndex % 2 === 0 ? "rgb(255, 199, 18)" : "rgb(236, 24, 72)",
-          pointHoverBorderColor: "white",
-          pointRadius: 5,
-          pointHoverRadius: 8,
-          pointBorderWidth: 3,
-          pointHoverBorderWidth: 3,
-          pointHitRadius: 30
-        }, {
-          label: "Joe Average",
-          data: [6, 5, 5, 5, 2, 0],
-          dragData: true,
-          borderColor: "rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(0, 0, 0, 0.05)",
-          pointRadius: 0,
-          pointHitRadius: 0,
-          pointHoverRadius: 0
-        }]}
-      />
-      <div className="column">
-        We really appreciate your originality, initiative and humor, so any interesting
-        idea will be highly appreciated according to the last criterion!
-      </div>
-    </>
-  </Accordion>
-</div>
+      </small>
+    </div>
+          <RadarChart
+      labels={[
+        "Repository management",
+        "Project management",
+        "git + GitFlow",
+        "HTML / CSS / JS",
+        "UI / UX",
+        "Awesomeness"
+      ]}
+      datasets={[{
+        label: "You",
+        data: [6, 5, 5, 5, 2, 0],
+        dragData: true,
+        borderColor: "rgba(0, 173, 238, 1)",
+        backgroundColor: "rgba(0, 173, 238, 0.125)",
+        pointBorderColor: "white",
+        pointBackgroundColor: context => context.dataIndex % 2 === 0 ? "rgb(255, 199, 18)" : "rgb(236, 24, 72)",
+        pointHoverBorderColor: "white",
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 3,
+        pointHoverBorderWidth: 3,
+        pointHitRadius: 30
+      }, {
+        label: "Joe Average",
+        data: [6, 5, 5, 5, 2, 0],
+        dragData: true,
+        borderColor: "rgba(0, 0, 0, 0.1)",
+        backgroundColor: "rgba(0, 0, 0, 0.05)",
+        pointRadius: 0,
+        pointHitRadius: 0,
+        pointHoverRadius: 0
+      }]}
+    />
+    <div className="column">
+      We really appreciate your originality, initiative and humor, so any interesting
+      idea will be highly appreciated according to the last criterion!
+    </div>
+  </>
+</Accordion>
 
 <div className="bubble small subtle">
   Don't worry 😌 if your repository doesn't get 10 - repositories for 10 aren't

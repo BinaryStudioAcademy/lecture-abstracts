@@ -35,3 +35,43 @@ summary.accordion-header {
     display: none;
   }
 }
+
+.grading-hometask {
+  margin-bottom: 0.25em;
+  padding: 0.5em;
+  background: whitesmoke;
+  border-radius: 0.5em;
+}
+
+.grading-hometask .accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+
+.grading-hometask .accordion-header:hover,
+.grading-hometask:is(.accordion[open]) .accordion-header {
+  opacity: 1;
+}
+
+.grading-hometask:is(.accordion[open]) .accordion-header {
+  margin-bottom: 0.5em;
+}
+
+.grading-hometask .accordion-header .title {
+  flex: 1 1 auto;
+  padding: 0 0.25em;
+}
+
+.grading-hometask .accordion-body {
+  margin-bottom: 0;
+  background: white;
+  border-radius: 0.5em;
+}
+
+.grading-hometask:is(.accordion[open]) .accordion-body {
+  max-height: 150rem;
+}
