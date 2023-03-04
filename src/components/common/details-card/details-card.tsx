@@ -3,12 +3,12 @@ import * as styles from './details-card.module.scss';
 
 type Props = {
   children: [React.ReactNode, React.ReactNode];
-  type?: 'inverted';
+  type?: 'reversed';
 };
 
 const DetailsCard: React.FC<Props> = ({ children, type = '' }) => {
   const [header, body] = children;
-  const inverted = type === 'inverted' ? styles.inverted : '';
+  const inverted = type === 'reversed' ? styles.inverted : '';
   return (
     <details className={styles.testimonialsDetails}>
       <summary className={`${styles.testimonialsSummary} ${inverted}`}>
