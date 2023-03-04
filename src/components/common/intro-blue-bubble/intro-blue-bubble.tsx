@@ -66,7 +66,7 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
         <strong>{title}</strong> 👋 <br />
         <span dangerouslySetInnerHTML={{ __html: subtitle }} />
         {listItems && (
-          <ol>
+          <ol className="bubble-list">
             {listItems.map((item, index) => (
               <li
                 key={index}

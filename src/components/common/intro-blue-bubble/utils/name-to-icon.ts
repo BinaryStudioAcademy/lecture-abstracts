@@ -5,6 +5,7 @@ import {
   faStackOverflow,
   faFacebook,
   faLinkedin,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
 const nameToIcon = {
@@ -13,6 +14,7 @@ const nameToIcon = {
   [ContactIcon.GLOBE]: faGlobe,
   [ContactIcon.STACK_OVERFLOW]: faStackOverflow,
   [ContactIcon.LINKEDIN]: faLinkedin,
+  [ContactIcon.INSTAGRAM]: faInstagram,
 };
 
 export { nameToIcon };

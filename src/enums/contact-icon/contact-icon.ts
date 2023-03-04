@@ -4,6 +4,7 @@ enum ContactIcon {
   GITHUB = 'github',
   FACEBOOK = 'facebook',
   LINKEDIN = 'linkedin',
+  INSTAGRAM = 'instagram',
 }
 
 export { ContactIcon };
