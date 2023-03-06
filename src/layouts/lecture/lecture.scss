@@ -9,6 +9,7 @@
 @import './styles/tooltips.scss';
 @import './styles//tables.scss';
 @import './styles/chip.scss';
+@import './styles/badge.scss';
 
 /* Spectre.css overrides */
 // .content ul,
@@ -497,11 +498,4 @@
 
 .content .gatsby-highlight:last-child {
   margin-bottom: 0;
-}
-
-.badge.badge-secondary {
-  &::after {
-    color: #727271;
-    background-color: #eaeae1;
-  }
 }
