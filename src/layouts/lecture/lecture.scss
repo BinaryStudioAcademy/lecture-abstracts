@@ -108,12 +108,12 @@
 }
 
 /* Elements */
-// .content hr {
-//   height: 2px;
-//   margin: 2rem 0;
-//   background: lightgrey;
-//   border: none;
-// }
+.content hr {
+  height: 2px;
+  margin: 40px 0;
+  background: var(--gray-100);
+  border: none;
+}
 
 // .content hr.small {
 //   height: 1px;
