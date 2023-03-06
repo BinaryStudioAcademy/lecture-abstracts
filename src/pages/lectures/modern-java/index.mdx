@@ -25,16 +25,13 @@ import JavaModuleSnippet from './assets/snippets/java-module-system.mdx';
 import JavaTrycatchSnippet from './assets/snippets/java-try-catch.mdx';
 import JavaHTTPClientSnippet from './assets/snippets/java-http'
 import { kyryloLesohorskyi2020Avatar } from "~/assets/images/avatars/intro-rounded";
+import { introBubble } from '~/data/lectures/modern-java/intro';
 
-<div>
-  <h1>
-    <strong>Modern java</strong>
-  </h1>
-</div>
+#  Modern Java
 
 <Language
   currentLanguage="ua"
-  languages={{"ru": "lectures/modern-java", "ua": "lectures/modern-java/"}
+  languages={{"ru": "lectures/modern-java/ru", "ua": "lectures/modern-java/"}
 }/>
 
 <VideoWrapper duration="1 час 24 хв.">
@@ -46,68 +43,28 @@ import { kyryloLesohorskyi2020Avatar } from "~/assets/images/avatars/intro-round
   />
 </VideoWrapper>
 
-<div>
-     <div className="author">
-        <div className="avatar-wrapper">
-        <object className="avatar-object" data={kyryloLesohorskyi2020Avatar} role="img" aria-label="My profile picture"></object>
-        </div>
-        <div className="profile">
-        <h3 className="name">Лесогорський Кирило</h3>
-        <ul className="contacts">
-            <li>
-            <a href="https://www.facebook.com/nempavel" rel="author" className="facebook">
-                <FontAwesomeIcon icon={faTelegram} className="icon" />
-                <span>@klesogor</span>
-            </a>
-            </li>
-            <li>
-            <a href="https://github.com/klesogor" rel="author" className="github">
-                <FontAwesomeIcon icon={faGithub} className="icon" />
-                <span>klesogor</span>
-            </a>
-            </li>
-        </ul>
-        <p className="about">
-        Кирило працює FullStack розробником в <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> після того, як закінчив Академію по PHP в 2018 році. В роботі використовує JavaScript і TypeScript, але вважає, що мова - лише інструмент в руках програміста, та у вільний час пробує нові мови та парадигми, такі як Scala, Haskell, F#, Go, Rust і <i>Java</i>. Любить функціональне програмування та комп'ютерні ігри
-        </p>
-        </div>
-  </div>
+<IntroBlueBubble {...introBubble.ua}/>
 
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Привіт, академісти! 👋</strong><br />
-    Зустрічайте першу профільну лекцію по Java «Modern Java»! Розглянемо, що нового в Java 8-11 та що готовить майбутнє. Але спочатку дисклеймер:
-    <ol className="compact inverted">
-      <li>скоріш за все, ви це знаєте, і це добре😊;</li>
-      <li>лекція обіцяє бути інформативною <em>(за використання слів-паразитів і термінів - вибачте)</em>;</li>
-      <li>практичка частина лекції доволі велика, якщо ви впевнені в своїх силах, можете її пропустити.</li>
-      <li>Як бачите, я вельми формальний зануда, але воно само так виходить😢</li>
-    </ol>
-    І не забудьте взяти з собою потрібний інструментарій: <a href="https://git-scm.com/"><strong>Git</strong></a>, <a href="https://www.jetbrains.com/ru-ru/idea/"><strong>Intellij IDEA або інша IDE на вибір</strong></a>, <a href="https://www.oracle.com/java/technologies/javase-downloads.html"><strong>JDK (куди ж без неї)</strong></a>. Поїхали?
-  </div>
-</div>
-
-<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 1 + "em" }}>
-  <TimelineOfContents
-    timeline={[
-      {
-        linkTo: "#welcome-to-java",
-        title: "Welcome to Java world"
-      },
-      {
-        linkTo: "#whats-new-in-java",
-        title: "What's new in Java 8-11"
-      },
-      {
-        linkTo: "#java-ecosystem",
-        title: "Java ecosystem"
-      },
-      {
-        linkTo: "#typical-java-development-environment",
-        title: "Typical Java development environment"
-      }
-    ]}
-  />
-</div>
+<TimelineOfContents
+  timeline={[
+    {
+      linkTo: "#welcome-to-java",
+      title: "Welcome to Java world"
+    },
+    {
+      linkTo: "#whats-new-in-java",
+      title: "What's new in Java 8-11"
+    },
+    {
+      linkTo: "#java-ecosystem",
+      title: "Java ecosystem"
+    },
+    {
+      linkTo: "#typical-java-development-environment",
+      title: "Typical Java development environment"
+    }
+  ]}
+/>
 
 <Level
   id="welcome-to-java"
@@ -124,168 +81,133 @@ _Java_ - це мова програмування загального приз�
   (новий Кобол ())» — ось це Ява.
 </div>
 
-<hr className="small" />
+<hr />
 
-<ul>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-1" />
-    <label className="summary" htmlFor="accordion-1-1">
-      <strong>Java - високорівнева мова</strong>
-    </label>
-  <div className="details-body">
-Окрім того, що Java більше похожа на людську мову, ніж інші машинні коди, Java також бере на себе керування пам'яттю, що значно спрощує розробку та зменшує кількість багів.
 
-```java
-// C/C++ language allocate memory
-int *testArray = malloc(5 * sizeof(int));
-free(testArray);
+<DetailsCard>
+  <strong>Java - високорівнева мова</strong>
+  <>
+    Окрім того, що Java більше похожа на людську мову, ніж інші машинні коди, Java також бере на себе керування пам'яттю, що значно спрощує розробку та зменшує кількість багів.
 
-// allocate memory
-ArrayList list = new ArrayList();
-list.add('Hi!');
+    ```java
+    // C/C++ language allocate memory
+    int *testArray = malloc(5 * sizeof(int));
+    free(testArray);
 
-// cleanup memory by garbage collector
-```
+    // allocate memory
+    ArrayList list = new ArrayList();
+    list.add('Hi!');
 
-Пам'ять керується автоматично.
+    // cleanup memory by garbage collector
+    ```
 
-  </div>
+    Пам'ять керується автоматично.
+  </>
+</DetailsCard>
 
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-2" />
-    <label className="summary" htmlFor="accordion-1-2">
-      <strong>Java - об'єктно-орієнтована мова</strong>
-    </label>
-  <div className="details-body">
-в Java есть:
 
-- класи
-- інтерфейси
-- абстрактні класи
-- пакети
-- успадкування
+<DetailsCard>
+  <strong>Java - об'єктно-орієнтована мова</strong>
+  <>
+    в Java є:
 
-<JavaOOSnippet />
-    </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-3" />
-    <label className="summary" htmlFor="accordion-1-3">
-      <strong>Java - в якійсь-то мірі функціональна мова</strong>
-    </label>
-  <div className="details-body">
-    <ul>
-        <li> Функції вищого порядку за допомогою функціональних інтерфейсів </li>
-        <li> Декілька абстракцій зі світу функціонального програмування, таких як Optional </li>
-    </ul>
-  </div>
-  </li>
-</ul>
+    - класи
+    - інтерфейси
+    - абстрактні класи
+    - пакети
+    - успадкування
+
+    <JavaOOSnippet />
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <strong>Java - в якійсь-то мірі функціональна мова</strong>
+
+  <ul>
+      <li> Функції вищого порядку за допомогою функціональних інтерфейсів </li>
+      <li> Декілька абстракцій зі світу функціонального програмування, таких як Optional </li>
+  </ul>
+</DetailsCard>
+
 
 <Level id="whats-new-in-java" number="2" name="What's new in Java 8-11" difficulty="Intermediate" objectives="В Java 8+ було додано багато нових фіч. Вони дуже сильно вплинули на те, як ми пишемо наші програми. Їх знання та застосування на практиці важні для сучасного розробника" />
 
-<ul>
-<li className="details">
-  <input type="checkbox" id="accordion-2-1" hidden />
-  <label className="summary" htmlFor="accordion-2-1">
-    Functional Interfaces
-  </label>
-  <div className="details-body">
-      <JavaFISnippet />
-  </div>
-</li>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-2" hidden />
-  <label className="summary" htmlFor="accordion-2-2">
-    Stream API
-  </label>
-  <div className="details-body">
-      <JavaStreamSnippet />
+<DetailsCard>
+  Functional Interfaces
+  <JavaFISnippet />
+</DetailsCard>
 
-Часто використовувані операції стрімів:
-  - Intermediate
+
+<DetailsCard>
+  Stream API
+  <>
+    <JavaStreamSnippet />
+
+    Часто використовувані операції стрімів:
+
+    - Intermediate
     - sorted
     - filter
     - map
-  - Terminal
+    - Terminal
     - collect
     - reduce
     - forEach
     - findAny
     - findFirst
+  </>
+</DetailsCard>
 
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-2-3" hidden />
-  <label className="summary" htmlFor="accordion-2-3">
-    Optional
-  </label>
-  <div className="details-body">
-      <i>Ah, almost monads</i>
-      <JavaOptionalSnippet />
-  </div>
-</li>
+<DetailsCard>
+  Optional
+  <>
+    <i>Ah, almost monads</i>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-4" hidden />
-  <label className="summary" htmlFor="accordion-2-4">
-    Static, default and private interface methods
-  </label>
-  <div className="details-body">
-      <JavaPSDIMSnippet />
-  </div>
-</li>
+    <JavaOptionalSnippet />
+  </>
+</DetailsCard>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-5" hidden />
-  <label className="summary" htmlFor="accordion-2-5">
-    Module system
-  </label>
-  <div className="details-body">
-      <JavaModuleSnippet />
-  </div>
-</li>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-6" hidden />
-  <label className="summary" htmlFor="accordion-2-6">
-    Try-catch with resources
-  </label>
-  <div className="details-body">
-      <JavaTrycatchSnippet />
-  </div>
-</li>
+<DetailsCard>
+  Static, default and private interface methods
+  <JavaPSDIMSnippet />
+</DetailsCard>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-7" hidden />
-  <label className="summary" htmlFor="accordion-2-7">
-    JSHell CLI REPL
-  </label>
-  <div className="details-body">
-      Введіть в терміналі `jshell` та експериментуйте
-  </div>
-</li>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-8" hidden />
-  <label className="summary" htmlFor="accordion-2-8">
-    HTTP Client
-  </label>
-  <div className="details-body">
-      <JavaHTTPClientSnippet />
-  </div>
-</li>
+<DetailsCard>
+  Module system
+  <JavaModuleSnippet />
+</DetailsCard>
 
-<li className="details">
-  <input type="checkbox" id="accordion-2-9" hidden />
-  <label className="summary" htmlFor="accordion-2-9">
-    Other changes
-  </label>
-  <div className="details-body">
+
+<DetailsCard>
+  Try-catch with resources
+  <JavaTrycatchSnippet />
+</DetailsCard>
+
+
+<DetailsCard>
+  JSHell CLI REPL
+
+  Введіть в терміналі `jshell` та експериментуйте
+</DetailsCard>
+
+
+<DetailsCard>
+  HTTP Client
+
+  <JavaHTTPClientSnippet />
+</DetailsCard>
+
+
+<DetailsCard>
+  Other changes
+
+  <>
     - GC interface
     - Nest Based Access Control
     - Immutable collections
@@ -294,10 +216,9 @@ list.add('Hi!');
     - No-Op GC
     - CompletableFuture
     - Variable handles
-  </div>
-</li>
+  </>
+</DetailsCard>
 
-</ul>
 
 <Level id="java-ecosystem" number="3" name="Java ecosystem" difficulty="Hard" objectives="Вивчити екосистему й управління пакетами" />
 
