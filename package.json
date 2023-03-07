@@ -24,8 +24,7 @@
     "gatsby-source-filesystem": "5.5.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "remark-gfm": "1.0.0",
-    "spectre.css": "0.5.9"
+    "remark-gfm": "1.0.0"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "1.11.2",

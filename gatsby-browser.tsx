@@ -18,8 +18,6 @@ import {
   DetailsCard,
 } from '~/components';
 
-// import '~/assets/stylesheets/index.css';
-
 const components = {
   Avatar,
   Accordion,
