@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import thatsAllFolksAudio from '~/assets/audio/thats-all-folks.mp3';
 
-import './thats-all-folks.css';
+import * as styles from './thats-all-folks.module.scss';
 
 type Props = {
   source?: string;
@@ -14,7 +14,7 @@ const ThatsAllFolks: React.FC<Props> = ({ source, children }) => {
   const pause = (): void => audio?.current?.pause();
 
   return (
-    <h4 className="thats-all-folks">
+    <h4 className={styles.thatsAllFolks}>
       <span onMouseEnter={play} onMouseLeave={pause}>
         {children || (
           <>
