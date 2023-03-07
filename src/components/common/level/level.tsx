@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowUp } from '@fortawesome/pro-regular-svg-icons';
-import './level.css';
+import * as styles from './level.module.scss';
 
 type Labels = {
   level: string;
@@ -32,17 +32,17 @@ const Level: React.FC<Props> = ({
   const backToTopLabel = labels?.backToTop || 'back to top';
 
   return (
-    <div className="level" {...rest}>
-      <small className="level__info">
-        <em className="level__number">
+    <div className={styles.level} {...rest}>
+      <small className={styles.info}>
+        <em className={styles.number}>
           {levelLabel} {number}
         </em>
-        <a className="level__back-to-top" href="#table-of-contents">
+        <a className={styles.backToTop} href="#table-of-contents">
           <FontAwesomeIcon icon={faLongArrowUp} /> {backToTopLabel}
         </a>
       </small>
-      <h3 className="level__name">{name}</h3>
-      <small className="level__meta">
+      <h3 className={styles.name}>{name}</h3>
+      <small className={styles.meta}>
         <strong>{difficultyLabel}</strong> {difficulty}{' '}
         <strong>{objectivesLabel}</strong> {objectives}
       </small>
