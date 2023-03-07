@@ -10,11 +10,11 @@
   transition: all 0.2s linear;
 }
 
-.testimonials-summary:not(.inverted) {
+.testimonials-summary:not(.reversed) {
   padding: 0 0 0 20px;
 }
 
-.testimonials-summary:not(.inverted)::before {
+.testimonials-summary:not(.reversed)::before {
   position: absolute;
   top: 20%;
   left: 0;
@@ -27,7 +27,7 @@
   content: '';
 }
 
-.testimonials-summary:is(.inverted)::after {
+.testimonials-summary:is(.reversed)::after {
   position: absolute;
   top: 6px;
   right: -30px;
@@ -45,11 +45,11 @@
   transform: rotate(90deg);
 }
 
-.testimonials-description:not(.inverted) {
+.testimonials-description:not(.reversed) {
   margin-left: 18px;
 }
 
-.testimonials-description:is(.inverted) {
+.testimonials-description:is(.reversed) {
   margin-top: 5px;
 }
 

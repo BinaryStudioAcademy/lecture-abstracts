@@ -8,14 +8,14 @@ type Props = {
 
 const DetailsCard: React.FC<Props> = ({ children, type = '' }) => {
   const [header, body] = children;
-  const inverted = type === 'reversed' ? styles.inverted : '';
+  const reversed = type === 'reversed' ? styles.reversed : '';
   return (
     <details className={styles.testimonialsDetails}>
-      <summary className={`${styles.testimonialsSummary} ${inverted}`}>
+      <summary className={`${styles.testimonialsSummary} ${reversed}`}>
         <span className="details-card__header">{header}</span>
       </summary>
 
-      <div className={`${styles.testimonialsDescription} ${inverted}`}>
+      <div className={`${styles.testimonialsDescription} ${reversed}`}>
         {body}
       </div>
     </details>
