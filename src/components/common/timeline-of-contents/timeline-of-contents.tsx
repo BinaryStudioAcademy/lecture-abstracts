@@ -1,5 +1,5 @@
 import React from 'react';
-// import './styles.css';
+import classNames from 'classnames';
 
 import * as styles from './timeline-of-contents.module.scss';
 
@@ -20,13 +20,13 @@ const TimelineOfContents: React.FC<Props> = ({
   headerTitle,
   ...rest
 }) => (
-  <div id="table-of-contents" className={styles.timelineWrapper}>
+  <div id="table-of-contents" className={styles.wrapper}>
     {headerTitle && (
       <h2>
         <strong>{headerTitle}</strong>
       </h2>
     )}
-    <ul className={`${styles.step} timeline`} {...rest}>
+    <ul className={classNames(styles.step, 'timeline')} {...rest}>
       {timeline.map(({ linkTo, title, time }, index) => (
         <li key={`timeline-item-${index}`} className={styles.stepItem}>
           {time && (

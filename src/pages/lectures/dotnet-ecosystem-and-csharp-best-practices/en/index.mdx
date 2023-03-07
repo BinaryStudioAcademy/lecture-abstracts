@@ -238,7 +238,7 @@ Microsoft is on top right now, have you heard about OpenAI company and their pro
 
     <ul>
       <li>
-        <DetailsCard type="reversed">
+        <DetailsCard isReversed >
           <>
             First, the compiler will turn the written code from C# into IL:
           </>
@@ -510,7 +510,7 @@ Microsoft is on top right now, have you heard about OpenAI company and their pro
     For example, our class interacts with the file system - opens a file, reads something from it, writes. And it's better to finish working with this file as soon as possible so that other programs or threads can use it.
     And another thing, we ourselves need to explicitly call the <code>Dispose</code> method, because the <em>Garbage Collector</em> knows nothing about it. This is best done in a <code>try...finally</code> block so that even if an error occurs, we can free the resources and clean up the memory properly.
 
-    <DetailsCard type="reversed">
+    <DetailsCard isReversed >
       IDisposable implementation example
 
       <SnippetL03S31 />

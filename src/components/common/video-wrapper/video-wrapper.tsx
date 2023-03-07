@@ -14,9 +14,9 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
   duration = '00:00',
 }) => {
   return (
-    <div className={styles.videoWrapper}>
-      <details className={styles.videoDetails}>
-        <summary className={styles.videoHeader}>
+    <div className={styles.wrapper}>
+      <details className={styles.details}>
+        <summary className={styles.header}>
           <FontAwesomeIcon icon={faVideo} fixedWidth />
           <span className={styles.title}>
             <strong>{duration}</strong>
@@ -25,7 +25,7 @@ const VideoWrapper: React.FC<VideoWrapperProps> = ({
             <FontAwesomeIcon icon={faAngleRight} fixedWidth />
           </span>
         </summary>
-        <div className={styles.videoBody}>
+        <div className={styles.body}>
           {' '}
           <div className={styles.iframeWrapper}>{children}</div>
         </div>

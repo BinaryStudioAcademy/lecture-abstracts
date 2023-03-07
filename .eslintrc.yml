@@ -49,7 +49,10 @@ rules:
   '@typescript-eslint/explicit-function-return-type':
     - error
     - allowTypedFunctionExpressions: true
-  '@typescript-eslint/quotes': ['error', 'single', { avoidEscape: true }]
+  '@typescript-eslint/quotes':
+    - error
+    - single
+    - avoidEscape: true
   '@typescript-eslint/object-curly-spacing':
     - error
     - always

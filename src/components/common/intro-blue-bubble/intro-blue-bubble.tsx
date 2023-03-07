@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Contacts = {
   ref: string;
-  className?: 'darkBlueIcon' | 'blueIcon';
+  iconColor?: 'darkBlue' | 'blue';
   title: string;
   iconName: ContactIcon;
 };
@@ -42,9 +42,9 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
           {contacts && (
             <ul className={styles.contacts}>
               {contacts.map(
-                ({ ref, title, className = 'defaultIcon', iconName }) => (
+                ({ ref, title, iconColor = 'defaultIcon', iconName }) => (
                   <li key={title} className={styles.contact}>
-                    <a href={ref} rel="author" className={styles[className]}>
+                    <a href={ref} rel="author" className={styles[iconColor]}>
                       <FontAwesomeIcon
                         icon={nameToIcon[iconName]}
                         className={styles.icon}

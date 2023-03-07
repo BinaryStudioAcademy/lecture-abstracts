@@ -7,7 +7,7 @@ const Flute: React.FC = () => {
   const play = (): Promise<void> | undefined => audio?.current?.play();
   const pause = (): void => audio?.current?.pause();
   return (
-    <div className={styles.sceneFlute} onMouseEnter={play} onMouseLeave={pause}>
+    <div className={styles.wrapper} onMouseEnter={play} onMouseLeave={pause}>
       <em>(in the distance, a Japanese flute plays a gentle melody)</em>
       <audio ref={audio} preload="auto">
         <source src={rodrigoRodriguezShakuhachiFluteAudio} type="audio/mpeg" />

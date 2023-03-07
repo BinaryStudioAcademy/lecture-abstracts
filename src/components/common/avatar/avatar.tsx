@@ -1,6 +1,7 @@
 import React from 'react';
 import { nameToImage } from './utils/name-to-image';
 import { Author } from '~/types';
+import classNames from 'classnames';
 
 import * as styles from './avatar.module.scss';
 
@@ -12,9 +13,9 @@ type Props = {
 const Avatar: React.FC<Props> = ({ name, size = 'medium' }) => {
   const Avatar = nameToImage[name];
   return (
-    <div className={`${styles.avatarWrapper} ${styles[size]}`}>
+    <div className={classNames(styles.wrapper, styles[size])}>
       <object
-        className={styles.avatarObject}
+        className={styles.avatar}
         role="img"
         data={Avatar}
         aria-label={name}

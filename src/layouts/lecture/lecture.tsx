@@ -7,7 +7,6 @@ import { Footer, Header } from '~/partials';
 import '~/assets/stylesheets/styles.scss';
 
 import './lecture.scss';
-// import * as styles from './lecture.module.scss';
 import 'prismjs/themes/prism.css';
 
 type LectureProps = {

@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import * as styles from './accordion.module.scss';
 
 type Props = {
@@ -11,9 +12,9 @@ const Accordion: React.FC<Props> = ({ children, grading = false }) => {
 
   return (
     <details
-      className={`${styles.accordion} ${
-        grading ? styles.gradingHometask : null
-      }`}
+      className={classNames(styles.accordion, {
+        [styles.gradingHometask]: grading,
+      })}
     >
       <summary className={styles.accordionHeader}>{heading}</summary>
       <div className={styles.accordionBody}>{content}</div>
