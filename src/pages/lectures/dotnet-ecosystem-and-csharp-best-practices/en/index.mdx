@@ -78,9 +78,10 @@ import SnippetL04S09 from "../assets/snippets/snippet-l04-s09.mdx";
 import SnippetL04S10 from "../assets/snippets/snippet-l04-s10.mdx";
 import SnippetL04S11 from "../assets/snippets/snippet-l04-s11.mdx";
 import SnippetL04S12 from "../assets/snippets/snippet-l04-s12.mdx";
+import { introBubble } from '~/data/lectures/dotnet-ecosystem-and-csharp-best-practices/intro';
 import "../styles.css";
 
-<div><h1><strong>.NET ecosystem and C# best practices</strong></h1></div>
+#  .NET ecosystem and C# best practices
 
 <Language
   currentLanguage="en"
@@ -91,27 +92,7 @@ import "../styles.css";
   <iframe src="https://www.youtube.com/embed/qESDPe_Gj5Y" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <Avatar name="Ivan Hedz"/>
-    <div className="profile">
-      <h3 className="name">Ivan Hedz</h3>
-      <p className="about">Ivan workes as Full Stack Web Developer in <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>. Tech stack is C# and Typescript. Hobbies – listening to music, arcade games and yoga. Decided to record a lecture for the Academy for the first time so that it would be easier for you to understand the .NET ecosystem.</p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong className="dorov">Hello!</strong>
-    <br />
-    The lecture about the .NET ecosystem and best practices for writing C# code will start in 5..4..3... But first, 🥁 some disclaimers about the lecture itself.
-    <ol className="compact inverted">
-      <li>You have probably already heard (or not) about much of what will be discussed;</li>
-      <li>Some topics are talked about superficially, without going into details;</li>
-      <li>The lecture may seem long, but believe me is faster than diving into the MSDN documentation in search of the necessary information.</li>
-    </ol>
-    <p>You will also need a .NET developer starter pack: <a href="https://dotnet.microsoft.com/download" title=".NET"><strong>.NET</strong></a>, <a href="https://git-scm.com/" title="Git"><strong>Git</strong></a>, <a href="https://visualstudio.microsoft.com/" title="Visual Studio"><strong>Visual Studio</strong></a> or <a href="https://www.jetbrains.com/rider/" title="Rider"><strong>Rider</strong></a>.</p>
-  </div>
-</div>
-
+<IntroBlueBubble {...introBubble.en}/>
 
 <TimelineOfContents timeline={[{
     linkTo: "#dotnet-platform-overview",

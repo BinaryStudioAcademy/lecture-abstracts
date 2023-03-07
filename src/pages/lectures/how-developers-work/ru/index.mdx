@@ -15,6 +15,7 @@ import { faEnvelope, faGlobe, faQuestionCircle } from "@fortawesome/pro-solid-sv
 import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
 import { faFacebookSquare, faGithub, faSkype } from "@fortawesome/free-brands-svg-icons";
 import { volodymyrKushnir2017Avatar } from "~/assets/images/avatars/intro-rounded";
+import { introBubble } from '~/data/lectures/how-developers-work/intro';
 import {
   ryuAvatar,
   donaldTrumpAvatar,
@@ -35,7 +36,7 @@ import {
   yuriyStetsulaAvatar
 } from "~/assets/images/avatars/slack-squared";
 
-<div><h1><strong>How developers work</strong></h1></div>
+#  How developers work
 
 <Language
   currentLanguage="ru"
@@ -46,28 +47,7 @@ import {
   <iframe src="https://www.youtube.com/embed/Erzsn5SoczI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <Avatar name="Владимир Кушнир" />
-    <div className="profile">
-      <h3 className="name">Владимир Кушнир</h3>
-      <p className="about">
-	  	Володя, фулл-стек разработчик с большим опытом, который строит точные, адаптивные, быстрые, удобные в использовании окружения, которые красиво выглядят и хорошо выполняют свои задания. Любимыми технологиями считает <a href="https://reactjs.org/"><strong>React</strong></a> и <a href="https://graphql.org/"><strong>GraphQL</strong></a>. По-русски говорит со смешным акцентом <em>(по-английски тоже)</em>.
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em" }}>
-    <strong>Hey, hola, привет!</strong> 👋<br />Уже спустя два абзаца начнется лекция. Но! Сначала пара коротеньких дисклеймеров:
-    <ol className="compact inverted">
-      <li>некоторые термины и технологии не объясняются;</li>
-      <li>линки на документацию и гайдлайны опциональны <em>(их можно полностью проигнорировать, имея сильную интуицию, багаж знаний или достаточно времени на эксперименты)</em>;</li>
-      <li>лекция пытается быть суперфановой, хорошо структурированной и максимально полезной, но не всегда так будет получаться в итоге &#x1F937;&#x200D;&#x2642;&#xFE0F;;</li>
-      <li>обидно, что в видео в некоторых моментах слышно, как бегает моя мышка 🐭 — нужно было взять коврик;</li>
-      <li>за беканье-меканье и употребление иностранных слов извините, пожалуйста <em>(задания лекции в своем большинстве будут написаны на английском языке, чтоб сымитировать диалог между клиентом и разработчиком)</em>;</li>
-    </ol>
-    Между прочим, it's dangerous to go alone! Take this: <a href="https://git-scm.com/"><strong>Git</strong></a>, <a href="https://desktop.github.com/"><strong>GitHub Desktop</strong></a>, <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a>, <a href="https://nodejs.org/"><strong>Node.js</strong></a>. Го!
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.ru}/>
 
 <div className="messages">
   Итак, представим себе такую ситуацию — студент подписывает контракт с аутсорсинговой или продуктовой компанией, на следующее утро приходит в офис/коворк/cloffice ("closet office"), включает компьютер, запускает мессенджер (например, Slack), и получает своё первое мега-задание ("таску") от заказчика (

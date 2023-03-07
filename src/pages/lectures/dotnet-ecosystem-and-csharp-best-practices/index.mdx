@@ -78,6 +78,7 @@ import SnippetL04S09 from "./assets/snippets/snippet-l04-s09.mdx";
 import SnippetL04S10 from "./assets/snippets/snippet-l04-s10.mdx";
 import SnippetL04S11 from "./assets/snippets/snippet-l04-s11.mdx";
 import SnippetL04S12 from "./assets/snippets/snippet-l04-s12.mdx";
+import { introBubble } from '~/data/lectures/dotnet-ecosystem-and-csharp-best-practices/intro';
 import "./styles.css";
 
 <div><h1><strong>.NET ecosystem and C# best practices</strong></h1></div>
@@ -91,26 +92,8 @@ import "./styles.css";
   <iframe src="https://www.youtube.com/embed/qESDPe_Gj5Y" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <Avatar name="Ivan Hedz"/>
-    <div className="profile">
-      <h3 className="name">Іван Гедзь</h3>
-      <p className="about">Іван працює Full Stack веб-розробником у <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>. Пише на C# і TypeScript. З хобі ― слухати музику, грати в аркади, займатися йогою. Вирішив вперше записати лекцію для Академії, щоб тобі було легше розібратися з екосистемою .NET.</p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0,5em 1em 1em"}}>
-    <strong className="dorov">Привіт!</strong>
-    <br />
-   Лекція про екосистему .NET та кращі практики написання C#-коду почнеться за 5..4..3... Але спочатку 🥁 кілька дісклеймерів про саму ж лекцію:
-    <ol className="compact inverted">
-      <li>багато з чого, про що йдеться у лекції, ви вже мабуть чули (або ні);</li>
-      <li>деякі теми та терміни висвітлюються поверхнево, не вдаючись у деталі;</li>
-      <li>лекція може здатися затягнутою, але believe me — це швидше, ніж прошуршати документацію MSDN-у в пошуках потрібної інфи 😝.</li>
-    </ol>
-    <p>Вам також знадобиться стартовий пакет розробника .NET: <a href="https://dotnet.microsoft.com/download" title=".NET"><strong>.NET</strong></a>, <a href="https://git-scm.com/" title="Git"><strong>Git</strong></a>, <a href="https://visualstudio.microsoft.com/" title="Visual Studio"><strong>Visual Studio</strong></a> або <a href="https://www.jetbrains.com/rider/" title="Rider"><strong>Rider</strong></a>.</p>
-  </div>
-</div>
+
+<IntroBlueBubble {...introBubble.ua} />
 
 
 <TimelineOfContents timeline={[{
