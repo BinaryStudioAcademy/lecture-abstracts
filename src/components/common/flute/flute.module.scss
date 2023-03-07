@@ -1,0 +1,12 @@
+.scene-flute {
+  cursor: default;
+  transition: all 0.2s linear;
+  transform-origin: 0 50%;
+  line-height: 1.25em;
+  opacity: 0.5;
+  font-size: 0.85em;
+}
+.scene-flute:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
