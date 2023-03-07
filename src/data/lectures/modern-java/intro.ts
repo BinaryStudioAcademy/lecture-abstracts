@@ -12,11 +12,6 @@ const introRu: IntroBlueBubbleProps = {
     'Кирилл работает FullStack разработчиком в <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> после того, как закончил Академию по PHP в 2018 году. В работе использует JavaScript и TypeScript, но считает, что язык - лишь инструмент в руках программиста, и в свободное время пробует новые языки и парадигмы, такие как Scala, Haskell, F#, Go, Rust и <i>Java</i>. Любит функциональное программирование и компьютерные игры.',
   contacts: [
     {
-      ref: 'https://www.facebook.com/nempavel',
-      title: '@klesogor',
-      iconName: ContactIcon.FACEBOOK,
-    },
-    {
       ref: 'https://github.com/klesogor',
       title: 'klesogor',
       iconName: ContactIcon.GITHUB,
