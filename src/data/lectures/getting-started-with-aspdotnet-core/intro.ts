@@ -15,7 +15,7 @@ const introEN: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
       iconName: ContactIcon.LINKEDIN,
-      className: 'blueIcon',
+      iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',
@@ -41,7 +41,7 @@ const introUA: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
       iconName: ContactIcon.LINKEDIN,
-      className: 'blueIcon',
+      iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',

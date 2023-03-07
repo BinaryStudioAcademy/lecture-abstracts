@@ -15,7 +15,7 @@ const introEN: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/uliana-l-b34129105/',
       title: 'uliana-l',
       iconName: ContactIcon.LINKEDIN,
-      className: 'blueIcon',
+      iconColor: 'blue',
     },
   ],
   title: 'Hello, world!',

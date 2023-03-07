@@ -13,7 +13,7 @@ const introEN: IntroBlueBubbleProps = {
   contacts: [
     {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
-      className: 'blueIcon',
+      iconColor: 'blue',
       title: 'oleksandr-danylchenko',
       iconName: ContactIcon.LINKEDIN,
     },
@@ -36,7 +36,7 @@ const introUA: IntroBlueBubbleProps = {
   contacts: [
     {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
-      className: 'blueIcon',
+      iconColor: 'blue',
       title: 'oleksandr-danylchenko',
       iconName: ContactIcon.LINKEDIN,
     },
