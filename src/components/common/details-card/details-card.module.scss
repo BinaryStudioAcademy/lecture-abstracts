@@ -1,12 +1,12 @@
 .testimonials-details {
-  margin-bottom: 4px;
   width: fit-content;
+  margin-bottom: 4px;
 }
 
 .testimonials-summary {
-  cursor: pointer;
   position: relative;
   display: inline-block;
+  cursor: pointer;
   transition: all 0.2s linear;
 }
 
@@ -15,29 +15,29 @@
 }
 
 .testimonials-summary:not(.inverted)::before {
-  content: '';
-  border-width: 6px 10px;
-  border-style: solid;
-  border-color: transparent transparent transparent black;
   position: absolute;
   top: 20%;
   left: 0;
-  transform: rotate(0);
-  transform-origin: 0.2rem 50%;
-  transition: 0.25s transform ease;
-}
-
-.testimonials-summary:is(.inverted)::after {
-  content: '';
   border-width: 6px 10px;
   border-style: solid;
   border-color: transparent transparent transparent black;
-  position: absolute;
-  top: 6px;
-  right: -30px;
   transform: rotate(0);
   transform-origin: 0.2rem 50%;
   transition: 0.25s transform ease;
+  content: '';
+}
+
+.testimonials-summary:is(.inverted)::after {
+  position: absolute;
+  top: 6px;
+  right: -30px;
+  border-width: 6px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+  content: '';
 }
 
 .testimonials-details[open] > .testimonials-summary::before,
@@ -48,6 +48,7 @@
 .testimonials-description:not(.inverted) {
   margin-left: 18px;
 }
+
 .testimonials-description:is(.inverted) {
   margin-top: 5px;
 }

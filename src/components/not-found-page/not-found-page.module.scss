@@ -1,16 +1,16 @@
 .page {
-  color: #232129;
-  padding: 96px;
-  text-align: center;
-  height: 100vh;
   display: flex;
   align-items: center;
+  height: 100vh;
+  padding: 96px;
+  color: #232129;
+  text-align: center;
 }
 
 .code {
-  color: #8a6534;
   padding: 4;
-  background-color: #fff4db;
+  color: #8a6534;
   font-size: 20px;
+  background-color: #fff4db;
   border-radius: 4px;
 }

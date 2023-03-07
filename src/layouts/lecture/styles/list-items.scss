@@ -61,7 +61,7 @@ ul:not(.timeline) li::before {
   content: '●';
 }
 
-.content ol:not(.default-list):not(.bubble-list) > li::before {
+.content ol:not(.default-list, .bubble-list) > li::before {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,92 +1,28 @@
-// @import 'node_modules/spectre.css/src/spectre';
-// @import 'node_modules/spectre.css/src/spectre-exp';
-
-@import './styles/code.scss';
-@import './styles/list-items.scss';
-@import './styles/typography.scss';
-@import './styles/layout.scss';
-@import './styles/panels.scss';
-@import './styles/tooltips.scss';
+@import './styles/code';
+@import './styles/list-items';
+@import './styles/typography';
+@import './styles/layout';
+@import './styles/panels';
+@import './styles/tooltips';
 @import './styles//tables.scss';
-@import './styles/chip.scss';
-@import './styles/badge.scss';
-
-/* Spectre.css overrides */
-// .content ul,
-// .content ol {
-//   padding-left: 1.5em;
-//   list-style: none outside none;
-// }
-
-// .content ol {
-//   counter-reset: ol-counter;
-// }
-
-// .content li {
-//   list-style: none outside none;
-// }
-
-// /* Lecture panel */
-// .lecture-panel {
-//   height: 100%;
-// }
-// .lecture-panel.disabled {
-//   filter: grayscale(1);
-//   pointer-events: none;
-// }
-// .lecture-panel .panel-footer {
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: space-between;
-// }
-// .lecture-title {
-//   margin-bottom: 0;
-// }
-// .lecture-meta {
-//   display: flex;
-//   align-items: flex-end;
-// }
-// .lecture-author {
-//   display: flex;
-//   align-items: flex-end;
-// }
-// .lecture-author:not(:last-child):after {
-//   content: '•';
-//   line-height: 1rem;
-//   margin: 0 0.25rem;
-//   color: #bcc3ce;
-// }
-// .lecture-author .avatar-wrapper {
-//   width: 1.25em;
-//   flex: 0 0 1.25em;
-//   margin-right: 0.5em;
-// }
-// .lecture-author-name {
-//   font-size: 1.125em;
-//   font-weight: 500;
-// }
-// .lecture-author-name,
-// .lecture-duration,
-// .lecture-number {
-//   line-height: 1em;
-//   white-space: nowrap;
-// }
+@import './styles/chip';
+@import './styles/badge';
 
 .container {
-  max-width: 976px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 8px;
-  padding-right: 8px;
   width: 100%;
+  max-width: 976px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 64px;
   padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 .top-image {
@@ -115,99 +51,6 @@
   background: var(--gray-100);
   border: none;
 }
-
-// .content hr.small {
-//   height: 1px;
-//   margin: 1rem 0;
-// }
-
-// .content ol,
-// .content ul {
-//   margin: 0.25rem 0 0.5rem;
-// }
-
-// .content ol {
-//   list-style: outside decimal;
-// }
-
-// .content ul {
-//   list-style: outside disc;
-// }
-
-// .content ol li,
-// .content ul li {
-//   margin-top: 0;
-//   margin-bottom: 0.25rem;
-// }
-
-// .content ol li:last-child,
-// .content ul li:last-child {
-//   margin-bottom: 0;
-// }
-
-// .content ol.compact,
-// .content ol.compact li,
-// .content ul.compact,
-// .content ul.compact li {
-//   margin: 0;
-// }
-
-// .content p {
-//   margin-bottom: 0.25rem;
-// }
-
-// .content p:last-child {
-//   margin-bottom: 0;
-// }
-
-// .content img {
-//   max-width: 100%;
-// }
-
-// .content blockquote {
-//   margin-top: 0.25rem;
-//   margin-bottom: 0.25rem;
-//   margin-left: 0;
-//   padding: 0 0.75rem;
-//   border-left: 0.1rem solid #dadee4;
-// }
-
-// .content pre {
-//   margin: 0.25rem 0;
-//   padding: 0.5em;
-// }
-
-// .content pre:first-child {
-//   margin-top: 0;
-// }
-
-// .content pre:last-child {
-//   margin-bottom: 0;
-// }
-
-// .content pre code {
-//   display: block;
-//   padding: 0;
-//   color: inherit;
-//   font-size: 85%;
-//   font-family: 'SF Mono', 'Segoe UI Mono', 'Roboto Mono', Menlo, Courier,
-//     monospace;
-//   line-height: 1.4;
-//   background: none;
-// }
-
-// .content :not(pre) > code {
-//   padding: 0.1rem 0.2rem;
-//   color: #d73e48;
-//   font-size: 85%;
-//   line-height: 1.25;
-//   background: #fcf2f2;
-//   border-radius: 0.1rem;
-// }
-
-// .content a:hover code {
-//   text-decoration: underline;
-// }
 
 /* Collapsible */
 .content ul.collapsible li {
@@ -238,89 +81,6 @@
   background: whitesmoke;
   border-radius: 0.5em;
 }
-
-// /* Avatar */
-// .avatar-wrapper {
-//   flex: 0 0 6em;
-//   width: 6em;
-//   margin-right: 1em;
-// }
-
-// .avatar-wrapper > object,
-// .avatar-wrapper > .avatar-object {
-//   position: relative;
-//   display: block;
-//   flex: 1 0 auto;
-// }
-
-// /* Contacts */
-// .content .contacts {
-//   display: flex;
-//   flex-wrap: wrap;
-//   margin-top: 0;
-//   margin-bottom: 0;
-//   margin-left: 0;
-//   padding: 0;
-//   font-weight: 400;
-//   font-size: 0.9em;
-//   white-space: nowrap;
-//   list-style: none outside none;
-// }
-
-// .content .contacts li {
-//   margin-top: 0;
-//   margin-right: 1em;
-//   margin-bottom: 0.25em;
-// }
-
-// .content .contacts li::before {
-//   display: none;
-// }
-
-// .content .contacts li a {
-//   color: black;
-//   transition: color 0.2s ease-in-out;
-// }
-
-// .content .contacts li a:hover {
-//   text-decoration: none;
-// }
-
-// .content .contacts li a.facebook:hover {
-//   color: #3b5998;
-// }
-
-// .content .contacts li a.github:hover {
-//   color: dimgrey;
-// }
-
-// .content .contacts li a.mail:hover {
-//   color: dimgrey;
-// }
-
-// .content .contacts li a.skype:hover {
-//   color: #00aff0;
-// }
-
-// .content .contacts li a.linkedin:hover {
-//   color: #0077b5;
-// }
-
-// .content .contacts li a.phone:hover {
-//   color: dimgrey;
-// }
-
-// .content .contacts li a.website:hover {
-//   color: dimgrey;
-// }
-
-// .content .contacts li a .icon {
-//   width: auto;
-//   height: 16px;
-//   margin-right: 0.25em;
-//   vertical-align: bottom;
-//   fill: currentcolor;
-// }
 
 /* Profile */
 .content .profile .name {
@@ -433,43 +193,6 @@
 .content .messages input + label ~ .message {
   display: none;
 }
-
-// /* Table of contents */
-// .content .table-of-contents .step {
-//   margin: 0;
-//   padding: 0;
-//   list-style: none outside none;
-// }
-
-// .content .table-of-contents .step .step-item::before {
-//   position: absolute;
-//   top: 9px;
-//   left: 10px;
-//   width: 100%;
-//   height: 2px;
-//   background: rgb(87 85 217);
-//   content: '';
-// }
-
-// .content .table-of-contents .step .step-item:last-child::before {
-//   width: calc(100% - 20px);
-// }
-
-// .content .table-of-contents .step .step-item {
-//   text-align: left;
-// }
-
-// .content .table-of-contents .step .step-item a::before {
-//   left: auto;
-// }
-
-// .content .table-of-contents .step .step-item a:hover {
-//   text-decoration: underline;
-// }
-
-// .content .table-of-contents .step .step-item a:nth-of-type(2) {
-//   padding-top: 0;
-// }
 
 /* Columns */
 .column {
