@@ -15,6 +15,7 @@ import { faEnvelope, faGlobe, faQuestionCircle } from "@fortawesome/pro-solid-sv
 import { faChevronRight } from "@fortawesome/pro-regular-svg-icons";
 import { faFacebookSquare, faGithub, faSkype } from "@fortawesome/free-brands-svg-icons";
 import { volodymyrKushnir2017Avatar } from "~/assets/images/avatars/intro-rounded";
+import { introBubble } from '~/data/lectures/how-developers-work/intro';
 import {
   ryuAvatar,
   donaldTrumpAvatar,
@@ -35,7 +36,7 @@ import {
   yuriyStetsulaAvatar
 } from "~/assets/images/avatars/slack-squared";
 
-<div><h1><strong>How developers work</strong></h1></div>
+#  How developers work
 
 <Language
   currentLanguage="ru"
@@ -46,30 +47,7 @@ import {
   <iframe src="https://www.youtube.com/embed/Erzsn5SoczI" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={volodymyrKushnir2017Avatar} role="img" aria-label="Volodymyr Kushnir"></object>
-    </div>
-    <div className="profile">
-      <h3 className="name">Владимир Кушнир</h3>
-      <p className="about">
-	  	Володя, фулл-стек разработчик с большим опытом, который строит точные, адаптивные, быстрые, удобные в использовании окружения, которые красиво выглядят и хорошо выполняют свои задания. Любимыми технологиями считает <a href="https://reactjs.org/"><strong>React</strong></a> и <a href="https://graphql.org/"><strong>GraphQL</strong></a>. По-русски говорит со смешным акцентом <em>(по-английски тоже)</em>.
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em" }}>
-    <strong>Hey, hola, привет!</strong> 👋<br />Уже спустя два абзаца начнется лекция. Но! Сначала пара коротеньких дисклеймеров:
-    <ol className="compact inverted">
-      <li>некоторые термины и технологии не объясняются;</li>
-      <li>линки на документацию и гайдлайны опциональны <em>(их можно полностью проигнорировать, имея сильную интуицию, багаж знаний или достаточно времени на эксперименты)</em>;</li>
-      <li>лекция пытается быть суперфановой, хорошо структурированной и максимально полезной, но не всегда так будет получаться в итоге &#x1F937;&#x200D;&#x2642;&#xFE0F;;</li>
-      <li>обидно, что в видео в некоторых моментах слышно, как бегает моя мышка 🐭 — нужно было взять коврик;</li>
-      <li>за беканье-меканье и употребление иностранных слов извините, пожалуйста <em>(задания лекции в своем большинстве будут написаны на английском языке, чтоб сымитировать диалог между клиентом и разработчиком)</em>;</li>
-    </ol>
-    Между прочим, it's dangerous to go alone! Take this: <a href="https://git-scm.com/"><strong>Git</strong></a>, <a href="https://desktop.github.com/"><strong>GitHub Desktop</strong></a>, <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a>, <a href="https://nodejs.org/"><strong>Node.js</strong></a>. Го!
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.ru}/>
 
 <div className="messages">
   Итак, представим себе такую ситуацию — студент подписывает контракт с аутсорсинговой или продуктовой компанией, на следующее утро приходит в офис/коворк/cloffice ("closet office"), включает компьютер, запускает мессенджер (например, Slack), и получает своё первое мега-задание ("таску") от заказчика (
@@ -221,9 +199,11 @@ import {
    <div><strong>GitHub</strong> <sup><strong><a href="https://github.com/about/facts" title="GitHub Facts">[1]</a><a href="https://github.com/about/milestones" title="GitHub Milestones">[2]</a><a href="https://github.com/features" title="How developers work">[3]</a><a href="https://github.blog" title="The GitHub Blog">[4]</a><a href="https://education.github.com" title="GitHub Education">[5]</a><a href="https://help.github.com" title="GitHub Help">[6]</a><a href="https://lab.github.com" title="GitHub Learning Lab">[7]</a></strong></sup> will host it for you. First things first, skim through <a href="https://guides.github.com/introduction/flow/"><strong>Understanding the GitHub flow</strong></a> and <a href="https://guides.github.com/activities/hello-world/"><strong>Hello World</strong></a> guides to get an overview of terminology and core concepts <sup><strong><a href="https://git-scm.com/docs/gitglossary" title="gitglossary">[1]</a></strong></sup></div>
 2. Open up [**GitHub**](https://github.com/) and sign in. Create a new repository named **"homepage"** (e.g. **volodymyr-kushnir/homepage**), set description to "My very own personal website. Basically this is just a résumé.", initialize with **README**, ignore **.gitignore**, but choose **"MIT License"**
 3. Add topics _"personal website homepage resume gh-pages html css binary-studio-academy bsa21"_
-  <FacebookMessage small subtle>
-    Hmmm, adding proper topics helps to SEO your repository...
-  </FacebookMessage>
+
+    <FacebookMessage small subtle>
+      Hmmm, adding proper topics helps to SEO your repository...
+    </FacebookMessage>
+
 4. Create two projects — **"Homepage"** and **"Resume"** ― using **Automated kanban** as a project template for both. Here's the description for the **Homepage** project:
 
    > **\*\*Make homepage great!\*\*** Make it responsive, accessible, informative, credible, readable, descriptive, compatible, consistent, uncluttered, simple, secure, up-to-date. Alternatively, just give up.
@@ -242,11 +222,11 @@ import {
    </div>
 
 6. Create a new branch `develop` based on `main`
-   <div className="grading-hometask">
+
     <Accordion>
       <>
         <FontAwesomeIcon icon={faQuestionCircle} />
-        <span className="title"><strong>master чи main</strong></span>
+        <span className="title"><strong>&nbsp; master чи main</strong></span>
         <span className="icon">
           <FontAwesomeIcon icon={faChevronRight} fixedWidth />
         </span>
@@ -261,10 +241,10 @@ import {
         </div>
       </>
     </Accordion>
-   </div>
-   <div className="bubble small subtle">
+
+    <div className="bubble small subtle">
       Hey, c'mon fam, are you even trying?! I've asked you to put tasks into projects, so puh-leeeeeze!
-   </div>
+    </div>
 
 
 7. Go to **Settings — Manage access** and invite a collaborator
@@ -434,171 +414,169 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
       8. Merge `feature/body` into `develop` using pull request
    4. Open a pull request and merge `develop` into `main`. 💥**Boom, done, готово!**
 
-<div className="grading-hometask">
-  <Accordion>
-    <>
-      <FontAwesomeIcon icon={faQuestionCircle} />
-      <span className="title"><strong>Как будет оцениваться проект</strong></span>
-      <span className="icon">
-        <FontAwesomeIcon icon={faChevronRight} fixedWidth />
-      </span>
-    </>
-    <>
-      <div className="container">
+<Accordion>
+  <>
+    <FontAwesomeIcon icon={faQuestionCircle} />
+    <span className="title"><strong>&nbsp; Как будет оцениваться проект</strong></span>
+    <span className="icon">
+      <FontAwesomeIcon icon={faChevronRight} fixedWidth />
+    </span>
+  </>
+  <>
+    <div className="container">
+      <div className="columns">
+        <div className="column">
+          Задание комплексное, поэтому и оцениваться будет в шести направлениях, а среднее арифметическое этих шести чисел и будет окончательной оценкой:
+        </div>
+      </div>
+      <small>
         <div className="columns">
-          <div className="column">
-            Задание комплексное, поэтому и оцениваться будет в шести направлениях, а среднее арифметическое этих шести чисел и будет окончательной оценкой:
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>Repository management</strong>
+                    <span className="text-gray"><small>#1</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                <p>Репозиторий создан, топики добавлены, README.md на месте, а GitHub Pages включены. Может даже есть какая-то Wiki? А если найду?!</p>
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>Project management</strong>
+                    <span className="text-gray"><small>#2</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Проекты заведены, майлстоуны определены, таски создаются, проблемы описываются, лейбы прикрепляются.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong>
+                      <code>git</code>
+                      <span style={{ fontWeight: 300 }}> + </span>
+                      GitFlow
+                    </strong>
+                    <span className="text-gray"><small>#3</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Работа ведется в нескольких ветках, каждая интуитивно понятна, а для их слияния в основную ветку используются pull request-ы. Может даже у коммитов нормальные названия.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <span>
+                      <span style={{ fontWeight: 900 }}>HTML</span>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      <strong>CSS</strong>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      JS
+                    </span>
+                    <span className="text-gray"><small>#4</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Мастер копипаста 80-го уровня — валидная HTML-разметка, CSS не пошакаленный, а JS (если есть) делает нормальные вещи.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <span>
+                      <strong>UI</strong>
+                      <span style={{ fontWeight: 300 }}> / </span>
+                      <span style={{ fontWeight: 900 }}>UX</span>
+                    </span>
+                    <span className="text-gray"><small>#5</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Страница доступная, информативная, удобная, читабельная, чистая, приятная, интересная, адаптивная, быстрая.
+              </div>
+            </div>
+          </div>
+          <div className="column col-4 col-md-6 col-sm-12">
+            <div className="panel">
+              <div className="panel-header">
+                <div className="panel-title">
+                  <h6>
+                    <strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong>
+                    <span className="text-gray"><small>#6</small></span>
+                  </h6>
+                </div>
+              </div>
+              <div className="panel-body">
+                Творчество, старательность, внимание к деталям, юмор, оригинальность, "что-о-о-о?!".
+              </div>
+            </div>
           </div>
         </div>
-        <small>
-          <div className="columns">
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>Repository management</strong>
-                      <span className="text-gray"><small>#1</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  <p>Репозиторий создан, топики добавлены, README.md на месте, а GitHub Pages включены. Может даже есть какая-то Wiki? А если найду?!</p>
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>Project management</strong>
-                      <span className="text-gray"><small>#2</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Проекты заведены, майлстоуны определены, таски создаются, проблемы описываются, лейбы прикрепляются.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong>
-                        <code>git</code>
-                        <span style={{ fontWeight: 300 }}> + </span>
-                        GitFlow
-                      </strong>
-                      <span className="text-gray"><small>#3</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Работа ведется в нескольких ветках, каждая интуитивно понятна, а для их слияния в основную ветку используются pull request-ы. Может даже у коммитов нормальные названия.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <span>
-                        <span style={{ fontWeight: 900 }}>HTML</span>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        <strong>CSS</strong>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        JS
-                      </span>
-                      <span className="text-gray"><small>#4</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Мастер копипаста 80-го уровня — валидная HTML-разметка, CSS не пошакаленный, а JS (если есть) делает нормальные вещи.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <span>
-                        <strong>UI</strong>
-                        <span style={{ fontWeight: 300 }}> / </span>
-                        <span style={{ fontWeight: 900 }}>UX</span>
-                      </span>
-                      <span className="text-gray"><small>#5</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Страница доступная, информативная, удобная, читабельная, чистая, приятная, интересная, адаптивная, быстрая.
-                </div>
-              </div>
-            </div>
-            <div className="column col-4 col-md-6 col-sm-12">
-              <div className="panel">
-                <div className="panel-header">
-                  <div className="panel-title">
-                    <h6>
-                      <strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong>
-                      <span className="text-gray"><small>#6</small></span>
-                    </h6>
-                  </div>
-                </div>
-                <div className="panel-body">
-                  Творчество, старательность, внимание к деталям, юмор, оригинальность, "что-о-о-о?!".
-                </div>
-              </div>
-            </div>
-          </div>
-        </small>
-      </div>
-      <RadarChart
-        labels={[
-          "Repository management",
-          "Project management",
-          "git + GitFlow",
-          "HTML / CSS / JS",
-          "UI / UX",
-          "Awesomeness"
-        ]}
-        datasets={[{
-          label: "You",
-          data: [6, 5, 5, 5, 2, 0],
-          dragData: true,
-          borderColor: "rgba(0, 173, 238, 1)",
-          backgroundColor: "rgba(0, 173, 238, 0.125)",
-          pointBorderColor: "white",
-          pointBackgroundColor: context => context.dataIndex % 2 === 0 ? "rgb(255, 199, 18)" : "rgb(236, 24, 72)",
-          pointHoverBorderColor: "white",
-          pointRadius: 5,
-          pointHoverRadius: 8,
-          pointBorderWidth: 3,
-          pointHoverBorderWidth: 3,
-          pointHitRadius: 30
-        }, {
-          label: "Joe Average",
-          data: [6, 5, 5, 5, 2, 0],
-          dragData: false,
-          borderColor: "rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(0, 0, 0, 0.05)",
-          pointRadius: 0,
-          pointHitRadius: 0,
-          pointHoverRadius: 0
-        }]}
-      />
-      <div className="column">
-        Мы очень ценим вашу оригинальность, инициативу и юмор, поэтому по последнему критерию любая интересная идея будет высоко оценена! За обычный копипаст стилей и биографии Трампа или Рю оценка по UI/UX и Awesomeness будет средняя - 5.
-      </div>
-    </>
-  </Accordion>
-</div>
+      </small>
+    </div>
+    <RadarChart
+      labels={[
+        "Repository management",
+        "Project management",
+        "git + GitFlow",
+        "HTML / CSS / JS",
+        "UI / UX",
+        "Awesomeness"
+      ]}
+      datasets={[{
+        label: "You",
+        data: [6, 5, 5, 5, 2, 0],
+        dragData: true,
+        borderColor: "rgba(0, 173, 238, 1)",
+        backgroundColor: "rgba(0, 173, 238, 0.125)",
+        pointBorderColor: "white",
+        pointBackgroundColor: context => context.dataIndex % 2 === 0 ? "rgb(255, 199, 18)" : "rgb(236, 24, 72)",
+        pointHoverBorderColor: "white",
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        pointBorderWidth: 3,
+        pointHoverBorderWidth: 3,
+        pointHitRadius: 30
+      }, {
+        label: "Joe Average",
+        data: [6, 5, 5, 5, 2, 0],
+        dragData: false,
+        borderColor: "rgba(0, 0, 0, 0.1)",
+        backgroundColor: "rgba(0, 0, 0, 0.05)",
+        pointRadius: 0,
+        pointHitRadius: 0,
+        pointHoverRadius: 0
+      }]}
+    />
+    <div className="column">
+      Мы очень ценим вашу оригинальность, инициативу и юмор, поэтому по последнему критерию любая интересная идея будет высоко оценена! За обычный копипаст стилей и биографии Трампа или Рю оценка по UI/UX и Awesomeness будет средняя - 5.
+    </div>
+  </>
+</Accordion>
 
 <div className="bubble small subtle">
   Не волнуйся 😌, если твой репозиторий не получил 10 — самостоятельно за короткий промежуток времени репозитории на 10 не составляются 😝. Кто-то вложит всё свое время и силы в сам проект, но не успеет оформить репозиторий, а кто-то сделает наоборот. В первую очередь стоит делать то, что нравится, и получить максимум удовольствия от процесса. Если при всём этом ещё и зайти в незнакомую или некомфортную для cебя область и достичь успехов там — то это вообще супер! В конце концов, мы больше заинтересованы в том, чтоб увидеть, что разработчики могут создать в краткий срок, чем навязывать наше виденье правильного или неправильного способа выполнения абстрактных заданий
@@ -651,9 +629,10 @@ Let's download the repository using the command line. [**Git Handbook**](https:/
    </div>
 
    1. Log in to [**AWS Console**](https://console.aws.amazon.com/), go to **S3** service, create two buckets for **staging** and **production** (choose unique names!), edit their public access settings (uncheck everything), go to bucket properties and enable static website hosting, then go to **My Security Credentials** and generate a new set of access keys. Phew! 😌
-   <div className="bubble small subtle">
-     <strong>S3 bucket names are globally unique.</strong> This means that if someone else has a bucket of a certain name, you cannot have a bucket with that same name
-   </div>
+
+      <div className="bubble small subtle">
+        <strong>S3 bucket names are globally unique.</strong> This means that if someone else has a bucket of a certain name, you cannot have a bucket with that same name
+      </div>
 
    2. Create **.travis.yml**:
        ```yaml

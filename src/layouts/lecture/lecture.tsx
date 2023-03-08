@@ -4,6 +4,8 @@ import { isDateInThePast } from '~/utils';
 import { LecturesContext } from '~/types';
 import { Footer, Header } from '~/partials';
 
+import '~/assets/stylesheets/styles.scss';
+
 import './lecture.scss';
 import 'prismjs/themes/prism.css';
 

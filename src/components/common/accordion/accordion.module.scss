@@ -1,0 +1,52 @@
+.accordion {
+  margin-bottom: 0.25em;
+  padding: 0.5em;
+  background: var(--gray-50);
+  border-radius: 0.5em;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+.content {
+  max-height: 0;
+  margin-bottom: 6px;
+  overflow: hidden;
+  transition: max-height 0.25s;
+  margin-bottom: 0;
+  background: white;
+  border-radius: 0.5em;
+}
+
+// Remove default details marker in Webkit
+summary.header {
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
+.header:hover,
+.accordion[open] .header {
+  opacity: 1;
+}
+
+.accordion[open] .header {
+  margin-bottom: 0.5em;
+}
+
+.accordion[open] .content {
+  max-height: 1500px;
+}
+
+.accordion :global(.icon) {
+  transition: transform 0.25s;
+}
+
+.accordion :global(.title) {
+  flex: 1 1 auto;
+  padding: 0 0.25em;
+}

@@ -134,7 +134,9 @@ import SnippetL03S16 from "../assets/snippets/snippet-l03-s16.mdx";
 import SnippetL03S17 from "../assets/snippets/snippet-l03-s17.mdx";
 import SnippetL03S18 from "../assets/snippets/snippet-l03-s18.mdx";
 
-<div><h1><strong>Javascript for everyone</strong></h1></div>
+import { introBubble } from '~/data/lectures/javascript-for-everyone/intro';
+
+# Javascript for everyone
 
 <Language
   currentLanguage="en"
@@ -148,37 +150,7 @@ import SnippetL03S18 from "../assets/snippets/snippet-l03-s18.mdx";
   <iframe src="https://www.youtube.com/embed/wZOizfA6kmw" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen/>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={oleksandrDanylchenko2021Avatar} role="img" aria-label="Oleksandr Danylchenko"/>
-    </div>
-    <div className="profile">
-      <h3 className="name">Oleksandr Danylchenko</h3>
-      <ul className="contacts">
-        <li>
-          <a href="https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/" rel="author" className="linkedin">
-            <FontAwesomeIcon icon={faLinkedin} className="icon" />
-            <span>oleksandr-danylchenko</span>
-          </a>
-        </li>
-      </ul>
-      <p className="about">
-        Full-stack developer at Binary Studio. Works on development of a new SPA framework, which generates complex visually-rich sites with just the simple declarative description in the few jsons. Likes to discover and experiment with the new web-platform features. <del>And doesn't like Safari for incompatibilities and obsolescence.</del>
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Hello, world! 👋</strong><br />
-    I will tell you about all the joys of modern JavaScript, starting from the basic syntax and ending <em>(carefully, jargon!)</em> with modules, transpilers, and bundlers. Before you start - a few disclaimers about the content of the lecture:<br />
-    <ol className="compact inverted">
-      <li>Some terms and technologies are covered superficially;</li>
-      <li>"- Should I click on all the links to the documentation and read all the articles?" Well-u-u-u-u, up to you;</li>
-      <li>Everything should be interesting and as informative as possible, but you’ll see how it will turn out ... Have fun! 🙃</li>
-    </ol>
-    <p>And another <strong>heads up</strong> - you will need your favorite <a href="https://www.jetbrains.com/products/#lang=js"><strong>IDE</strong></a>, <a href="https://nodejs.org/en/"><strong>Node.js</strong></a>, and download the [project starter](/assets/zip/es6-for-everyone.zip). Ready? Let's go!</p>
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.en} />
 
 <div className="messages">
   The student is still on probation at his new company and is still using Slack to collaborate with other developers and communicate with customers. Ryu writes in the chat one warm spring evening - a former customer <em>(returning customer, ya-a-a-ay!)</em>, for whom an online resume was previously made. He is completely satisfied with the quality of our work and wants to entrust us with another project &mdash;
@@ -307,321 +279,345 @@ So, there is no specification, but it seems that this time we are talking about 
   </li>
 
   <li>
-    <p><strong>Declaring variables: <code>var</code>, <code>let</code> and <code>const</code></strong></p>
-    <p>There are three kinds of declarations in JavaScript:</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1" />
-        <label className="summary" htmlFor="accordion-3-1">
-          <code>var</code> declares a variable, optionally initializing it to a value
-        </label>
-        <div className="details-body">
-          Declaration will be hoisted to the global scope or a function block scope. Variable defined inside of the inner scope can override another variable from the outer scope. <strong>That's why it mustn't be used in the modern JS code!</strong>
-          <SnippetL01S04 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-2" />
-        <label className="summary" htmlFor="accordion-3-2">
-          <code>let</code> declares a local block-scoped variable, optionally initializing it to a value
-        </label>
-        <div className="details-body">
-          Declaration won't be hoisted but will create a new locally scoped variable.
-          <SnippetL01S05 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-3" />
-        <label className="summary" htmlFor="accordion-3-3">
-          <code>const</code> declares a local block-scoped read-only constant variable
-        </label>
-        <div className="details-body">
-          Variable cannot be <strong>reassigned</strong>, but objects defined with <code>const</code> can be changed
-          <SnippetL01S06 />
-        </div>
-      </li>
-    </ul>
+    <strong>Declaring variables: <code>var</code>, <code>let</code> and <code>const</code></strong>
+
+    There are three kinds of declarations in JavaScript:
+
+    <DetailsCard>
+      <>
+        <code>var</code> declares a variable, optionally initializing it to a value
+      </>
+      <>
+        Declaration will be hoisted to the global scope or a function block scope. Variable defined inside of the inner scope can override another variable from the outer scope. <strong>That's why it mustn't be used in the modern JS code!</strong>
+
+        <SnippetL01S04 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <code>let</code> declares a local block-scoped variable, optionally initializing it to a value
+      </>
+      <>
+        Declaration won't be hoisted but will create a new locally scoped variable.
+
+        <SnippetL01S05 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <code>const</code> declares a local block-scoped read-only constant variable
+      </>
+      <>
+        Variable cannot be <strong>reassigned</strong>, but objects defined with <code>const</code> can be changed
+
+        <SnippetL01S06 />
+      </>
+    </DetailsCard>
   </li>
 
   <li>
-    <p><strong>Data Types</strong></p>
-    <p>According to the <strong>ECMAScript</strong>, there are seven primitive types and everything else is an <code>Object</code> type. Let’s run over those one by one:</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-1" />
-        <label className="summary" htmlFor="accordion-4-1">
-          <strong>Boolean</strong>
-        </label>
-        <div className="details-body">
-          <p>The boolean type has two values: <code>true</code> and <code>false</code>.</p>
-          <SnippetL01S07 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-2" />
-        <label className="summary" htmlFor="accordion-4-2">
-          <strong>Number</strong>
-        </label>
-        <div className="details-body">
-          <p>An integer or floating point number.</p>
-          <SnippetL01S08 />
-          <SnippetL01S09 />
-          The number type has three symbolic values: `+Infinity`, `-Infinity`, and `NaN` (not-a-number).
-          <SnippetL01S10 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-3" />
-        <label className="summary" htmlFor="accordion-4-3">
-          <strong>BigInt</strong> <em>(added in ES2020)</em>
-        </label>
-        <div className="details-body">
-          <p>Represents who represent whole numbers larger than <code>2<sup>53</sup> - 1</code> which is larger than maximum value of <code>Number</code> type.</p>
-          <SnippetL01S26 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-4" />
-        <label className="summary" htmlFor="accordion-4-4">
-          <strong>String</strong>
-        </label>
-        <div className="details-body">
-          <p>A sequence of characters that represent a text value. JavaScript <strong>strings are immutable</strong>.</p>
-          <SnippetL01S11 />
-          <SnippetL01S12 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-5" />
-        <label className="summary" htmlFor="accordion-4-5">
-          <strong>Symbol</strong>
-        </label>
-        <div className="details-body">
-          <p>A Symbol is a unique and immutable primitive value and may be used as the key of an object property. So we can “covertly” hide something into objects that we need, but others should not see, using symbolic properties.</p>
-          <SnippetL01S15 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-6" />
-        <label className="summary" htmlFor="accordion-4-6">
-          <strong>undefined</strong>
-        </label>
-        <div className="details-body">
-          <p><code>undefined</code> is a property of the global object. The initial value is the primitive value <code>undefined</code></p>
-           <SnippetL01S14 />
-       </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-4-7" />
-        <label className="summary" htmlFor="accordion-4-7">
-          <strong>null</strong>
-        </label>
-        <div className="details-body">
-          <p><code>null</code> is a keyword denoting a special empty <em>(null)</em> value.</p>
-          <SnippetL01S13 />
-        </div>
-      </li>
-    </ul>
+    <strong>Data Types</strong>
+
+    According to the <strong>ECMAScript</strong>, there are seven primitive types and everything else is an <code>Object</code> type. Let’s run over those one by one:
+
+
+    <DetailsCard>
+      <>
+        <strong>Boolean</strong>
+      </>
+      <>
+        The boolean type has two values: <code>true</code> and <code>false</code>.
+
+        <SnippetL01S07 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>Number</strong>
+      </>
+      <>
+        An integer or floating point number.
+
+        <SnippetL01S08 />
+
+        <SnippetL01S09 />
+
+        The number type has three symbolic values: `+Infinity`, `-Infinity`, and `NaN` (not-a-number).
+
+        <SnippetL01S10 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>BigInt</strong> <em>(added in ES2020)</em>
+      </>
+      <>
+        Represents who represent whole numbers larger than <code>2<sup>53</sup> - 1</code> which is larger than maximum value of <code>Number</code> type.
+
+        <SnippetL01S26 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>String</strong>
+      </>
+      <>
+        A sequence of characters that represent a text value. JavaScript <strong>strings are immutable</strong>.
+
+        <SnippetL01S11 />
+
+        <SnippetL01S12 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Symbol</strong>
+      </>
+      <>
+        A Symbol is a unique and immutable primitive value and may be used as the key of an object property. So we can “covertly” hide something into objects
+        that we need, but others should not see, using symbolic properties.
+
+        <SnippetL01S15 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>undefined</strong>
+      </>
+      <>
+        <code>undefined</code> is a property of the global object. The initial value is the primitive value <code>undefined</code>
+
+        <SnippetL01S14 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>null</strong>
+      </>
+      <>
+        <code>null</code> is a keyword denoting a special empty <em>(null)</em> value.
+
+        <SnippetL01S13 />
+      </>
+    </DetailsCard>
   </li>
 
   <li>
-    <p><strong><a href="https://medium.freecodecamp.org/js-type-coercion-explained-27ba3d9a2839">Type coercion</a></strong></p>
-    <p>JavaScript variables can be converted to a new variable and another data type either by the use of a JavaScript function or automatically by JavaScript itself:</p>
-    <p>Converting to <strong>string</strong>:</p>
+    <strong><a href="https://medium.freecodecamp.org/js-type-coercion-explained-27ba3d9a2839">Type coercion</a></strong>
+
+    JavaScript variables can be converted to a new variable and another data type either by the use of a JavaScript function or automatically by JavaScript itself:
+
+    Converting to <strong>string</strong>:
+
     <SnippetL01S16 />
-    <p>Converting to <strong>number</strong>:</p>
+
+    Converting to <strong>number</strong>:
+
     <SnippetL01S17 />
-    <p>Converting to <strong>boolean</strong>:</p>
+
+    Converting to <strong>boolean</strong>:
+
     <SnippetL01S18 />
   </li>
 
-  <li>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" title="Standard built-in objects"><strong>Standard built-in objects</strong></a></p>
-    <p>Objects, which are created in the global scope and can be accessed wherever in the code. They can be created by the user script or provided by the host environment <em>(browser, node)</em>. Let's look through the common ones:</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-1" />
-        <label className="summary" htmlFor="accordion-7-1">
-          <strong>Object</strong>
-        </label>
-        <div className="details-body">
-          Represents complex Javascript data type. It is used to store various keyed collections and more complex nested entities.
-          <SnippetL01S34 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-2" />
-        <label className="summary" htmlFor="accordion-7-2">
-          <strong>Array</strong>
-        </label>
-        <div className="details-body">
-          List-like object, which includes methods to perform traversal and mutation operations. Each element can be accessed only by its index. Neither the length of a JavaScript array nor the types of its elements are fixed.
-          <SnippetL01S27 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-3" />
-        <label className="summary" htmlFor="accordion-7-3">
-          <strong>Map</strong>
-        </label>
-        <div className="details-body">
-          Object, which holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
-          <SnippetL01S28 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-4" />
-        <label className="summary" htmlFor="accordion-7-4">
-          <strong>Set</strong>
-        </label>
-        <div className="details-body">
-          Object allows storing unique values of any type, whether primitive values or object references. Plays a role as an array of unique values.
-          <SnippetL01S29 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-5" />
-        <label className="summary" htmlFor="accordion-7-5">
-          <strong>RegExp</strong>
-        </label>
-        <div className="details-body">
-          Object which holds pattern used to match character combinations in strings.
-          <SnippetL01S30 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-6" />
-        <label className="summary" htmlFor="accordion-7-6">
-          <strong>Date</strong>
-        </label>
-        <div className="details-body">
-          Object represents a single moment in time in a platform-independent format. Internally contains a Number that represents milliseconds since 1 January 1970 UTC.
-          <SnippetL01S31 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-7" />
-        <label className="summary" htmlFor="accordion-7-7">
-          <strong>Math</strong>
-        </label>
-        <div className="details-body">
-          Object that has properties and methods for mathematical constants and functions. Works with Number type, but doesn't support BigInt type
-          <SnippetL01S32 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-7-8" />
-        <label className="summary" htmlFor="accordion-7-8">
-          <strong>JSON</strong>
-        </label>
-        <div className="details-body">
+	<li>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" title="Standard built-in objects"><strong>Standard built-in objects</strong></a>
+
+    Objects, which are created in the global scope and can be accessed wherever in the code. They can be created by the user script or provided by the host environment <em>(browser, node)</em>. Let's look through the common ones:
+
+    <DetailsCard>
+      <>
+        <strong>Object</strong>
+      </>
+      <>
+        Represents complex Javascript data type. It is used to store various keyed collections and more complex nested entities.
+
+        <SnippetL01S34 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>Array</strong>
+      </>
+      <>
+        List-like object, which includes methods to perform traversal and mutation operations. Each element can be accessed only by its index. Neither the length of a JavaScript array nor the types of its elements are fixed.
+
+        <SnippetL01S27 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Map</strong>
+      </>
+      <>
+        Object, which holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
+
+        <SnippetL01S28 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Set</strong>
+      </>
+      <>
+        Object allows storing unique values of any type, whether primitive values or object references. Plays a role as an array of unique values.
+
+        <SnippetL01S29 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>RegExp</strong>
+      </>
+      <>
+        Object which holds pattern used to match character combinations in strings.
+
+        <SnippetL01S30 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Date</strong>
+      </>
+      <>
+        Object represents a single moment in time in a platform-independent format. Internally contains a Number that represents milliseconds since 1 January 1970 UTC.
+
+        <SnippetL01S31 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Math</strong>
+      </>
+      <>
+        Object that has properties and methods for mathematical constants and functions. Works with Number type, but doesn't support BigInt type
+
+        <SnippetL01S32 />
+      </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <>
+        <strong>JSON</strong>
+      </>
+      <>
           Object contains methods for parsing JSON and converting stringified values to JSON.
-          <SnippetL01S33 />
-        </div>
-      </li>
-    </ul>
-  </li>
+
+					<SnippetL01S33 />
+      </>
+    </DetailsCard>
+	</li>
+
+	<li>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" title="Functions"><strong>Functions</strong></a>
+
+    Function is a "subprogram" that can be called by code external (or internal in the case of the recursion) to the function. <br/>
+    A function is composed of a sequence of statements called the <strong>function body</strong>. Values can be passed to a function, and the function will return a value. In JavaScript, functions are <strong>first-class objects</strong>, because they <strong>can have properties and methods</strong> just like any other object. <br/> There are three ways to declare function in Javascript:
+
+    <DetailsCard>
+      <>
+        <strong>Function declaration</strong> - hoisted, has a context
+      </>
+      <>
+        <SnippetL01S42 />
+        <SnippetL01S35 />
+        <SnippetL01S36 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Function expression</strong> - not hoisted, has a context
+      </>
+      <>
+        <SnippetL01S43 />
+        <SnippetL01S37 />
+        <SnippetL01S38 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <>
+        <strong>Arrow function</strong> - not hoisted, doesn't have a context
+      </>
+      <>
+        <SnippetL01S44 />
+        <SnippetL01S39 />
+        <SnippetL01S40 />
+        <SnippetL01S45 />
+      </>
+    </DetailsCard>
+	</li>
 
   <li>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" title="Functions"><strong>Functions</strong></a></p>
-    <p>Function is a "subprogram" that can be called by code external (or internal in the case of the recursion) to the function. <br/>A function is composed of a sequence of statements called the <strong>function body</strong>. Values can be passed to a function, and the function will return a value. In JavaScript, functions are <strong>first-class objects</strong>, because they <strong>can have properties and methods</strong> just like any other object. <br/> There are three ways to declare function in Javascript:</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-8-1" />
-        <label className="summary" htmlFor="accordion-8-1">
-          <strong>Function declaration</strong> - hoisted, has a context
-        </label>
-         <div className="details-body">
-           <SnippetL01S42 />
-          <SnippetL01S35 />
-          <SnippetL01S36 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-8-2" />
-        <label className="summary" htmlFor="accordion-8-2">
-          <strong>Function expression</strong> - not hoisted, has a context
-        </label>
-        <div className="details-body">
-          <SnippetL01S43 />
-          <SnippetL01S37 />
-          <SnippetL01S38 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-8-3" />
-        <label className="summary" htmlFor="accordion-8-3">
-          <strong>Arrow function</strong> - not hoisted, doesn't have a context
-        </label>
-        <div className="details-body">
-          <SnippetL01S44 />
-          <SnippetL01S39 />
-          <SnippetL01S40 />
-          <SnippetL01S45 />
-        </div>
-      </li>
-    </ul>
-  </li>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" title="Loops and iteration"><strong>Loops and iteration</strong></a>
 
-  <li>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" title="Loops and iteration"><strong>Loops and iteration</strong></a></p>
-    <p>Loops offer a quick and easy way to do something repeatedly. The statements for loops provided in JavaScript are:</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-1" />
-        <label className="summary" htmlFor="accordion-9-1">
-          <code>for</code> statement, <code>break</code> statement, <code>continue</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S21 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-2" />
-        <label className="summary" htmlFor="accordion-9-2">
-          <code>while</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S22 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-3" />
-        <label className="summary" htmlFor="accordion-9-3">
-          <code>do...while</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S23 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-4" />
-        <label className="summary" htmlFor="accordion-9-4">
-          <code>forEach</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S41 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-5" />
-        <label className="summary" htmlFor="accordion-9-5">
-          <code>for...of</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S24 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-9-6" />
-        <label className="summary" htmlFor="accordion-9-6">
-          <code>for...in</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL01S25 />
-        </div>
-      </li>
-    </ul>
+    Loops offer a quick and easy way to do something repeatedly. The statements for loops provided in JavaScript are:
+
+
+    <DetailsCard>
+      <code>for</code> statement, <code>break</code> statement, <code>continue</code> statement
+
+      <SnippetL01S21 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>while</code> statement
+
+      <SnippetL01S22 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>do...while</code> statement
+
+      <SnippetL01S23 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>forEach</code> statement
+
+      <SnippetL01S41 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>for...of</code> statement
+
+      <SnippetL01S24 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>for...in</code> statement
+
+      <SnippetL01S25 />
+
+    </DetailsCard>
   </li>
 </ol>
 
@@ -633,406 +629,282 @@ So, there is no specification, but it seems that this time we are talking about 
 
 <ol>
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-1-1">
+    <DetailsCard isReversed>
+      <>
         Get data from remote <strong><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API</a></strong> using <code>fetch</code>
-      </label>
-      <input type="checkbox" id="accordion-2-1-1" />
-      <div className="details-body">
+      </>
+      <>
         <SnippetL02S01 />
-        <ul>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-1-2" />
-            <label className="summary" htmlFor="accordion-2-1-2">
-              What is a <code>Promise</code>?
-            </label>
-            <div className="details-body">
-              <SnippetL02S02 />
-              <img src="https://i.imgur.com/iB1wjrw.png"/>
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-1-3" />
-            <label className="summary" htmlFor="accordion-2-1-3">
-              Add <code>then</code> method
-            </label>
-            <div className="details-body">
-              <SnippetL02S03 />
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-1-4" />
-            <label className="summary" htmlFor="accordion-2-1-4">
-              Get response body
-            </label>
-            <div className="details-body">
-              <SnippetL02S04 />
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-1-5" />
-            <label className="summary" htmlFor="accordion-2-1-5">
-              Get file content and parse it (<code>Promise</code> chain)
-            </label>
-            <div className="details-body">
-              <SnippetL02S05 />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+        <DetailsCard>
+          <>
+            What is a <code>Promise</code>?
+          </>
+          <>
+            <SnippetL02S02 />
+
+            <img src="https://i.imgur.com/iB1wjrw.png"/>
+          </>
+        </DetailsCard>
+
+        <DetailsCard>
+          Add <code>then</code> method
+
+          <SnippetL02S03 />
+        </DetailsCard>
+
+        <DetailsCard>
+          Get response body
+
+          <SnippetL02S04 />
+        </DetailsCard>
+
+
+        <DetailsCard>
+          Get file content and parse it (<code>Promise</code> chain)
+
+          <SnippetL02S05 />
+        </DetailsCard>
+      </>
+    </DetailsCard>
   </li>
 
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-2-1">
-        Process data from the received (<code>Array</code> or <code>Object</code>)
-      </label>
-      <input type="checkbox" id="accordion-2-2-1" />
-      <div className="details-body">
-        <SnippetL02S06 />
-      </div>
-    </div>
+    <DetailsCard isReversed>
+      Process data from the received (<code>Array</code> or <code>Object</code>)
+
+      <SnippetL02S06 />
+    </DetailsCard>
   </li>
 
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-4-1">
-        Display data using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a> API</strong> (<code>getElementById</code>, <code>getElementsByClassName</code>, <code>querySelector</code>, etc.)
-      </label>
-      <input type="checkbox" id="accordion-2-4-1" />
-      <div className="details-body">
-        <SnippetL02S08 />
-      </div>
-    </div>
+    <DetailsCard isReversed>
+      Display data using <strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">DOM</a> API</strong> (<code>getElementById</code>, <code>getElementsByClassName</code>, <code>querySelector</code>, etc.)
+
+      <SnippetL02S08 />
+    </DetailsCard>
   </li>
 
   <li>
     Learn more about <strong>Promises</strong>:
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-1" />
-        <label className="summary" htmlFor="accordion-2-5-1">
-          onRejected handler
-        </label>
-        <div className="details-body">
-          <SnippetL02S09 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-2" />
-        <label className="summary" htmlFor="accordion-2-5-2">
-          <code>catch</code> method
-        </label>
-        <div className="details-body">
-          <SnippetL02S10 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-3" />
-        <label className="summary" htmlFor="accordion-2-5-3">
-          <code>throw new Error</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S11 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-4" />
-        <label className="summary" htmlFor="accordion-2-5-4">
-          <code>Promise.reject</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S12 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-5" />
-        <label className="summary" htmlFor="accordion-2-5-5">
-          Add loading overlay
-        </label>
-        <div className="details-body">
-          <SnippetL02S13 />
-          <SnippetL02S14 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-6" />
-        <label className="summary" htmlFor="accordion-2-5-6">
-          <code>finally</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S15 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-7" />
-        <label className="summary" htmlFor="accordion-2-5-7">
-          <code>Promise.resolve</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S16 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-8" />
-        <label className="summary" htmlFor="accordion-2-5-8">
-          How to create a <code>new Promise</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S17 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-5-9" />
-        <label className="summary" htmlFor="accordion-2-5-9">
+
+    <DetailsCard>
+      onRejected handler
+
+      <SnippetL02S09 />
+    </DetailsCard>
+
+    <DetailsCard>
+      <code>catch</code> method
+
+      <SnippetL02S10 />
+    </DetailsCard>
+
+    <DetailsCard>
+      <code>throw new Error</code>
+      <SnippetL02S11 />
+    </DetailsCard>
+
+    <DetailsCard>
+      <code>Promise.reject</code>
+      <SnippetL02S12 />
+    </DetailsCard>
+
+    <DetailsCard>
+      Add loading overlay
+      <>
+        <SnippetL02S13 />
+        <SnippetL02S14 />
+      </>
+    </DetailsCard>
+
+    <DetailsCard>
+      <code>finally</code>
+      <SnippetL02S15 />
+    </DetailsCard>
+
+    <DetailsCard>
+      <code>Promise.resolve</code>
+      <SnippetL02S16 />
+    </DetailsCard>
+
+    <DetailsCard>
+      How to create a <code>new Promise</code>
+      <SnippetL02S17 />
+    </DetailsCard>
+
+        <DetailsCard>
           <code>Promise.race</code> and <code>Promise.all</code>
-        </label>
-        <div className="details-body">
           <SnippetL02S18 />
-        </div>
-      </li>
-    </ul>
+    </DetailsCard>
   </li>
 
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-6-1">
+    <DetailsCard isReversed>
+      <>
         Add more <strong>Functions</strong>
-      </label>
-      <input type="checkbox" id="accordion-2-6-1" />
-      <div className="details-body">
+      </>
+      <>
         <SnippetL02S19 />
-        <ul>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-6-2" />
-            <label className="summary" htmlFor="accordion-2-6-2">
-              Default arguments
-            </label>
-            <div className="details-body">
-              <SnippetL02S21 />
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-6-3" />
-            <label className="summary" htmlFor="accordion-2-6-3">
-              Async functions
-            </label>
-            <div className="details-body">
-              <SnippetL02S22 />
-              <SnippetL02S23 />
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-2-6-4" />
-            <label className="summary" htmlFor="accordion-2-6-4">
-              Generators
-            </label>
-            <div className="details-body">
-              <SnippetL02S24 />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+        <DetailsCard>
+          Default arguments
+          <SnippetL02S21 />
+        </DetailsCard>
+
+        <DetailsCard>
+          Async functions
+          <>
+            <SnippetL02S22 />
+            <SnippetL02S23 />
+          </>
+        </DetailsCard>
+
+        <DetailsCard>
+          Generators
+          <SnippetL02S24 />
+        </DetailsCard>
+      </>
+    </DetailsCard>
   </li>
 
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-7-1">
-        <strong>Handle errors</strong> using <code>try...catch</code> statement
-      </label>
-      <input type="checkbox" id="accordion-2-7-1" />
-      <div className="details-body">
-        <SnippetL02S26 />
-      </div>
-    </div>
+    <DetailsCard isReversed>
+      <strong>Handle errors</strong> using <code>try...catch</code> statement
+      <SnippetL02S26 />
+    </DetailsCard>
   </li>
 
   <li>
     Create more <strong>DOM elements</strong> and add <strong>event listeners</strong>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-1" />
-        <label className="summary" htmlFor="accordion-2-8-1">
-          Add helper function for creating a DOM element
-        </label>
-        <div className="details-body">
-          <SnippetL02S27 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-2" />
-        <label className="summary" htmlFor="accordion-2-8-2">
-          Create name and image elements
-        </label>
-        <div className="details-body">
-          <SnippetL02S28 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-3" />
-        <label className="summary" htmlFor="accordion-2-8-3">
+
+    <DetailsCard>
+      Add helper function for creating a DOM element
+      <SnippetL02S27 />
+    </DetailsCard>
+    <DetailsCard>
+      Create name and image elements
+      <SnippetL02S28 />
+    </DetailsCard>
+    <DetailsCard>
           Create fighter
-        </label>
-        <div className="details-body">
-          <SnippetL02S29 />
-          <ul>
-            <li>
-              <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"><strong>Destructuring assignment</strong></a> &mdash; expression that unpacks values from arrays, or properties from objects, into distinct variables.</p>
-              <SnippetL02S20 />
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-4" />
-        <label className="summary" htmlFor="accordion-2-8-4">
+          <>
+            <SnippetL02S29 />
+
+            <ul>
+              <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"><strong>Destructuring assignment</strong></a> &mdash; expression that unpacks values from arrays, or properties from objects, into distinct variables.
+
+                <SnippetL02S20 />
+              </li>
+            </ul>
+          </>
+    </DetailsCard>
+
+
+    <DetailsCard>
           Create fighters
-        </label>
-        <div className="details-body">
-          <SnippetL02S30 />
-          <ul>
-            <li>
-              <p>Using the <a href="https://medium.freecodecamp.org/spread-operator-and-rest-parameter-in-javascript-es6-4416a9f47e5e"><strong>spread operator and rest parameter</strong></a>:</p>
-              <ul>
-                <li className="details">
-                  <input type="checkbox" id="accordion-2-8-4-1" />
-                  <label className="summary" htmlFor="accordion-2-8-4-1">
-                    How to <strong>spread</strong>?
-                  </label>
-                  <div className="details-body">
-                    <SnippetL02S31 />
-                  </div>
-                </li>
-                <li className="details">
-                  <input type="checkbox" id="accordion-2-8-4-2" />
-                  <label className="summary" htmlFor="accordion-2-8-4-2">
-                    How to <strong>rest</strong>?
-                  </label>
-                  <div className="details-body">
-                    <SnippetL02S32 />
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-5" />
-        <label className="summary" htmlFor="accordion-2-8-5">
-          Append fighters to the root element
-        </label>
-        <div className="details-body">
-          <SnippetL02S33 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-8-6" />
-        <label className="summary" htmlFor="accordion-2-8-6">
-          Add events
-        </label>
-        <div className="details-body">
-          <SnippetL02S34 />
-          <ul>
-            <li className="details">
-              <input type="checkbox" id="accordion-2-8-6-1" />
-              <label className="summary" htmlFor="accordion-2-8-6-1">
-                <a href="https://javascript.info/bubbling-and-capturing"><strong>Events processing phases:</strong></a>
-              </label>
-              <div className="details-body">
-                <img src="https://i.ibb.co/yd4kd8F/image.png" />
-              </div>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
+          <>
+            <SnippetL02S30 />
+
+            <ul>
+              <li>
+                Using the <a href="https://medium.freecodecamp.org/spread-operator-and-rest-parameter-in-javascript-es6-4416a9f47e5e"><strong>spread operator and rest parameter</strong></a>:
+
+                <DetailsCard>
+                  How to <strong>spread</strong>?
+                  <SnippetL02S31 />
+                </DetailsCard>
+
+
+                <DetailsCard>
+                  How to <strong>rest</strong>?
+                  <SnippetL02S32 />
+                </DetailsCard>
+              </li>
+            </ul>
+          </>
+    </DetailsCard>
+
+
+    <DetailsCard>
+      Append fighters to the root element
+      <SnippetL02S33 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      Add events
+      <>
+        <SnippetL02S34 />
+
+        <ul>
+          <DetailsCard>
+            <a href="https://javascript.info/bubbling-and-capturing"  target="_blank"><strong>Events processing phases:</strong></a>
+
+            <img src="https://i.ibb.co/yd4kd8F/image.png" />
+          </DetailsCard>
+        </ul>
+      </>
+    </DetailsCard>
   </li>
 
   <li>
-    <div className="details">
-      <label className="summary" htmlFor="accordion-2-9-1">
-        Use <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections">keyed collection</a></strong> to hold key-value pairs (<code>Map</code> or <code>Set</code>)
-      </label>
-      <input type="checkbox" id="accordion-2-9-1" />
-      <div className="details-body">
-        <SnippetL02S35 />
-      </div>
-    </div>
+    <DetailsCard isReversed>
+      Use <strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections">keyed collection</a></strong> to hold key-value pairs (<code>Map</code> or <code>Set</code>)
+
+      <SnippetL02S35 />
+    </DetailsCard>
   </li>
 
   <li>
     Add <strong>classes</strong> (use inheritance and static properties)
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-0" />
-        <label className="summary" htmlFor="accordion-2-10-0">
-          Create <code>FighterService</code> class
-        </label>
-        <div className="details-body">
-          <SnippetL02S36 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-1" />
-        <label className="summary" htmlFor="accordion-2-10-1">
-          Add <code>View</code> class
-        </label>
-        <div className="details-body">
-          <SnippetL02S37 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-2" />
-        <label className="summary" htmlFor="accordion-2-10-2">
-          What are <em>getters</em> and <em>setters</em>?
-        </label>
-        <div className="details-body">
-          <SnippetL02S38 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-3" />
-        <label className="summary" htmlFor="accordion-2-10-3">
-          Create <code>Fighters</code> and <code>Fighter</code> class
-        </label>
-        <div className="details-body">
-          <SnippetL02S39 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-4" />
-        <label className="summary" htmlFor="accordion-2-10-4">
-          What is <code>super()</code>, <code>super.parentProperty</code>, and <code>super.parentMethod()</code>?
-        </label>
-        <div className="details-body">
-          <SnippetL02S42 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-5" />
-        <label className="summary" htmlFor="accordion-2-10-5">
-          Add <code>App</code> class
-        </label>
-        <div className="details-body">
-          <SnippetL02S40 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-2-10-6" />
-        <label className="summary" htmlFor="accordion-2-10-6">
-          <code>bind</code>, <code>call</code>, and <code>apply</code>
-        </label>
-        <div className="details-body">
-          <SnippetL02S43 />
-          <SnippetL02S44 />
-          <SnippetL02S45 />
-          <SnippetL02S41 />
-        </div>
-      </li>
-    </ul>
+
+    <DetailsCard>
+      Create <code>FighterService</code> class
+      <SnippetL02S36 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      Add <code>View</code> class
+      <SnippetL02S37 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      What are <em>getters</em> and <em>setters</em>?
+      <SnippetL02S38 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      Create <code>Fighters</code> and <code>Fighter</code> class
+      <SnippetL02S39 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      What is <code>super()</code>, <code>super.parentProperty</code>, and <code>super.parentMethod()</code>?
+      <SnippetL02S42 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      Add <code>App</code> class
+      <SnippetL02S40 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      <code>bind</code>, <code>call</code>, and <code>apply</code>
+      <>
+        <SnippetL02S43 />
+        <SnippetL02S44 />
+        <SnippetL02S45 />
+        <SnippetL02S41 />
+      </>
+    </DetailsCard>
   </li>
   <li>
     💥<strong>Boom, done! There is half already!</strong>
@@ -1047,58 +919,41 @@ So, there is no specification, but it seems that this time we are talking about 
 
 <ol>
   <li>
-    <p>Hold on, <a href="https://medium.com/siliconwat/how-javascript-classes-work-80b0cf483b1d"><strong>How JavaScript Classes Work Under the Hood</strong></a> again?</p>
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1-1" />
-        <label className="summary" htmlFor="accordion-3-1-1">
-          What's <code>__proto__</code>?
-        </label>
-        <div className="details-body">
-          <SnippetL03S01 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1-2" />
-        <label className="summary" htmlFor="accordion-3-1-2">
-          And the <code>constructor</code>?
-        </label>
-        <div className="details-body">
-          <SnippetL03S02 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1-3" />
-        <label className="summary" htmlFor="accordion-3-1-3">
-          How to add a method?
-        </label>
-        <div className="details-body">
-          <SnippetL03S04 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1-4" />
-        <label className="summary" htmlFor="accordion-3-1-4">
-          How to create an instance?
-        </label>
-        <div className="details-body">
-          <SnippetL03S03 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-1-5" />
-        <label className="summary" htmlFor="accordion-3-1-5">
-          But how does inheritance works?
-        </label>
-        <div className="details-body">
-          <SnippetL03S05 />
-        </div>
-      </li>
-    </ul>
+    Hold on, <a href="https://medium.com/siliconwat/how-javascript-classes-work-80b0cf483b1d"><strong>How JavaScript Classes Work Under the Hood</strong></a> again?
+
+    <DetailsCard>
+      What's <code>__proto__</code>?
+      <SnippetL03S01 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      And the <code>constructor</code>?
+      <SnippetL03S02 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      How to add a method?
+      <SnippetL03S04 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      How to create an instance?
+      <SnippetL03S03 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      But how does inheritance works?
+      <SnippetL03S05 />
+    </DetailsCard>
   </li>
 
   <li>
-    <p>Let's learn more about the <strong>transpilers</strong> — tools that read source code written in one programming language, and produce the equivalent code in another language. The most popular one, <a href="https://babeljs.io/"><strong>Babel</strong></a>, is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Let's try it out:</p>
+    Let's learn more about the <strong>transpilers</strong> — tools that read source code written in one programming language, and produce the equivalent code in another language. The most popular one, <a href="https://babeljs.io/"><strong>Babel</strong></a>, is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Let's try it out:
+
     <ul>
       <li>
         Install <a href="https://nodejs.org/en/"><strong>node.js</strong></a>, open <strong>Terminal</strong> in Visual Studio Code <sup><em>(Terminal</em> &rarr; <em>New Terminal)</em></sup>, and run <code>npm init</code>.
@@ -1127,31 +982,25 @@ So, there is no specification, but it seems that this time we are talking about 
       </li>
     </ul>
   </li>
+
   <li>
     What’s great about <strong>ES6 modules</strong>?
-    <ul>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-3-1" />
-        <label className="summary" htmlFor="accordion-3-3-1">
-          Export functions, objects, or primitive values from the module with <code>export</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL03S10 />
-        </div>
-      </li>
-      <li className="details">
-        <input type="checkbox" id="accordion-3-3-2" />
-        <label className="summary" htmlFor="accordion-3-3-2">
-          👆Load that stuff with <code>import</code> statement
-        </label>
-        <div className="details-body">
-          <SnippetL03S11 />
-        </div>
-      </li>
-    </ul>
+
+    <DetailsCard>
+      Export functions, objects, or primitive values from the module with <code>export</code> statement
+      <SnippetL03S10 />
+    </DetailsCard>
+
+
+    <DetailsCard>
+      👆Load that stuff with <code>import</code> statement
+      <SnippetL03S11 />
+    </DetailsCard>
   </li>
+
   <li>
-    Alright, let's <span style={{ textDecoration: 'line-through'}}><em>npminstall everything</em></span> set up <a href="https://webpack.js.org/"><strong>Webpack</strong></a> — a module bundler for JavaScript applications:
+    Alright, let's <span style={{ textDecoration: 'line-through'}}><em>npm install everything</em></span> set up <a href="https://webpack.js.org/"><strong>Webpack</strong></a> — a module bundler for JavaScript applications:
+
     <ul>
       <li>
         Install Webpack by running <code>npm install webpack webpack-cli --save-dev</code>, then create a file named <strong>webpack.config.js</strong> in the root of your project, with the following content:
@@ -1163,72 +1012,61 @@ So, there is no specification, but it seems that this time we are talking about 
         Set <code>build</code> command in <strong>package.json</strong>'s <code>scripts</code> key to <code>"build": "webpack"</code>
       </li>
       <li>
-        <p>Set up <a href="https://webpack.js.org/loaders/"><strong>loaders</strong></a>:</p>
-        <ul>
-          <li className="details">
-            <input type="checkbox" id="accordion-3-4-1" />
-            <label className="summary" htmlFor="accordion-3-4-1">
-              Add <code>babel-loader</code> to transpile code, as was mentioned before:
-            </label>
-            <div className="details-body">
-              <code>npm install babel-loader --save-dev</code> and edit <strong>webpack.config.js</strong> to include <code>module</code> key:
-             <div>
-               <SnippetL03S13 />
-             </div>
-             Rename <strong>.babelrc</strong> to <strong>babel.config.js</strong> to consistent with webpack config type and change it's content to:
-              <div>
-                <SnippetL03S14 />
-              </div>
-            </div>
-          </li>
-          <li className="details">
-            <input type="checkbox" id="accordion-3-4-2" />
-            <label className="summary" htmlFor="accordion-3-4-2">
-              Add <code>style-loader</code> and <code>css-loader</code>, so that you could import styles in your JavaScript files with <code>import './src/styles/styles.css';</code>
-            </label>
-            <div className="details-body">
-              As usual, just run <code>npm install css-loader style-loader --save-dev</code> and edit <strong>webpack.config.js</strong> to include the new rules:
-              <SnippetL03S15 />
-            </div>
-          </li>
-        </ul>
+        Set up <a href="https://webpack.js.org/loaders/" target="_blank"><strong>loaders</strong></a>:
+
+        <DetailsCard>
+          Add <code>babel-loader</code> to transpile code, as was mentioned before:
+          <>
+            <code>npm install babel-loader --save-dev</code> and edit <strong>webpack.config.js</strong> to include <code>module</code> key:
+
+            <SnippetL03S13 />
+
+            Rename <strong>.babelrc</strong> to <strong>babel.config.js</strong> to consistent with webpack config type and change it's content to:
+
+            <SnippetL03S14 />
+          </>
+        </DetailsCard>
+        <DetailsCard>
+          Add <code>style-loader</code> and <code>css-loader</code>, so that you could import styles in your JavaScript files with <code>import './src/styles/styles.css';</code>
+          <>
+            As usual, just run <code>npm install css-loader style-loader --save-dev</code> and edit <strong>webpack.config.js</strong> to include the new rules:
+            <SnippetL03S15 />
+          </>
+        </DetailsCard>
       </li>
+
       <li>
-        <p>Set up <a href="https://webpack.js.org/plugins/"><strong>plugins</strong></a>:</p>
-        <ul>
-          <li className="details">
-            <input type="checkbox" id="accordion-3-5-1" />
-            <label className="summary" htmlFor="accordion-3-5-1">
-              Add <code>html-webpack-plugin</code> to automate HTML file creation:
-            </label>
-            <div className="details-body">
-              <code>npm install html-webpack-plugin --save-dev</code> and edit <strong>webpack.config.js</strong> to include <code>plugins</code> key:
-              <div>
-                <SnippetL03S17 />
-              </div>
-              <ul>
-                <li>
-                  <label className="summary">
-                    Add <code>html-loader</code> to bundle assets from template <code>.html</code> file:
-                  </label>
-                  <div className="details-body">
+        Set up <a href="https://webpack.js.org/plugins/"><strong>plugins</strong></a>:
+
+
+        <DetailsCard>
+          Add <code>html-webpack-plugin</code> to automate HTML file creation:
+          <>
+            <code>npm install html-webpack-plugin --save-dev</code> and edit <strong>webpack.config.js</strong> to include <code>plugins</code> key:
+
+            <SnippetL03S17 />
+            <ul>
+              <li>
+                <DetailsCard isReversed>
+                  Add <code>html-loader</code> to bundle assets from template <code>.html</code> file:
+                  <>
                     <code>npm install html-loader --save-dev</code> and edit <strong>webpack.config.js</strong> to include the new rule:
-                    <div>
-                      <SnippetL03S18 />
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
+
+                    <SnippetL03S18 />
+                  </>
+                </DetailsCard>
+              </li>
+            </ul>
+          </>
+        </DetailsCard>
       </li>
+
       <li>
-        Add <a href="https://webpack.js.org/configuration/dev-server/"><strong>Webpack DevServer</strong></a> — <code>npm install webpack-dev-server --save-dev</code> and modify <strong>webpack.config.js</strong> to include <code>devServer</code> and <code>publicPath</code> keys:
-        <div>
-          <SnippetL03S16 />
-        </div>
-        <p>Add <code>"dev": "webpack-dev-server"</code> to <strong>package.json</strong>'s <code>scripts</code> key</p>
+        Add <a href="https://webpack.js.org/configuration/dev-server/" target="_blank"><strong>Webpack DevServer</strong></a> — <code>npm install webpack-dev-server --save-dev</code> and modify <strong>webpack.config.js</strong> to include <code>devServer</code> and <code>publicPath</code> keys:
+
+        <SnippetL03S16 />
+
+        Add <code>"dev": "webpack-dev-server"</code> to <strong>package.json</strong>'s <code>scripts</code> key
       </li>
       <li>
         Maybe add <code>devtool</code> option to the <strong>webpack.config.js</strong> for much better debugging experience — <code>devtool: "source-map"</code>

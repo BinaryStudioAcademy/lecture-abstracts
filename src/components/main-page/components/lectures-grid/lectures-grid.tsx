@@ -43,17 +43,17 @@ const LecturesGrid: React.FC<Props> = ({ lectures }) => {
               <div className="lecture-footer">
                 <div className="lecture-meta">
                   <div className="lecture-author">
-                    <Avatar name={author} className={'avatar-large'} />
+                    <Avatar name={author} size="small" />
                     <div className="lecture-author-name">{author}</div>
+                    {duration && (
+                      <span className="lecture-duration">
+                        <small>{duration}</small>
+                      </span>
+                    )}
                   </div>
-                  {duration && (
-                    <span className="lecture-duration text-gray">
-                      <small>{duration}</small>
-                    </span>
-                  )}
                 </div>
                 {
-                  <span className="lecture-number text-gray">
+                  <span className="lecture-number">
                     <small>#{index + 1}</small>
                   </span>
                 }

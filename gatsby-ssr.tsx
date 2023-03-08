@@ -14,9 +14,9 @@ import {
   ThatsAllFolks,
   VideoWrapper,
   Flute,
+  IntroBlueBubble,
+  DetailsCard,
 } from '~/components';
-
-import '~/assets/stylesheets/index.css';
 
 const components = {
   Avatar,
@@ -31,6 +31,8 @@ const components = {
   ThatsAllFolks,
   VideoWrapper,
   Flute,
+  IntroBlueBubble,
+  DetailsCard,
 };
 
 const wrapPageElement = ({

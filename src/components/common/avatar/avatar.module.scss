@@ -1,0 +1,18 @@
+.wrapper {
+  width: 6em;
+  margin-right: 1em;
+}
+
+.avatar {
+  position: relative;
+  display: block;
+  flex: 1 0 auto;
+}
+
+.small {
+  flex: 0 0 1.25em;
+}
+
+.medium {
+  flex: 0 0 6em;
+}

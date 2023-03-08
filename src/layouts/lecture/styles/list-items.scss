@@ -1,0 +1,99 @@
+.content ol,
+.content ul {
+  margin: 0.25rem 0 0.5rem;
+  padding: 0;
+}
+
+.content ol {
+  list-style: outside decimal;
+}
+
+.content ul {
+  list-style: outside disc;
+}
+
+.content ol li,
+.content ul li {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+.content ol li:last-child,
+.content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.content ol.compact,
+.content ol.compact li,
+.content ul.compact,
+.content ul.compact li {
+  margin: 0;
+}
+
+.content p {
+  margin-bottom: 0.25rem;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.5em;
+  list-style: none outside none;
+}
+
+.content ol {
+  counter-reset: ol-counter;
+}
+
+.content li {
+  list-style: none outside none;
+}
+
+ul:not(.timeline) li::before {
+  float: left;
+  width: 1.5em;
+  margin-left: -1.5em;
+  font-family: Arial;
+  text-align: center;
+  content: '●';
+}
+
+.content ol:not(.default-list, .bubble-list) > li::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-top: calc((0.8rem * 1.5 - 1rem) / 2 + 0.05rem);
+  margin-left: calc(-1.5rem + 0.5rem / 2);
+  color: inherit;
+  font-weight: bold;
+  font-size: 0.7em;
+  font-family: inherit;
+  line-height: 1rem;
+  background: transparent;
+  border-radius: 0.25em;
+  counter-increment: ol-counter;
+  content: counter(ol-counter);
+}
+
+.content ol:is(.default-list) > li {
+  list-style-type: decimal;
+}
+
+.content ol.inverted > li::before {
+  color: white;
+  font-weight: normal;
+  background: black;
+}
+
+.content .bubble ol.inverted > li::before {
+  color: #0084ff;
+  font-weight: bold;
+  background: white;
+  border-radius: 100%;
+}

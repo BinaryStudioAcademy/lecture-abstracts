@@ -12,12 +12,9 @@ hiddenFromMainPage: false
 import { Lecture } from "~/layouts";
 import { SEO } from '~/partials';
 
+import { introBubble } from '~/data/lectures/how-to-work-with-git/intro';
 
-<div>
-  <h1>
-    <strong>Як працювати з Git</strong>
-  </h1>
-</div>
+# Як працювати з Git
 
 <Language
   currentLanguage="ua"
@@ -27,37 +24,25 @@ import { SEO } from '~/partials';
   }}
 />
 
-<div>
-  <div className="author">
-      <Avatar name="Viktoriia Vasylenko" />
-      <div className="profile">
-        <h3 className="name">Вікторія Василенко</h3>
-        <p className="about">
-          Вікторія працює в Binary Studio як Full stack developer після закінчення Binary Studio Academy в 2020.
-        </p>
-      </div>
-    </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Привіт!</strong> 👋<br />Вітаємо на лекції по Git. Тут ти знайдеш короткий конспект до лекції з основними Git командами та корисними посиланнями. Поїхали!
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.ua} />
 
-<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 2 + "em"}}>
-  <h2><strong>План лекції</strong></h2>
-  <TimelineOfContents timeline={[{
-    linkTo: "#setting-up-the-repository",
-    title: "Налаштування репозиторію"
-  }, {
-    linkTo: "#practicing-git",
-    title: "<span>Основні <code>git</code> команди</span>",
-  }, {
-    linkTo: "#git-flow",
-    title: "Git flow"
-  },  {
-    linkTo: "#undo-changes",
-    title: "Відмінити зміни"
-  }]} />
-</div>
+<br />
+
+## План лекції
+
+<TimelineOfContents timeline={[{
+  linkTo: "#setting-up-the-repository",
+  title: "Налаштування репозиторію"
+}, {
+  linkTo: "#practicing-git",
+  title: "<span>Основні <code>git</code> команди</span>",
+}, {
+  linkTo: "#git-flow",
+  title: "Git flow"
+},  {
+  linkTo: "#undo-changes",
+  title: "Відмінити зміни"
+}]} />
 
 <VideoWrapper duration="38m 2s">
   <iframe src="https://www.youtube.com/embed/HJ7NW6zatXo" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -104,7 +89,7 @@ import { SEO } from '~/partials';
 
 5. Щоб оновити віддалену гілку використовуй `git push` команду.
    Якщо твоєї локальної гілки не існує на віддаленому репозиторій тобі потрібно буде ввести `git push --set-upstream branch-name`
-   або скорочено `git push -u branch-name`,що означає те ж. Або ж ти можеш явно вказати, в яку remote гілку ти хочеш запушити свої зміни - ось так `git push origin branch-name`.
+   або скорочено `git push -u branch-name`, що означає те ж. Або ж ти можеш явно вказати, в яку remote гілку ти хочеш запушити свої зміни - ось так `git push origin branch-name`.
 
 6. Git stash зручний, якщо ви ще не готові закомітити свої зміни. `git stash` 'застешить' зміни, `git stash list` покаже усі доступні стегі,
    а `git stash pop` застосує останній стеш - поверне зміни назад.

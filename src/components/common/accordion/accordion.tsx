@@ -1,19 +1,17 @@
 import React from 'react';
-import classnames from 'classnames';
+import * as styles from './accordion.module.scss';
 
 type Props = {
   children: [React.ReactNode, React.ReactNode];
-  className?: string;
 };
 
-const Accordion: React.FC<Props> = ({ children, className }) => {
+const Accordion: React.FC<Props> = ({ children }) => {
   const [heading, content] = children;
-  const classNames = classnames('accordion', className);
 
   return (
-    <details className={classNames}>
-      <summary className="accordion-header">{heading}</summary>
-      <div className="accordion-body">{content}</div>
+    <details className={styles.accordion}>
+      <summary className={styles.header}>{heading}</summary>
+      <div className={styles.content}>{content}</div>
     </details>
   );
 };

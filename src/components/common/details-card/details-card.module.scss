@@ -1,0 +1,59 @@
+.wrapper {
+  width: fit-content;
+  margin-bottom: 4px;
+}
+
+.summary {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.summary:not(.reversed) {
+  padding: 0 0 0 20px;
+}
+
+.summary:not(.reversed)::before {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  border-width: 6px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+  content: '';
+}
+
+.summary:is(.reversed)::after {
+  position: absolute;
+  top: 6px;
+  right: -30px;
+  border-width: 6px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+  content: '';
+}
+
+.wrapper[open] > .summary::before,
+.wrapper[open] > .summary::after {
+  transform: rotate(90deg);
+}
+
+.description:not(.reversed) {
+  margin-left: 18px;
+}
+
+.description:is(.reversed) {
+  margin-top: 5px;
+}
+
+.wrapper[open] > .summary {
+  margin-bottom: 8px;
+  transition: all 0.2s linear;
+}

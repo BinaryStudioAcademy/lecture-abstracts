@@ -1,13 +1,11 @@
 import React from 'react';
-import './header.css';
+// import './header.css';
+import * as styles from './header.module.scss';
 
 const Header: React.FC = () => (
-  <header className="hero hero-sm">
-    <nav className="navbar">
-      <div className="navbar-section">
-        <strong>Binary Studio Academy {new Date().getFullYear()}</strong>
-      </div>
-      <div className="navbar-section"></div>
+  <header className={styles.hero}>
+    <nav className={styles.navbar}>
+      <strong>Binary Studio Academy {new Date().getFullYear()}</strong>
     </nav>
   </header>
 );

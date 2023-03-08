@@ -10,3 +10,5 @@ export { ThatsAllFolks } from './thats-all-folks/thats-all-folks';
 export { VideoWrapper } from './video-wrapper/video-wrapper';
 export { ShrugMessage } from './shrug-message/shrug-message';
 export { Flute } from './flute/flute';
+export { IntroBlueBubble } from './intro-blue-bubble/intro-blue-bubble';
+export { DetailsCard } from './details-card/details-card';

@@ -11,4 +11,6 @@ export {
   ThatsAllFolks,
   TimelineOfContents,
   VideoWrapper,
+  IntroBlueBubble,
+  DetailsCard,
 } from './common';

@@ -15,9 +15,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faWikipediaW, faVk, faGoogle, faYahoo, faGithub, faSymfony, faLaravel, faWordpress, faJoomla, faDrupal, faMagento, faOpencart, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { LenchVolodymyr2021Avatar } from "~/assets/images/avatars/intro-rounded";
 import { default as meme } from './assets/images/meme-ua.jpg';
+import { introBubble } from '~/data/lectures/modern-php-features-and-ecosystem/intro';
+
 import "./assets/stylesheets/styles.css";
 
-<div><h1><strong>Modern PHP features and ecosystem</strong></h1></div>
+#  Modern PHP features and ecosystem
 
 <Language
   currentLanguage="ua"
@@ -28,64 +30,21 @@ import "./assets/stylesheets/styles.css";
   <iframe src="https://www.youtube.com/embed/1DlPvGFO2hM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 </VideoWrapper>
 
-<div>
-  <div className="author">
-    <div className="avatar-wrapper">
-      <object className="avatar-object" data={LenchVolodymyr2021Avatar} role="img" aria-label="My profile picture"></object>
-    </div>
-    <div className="profile">
-      <h3 className="name">Володимир Лєнч</h3>
-      <ul className="contacts">
-        <li>
-          <a href="https://github.com/lenchv" rel="author" className="github">
-            <FontAwesomeIcon icon={faGithub} className="icon" />
-            <span>lenchv</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/people/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80-%D0%9B%D0%B5%D0%BD%D1%87/100000740939113/" rel="author" className="facebook">
-            <FontAwesomeIcon icon={faFacebookSquare} className="icon" />
-            <span>Володимир Лєнч</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/vladimirlench/" rel="author" className="instagram">
-            <FontAwesomeIcon icon={faInstagram} className="icon" />
-            <span>vladimirlench</span>
-          </a>
-        </li>
-      </ul>
-      <p className="about">
-        Вова закінчив курс академії по РНР у 2017 році та з тих пір пише код в <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>. Знає про <a href="https://martinfowler.com/bliki/CQRS.html"><strong>CQRS</strong></a> та <a href="https://www.martinfowler.com/eaaDev/EventSourcing.html"><strong>event sourcing</strong></a>, вміє пилити фронтенд на <a href="https://vuejs.org/"><strong>Vue</strong></a>, але розробляє додаток для моделюання баз даних на <a href="https://reactjs.org/"><strong>React</strong></a>. Любить відвідувати технічні мітапи, пити каву, та розбиратися у нових технологіях по вихідним.
-      </p>
-    </div>
-  </div>
-  <div className="bubble" style={{ margin: "-0.5em 1em 1em"}}>
-    <strong>Усім привіт! 👋</strong><br />
-    Вашій увазі перша профільна лекція «Modern PHP features and ecosystem» або ж «Make PHP great again»! Розглянемо що нового у PHP та що майбутнє готує. Але зпочатку дізклеймер:
-    <ol className="compact inverted">
-      <li>частина матеріалу вам вже знайома і це гуд 😊;</li>
-      <li>лекція обіцяє бути цікавою та познавальною <em>(за використання слів-паразитів, жаргону та нецензурної лайки вибачайте)</em>.</li>
-    </ol>
-    Так, до речі... з собою: термінал (командний рядок), <a href="https://git-scm.com/"><strong>Git</strong></a>, <a href="https://code.visualstudio.com/"><strong>PHPStorm</strong></a> або <a href="https://code.visualstudio.com/"><strong>Visual Studio Code</strong></a>. Почнемо?
-  </div>
-</div>
+<IntroBlueBubble {...introBubble.ua} />
 
-<div id="table-of-contents" className="table-of-contents" style={{ marginTop: 1 + "em" }}>
-  <TimelineOfContents timeline={[{
-    linkTo: "#welcome-to-php",
-    title: "Welcome to PHP"
-  }, {
-    linkTo: "#whats-new-in-php",
-    title: "What's new in PHP"
-  }, {
-    linkTo: "#php-ecosystem",
-    title: "PHP ecosystem"
-  }, {
-    linkTo: "#typical-php-development-environment",
-    title: "Typical PHP development environment"
-  }]} />
-</div>
+<TimelineOfContents timeline={[{
+  linkTo: "#welcome-to-php",
+  title: "Welcome to PHP"
+}, {
+  linkTo: "#whats-new-in-php",
+  title: "What's new in PHP"
+}, {
+  linkTo: "#php-ecosystem",
+  title: "PHP ecosystem"
+}, {
+  linkTo: "#typical-php-development-environment",
+  title: "Typical PHP development environment"
+}]} />
 
 <Level id="welcome-to-php" number="1" name="Welcome to PHP" difficulty="Hardcore." objectives="Get some knowledge about $php features." />
 
@@ -129,155 +88,134 @@ import "./assets/stylesheets/styles.css";
   <strong>PHP</strong> <em>(ПХП, похапэ, пэхэпэ, пиашпи, пих-пих, ПиЭйчПи)</em> — одна з небагатьох мов програмуання, володіючи якою, можна заробити собі на хліб, $ало та воду.
 </div>
 
-<hr className="small" />
+<hr />
 
-<ul>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-1" />
-    <label className="summary" htmlFor="accordion-1-1">
-      <strong>High-level language</strong>
-    </label>
-  <div className="details-body">
+<DetailsCard>
+  <strong>High-level language</strong>
+  <>
+    ```php
+    php hello.php
+    ```
+  </>
+</DetailsCard>
 
-```php
-// C/C++ language allocate memory
-int *testArray = malloc(5 * sizeof(int));
-free(testArray);
 
-// allocate memory
-$testArray = [];
-$testArray[] = 'Hi!';
+<DetailsCard>
+  <strong>PHP is interpreted</strong>
+  <>
+    ```php
+    // C/C++ language allocate memory
+    int *testArray = malloc(5 * sizeof(int));
+    free(testArray);
 
-// memory is cleaned up by garbage collector
-```
-Memory is managed dynamically. [Written in Zend engine using C language.](https://github.com/php)
+    // allocate memory
+    $testArray = [];
+    $testArray[] = 'Hi!';
 
-  </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-2" />
-    <label className="summary" htmlFor="accordion-1-2">
-      <strong>PHP is interpreted</strong>
-    </label>
-  <div className="details-body">
+    // memory is cleaned up by garbage collector
+    ```
 
-```php
-php hello.php
-```
+    Memory is managed dynamically. [Written in Zend engine using C language.](https://github.com/php)
+  </>
+</DetailsCard>
 
-  </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-3" />
-    <label className="summary" htmlFor="accordion-1-3">
-      <strong>OOP vs FP vs procedural</strong>
-    </label>
-  <div className="details-body">
 
-```php
-// oop
-namespace A;
+<DetailsCard>
+  <strong>OOP vs FP vs procedural</strong>
+  <>
+    ```php
+    // oop
+    namespace A;
 
-interface Schedulable
-{
-    public function setTime(\DateTime $datetime): void;
-}
-
-abstract class Task implements Schedulable
-{
-    private $time;
-
-    public function setTime(\DateTime $time): void
+    interface Schedulable
     {
-        $this->time = $time;
+        public function setTime(\DateTime $datetime): void;
     }
-}
 
-class MegaTask extends Task {}
+    abstract class Task implements Schedulable
+    {
+        private $time;
 
-// functional
-$p = function() { return 'p'; };
-$h = fn() => 'h';
-echo $p() . $h() . $p();
+        public function setTime(\DateTime $time): void
+        {
+            $this->time = $time;
+        }
+    }
 
-// procedural
-function header() {
-    $title = 'Hello!';
+    class MegaTask extends Task {}
 
-    echo '<div>' . $title . '</div>';
-}
-function content() {
-    echo '<div>content</div>';
-}
-```
+    // functional
+    $p = function() { return 'p'; };
+    $h = fn() => 'h';
+    echo $p() . $h() . $p();
 
-  </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-4" />
-    <label className="summary" htmlFor="accordion-1-4">
-      <strong>Weak typing system</strong>
-    </label>
-  <div className="details-body">
+    // procedural
+    function header() {
+        $title = 'Hello!';
 
-```php
-$one = '1';
-$two = 2;
+        echo '<div>' . $title . '</div>';
+    }
+    function content() {
+        echo '<div>content</div>';
+    }
+    ```
+  </>
+</DetailsCard>
 
-// int(3)
-var_dump($one + $two);
 
-$foo = null;
-$bar = false;
+<DetailsCard>
+  <strong>Weak typing system</strong>
+  <>
+    ```php
+    $one = '1';
+    $two = 2;
 
-// true
-var_dump($foo == $bar);
+    // int(3)
+    var_dump($one + $two);
 
-// false
-var_dump($foo === $bar);
-```
-But starting from PHP 7.0
-```php
-declare(strict_types=1);
+    $foo = null;
+    $bar = false;
 
-function tuple(int $a, int $b): array
-{
-    return [$x, $y];
-}
-```
+    // true
+    var_dump($foo == $bar);
 
-  </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-5" />
-    <label className="summary" htmlFor="accordion-1-5">
-      <strong>Single threaded</strong>
-    </label>
-  <div className="details-body">
+    // false
+    var_dump($foo === $bar);
+    ```
+    But starting from PHP 7.0
+    ```php
+    declare(strict_types=1);
 
-Multi thread with POSIX and `--pthreads` extension. High-load tasks with message queue systems (RabbitMQ, etc.).
+    function tuple(int $a, int $b): array
+    {
+        return [$x, $y];
+    }
+    ```
+  </>
+</DetailsCard>
 
-  </div>
-  </li>
-  <li className="details">
-    <input type="checkbox" id="accordion-1-6" />
-    <label className="summary" htmlFor="accordion-1-6">
-      <strong>Too many dollars $$$</strong>
-    </label>
-  <div className="details-body">
 
-```php
-$kernel = new Kernel($_SERVER['APP_ENV'], $_SERVER['APP_DEBUG']);
-$request = Request::createFromGlobals();
-$response = $kernel->handle($request);
-$response->send();
-$kernel->terminate($request, $response);
-```
-[**Why do we use $ in PHP?**](https://www.quora.com/Why-do-we-use-a-dollar-symbol-before-variables-in-PHP)
+<DetailsCard>
+  <strong>Single threaded</strong>
 
-  </div>
-  </li>
-</ul>
+  Multi thread with POSIX and `--pthreads` extension. High-load tasks with message queue systems (RabbitMQ, etc.).
+</DetailsCard>
+
+
+<DetailsCard>
+  <strong>Too many dollars $$$</strong>
+  <>
+    ```php
+    $kernel = new Kernel($_SERVER['APP_ENV'], $_SERVER['APP_DEBUG']);
+    $request = Request::createFromGlobals();
+    $response = $kernel->handle($request);
+    $response->send();
+    $kernel->terminate($request, $response);
+    ```
+
+    [**Why do we use $ in PHP?**](https://www.quora.com/Why-do-we-use-a-dollar-symbol-before-variables-in-PHP)
+  </>
+</DetailsCard>
 
 
 <Level id="whats-new-in-php" number="2" name="What's new in PHP" difficulty="Hardcore." objectives="Learn what PHP can offer us." />
@@ -287,32 +225,25 @@ $kernel->terminate($request, $response);
 
 The following are some of the new features in PHP 7 and higher — it is faster ([PHP 5.6 vs 8.0](http://www.phpbenchmarks.com/en/comparator/php)), memory optimized, has new exception hierarchy, introduces new syntax sugar (`??, <=>, () =>`), nullables (`?string`), scalar type declarations, , `void` return type, iterable type, anonymous classes. Let's take a look at some of the features in detail:
 
-<ul>
-<li className="details">
-  <input type="checkbox" id="accordion-1" hidden />
-  <label className="summary" htmlFor="accordion-1">
-    Deprecated tags
-  </label>
-  <div className="details-body">
 
-  ```php
-  <script language="php">
-  // cannot be used anymore
-  </script>
-  // no  ASP tags
-  <% echo 'Oh, God!'; %>
-  <?php echo 'Hello, sweety!'; ?>
-  <?= "Whaat?" ?>
-  ```
+<DetailsCard>
+  Deprecated tags
+  <>
+    ```php
+    <script language="php">
+    // cannot be used anymore
+    </script>
+    // no  ASP tags
+    <% echo 'Oh, God!'; %>
+    <?php echo 'Hello, sweety!'; ?>
+    <?= "Whaat?" ?>
+    ```
+  </>
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-2" hidden />
-  <label className="summary" htmlFor="accordion-2">
-    Deprecated mysql_* functions
-  </label>
-  <div className="details-body">
+
+<DetailsCard>
+  Deprecated mysql_* functions
 
   ```php
   $query = 'SELECT * FROM USERS WHERE 1 = 1';
@@ -323,923 +254,821 @@ The following are some of the new features in PHP 7 and higher — it is faster 
   $query = $pdo->prepare('SELECT * FROM USERS WHERE age = :age');
   $result = $query->execute([':age' => 24]);
   ```
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-3" hidden />
-  <label className="summary" htmlFor="accordion-3">
-    Deprecated PHP 4 style constructors
-  </label>
-  <div className="details-body">
 
-```php
-class A
-{
-    // bad, PHP 4 syntax
-    public function A()
+<DetailsCard>
+  Deprecated PHP 4 style constructors
+
+  ```php
+  class A
+  {
+      // bad, PHP 4 syntax
+      public function A()
+      {
+
+      }
+
+      // good
+      public function __construct()
+      {
+
+      }
+  }
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  Deprecated functions
+  <>
+    ```php
+    ereg();
+    eregi();
+    ereg_replace();
+    ...
+    ```
+    Use **preg_\*** functions like `preg_match();`.
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Array destructuring
+
+  ```php
+  $user = ['John', 'Doe', 29];
+
+  // list syntax
+  list($firstname, $lastname, $age) = $user;
+
+  // short array syntax
+  [$firstname, $lastname, $age] = $user;
+
+  // destructuring with keys
+  [
+      'first_name' => $firstname,
+      'last_name' => $lastname,
+      'age' => $age
+  ] = $user;
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  New variable call combinations
+
+  ```php
+  $foo = function() {
+      return [
+          'bar' => function() { echo 'bar'; },
+          'foo' => function() { echo 'foo'; }
+      ];
+  };
+  // call a closure inside an array returned by another closure
+  $foo()['bar']();
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  String character access
+
+  ```php
+  function getUserName() {
+      return 'Pavel';
+  }
+  // access a character by index
+  echo getUserName(){0};
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  Object public property access from array
+
+  ```php
+  $ball = new stdClass();
+  $ball->type = 'football';
+
+  $ball1 = new stdClass();
+  $ball1->type = 'basketball';
+
+  echo [$ball, $ball1][0]->type;
+  ```
+
+</DetailsCard>
+
+
+<DetailsCard>
+  Nested double colons ::
+  <>
+    ```php
+    class Student
     {
+      public static $courses = [
+        'math',
+        'programming',
+        'databases'
+      ];
 
+      public static function getSchedule(): Schedule
+      {
+        return new Schedule();
+      }
+
+      public function getCredits(): Credits
+      {
+        return new Credits();
+      }
+    }
+
+    class Schedule
+    {
+      public static $classes = 5;
+    }
+
+    class Credits
+    {
+      public static function getCreditsPerYear(): int
+      {
+        return 350;
+      }
+    }
+
+    $students = [
+      'Bob' => new Student(),
+      'Rachel' => new Student()
+    ];
+
+    // access a static property on a string class name or object inside an array //
+    $students['Bob']::$courses;
+
+    // access a static property on a string class name or object returned by a static method call on a string class name or object
+    $students['Rachel']::getSchedule()::$classes;
+
+    // call a static method on a string class name or object returned by an instance method call
+    $students['Rachel']->getCredits()::getCreditsPerYear();
+
+    //$
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Nested functions call
+  <>
+    ```php
+    function foo(): callable {
+      return function(): string {
+        return 'Hi!';
+      };
+    }
+
+    // call a callable returned by function
+    echo foo()();
+
+    $foo = function(string $param): callable {
+        return function() use($param): string {
+            return $param;
+        };
+    };
+
+    // call a callable returned by another callable
+    echo $foo('Hi!')();
+
+    // also works with classes
+    class A
+    {
+      public function foo(): callable
+      {
+        return function(): string {
+          return 'Hi!';
+        };
+      }
+
+      public static function bar(): callable
+      {
+        return function(): string {
+          return 'Hi!';
+        };
+      }
+    }
+
+    (new A)->foo()();
+    A::bar()();
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  General expressions dereferencing schema
+  <>
+    ```php
+    // array key
+    (expression)['key']
+
+    // class property
+    (expression)->prop
+
+    // call a method
+    (expression)->method()
+
+    // static prop
+    (expression)::$foo
+
+    // static method
+    (expression)::method()
+
+    // call a callable
+    (expression)()
+
+    // access a string character
+    (expression){0}
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Null coalescing operator <code>??</code>
+  <>
+    ```php
+    // PHP 5
+    $key = isset($_GET['access_token']) ? $_GET['access_token'] : null;
+    // PHP 7
+    $key = $request->get('access_token') ?? null;
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Spaceship operator <code>&lt;=&gt;</code>
+  <>
+    ```php
+    $a = 5;
+    $b = 10;
+
+    // $a == $b : 0
+    // $a > $b : 1
+    // $a < $b : -1
+
+    >
+    $res = $a <=> $b;
+
+    $list = [-1, 10, -6, 126];
+    usort($list, function(int $a, int $b) {
+        return $a <=> $b;
+    });
+
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Constant arrays using <code>define()</code>
+  <>
+    ```php
+    define('COLORS', [
+      'red' => '#ff0000',
+      'green' => '#00ff00',
+      'blue' => '#0000ff'
+    ]);
+
+    echo COLORS['red'];
+
+    class Drawer
+    {
+      // visibility added in php 7.1
+      public const COLORS = [
+        'red' => '#ff0000',
+        'green' => '#00ff00',
+        'blue' => '#0000ff'
+      ];
+    }
+
+    echo Drawer::COLORS['red'];
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Multiple catch
+  <>
+    ```php
+    try {
+        // code
+    } catch (InvalidArgumentException | MyException $e) {
+        // catch only specific
+    }
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Integer division aka <code>intdiv()</code>
+  <>
+
+    ```php
+    $a = intdiv(8, 3);
+    $b = 8 % 3;
+    try {
+        $c = intdiv(1, 0);
+    } catch (DivisionByZeroError $e) {
+        // logic
+    }
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Binding Closure
+  <>
+    ```php
+    class Greeting {
+        private $hello = 'Hello';
+    }
+
+    $closure = function(string $name) {
+        return "{$this->hello}, {$name}";
+    };
+
+    echo $closure->call(new Greeting(), 'Bob');
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Group use statements
+
+  ```php
+  use Some\Namespace{ClassA, ClassB};
+  use function Some\Namespace{funcA, funcB};
+  use const Some\Namespace{CONST_A, CONST_B};
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  Anonymous classes
+  <>
+    ```php
+    interface Logger {}
+
+    class BaseLogger {}
+
+    trait WriteToFile {}
+
+    class Util
+    {
+        private $logger;
+
+        public function setLogger($logger)
+        {
+            $this->logger = $logger;
+        }
+    }
+
+    $util = new Util();
+    $util->setLogger(
+        new class ($config) extends BaseLogger implements LoggerInterface {
+            use WriteToFile;
+
+            private $config;
+
+            public function __construct(array $config)
+            {
+                $this->config = $config;
+            }
+
+            public function log($msg)
+            {
+                $this->write('app.log', $msg);
+            }
+        }
+    );
+    ```
+
+    Object of anonymous class lives once at runtime. Can be used in test code to mock objects. Think before use :)
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Type hinting
+  <>
+    * bool
+    * float
+    * int
+    * string
+    * array
+    * iterable
+
+    ```php
+    function typed(string $a, bool $b, float $c): array {}
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  Strict types
+  <>
+    ```php
+    declare(strict_types=1);
+
+    function intSum(int $a, int $b): int
+    {
+        return $a + $b;
     }
 
     // good
-    public function __construct()
+    intSum(1, 2);
+
+    // TypeError thrown
+    intSum(0.1, 2);
+    ```
+
+    Use types everywhere! )
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.1">Nullables</span>
+  <>
+    ```php
+    class Profile
     {
+      private $name;
+      private $age;
 
+      public function __construct(string $name, ?int $age)
+      {
+        $this->name = $name;
+        $this->age = $age;
+      }
+
+      public function getName(): string
+      {
+        return $this->name;
+      }
+
+      public function getAge(): ?int
+      {
+        return $this->age;
+      }
     }
-}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-4" hidden />
-  <label className="summary" htmlFor="accordion-4">
-    Deprecated functions
-  </label>
-  <div className="details-body">
-
-```php
-ereg();
-eregi();
-ereg_replace();
-...
-```
-Use **preg_\*** functions like `preg_match();`.
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-5" hidden />
-  <label className="summary" htmlFor="accordion-5">
-    Array destructuring
-  </label>
-  <div className="details-body">
-
-```php
-$user = ['John', 'Doe', 29];
-
-// list syntax
-list($firstname, $lastname, $age) = $user;
-
-// short array syntax
-[$firstname, $lastname, $age] = $user;
-
-// destructuring with keys
-[
-    'first_name' => $firstname,
-    'last_name' => $lastname,
-    'age' => $age
-] = $user;
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-6" hidden />
-  <label className="summary" htmlFor="accordion-6">
-    New variable call combinations
-  </label>
-  <div className="details-body">
-
-```php
-$foo = function() {
-    return [
-        'bar' => function() { echo 'bar'; },
-        'foo' => function() { echo 'foo'; }
-    ];
-};
-// call a closure inside an array returned by another closure
-$foo()['bar']();
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-7" hidden />
-  <label className="summary" htmlFor="accordion-7">
-    String character access
-  </label>
-  <div className="details-body">
-
-```php
-function getUserName() {
-    return 'Pavel';
-}
-// access a character by index
-echo getUserName(){0};
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-8" hidden />
-  <label className="summary" htmlFor="accordion-8">
-    Object public property access from array
-  </label>
-  <div className="details-body">
-
-```php
-$ball = new stdClass();
-$ball->type = 'football';
-
-$ball1 = new stdClass();
-$ball1->type = 'basketball';
-
-echo [$ball, $ball1][0]->type;
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-9" hidden />
-  <label className="summary" htmlFor="accordion-9">
-    Nested double colons ::
-  </label>
-  <div className="details-body">
-
-```php
-class Student
-{
-  public static $courses = [
-    'math',
-    'programming',
-    'databases'
-  ];
-
-  public static function getSchedule(): Schedule
-  {
-    return new Schedule();
-  }
-
-  public function getCredits(): Credits
-  {
-    return new Credits();
-  }
-}
-
-class Schedule
-{
-  public static $classes = 5;
-}
-
-class Credits
-{
-  public static function getCreditsPerYear(): int
-  {
-    return 350;
-  }
-}
-
-$students = [
-  'Bob' => new Student(),
-  'Rachel' => new Student()
-];
-
-// access a static property on a string class name or object inside an array
-$students['Bob']::$courses;
-
-// access a static property on a string class name or object returned by a static method call on a string class name or object
-$students['Rachel']::getSchedule()::$classes;
-
-// call a static method on a string class name or object returned by an instance method call
-$students['Rachel']->getCredits()::getCreditsPerYear();
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-10" hidden />
-  <label className="summary" htmlFor="accordion-10">
-    Nested functions call
-  </label>
-  <div className="details-body">
-
-```php
-function foo(): callable {
-  return function(): string {
-    return 'Hi!';
-  };
-}
-
-// call a callable returned by function
-echo foo()();
-
-$foo = function(string $param): callable {
-    return function() use($param): string {
-        return $param;
-    };
-};
-
-// call a callable returned by another callable
-echo $foo('Hi!')();
-
-// also works with classes
-class A
-{
-  public function foo(): callable
-  {
-    return function(): string {
-      return 'Hi!';
-    };
-  }
-
-  public static function bar(): callable
-  {
-    return function(): string {
-      return 'Hi!';
-    };
-  }
-}
-
-(new A)->foo()();
-A::bar()();
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-11" hidden />
-  <label className="summary" htmlFor="accordion-11">
-    General expressions dereferencing schema
-  </label>
-  <div className="details-body">
-
-```php
-// array key
-(expression)['key']
-
-// class property
-(expression)->prop
-
-// call a method
-(expression)->method()
-
-// static prop
-(expression)::$foo
-
-// static method
-(expression)::method()
-
-// call a callable
-(expression)()
-
-// access a string character
-(expression){0}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-12" hidden />
-  <label className="summary" htmlFor="accordion-12">
-    Null coalescing operator <code>??</code>
-  </label>
-  <div className="details-body">
-
-```php
-// PHP 5
-$key = isset($_GET['access_token']) ? $_GET['access_token'] : null;
-// PHP 7
-$key = $request->get('access_token') ?? null;
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-13" hidden />
-  <label className="summary" htmlFor="accordion-13">
-    Spaceship operator <code>&lt;=&gt;</code>
-  </label>
-  <div className="details-body">
-
-```php
-$a = 5;
-$b = 10;
-
-// $a == $b : 0
-// $a > $b : 1
-// $a < $b : -1
-$res = $a <=> $b;
-
-$list = [-1, 10, -6, 126];
-usort($list, function(int $a, int $b) {
-    return $a <=> $b;
-});
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-14" hidden />
-  <label className="summary" htmlFor="accordion-14">
-    Constant arrays using <code>define()</code>
-  </label>
-  <div className="details-body">
-
-```php
-define('COLORS', [
-  'red' => '#ff0000',
-  'green' => '#00ff00',
-  'blue' => '#0000ff'
-]);
-
-echo COLORS['red'];
-
-class Drawer
-{
-  // visibility added in php 7.1
-  public const COLORS = [
-    'red' => '#ff0000',
-    'green' => '#00ff00',
-    'blue' => '#0000ff'
-  ];
-}
-
-echo Drawer::COLORS['red'];
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-15" hidden />
-  <label className="summary" htmlFor="accordion-15">
-    Multiple catch
-  </label>
-  <div className="details-body">
-
-```php
-try {
-    // code
-} catch (InvalidArgumentException | MyException $e) {
-    // catch only specific
-}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-16" hidden />
-  <label className="summary" htmlFor="accordion-16">
-    Integer division aka intdiv()
-  </label>
-  <div className="details-body">
-
-```php
-$a = intdiv(8, 3);
-$b = 8 % 3;
-
-try {
-    $c = intdiv(1, 0);
-} catch (DivisionByZeroError $e) {
-    // logic
-}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-17" hidden />
-  <label className="summary" htmlFor="accordion-17">
-    Binding Closure
-  </label>
-  <div className="details-body">
-
-```php
-class Greeting {
-    private $hello = 'Hello';
-}
-
-$closure = function(string $name) {
-    return "{$this->hello}, {$name}";
-};
-
-echo $closure->call(new Greeting(), 'Bob');
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-18" hidden />
-  <label className="summary" htmlFor="accordion-18">
-    Group use statements
-  </label>
-  <div className="details-body">
-
-```php
-use Some\Namespace{ClassA, ClassB};
-use function Some\Namespace{funcA, funcB};
-use const Some\Namespace{CONST_A, CONST_B};
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-19" hidden />
-  <label className="summary" htmlFor="accordion-19">
-    Anonymous classes
-  </label>
-  <div className="details-body">
-
-```php
-interface Logger {}
-
-class BaseLogger {}
-
-trait WriteToFile {}
-
-class Util
-{
-    private $logger;
-
-    public function setLogger($logger)
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.1">Void type</span>
+  <>
+    ```php
+    // php 7.1
+    function doSomething(): void
     {
-        $this->logger = $logger;
+      // write to log file
+      return;
     }
-}
-
-$util = new Util();
-$util->setLogger(
-    new class ($config) extends BaseLogger implements LoggerInterface {
-        use WriteToFile;
-
-        private $config;
-
-        public function __construct(array $config)
-        {
-            $this->config = $config;
-        }
-
-        public function log($msg)
-        {
-            $this->write('app.log', $msg);
-        }
-    }
-);
-```
-Object of anonymous class lives once at runtime. Can be used in test code to mock objects. Think before use :)
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-20" hidden />
-  <label className="summary" htmlFor="accordion-20">
-    Type hinting
-  </label>
-  <div className="details-body">
+    ```
+  </>
+</DetailsCard>
 
 
-* bool
-* float
-* int
-* string
-* array
-* iterable
+<DetailsCard>
 
-```php
-function typed(string $a, bool $b, float $c): array {}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-21" hidden />
-  <label className="summary" htmlFor="accordion-21">
-    Strict types
-  </label>
-  <div className="details-body">
-
-```php
-declare(strict_types=1);
-
-function intSum(int $a, int $b): int
-{
-    return $a + $b;
-}
-
-// good
-intSum(1, 2);
-
-// TypeError thrown
-intSum(0.1, 2);
-```
-Use types everywhere! )
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-22" hidden />
-  <label className="summary" htmlFor="accordion-22">
-    <span className="badge badge-secondary" data-badge="7.1">Nullables</span>
-  </label>
-  <div className="details-body">
-
-```php
-class Profile
-{
-  private $name;
-  private $age;
-
-  public function __construct(string $name, ?int $age)
-  {
-    $this->name = $name;
-    $this->age = $age;
-  }
-
-  public function getName(): string
-  {
-    return $this->name;
-  }
-
-  public function getAge(): ?int
-  {
-    return $this->age;
-  }
-}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-23" hidden />
-  <label className="summary" htmlFor="accordion-23">
-    <span className="badge badge-secondary" data-badge="7.1">Void type</span>
-  </label>
-  <div className="details-body">
-
-```php
-// php 7.1
-function doSomething(): void
-{
-  // write to log file
-  return;
-}
-```
-
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-24" hidden />
-  <label className="summary" htmlFor="accordion-24">
     <span className="badge badge-secondary" data-badge="7.1">Iterable type</span>
-  </label>
-  <div className="details-body">
 
-```php
-function render(iterable $list)
-{
-  foreach ($list as $item) {}
-}
+    ```php
+    function render(iterable $list)
+    {
+      foreach ($list as $item) {}
+    }
 
-function numbers(): iterable
-{
-  return [1, 2];
-}
+    function numbers(): iterable
+    {
+      return [1, 2];
+    }
 
-function numbersAsIterator(): iterable
-{
-  $numbers = new ArrayObject([1, 2]);
-  return $numbers->getIterator();
-}
-```
+    function numbersAsIterator(): iterable
+    {
+      $numbers = new ArrayObject([1, 2]);
+      return $numbers->getIterator();
+    }
+    ```
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-25" hidden />
-  <label className="summary" htmlFor="accordion-25">
-    <span className="badge badge-secondary" data-badge="7.4">Spread operator</span>
-  </label>
-  <div className="details-body">
 
-```php
-$foo = [3, 4, 5];
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.4">Spread operator</span>
 
-// [1, 2, 3, 4, 5, 6]
-$bar = [1, 2, ...$foo, 6];
-```
+  ```php
+  $foo = [3, 4, 5];
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-26" hidden />
-  <label className="summary" htmlFor="accordion-26">
-    <span className="badge badge-secondary" data-badge="7.4">Arrow functions</span>
-  </label>
-  <div className="details-body">
+  // [1, 2, 3, 4, 5, 6]
+  $bar = [1, 2, ...$foo, 6];
+  ```
+</DetailsCard>
 
-```php
-$arr = [1, 2, 3];
 
-// [1, 4, 9]
-array_map(
-  fn($n) => $n * $n,
-  $arr
-);
-```
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.4">Arrow functions</span>
+  <>
+    ```php
+    $arr = [1, 2, 3];
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-27" hidden />
-  <label className="summary" htmlFor="accordion-27">
-    <span className="badge badge-secondary" data-badge="7.4">Typed properties</span>
-  </label>
-  <div className="details-body">
-  Class properties now support type declarations.
+    // [1, 4, 9]
+    array_map(
+      fn($n) => $n * $n,
+      $arr
+    );
+    ```
+  </>
+</DetailsCard>
 
-```php
-class User {
-    public int $id;
-    public string $name;
-}
-```
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-28" hidden />
-  <label className="summary" htmlFor="accordion-28">
-    <span className="badge badge-secondary" data-badge="7.4">Null coalescing assignment operator</span>
-  </label>
-  <div className="details-body">
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.4">Typed properties</span>
 
-```php
+  <>
+    Class properties now support type declarations.
 
-// before 7.4
-if (!isset($array['key'])) {
-    $array['key'] = computeDefault();
-}
+    ```php
+    class User {
+        public int $id;
+        public string $name;
+    }
+    ```
+  </>
 
-// after
-$array['key'] ??= computeDefault();
-```
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-29" hidden />
-  <label className="summary" htmlFor="accordion-29">
-    <span className="badge" data-badge="8.0">Named arguments</span>
-  </label>
-  <div className="details-body">
 
+<DetailsCard>
+  <span className="badge badge-secondary" data-badge="7.4">Null coalescing assignment operator</span>
+  <>
+    ```php
+
+    // before 7.4
+    if (!isset($array['key'])) {
+        $array['key'] = computeDefault();
+    }
+
+    // after
+    $array['key'] ??= computeDefault();
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Named arguments</span>
+  <>
     Specify only required parameters, skipping optional ones. Arguments are order-independent and self-documented.
 
-```php
+    ```php
 
-function sub(int $a, int $b): int {
-    return $b - $a;
-}
+    function sub(int $a, int $b): int {
+        return $b - $a;
+    }
 
-sub(
-  b: 2,
-  a: 3
-);
-```
+    sub(
+      b: 2,
+      a: 3
+    );
+    ```
+    </>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-30" hidden />
-  <label className="summary" htmlFor="accordion-30">
-    <span className="badge" data-badge="8.0">Attributes</span>
-  </label>
-  <div className="details-body">
+</DetailsCard>
 
+
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Attributes</span>
+  <>
     Instead of PHPDoc annotations, you can now use structured metadata with PHP's native syntax.
 
-```php
+    ```php
 
-class PostsController
-{
-    #[Route("/api/posts/{id}", methods: ["GET"])]
-    public function get($id) { /* ... */ }
-}
+    class PostsController
+    {
+        #[Route("/api/posts/{id}", methods: ["GET"])]
+        public function get($id) { /* ... */ }
+    }
 
-```
+    ```
+    </>
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-31" hidden />
-  <label className="summary" htmlFor="accordion-31">
-    <span className="badge" data-badge="8.0">Constructor property promotion</span>
-  </label>
-  <div className="details-body">
 
-  Less boilerplate code to define and initialize properties.
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Constructor property promotion</span>
+  <>
+    Less boilerplate code to define and initialize properties.
 
-```php
+    ```php
 
-// PHP 7
-class Point {
-  public float $x;
-  public float $y;
+    // PHP 7
+    class Point {
+      public float $x;
+      public float $y;
 
-  public function __construct(
-    float $x = 0.0,
-    float $y = 0.0,
-  ) {
-    $this->x = $x;
-    $this->y = $y;
-  }
-}
+      public function __construct(
+        float $x = 0.0,
+        float $y = 0.0,
+      ) {
+        $this->x = $x;
+        $this->y = $y;
+      }
+    }
 
-// PHP 8
-class Point {
-  public function __construct(
-    public float $x = 0.0,
-    public float $y = 0.0,
-  ) {}
-}
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-32" hidden />
-  <label className="summary" htmlFor="accordion-32">
-    <span className="badge" data-badge="8.0">Union types</span>
-  </label>
-  <div className="details-body">
+    // PHP 8
+    class Point {
+      public function __construct(
+        public float $x = 0.0,
+        public float $y = 0.0,
+      ) {}
+    }
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Union types</span>
+  <>
     Instead of PHPDoc annotations for a combination of types, you can use native union type declarations that are validated at runtime.
 
-```php
+    ```php
 
-class Number {
-  public function __construct(
-    private int|float $number
-  ) {}
-}
+    class Number {
+      public function __construct(
+        private int|float $number
+      ) {}
+    }
 
-new Number('NaN'); // TypeError
+    new Number('NaN'); // TypeError
 
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-33" hidden />
-  <label className="summary" htmlFor="accordion-33">
-    <span className="badge" data-badge="8.0">Match expression</span>
-  </label>
-  <div className="details-body">
+    ```
+  </>
+</DetailsCard>
+
+
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Match expression</span>
+  <>
     The new match is similar to switch and has the following features:
 
-    1) Match is an expression, meaning its result can be stored in a variable or returned.
+    1, Match is an expression, meaning its result can be stored in a variable or returned.
 
-    2) Match branches only support single-line expressions and do not need a break; statement.
+    2. Match branches only support single-line expressions and do not need a break; statement.
 
-    3) Match does strict comparisons.
+    3. Match does strict comparisons.
 
-```php
+    ```php
 
-echo match (8.0) {
-  '8.0' => "Oh no!",
-  8.0 => "This is what I expected",
-};
-//> This is what I expected
+    echo match (8.0) {
+      '8.0' => "Oh no!",
+      8.0 => "This is what I expected",
+    };
+    //> This is what I expected
 
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-34" hidden />
-  <label className="summary" htmlFor="accordion-34">
-    <span className="badge" data-badge="8.0">Nullsafe operator</span>
-  </label>
-  <div className="details-body">
-  Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the evaluation of one element in the chain fails, the execution of the entire chain aborts and the entire chain evaluates to null.
+    ```
+  </>
+</DetailsCard>
 
-```php
 
-$country = $session?->user?->getAddress()?->country;
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Nullsafe operator</span>
+  <>
+    Instead of null check conditions, you can now use a chain of calls with the new nullsafe operator. When the evaluation of one element in the chain fails, the execution of the entire chain aborts and the entire chain evaluates to null.
 
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-35" hidden />
-  <label className="summary" htmlFor="accordion-35">
-    <span className="badge" data-badge="8.0">Just-In-Time compilation</span>
-  </label>
-  <div className="details-body">
+    ```php
 
-  PHP 8 introduces two JIT compilation engines.
-  Tracing JIT, the most promising of the two, shows about _3 times_ better performance on synthetic benchmarks and _1.5–2 times_ improvement on some specific long-running applications.
+    $country = $session?->user?->getAddress()?->country;
 
-  ![](https://php.net/images/php8/scheme.svg)
+    ```
+  </>
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-36" hidden />
-  <label className="summary" htmlFor="accordion-36">
-    <span className="badge" data-badge="8.1">Enums</span>
-  </label>
-  <div className="details-body">
 
-```php
+<DetailsCard>
+  <span className="badge" data-badge="8.0">Just-In-Time compilation</span>
+  <>
+    PHP 8 introduces two JIT compilation engines.
+    Tracing JIT, the most promising of the two, shows about _3 times_ better performance on synthetic benchmarks and _1.5–2 times_ improvement on some specific long-running applications.
 
-enum Status
-{
-    case pending;
-    case fullfilled;
-    case canceled;
+    ![](https://php.net/images/php8/scheme.svg)
+  </>
+</DetailsCard>
 
-    public function color(): string
+
+<DetailsCard>
+  <span className="badge" data-badge="8.1">Enums</span>
+  <>
+    ```php
+
+    enum Status
     {
-        return match($this)
+        case pending;
+        case fullfilled;
+        case canceled;
+
+        public function color(): string
         {
-            Status::pending => 'blue',
-            Status::fullfilled => 'green',
-            Status::canceled => 'red',
-        };
+            return match($this)
+            {
+                Status::pending => 'blue',
+                Status::fullfilled => 'green',
+                Status::canceled => 'red',
+            };
+        }
     }
-}
 
-```
+    ```
+  </>
+</DetailsCard>
 
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-37" hidden />
-  <label className="summary" htmlFor="accordion-37">
-    <span className="badge" data-badge="8.1">Readonly properties</span>
-  </label>
-  <div className="details-body">
 
-```php
+<DetailsCard>
+  <span className="badge" data-badge="8.1">Readonly properties</span>
+  <>
+    ```php
 
-class PostData
-{
-    public function __construct(
-        public readonly string $title,
-        public readonly string $author,
-        public readonly string $text,
-        public readonly DateTimeImmutable $createdAt
-    ) {}
-}
-
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-38" hidden />
-  <label className="summary" htmlFor="accordion-38">
-    <span className="badge" data-badge="8.1">New in initializers</span>
-  </label>
-  <div className="details-body">
-
-```php
-
-class StateMachine
-{
-    public function __construct(
-        private State $state = new DefaultState(),
-    ) {
+    class PostData
+    {
+        public function __construct(
+            public readonly string $title,
+            public readonly string $author,
+            public readonly string $text,
+            public readonly DateTimeImmutable $createdAt
+        ) {}
     }
-}
 
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-39" hidden />
-  <label className="summary" htmlFor="accordion-39">
-    <span className="badge" data-badge="8.1">Pure intersection types</span>
-  </label>
-  <div className="details-body">
+    ```
+  </>
+</DetailsCard>
 
-```php
 
-function generateSlug(HasTitle&HasId $post): string {
-    return strtolower($post->getTitle()) . $post->getId();
-}
+<DetailsCard>
+  <span className="badge" data-badge="8.1">New in initializers</span>
 
-```
-  </div>
-</li>
-<li className="details">
-  <input type="checkbox" id="accordion-40" hidden />
-  <label className="summary" htmlFor="accordion-40">
-    Exceptions <sup><em>new hierarchy</em></sup>
-  </label>
-  <div className="details-body">
+  ```php
 
-`Throwable` is the base interface for any object that can be thrown via a `throw` statement in PHP 7, including `Error` and `Exception`. PHP classes cannot implement the `Throwable` interface directly, and must instead extend `Exception`.
+    class StateMachine
+    {
+        public function __construct(
+            private State $state = new DefaultState(),
+        ) {
+        }
+    }
 
-<ul><li>Throwable<ul><li><code className="language-text">Exception implements Throwable</code><ul><li>LogicException<ul><li>BadFunctionCallException<ul><li>BadMethodCallException</li></ul></li><li>DomainException</li><li>InvalidArgumentException</li><li>LengthException</li><li>OutOfRangeException</li></ul></li><li>RuntimeException<ul><li>OutOfBoundsException</li><li>OverflowException</li><li>RangeException</li><li>UnderflowException</li><li>UnexpectedValueException</li></ul></li></ul></li><li><code className="language-text">Error implements Throwable</code><ul><li>AssertionError</li><li>ArithmeticError</li><li>DivisionByZeroError</li><li>ParseError</li><li>TypeError</li></ul></li></ul></li></ul>
+    ```
+</DetailsCard>
 
-```php
-try {
-    // code
-} catch (Throwable $e) {
-    // catch all possible errors
-}
-```
-  </div>
-</li>
-</ul>
+
+<DetailsCard>
+  <span className="badge" data-badge="8.1">Pure intersection types</span>
+
+
+  ```php
+
+  function generateSlug(HasTitle&HasId $post): string {
+      return strtolower($post->getTitle()) . $post->getId();
+  }
+
+  ```
+</DetailsCard>
+
+
+<DetailsCard>
+  Exceptions <sup><em>new hierarchy</em></sup>
+  <>
+    `Throwable` is the base interface for any object that can be thrown via a `throw` statement in PHP 7, including `Error` and `Exception`. PHP classes cannot implement the `Throwable` interface directly, and must instead extend `Exception`.
+
+    <ul><li>Throwable<ul><li><code className="language-text">Exception implements Throwable</code><ul><li>LogicException<ul><li>BadFunctionCallException<ul><li>BadMethodCallException</li></ul></li><li>DomainException</li><li>InvalidArgumentException</li><li>LengthException</li><li>OutOfRangeException</li></ul></li><li>RuntimeException<ul><li>OutOfBoundsException</li><li>OverflowException</li><li>RangeException</li><li>UnderflowException</li><li>UnexpectedValueException</li></ul></li></ul></li><li><code className="language-text">Error implements Throwable</code><ul><li>AssertionError</li><li>ArithmeticError</li><li>DivisionByZeroError</li><li>ParseError</li><li>TypeError</li></ul></li></ul></li></ul>
+
+    ```php
+    try {
+        // code
+    } catch (Throwable $e) {
+        // catch all possible errors
+    }
+    ```
+  </>
+</DetailsCard>
+
 
 <Level id="php-ecosystem" number="3" name="PHP ecosystem" difficulty="Hardcore." objectives="Learn composer & autoloading basics, explore ecosystem." />
 

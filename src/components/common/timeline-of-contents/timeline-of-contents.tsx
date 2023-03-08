@@ -1,5 +1,7 @@
 import React from 'react';
-import './styles.css';
+import classNames from 'classnames';
+
+import * as styles from './timeline-of-contents.module.scss';
 
 type Timeline = {
   linkTo: string;
@@ -15,27 +17,26 @@ type Props = {
 
 const TimelineOfContents: React.FC<Props> = ({
   timeline = [],
-  headerClass,
   headerTitle,
   ...rest
 }) => (
-  <div id="table-of-contents" className={`table-of-contents ${headerClass}`}>
+  <div id="table-of-contents" className={styles.wrapper}>
     {headerTitle && (
       <h2>
         <strong>{headerTitle}</strong>
       </h2>
     )}
-    <ul className="step" {...rest}>
+    <ul className={classNames(styles.step, 'timeline')} {...rest}>
       {timeline.map(({ linkTo, title, time }, index) => (
-        <li key={`timeline-item-${index}`} className="step-item">
+        <li key={`timeline-item-${index}`} className={styles.stepItem}>
           {time && (
-            <div className="step-time">
+            <div>
               <small>{time}</small>
             </div>
           )}
           <a
             href={linkTo}
-            className="step-level"
+            className={styles.stepLevel}
             dangerouslySetInnerHTML={{ __html: title }}
           />
         </li>

@@ -1,0 +1,31 @@
+.page {
+  max-width: var(--page-container);
+  margin: 0 auto;
+  padding: var(--page-offset);
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+.waving-hand {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  animation: wave 0.4s alternate infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(12deg);
+  }
+}

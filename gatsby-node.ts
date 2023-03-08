@@ -8,7 +8,10 @@ const onCreateNode: GatsbyNode['onCreateNode'] = ({
   getNode,
 }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === 'Mdx') {
+  if (
+    node.internal.type === 'Mdx' &&
+    node.internal.contentFilePath?.endsWith('index.mdx')
+  ) {
     createNodeField({
       node,
       name: 'slug',
