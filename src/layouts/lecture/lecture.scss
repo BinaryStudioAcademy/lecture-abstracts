@@ -33,17 +33,6 @@
   margin-top: 15px;
 }
 
-/* Navbar */
-.navbar .logo {
-  display: block;
-  height: 2em;
-}
-
-.navbar .home {
-  color: inherit;
-  text-decoration: none;
-}
-
 /* Elements */
 .content hr {
   height: 2px;
@@ -58,14 +47,14 @@
 }
 
 .content ul.collapsible .accordion .accordion-header {
-  margin-left: -1.25rem;
+  margin-left: -25px;
   padding: 0;
   cursor: pointer;
 }
 
 .content ul.collapsible .accordion .accordion-header .icon {
   display: inline-block;
-  width: 1.25rem;
+  width: 25px;
   text-align: center;
 }
 
@@ -73,32 +62,21 @@
   margin-bottom: 0;
 }
 
-/* Profile */
-.content .profile .name {
-  margin-bottom: 0;
-  font-size: 1.4em;
-  line-height: 1.5em;
-}
-
-.content .profile .about {
-  margin: 0;
-}
-
 /* Speech bubble */
 .content .bubble {
   position: relative;
   display: inline-block;
   margin-top: 0;
-  padding: 0.4em 0.8em;
+  padding: 7px 13px;
   overflow: visible;
   color: white;
   background: linear-gradient(to right, #0084ff, #00c4ff);
-  border-radius: 0.25em 1em 1em;
+  border-radius: 4px 16px 16px;
   transition: opacity 0.2s ease-in-out;
 }
 
 .content .bubble.small {
-  font-size: 0.85em;
+  font-size: 14px;
 }
 
 .content .bubble.subtle {
@@ -114,37 +92,38 @@
 }
 
 .content p + div > .bubble:first-child {
-  margin-top: -0.25rem;
+  margin-top: -5px;
 }
 
 .content .bubble + p,
 .content .bubble + div {
-  margin-top: 0.25rem;
+  margin-top: 5px;
 }
 
 /* Messages */
-.content .messages .messages__from:not(:first-of-type) {
-  margin-left: 0.5em;
-}
 
-.content .messages .messages__from {
+.content .messages .messages-from {
   vertical-align: text-top;
   cursor: pointer;
   opacity: 0.5;
   transition: all 0.2s linear;
 }
 
-.content .messages .messages__from + label {
-  padding-left: 0.25em;
+.content .messages .messages-from:not(:first-of-type) {
+  margin-left: 8px;
+}
+
+.content .messages .messages-from + label {
+  padding-left: 4px;
   cursor: pointer;
   opacity: 0.5;
   transition: all 0.2s linear;
 }
 
-.content .messages .messages__from:hover,
-.content .messages .messages__from:hover + label,
-.content .messages .messages__from:checked,
-.content .messages .messages__from:checked + label {
+.content .messages .messages-from:hover,
+.content .messages .messages-from:hover + label,
+.content .messages .messages-from:checked,
+.content .messages .messages-from:checked + label {
   opacity: 1;
 }
 
@@ -178,16 +157,11 @@
 }
 
 .content .messages .message {
-  margin-top: 0.5em;
+  margin-top: 8px;
 }
 
 .content .messages input + label ~ .message {
   display: none;
-}
-
-/* Columns */
-.column {
-  padding: 0.4rem;
 }
 
 // Image :
@@ -195,15 +169,9 @@
   max-width: 100%;
 }
 
-/* Accordions */
-.accordion input:checked ~ .accordion-body,
-.accordion[open] .accordion-body {
-  max-height: 100rem;
-}
-
 /* Gatsby overrides */
 .content .gatsby-highlight {
-  margin: 0.25rem 0;
+  margin: 5px 0;
 }
 
 .content .gatsby-highlight:first-child {

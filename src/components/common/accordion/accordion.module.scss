@@ -1,9 +1,10 @@
 .accordion {
-  margin-bottom: 0.25em;
-  padding: 0.5em;
+  margin-bottom: 4px;
+  padding: 8px;
   background: var(--gray-50);
-  border-radius: 0.5em;
+  border-radius: 8px;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -12,21 +13,19 @@
   opacity: 0.5;
   transition: all 0.2s linear;
 }
+
 .content {
   max-height: 0;
   margin-bottom: 6px;
-  overflow: hidden;
-  transition: max-height 0.25s;
   margin-bottom: 0;
+  overflow: hidden;
   background: white;
-  border-radius: 0.5em;
+  border-radius: 8px;
+  transition: max-height 0.25s;
 }
 
-// Remove default details marker in Webkit
-summary.header {
-  &::-webkit-details-marker {
-    display: none;
-  }
+summary.header::-webkit-details-marker {
+  display: none;
 }
 
 .header:hover,
@@ -35,7 +34,7 @@ summary.header {
 }
 
 .accordion[open] .header {
-  margin-bottom: 0.5em;
+  margin-bottom: 8px;
 }
 
 .accordion[open] .content {
@@ -48,5 +47,5 @@ summary.header {
 
 .accordion :global(.title) {
   flex: 1 1 auto;
-  padding: 0 0.25em;
+  padding: 0 4px;
 }

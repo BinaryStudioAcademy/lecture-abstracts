@@ -1,14 +1,14 @@
 .content blockquote {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
   margin-left: 0;
-  padding: 0 0.75rem;
-  border-left: 0.1rem solid #dadee4;
+  padding: 0 15px;
+  border-left: 2px solid #dadee4;
 }
 
 .content pre {
-  margin: 0.25rem 0;
-  padding: 0.5em;
+  margin: 5px 0;
+  padding: 10px;
 }
 
 .content pre:first-child {
@@ -31,10 +31,10 @@
 }
 
 .content :not(pre) > code {
-  padding: 0.1rem 0.2rem;
+  padding: 2px 4px;
   color: #d73e48;
   font-size: 85%;
   line-height: 1.25;
   background: #fcf2f2;
-  border-radius: 0.1rem;
+  border-radius: 2px;
 }

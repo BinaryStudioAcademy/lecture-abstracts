@@ -1,21 +1,28 @@
 .content ol,
 .content ul {
-  margin: 0.25rem 0 0.5rem;
+  margin: 5px 0 10px;
   padding: 0;
+  padding-left: 25px;
+  list-style: none outside none;
 }
 
 .content ol {
   list-style: outside decimal;
+  counter-reset: ol-counter;
 }
 
 .content ul {
   list-style: outside disc;
 }
 
+.content li {
+  list-style: none outside none;
+}
+
 .content ol li,
 .content ul li {
   margin-top: 0;
-  margin-bottom: 0.25rem;
+  margin-bottom: 5px;
 }
 
 .content ol li:last-child,
@@ -31,32 +38,18 @@
 }
 
 .content p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 5px;
 }
 
 .content p:last-child {
   margin-bottom: 0;
 }
 
-.content ul,
-.content ol {
-  padding-left: 1.5em;
-  list-style: none outside none;
-}
-
-.content ol {
-  counter-reset: ol-counter;
-}
-
-.content li {
-  list-style: none outside none;
-}
-
 ul:not(.timeline) li::before {
   float: left;
-  width: 1.5em;
-  margin-left: -1.5em;
-  font-family: Arial;
+  width: 25px;
+  margin-left: -25px;
+  font-family: Arial, sans-serif;
   text-align: center;
   content: '●';
 }
@@ -66,17 +59,17 @@ ul:not(.timeline) li::before {
   justify-content: center;
   align-items: center;
   float: left;
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-top: calc((0.8rem * 1.5 - 1rem) / 2 + 0.05rem);
-  margin-left: calc(-1.5rem + 0.5rem / 2);
+  width: 18px;
+  height: 18px;
+  margin-top: calc((16px * 1.5 - 20px) / 2 + 1px);
+  margin-left: calc(-30px + 10px / 2);
   color: inherit;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 14px;
   font-family: inherit;
-  line-height: 1rem;
+  line-height: 20px;
   background: transparent;
-  border-radius: 0.25em;
+  border-radius: 4px;
   counter-increment: ol-counter;
   content: counter(ol-counter);
 }

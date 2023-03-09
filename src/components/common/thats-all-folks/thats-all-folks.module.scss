@@ -1,13 +1,15 @@
 .thats-all-folks {
-  margin-top: 2rem;
+  margin-top: 40px;
   font-weight: 400;
 }
+
 .thats-all-folks span {
   display: inline-block;
   cursor: default;
-  transition: all 0.2s linear;
   transform-origin: 0 50%;
+  transition: all 0.2s linear;
 }
+
 .thats-all-folks span:hover {
   transform: scale(1.2);
 }

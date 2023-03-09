@@ -1,9 +1,9 @@
 .author {
   display: flex;
-  padding: 1em;
+  padding: 14px;
   font-size: 14px;
   background: whitesmoke;
-  border-radius: 0.5em;
+  border-radius: 7px;
 }
 
 .contacts {
@@ -13,7 +13,7 @@
   margin-bottom: 0;
   margin-left: 0;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 12px;
   white-space: nowrap;
   list-style: none outside none;
 }
@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   margin-top: 0;
-  margin-right: 1em;
+  margin-right: 12px;
   margin-bottom: 0;
 }
 
@@ -47,17 +47,13 @@
 .bubble {
   position: relative;
   display: inline-block;
-  margin: -0.5em 1em 1em;
-  padding: 0.4em 0.8em;
+  margin: -8px 16px 16px;
+  padding: 7px 13px;
   overflow: visible;
   color: var(--white);
   background: linear-gradient(to right, var(--blue-200), var(--blue-100));
-  border-radius: 0.25em 1em 1em;
+  border-radius: 4px 16px 16px;
   transition: opacity 0.2s ease-in-out;
-}
-
-.bubble.small {
-  font-size: 0.85em;
 }
 
 .bubble.subtle {
@@ -69,19 +65,19 @@
 }
 
 .bubble:first-child {
-  margin-top: -0.25rem;
+  margin-top: -5px;
 }
 
 .bubble + p,
 .bubble + div {
-  margin-top: 0.25rem;
+  margin-top: 5px;
 }
 
 .name {
   margin-bottom: 0;
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.5em;
+  line-height: 30px;
 }
 
 .about {
@@ -108,17 +104,15 @@
 .contacts a .icon {
   width: auto;
   height: 16px;
-  margin-right: 0.25em;
+  margin-right: 4px;
   vertical-align: bottom;
   fill: currentcolor;
 }
 
-.intro-wrapper {
-  ol {
-    margin: 3px 0;
-    padding-left: 24px;
-    counter-reset: ol-counter;
-  }
+.intro-wrapper ol {
+  margin: 3px 0;
+  padding-left: 24px;
+  counter-reset: ol-counter;
 }
 
 .bubble .bubble-list-item {
@@ -131,15 +125,15 @@
   justify-content: center;
   align-items: center;
   float: left;
-  width: 0.9rem;
-  height: 0.9rem;
-  margin-top: 0.15rem;
-  margin-left: -1.25rem;
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  margin-left: -25px;
   color: var(--blue-200);
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 12px;
   font-family: inherit;
-  line-height: 1rem;
+  line-height: 20px;
   background: var(--white);
   border-radius: 100%;
   counter-increment: ol-counter;

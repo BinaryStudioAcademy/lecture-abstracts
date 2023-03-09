@@ -1,35 +1,31 @@
-// Layout
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding-right: 6px;
   padding-left: 6px;
-
-  $grid-spacing: 20px;
-
-  &.grid-xl {
-    max-width: $grid-spacing * 2 + 1280px;
-  }
-
-  &.grid-lg {
-    max-width: $grid-spacing * 2 + 960px;
-  }
-
-  &.grid-md {
-    max-width: $grid-spacing * 2 + 840px;
-  }
-
-  &.grid-sm {
-    max-width: $grid-spacing * 2 + 600px;
-  }
-
-  &.grid-xs {
-    max-width: $grid-spacing * 2 + 480px;
-  }
 }
 
-// Responsive breakpoint system
+.container.grid-xl {
+  max-width: 1320px;
+}
+
+.container.grid-lg {
+  max-width: 1000px;
+}
+
+.container.grid-md {
+  max-width: 880px;
+}
+
+.container.grid-sm {
+  max-width: 640px;
+}
+
+.container.grid-xs {
+  max-width: 520px;
+}
+
 .show-xs,
 .show-sm,
 .show-md,
@@ -38,52 +34,66 @@
   display: none !important;
 }
 
-// Responsive grid system
 .cols,
 .columns {
   display: flex;
   flex-wrap: wrap;
   margin-right: -6px;
   margin-left: -6px;
+}
 
-  &.col-gapless {
-    margin-right: 0;
-    margin-left: 0;
+.cols.col-gapless,
+.columns.col-gapless {
+  margin-right: 0;
+  margin-left: 0;
+}
 
-    & > .column {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  &.col-oneline {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
+.cols.col-oneline,
+.columns.col-oneline {
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 [class~='col-'],
 .column {
   flex: 1;
   max-width: 100%;
-  padding-right: 6px;
-  padding-left: 6px;
+  padding: 8px;
+}
 
-  &.col-12,
-  &.col-11,
-  &.col-10,
-  &.col-9,
-  &.col-8,
-  &.col-7,
-  &.col-6,
-  &.col-5,
-  &.col-4,
-  &.col-3,
-  &.col-2,
-  &.col-1,
-  &.col-auto {
-    flex: none;
-  }
+[class~='col-'].col-12,
+.column.col-12,
+[class~='col-'].col-11,
+.column.col-11,
+[class~='col-'].col-10,
+.column.col-10,
+[class~='col-'].col-9,
+.column.col-9,
+[class~='col-'].col-8,
+.column.col-8,
+[class~='col-'].col-7,
+.column.col-7,
+[class~='col-'].col-6,
+.column.col-6,
+[class~='col-'].col-5,
+.column.col-5,
+[class~='col-'].col-4,
+.column.col-4,
+[class~='col-'].col-3,
+.column.col-3,
+[class~='col-'].col-2,
+.column.col-2,
+[class~='col-'].col-1,
+.column.col-1,
+[class~='col-'].col-auto,
+.column.col-auto {
+  flex: none;
+}
+
+.cols.col-gapless > .column,
+.columns.col-gapless > .column {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .col-12 {

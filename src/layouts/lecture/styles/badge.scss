@@ -1,47 +1,39 @@
 .badge {
   position: relative;
   white-space: nowrap;
-
-  &[data-badge],
-  &:not([data-badge]) {
-    &::after {
-      display: inline-block;
-      color: var(--white);
-      background: var(--blue-500);
-      background-clip: padding-box;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 0 0.1rem var(--white);
-      transform: translate(-0.05rem, -0.5rem);
-      content: attr(data-badge);
-    }
-  }
-
-  &[data-badge] {
-    &::after {
-      min-width: 0.9rem;
-      height: 0.9rem;
-      padding: 0.1rem 0.2rem;
-      font-size: 14px;
-      line-height: 1;
-      white-space: nowrap;
-      text-align: center;
-    }
-  }
-
-  &:not([data-badge]),
-  &[data-badge=''] {
-    &::after {
-      width: 6px;
-      min-width: 6px;
-      height: 6px;
-      padding: 0;
-    }
-  }
 }
 
-.badge:is(.badge-secondary) {
-  &::after {
-    color: #727271;
-    background-color: #eaeae1;
-  }
+.badge[data-badge]::after,
+.badge:not([data-badge])::after {
+  display: inline-block;
+  color: var(--white);
+  background: var(--blue-500);
+  background-clip: padding-box;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px var(--white);
+  transform: translate(-1px, -10px);
+  content: attr(data-badge);
+}
+
+.badge[data-badge]::after {
+  min-width: 18px;
+  height: 18px;
+  padding: 2px 4px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.badge:not([data-badge])::after,
+.badge[data-badge='']::after {
+  width: 6px;
+  min-width: 6px;
+  height: 6px;
+  padding: 0;
+}
+
+.badge:is(.badge-secondary)::after {
+  color: #727271;
+  background-color: #eaeae1;
 }

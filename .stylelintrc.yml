@@ -9,7 +9,7 @@ plugins:
 rules:
   color-hex-length: long
   declaration-empty-line-before: never
-  max-nesting-depth: 1
+  max-nesting-depth: 0
   no-descending-specificity: true
   number-max-precision: 2
   rule-empty-line-before:
@@ -17,6 +17,9 @@ rules:
     - except: first-nested
       ignore: after-comment
   string-quotes: single
+  unit-disallowed-list:
+    - em
+    - rem
   selector-pseudo-class-no-unknown:
   - true
   - ignorePseudoClasses:

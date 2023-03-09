@@ -1,61 +1,61 @@
 .wrapper {
   margin-top: 16px;
+}
 
-  .step {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    list-style: none outside none;
-  }
+.wrapper .step {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style: none outside none;
+}
 
-  .step-item {
-    position: relative;
-    flex: 1 1;
-    min-height: 1rem;
-    margin-top: 0;
-    text-align: left;
-  }
+.wrapper .step-item {
+  position: relative;
+  flex: 1 1;
+  min-height: 20px;
+  margin-top: 0;
+  text-align: left;
+}
 
-  .step-item::before {
-    position: absolute;
-    top: 9px;
-    left: 10px;
-    width: 100%;
-    height: 2px;
-    background: #5755d9;
-    content: '';
-  }
+.wrapper .step-item::before {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  width: 100%;
+  height: 2px;
+  background: var(--blue-500);
+  content: '';
+}
 
-  .step-item:last-child::before {
-    width: calc(100% - 20px);
-  }
+.wrapper .step-item:last-child::before {
+  width: calc(100% - 20px);
+}
 
-  .step-level {
-    display: inline-block;
-    padding: 20px 10px 0;
-    color: #5755d9;
-    text-decoration: none;
-  }
+.wrapper .step-level {
+  display: inline-block;
+  padding: 20px 10px 0;
+  color: var(--blue-500);
+  text-decoration: none;
+}
 
-  .step-level::before {
-    position: absolute;
-    top: 0.2rem;
-    left: auto;
-    z-index: 1;
-    display: block;
-    width: 0.6rem;
-    height: 0.6rem;
-    background: #5755d9;
-    border: 0.1rem solid #ffffff;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    content: '';
-  }
+.wrapper .step-level::before {
+  position: absolute;
+  top: 4px;
+  left: auto;
+  z-index: 1;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: var(--blue-500);
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  content: '';
+}
 
-  .step-level:hover {
-    text-decoration: underline;
-  }
+.wrapper .step-level:hover {
+  text-decoration: underline;
 }
