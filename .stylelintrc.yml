@@ -17,6 +17,9 @@ rules:
     - except: first-nested
       ignore: after-comment
   string-quotes: single
+  unit-disallowed-list:
+    - em
+    - rem
   selector-pseudo-class-no-unknown:
   - true
   - ignorePseudoClasses:
