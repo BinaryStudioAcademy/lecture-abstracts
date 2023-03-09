@@ -113,12 +113,10 @@
   fill: currentcolor;
 }
 
-.intro-wrapper {
-  ol {
-    margin: 3px 0;
-    padding-left: 24px;
-    counter-reset: ol-counter;
-  }
+.intro-wrapper ol {
+  margin: 3px 0;
+  padding-left: 24px;
+  counter-reset: ol-counter;
 }
 
 .bubble .bubble-list-item {

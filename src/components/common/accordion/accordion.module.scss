@@ -4,6 +4,7 @@
   background: var(--gray-50);
   border-radius: 0.5em;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -12,21 +13,20 @@
   opacity: 0.5;
   transition: all 0.2s linear;
 }
+
 .content {
   max-height: 0;
   margin-bottom: 6px;
-  overflow: hidden;
-  transition: max-height 0.25s;
   margin-bottom: 0;
+  overflow: hidden;
   background: white;
   border-radius: 0.5em;
+  transition: max-height 0.25s;
 }
 
 // Remove default details marker in Webkit
-summary.header {
-  &::-webkit-details-marker {
-    display: none;
-  }
+summary.header::-webkit-details-marker {
+  display: none;
 }
 
 .header:hover,

@@ -2,23 +2,29 @@
   margin-top: 2em;
   margin-bottom: 1em;
 }
+
 .info {
   display: flex;
 }
+
 .number {
   flex: 1 0 auto;
 }
+
 .name {
-  font-weight: bold;
   margin-bottom: 0;
+  font-weight: bold;
 }
+
 .meta {
   display: inline-block;
 }
+
 .back-to-top {
   display: inline-flex;
   align-items: center;
 }
+
 .back-to-top > svg {
   height: 1em;
   margin-right: 0.25em;
