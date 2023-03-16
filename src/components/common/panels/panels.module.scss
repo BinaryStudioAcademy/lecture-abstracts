@@ -10,7 +10,7 @@
 
 .wrapper {
   display: grid;
-  gap: 1em;
+  gap: 16px;
   padding-block: 8px;
   margin-bottom: 10px;
 }
@@ -45,12 +45,13 @@
 }
 
 .body:last-child {
-  padding: 0 16px 20px 16px;
+  padding: 0 16px 20px;
 }
 
 .small {
   font-size: 14px;
 }
+
 .body img {
   max-width: 100%;
 }

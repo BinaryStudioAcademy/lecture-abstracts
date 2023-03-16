@@ -74,11 +74,11 @@ const Page: React.FC = () => {
           { name: 'Yuriy Stetsula', avatarUrl: yuriyStetsulaAvatar },
         ]}
       >
-        <div className="message__scene">
+        <div className="message-scene">
           <em>(stares intently at you, his headband fluttering in the wind)</em>
         </div>
         <p>To live is to fight, and to fight is to live.</p>
-        <div className="message__scene">
+        <div className="message-scene">
           <em>(clenches his fist)</em>
         </div>
         <p>
@@ -86,7 +86,7 @@ const Page: React.FC = () => {
           skills, and learning the true essence of what it means to be an
           honorable warrior. But now my greatest challenge lies before me.
         </p>
-        <div className="message__scene">
+        <div className="message-scene">
           <em>
             (raising his hand into the air, Ryu’s hand is engulfed in flame, and
             he brings it cr-r-r-r-rashing down to the ground, splitting the
@@ -103,7 +103,7 @@ const Page: React.FC = () => {
           question his wisdom. I am sure, in time, the “fanbase” I will acquire
           through this game will bring me great strength in the battles to come.
         </p>
-        <div className="message__scene">
+        <div className="message-scene">
           <em>(Ryu once again turns his gaze upon you)</em>
         </div>
         <p>
@@ -112,7 +112,7 @@ const Page: React.FC = () => {
           restore your family honor, or… whatever. We’ll work out contract
           details later.
         </p>
-        <div className="message__scene">
+        <div className="message-scene">
           <em>(Ryu turns his back and begins to walk away)</em>
         </div>
         <p>

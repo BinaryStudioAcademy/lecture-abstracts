@@ -1,28 +1,31 @@
 .message {
+  margin: 8px 0;
+  padding: 8px;
   overflow: hidden;
-  margin: 0.5em 0;
   background: whitesmoke;
-  padding: 0.5em;
   border-radius: 10px;
   transition: all 0.2s linear;
 }
+
 .message:hover {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background: white;
+  box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
 }
+
 .message img {
   display: block;
 }
 
 .avatar {
-  border-radius: 5px;
-  height: 32px;
   width: 32px;
+  height: 32px;
+  border-radius: 5px;
 }
+
 .avatar-big {
   float: left;
-  height: 64px;
   width: 64px;
+  height: 64px;
 }
 
 .content {
@@ -30,9 +33,10 @@
 }
 
 .author {
-  font-weight: bold;
   margin-right: 8px;
+  font-weight: bold;
 }
+
 .timestamp {
   color: lightgrey;
 }
@@ -48,87 +52,95 @@
 
 .reaction {
   margin-right: 3px;
-  font-size: 14px;
   padding: 0 4px;
+  color: dimgrey;
+  font-size: 14px;
+  background: white;
   border: 1px solid lightgray;
   border-radius: 4px;
-  background: white;
-  color: dimgrey;
-  appearance: none;
-  -webkit-appearance: none;
   outline: none;
   cursor: pointer;
   transition: all 0.2s linear;
+  appearance: none;
 }
-.reaction:before {
+
+.reaction::before {
   content: attr(data-before);
 }
-.reaction:after {
+
+.reaction::after {
   content: attr(data-after);
 }
+
 .reaction:hover {
-  border: 1px solid grey;
   background: whitesmoke;
+  border: 1px solid grey;
 }
+
 .reaction:checked {
-  border: 1px solid #1d9bd1;
-  background: #e8f5fa;
   color: #1264a3;
+  background: #e8f5fa;
+  border: 1px solid #1d9bd1;
 }
-.reaction:checked:after {
+
+.reaction:checked::after {
   content: attr(data-after-checked);
 }
+
 .replies {
-  padding: 4px;
-  border-radius: 5px;
-  border: 1px solid lightgrey;
-  overflow: visible;
-  background: white;
   display: flex;
   flex-wrap: wrap;
+  padding: 4px;
+  overflow: visible;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }
 
 .reply {
-  border-radius: 5px;
-  margin-right: 4px;
   position: relative;
+  margin-right: 4px;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .reply-meta {
   display: flex;
   flex: 1 1 auto;
   align-items: center;
-  font-size: 0.9em;
+  font-size: 14px;
 }
+
 .reply-count {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  width: 100%;
+  height: 100%;
   color: white;
   font-weight: bold;
+  background: rgb(0 0 0 / 50%);
 }
 
 .reply-total {
-  margin-right: 1em;
+  margin-right: 14px;
   font-weight: bold;
 }
+
 .reply-last {
   color: grey;
 }
 
-.text :global(.message__scene) {
+.text :global(.message-scene) {
+  font-size: 14px;
   line-height: 1.25;
   opacity: 0.5;
-  font-size: 14px;
   transition: all 0.2s linear;
 }
-.text :global(.message__scene:hover) {
+
+.text :global(.message-scene:hover) {
   opacity: 1;
 }
