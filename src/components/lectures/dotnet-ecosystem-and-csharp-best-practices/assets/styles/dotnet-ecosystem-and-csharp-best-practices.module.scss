@@ -1,0 +1,40 @@
+.grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: grid;
+  gap: 1em;
+  padding-block: 8px;
+  margin-bottom: 10px;
+}
+
+.orange-text {
+  color: #ff5349;
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-left: 4px;
+}
+
+.tooltip-crossed {
+  text-decoration: line-through;
+  opacity: 0.75;
+  margin-right: 4px;
+}
+
+.centered {
+  text-align: center;
+}
+.top-image {
+  margin-bottom: 15px;
+}
+
+.bottom-image {
+  margin-top: 15px;
+}

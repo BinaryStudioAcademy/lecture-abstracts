@@ -21,9 +21,9 @@ rules:
     - em
     - rem
   selector-pseudo-class-no-unknown:
-  - true
-  - ignorePseudoClasses:
-    - global
+    - true
+    - ignorePseudoClasses:
+        - global
   order/order:
     - custom-properties
     - declarations

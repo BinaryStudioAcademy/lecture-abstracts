@@ -8,7 +8,7 @@ import { feedbackStarters } from './data/feedback-starters';
 import { ChartDatasets } from '~/types';
 import 'chartjs-plugin-dragdata';
 
-import './radar-chart.css';
+import * as styles from './radar-chart.module.scss';
 
 type Props = {
   labels: string[];
@@ -63,27 +63,27 @@ const RadarChart: React.FC<Props> = ({ labels, datasets }) => {
     }
   }, [chartData]);
   return (
-    <div className="radar-chart">
+    <div className={styles.radarChart}>
       <canvas ref={chartElement} />
       {!areMyGradesDefault && (
-        <button className="reset-grades" onClick={resetMyGrades}>
-          <FontAwesomeIcon icon={faUndo} className="icon" /> Reset
+        <button className={styles.resetGrades} onClick={resetMyGrades}>
+          <FontAwesomeIcon icon={faUndo} className={styles.icon} /> Reset
         </button>
       )}
       <button
-        className="grades-by-categories"
+        className={styles.gradesByCategories}
         onClick={(): void => copyGradesByCategories(myGrades)}
       >
-        <FontAwesomeIcon icon={faCopy} className="icon" />
+        <FontAwesomeIcon icon={faCopy} className={styles.icon} />
       </button>
       <button
-        className="final-grade"
+        className={styles.finalGrade}
         onClick={(): void =>
           copyFinalGrade(String(roundToTwoDecimals(myGradesAverage)))
         }
       >
         {roundToTwoDecimals(myGradesAverage)}
-        <FontAwesomeIcon icon={faCopy} className="icon" />
+        <FontAwesomeIcon icon={faCopy} className={styles.copy} />
       </button>
     </div>
   );

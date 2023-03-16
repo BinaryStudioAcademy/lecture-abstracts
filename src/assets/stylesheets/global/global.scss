@@ -26,7 +26,7 @@ body {
   font-size: 16px;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', sans-serif;
-  background: #ffffff;
+  background: var(--white);
   text-rendering: optimizelegibility;
 }
 
@@ -72,4 +72,20 @@ h6 {
 
 a:hover {
   text-decoration: underline;
+}
+
+.text-gray {
+  color: var(--gray-200);
+}
+
+blockquote {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0;
+  padding: 0 15px;
+  border-left: 3px solid var(--gray-200);
+}
+
+img {
+  max-width: 100%;
 }

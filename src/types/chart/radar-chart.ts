@@ -1,3 +1,5 @@
+import { ChartColor, Scriptable } from 'chart.js';
+
 type ChartDatasets = {
   label: string;
   data: number[];
@@ -5,7 +7,7 @@ type ChartDatasets = {
   borderColor: string;
   backgroundColor: string;
   pointBorderColor?: string;
-  pointBackgroundColor?: (context: unknown) => string;
+  pointBackgroundColor?: ChartColor | ChartColor[] | Scriptable<ChartColor>;
   pointHoverBorderColor?: string;
   pointRadius: number;
   pointHoverRadius: number;

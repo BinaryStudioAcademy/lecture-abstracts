@@ -1,0 +1,134 @@
+.message {
+  overflow: hidden;
+  margin: 0.5em 0;
+  background: whitesmoke;
+  padding: 0.5em;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+.message:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: white;
+}
+.message img {
+  display: block;
+}
+
+.avatar {
+  border-radius: 5px;
+  height: 32px;
+  width: 32px;
+}
+.avatar-big {
+  float: left;
+  height: 64px;
+  width: 64px;
+}
+
+.content {
+  margin-left: 72px;
+}
+
+.author {
+  font-weight: bold;
+  margin-right: 8px;
+}
+.timestamp {
+  color: lightgrey;
+}
+
+.text p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.reactions {
+  display: flex;
+  margin: 4px 0;
+}
+
+.reaction {
+  margin-right: 3px;
+  font-size: 14px;
+  padding: 0 4px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background: white;
+  color: dimgrey;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.reaction:before {
+  content: attr(data-before);
+}
+.reaction:after {
+  content: attr(data-after);
+}
+.reaction:hover {
+  border: 1px solid grey;
+  background: whitesmoke;
+}
+.reaction:checked {
+  border: 1px solid #1d9bd1;
+  background: #e8f5fa;
+  color: #1264a3;
+}
+.reaction:checked:after {
+  content: attr(data-after-checked);
+}
+.replies {
+  padding: 4px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  overflow: visible;
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reply {
+  border-radius: 5px;
+  margin-right: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reply-meta {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  font-size: 0.9em;
+}
+.reply-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.reply-total {
+  margin-right: 1em;
+  font-weight: bold;
+}
+.reply-last {
+  color: grey;
+}
+
+.text :global(.message__scene) {
+  line-height: 1.25;
+  opacity: 0.5;
+  font-size: 14px;
+  transition: all 0.2s linear;
+}
+.text :global(.message__scene:hover) {
+  opacity: 1;
+}

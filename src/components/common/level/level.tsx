@@ -1,28 +1,15 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowUp } from '@fortawesome/pro-regular-svg-icons';
+import { LevelProps as Props } from '~/types/components/level/level';
 import * as styles from './level.module.scss';
-
-type Labels = {
-  level: string;
-  difficulty: string;
-  objectives: string;
-  backToTop: string;
-};
-
-type Props = {
-  number: string;
-  name: string;
-  difficulty: string;
-  objectives: string;
-  labels?: Labels;
-};
 
 const Level: React.FC<Props> = ({
   number = '',
   name = '',
   difficulty = '',
   objectives = '',
+  id = '',
   labels,
   ...rest
 }) => {
@@ -32,7 +19,7 @@ const Level: React.FC<Props> = ({
   const backToTopLabel = labels?.backToTop || 'back to top';
 
   return (
-    <div className={styles.level} {...rest}>
+    <div className={styles.level} id={id} {...rest}>
       <small className={styles.info}>
         <em className={styles.number}>
           {levelLabel} {number}

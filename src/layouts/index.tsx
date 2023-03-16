@@ -1,2 +1,1 @@
-export { Lecture } from './lecture/lecture';
-export { Page } from './page/page';
+export { Layout } from './layout/layout';

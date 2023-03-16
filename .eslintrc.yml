@@ -15,13 +15,12 @@ extends:
 
 overrides:
   - files:
-    - gatsby-config.ts
-    - index.d.ts
-    - src/pages/**
-    - src/templates/**
+      - gatsby-config.ts
+      - index.d.ts
+      - src/pages/**
     rules:
       import/no-default-export:
-      - off
+        - off
 
 rules:
   no-multiple-empty-lines:

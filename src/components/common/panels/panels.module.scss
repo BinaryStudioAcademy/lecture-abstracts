@@ -1,0 +1,56 @@
+@mixin generate-orders($max-index) {
+  @for $i from 0 to $max-index {
+    [data-columns='#{$i}'] {
+      grid-template-columns: repeat($i, minmax(0, 1fr));
+    }
+  }
+}
+
+@include generate-orders(4);
+
+.wrapper {
+  display: grid;
+  gap: 1em;
+  padding-block: 8px;
+  margin-bottom: 10px;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dadee4;
+  border-radius: 2px;
+}
+
+.head,
+.footer {
+  flex: 0 0 auto;
+  padding: 16px;
+}
+
+.head h6 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.panel .panel-nav {
+  flex: 0 0 auto;
+}
+
+.body {
+  flex: 1 1 auto;
+  padding: 0 12px;
+  overflow-y: auto;
+}
+
+.body:last-child {
+  padding: 0 16px 20px 16px;
+}
+
+.small {
+  font-size: 14px;
+}
+.body img {
+  max-width: 100%;
+}
