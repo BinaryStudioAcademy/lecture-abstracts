@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import * as styles from './panels.module.scss';
-// test ci
 
 type Panel = {
   head: string;
