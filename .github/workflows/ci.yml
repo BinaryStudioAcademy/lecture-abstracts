@@ -1,6 +1,10 @@
 name: Continuous Integration
 
 on:
+  push:
+    branches:
+      - test/LA-ci
+
   pull_request:
     branches:
       - development
@@ -19,6 +23,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
+
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hasFiles('**/package-lock.json') }}
 
       - name: Install Dependencies
         run: |
