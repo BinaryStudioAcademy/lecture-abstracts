@@ -4,12 +4,10 @@ import { siteMetadata } from './meta/default-meta';
 
 type Props = {
   pageContext?: SeoProps;
+  children?: React.ReactNode;
 };
 
-const SEO: React.FC<React.PropsWithChildren<Props>> = ({
-  pageContext,
-  children,
-}) => {
+const SEO: React.FC<Props> = ({ pageContext, children }) => {
   const {
     description: defaultDescription,
     title: defaultTitle,

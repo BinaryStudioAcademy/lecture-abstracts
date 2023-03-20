@@ -19,19 +19,18 @@ const Panels: React.FC<Props> = ({
 }) => {
   return (
     <div className={styles.wrapper} data-columns={columns}>
-      {panels &&
-        panels.map(({ body, head }, index) => (
-          <div key={index} className={styles.panel}>
-            <div
-              className={styles.head}
-              dangerouslySetInnerHTML={{ __html: head }}
-            />
-            <div
-              className={classNames(styles.body, styles[bodySize])}
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
-          </div>
-        ))}
+      {panels.map(({ body, head }, index) => (
+        <div key={index} className={styles.panel}>
+          <div
+            className={styles.head}
+            dangerouslySetInnerHTML={{ __html: head }}
+          />
+          <div
+            className={classNames(styles.body, styles[bodySize])}
+            dangerouslySetInnerHTML={{ __html: body }}
+          />
+        </div>
+      ))}
     </div>
   );
 };

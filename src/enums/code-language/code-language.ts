@@ -3,7 +3,6 @@ enum CodeLanguage {
   JSON = 'json',
   TEXT = 'text',
   CSHARP = 'csharp',
-  JAVA = 'java',
   JSX = 'jsx',
   HTML = 'markup',
   CSS = 'css',

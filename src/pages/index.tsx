@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { PageProps } from 'gatsby';
-import { MainPage } from '~/components/main-page/main-page';
+import { MainPage as Page } from '~/components/main-page/main-page';
 import { SEO } from '~/partials';
 
-const Homepage: React.FC<PageProps> = () => <MainPage />;
+const MainPage: React.FC<PageProps> = () => <Page />;
 
-export default Homepage;
+export default MainPage;
 export { SEO as Head };

@@ -15,9 +15,9 @@ extends:
 
 overrides:
   - files:
-      - gatsby-config.ts
-      - index.d.ts
-      - src/pages/**
+    - gatsby-config.ts
+    - index.d.ts
+    - src/pages/**
     rules:
       import/no-default-export:
         - off

@@ -4,11 +4,9 @@ import classNames from 'classnames';
 
 type Props = {
   size?: 'small' | 'regular';
+  children: React.ReactNode;
 };
-const Bubble: React.FC<React.PropsWithChildren<Props>> = ({
-  children,
-  size = 'regular',
-}) => {
+const Bubble: React.FC<Props> = ({ children, size = 'regular' }) => {
   const classes = classNames(styles.bubble, styles[size]);
   return <div className={classes}>{children}</div>;
 };

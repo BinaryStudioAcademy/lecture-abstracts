@@ -1,9 +1,13 @@
-import React, { PropsWithChildren } from 'react';
+import * as React from 'react';
 import { Footer, Header } from '~/partials';
 
 import * as styles from './layout.module.scss';
 
-const Layout: React.FC<PropsWithChildren> = ({ children }) => (
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout: React.FC<Props> = ({ children }) => (
   <>
     <div className={styles.container}>
       <Header />

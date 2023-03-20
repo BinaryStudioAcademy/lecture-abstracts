@@ -63,7 +63,7 @@
     "lint:js": "npx eslint . --resolve-plugins-relative-to .",
     "lint:fs": "ls-lint",
     "lint:editorconfig": "editorconfig-checker",
-    "lint": "npm run lint:js && npm run lint:type && npm run lint:css && npm run lint:fs"
+    "lint": "npm run lint:js && npm run lint:type && npm run lint:css && npm run lint:fs && lint:editorconfig"
   },
   "engines": {
     "node": "18.x",

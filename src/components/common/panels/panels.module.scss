@@ -1,18 +1,18 @@
-@mixin generate-orders($max-index) {
-  @for $i from 0 to $max-index {
-    [data-columns='#{$i}'] {
-      grid-template-columns: repeat($i, minmax(0, 1fr));
-    }
-  }
-}
-
-@include generate-orders(4);
-
 .wrapper {
   display: grid;
   gap: 16px;
   padding-block: 8px;
   margin-bottom: 10px;
+}
+
+[data-columns='1'] {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+[data-columns='2'] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+[data-columns='3'] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .panel {

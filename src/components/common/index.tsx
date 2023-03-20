@@ -13,3 +13,4 @@ export { DetailsCard } from './details-card/details-card';
 export { Code } from './code/code';
 export { Panels } from './panels/panels';
 export { Bubble } from './bubble/bubble';
+export { Copy } from './copy/copy';

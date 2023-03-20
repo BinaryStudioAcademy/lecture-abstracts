@@ -47,7 +47,7 @@ const Page: React.FC = () => {
           src="https://www.youtube.com/embed/HJ7NW6zatXo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+        />
       </VideoWrapper>
 
       <Level
