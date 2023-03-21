@@ -1,6 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
 import { TimelineProps as Props } from '~/types';
+import { getValidClasses } from '~/helpers/helpers';
+
 import * as styles from './timeline-of-contents.module.scss';
 
 const TimelineOfContents: React.FC<Props> = ({
@@ -14,7 +15,7 @@ const TimelineOfContents: React.FC<Props> = ({
         <strong>{headerTitle}</strong>
       </h2>
     )}
-    <ul className={classNames(styles.step, 'timeline')} {...rest}>
+    <ul className={getValidClasses(styles.step, 'timeline')} {...rest}>
       {timeline.map(({ linkTo, title, time }, index) => (
         <li key={`timeline-item-${index}`} className={styles.stepItem}>
           {time && (

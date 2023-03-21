@@ -1,6 +1,6 @@
-import classNames from 'classnames';
 import * as React from 'react';
 import * as styles from './panels.module.scss';
+import { getValidClasses } from '~/helpers/helpers';
 
 type Panel = {
   head: string;
@@ -26,7 +26,7 @@ const Panels: React.FC<Props> = ({
             dangerouslySetInnerHTML={{ __html: head }}
           />
           <div
-            className={classNames(styles.body, styles[bodySize])}
+            className={getValidClasses(styles.body, styles[bodySize])}
             dangerouslySetInnerHTML={{ __html: body }}
           />
         </div>
