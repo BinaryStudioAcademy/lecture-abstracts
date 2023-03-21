@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import { getValidClasses } from '~/helpers/helpers';
 import * as styles from './details-card.module.scss';
 
 type Props = {
@@ -12,7 +12,7 @@ const DetailsCard: React.FC<Props> = ({ children, isReversed = false }) => {
   return (
     <details className={styles.wrapper}>
       <summary
-        className={classNames(styles.summary, {
+        className={getValidClasses(styles.summary, {
           [styles.reversed]: isReversed,
         })}
       >
@@ -20,7 +20,7 @@ const DetailsCard: React.FC<Props> = ({ children, isReversed = false }) => {
       </summary>
 
       <div
-        className={classNames(styles.description, {
+        className={getValidClasses(styles.description, {
           [styles.reversed]: isReversed,
         })}
       >
