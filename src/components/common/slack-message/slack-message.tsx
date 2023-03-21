@@ -1,7 +1,7 @@
-import classNames from 'classnames';
 import React from 'react';
 import { TimeUnit } from './constants/time-unit';
 import { getRandomNumber } from './utils/get-random-number';
+import { getValidClasses } from '~/helpers/helpers';
 
 import * as styles from './slack-message.module.scss';
 
@@ -44,7 +44,7 @@ const SlackMessage: React.FC<React.PropsWithChildren<Props>> = ({
   return (
     <div className={styles.message} data-from={senderId} {...rest}>
       <img
-        className={classNames(styles.avatar, styles.avatarBig)}
+        className={getValidClasses(styles.avatar, styles.avatarBig)}
         src={senderAvatarUrl}
         alt=""
       />
@@ -77,7 +77,7 @@ const SlackMessage: React.FC<React.PropsWithChildren<Props>> = ({
                   data-tooltip={name}
                 >
                   <img
-                    className={classNames(styles.reply, styles.avatar)}
+                    className={getValidClasses(styles.reply, styles.avatar)}
                     src={avatarUrl}
                     alt={name}
                   />

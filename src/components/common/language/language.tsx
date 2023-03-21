@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import classNames from 'classnames';
+import { getValidClasses } from '~/helpers/helpers';
 
 import * as styles from './language.module.scss';
 
@@ -16,7 +16,7 @@ const Language: React.FC<Props> = ({ languages, currentLanguage }) => (
         currentLanguage === language ? (
           <div
             key={language}
-            className={classNames(styles.option, {
+            className={getValidClasses(styles.option, {
               [styles.isActive]: currentLanguage === language,
             })}
           >
@@ -25,7 +25,7 @@ const Language: React.FC<Props> = ({ languages, currentLanguage }) => (
         ) : (
           <Link
             key={language}
-            className={classNames(styles.option, {
+            className={getValidClasses(styles.option, {
               [styles.isActive]: currentLanguage === language,
             })}
             to={`/${languages[language]}`}
