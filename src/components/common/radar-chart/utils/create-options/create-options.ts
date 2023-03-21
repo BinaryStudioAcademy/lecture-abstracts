@@ -1,4 +1,4 @@
-import { ChartDatasets } from '~/types';
+import { ChartDatasets } from '~/types/types';
 
 type ChartData = {
   labels: string[];

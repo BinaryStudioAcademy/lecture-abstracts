@@ -1,4 +1,4 @@
-import { SlugPayload } from '~/types';
+import { SlugPayload } from '~/types/types';
 
 const slugPayload: SlugPayload = {
   en: 'lectures/javascript-for-everyone/en',

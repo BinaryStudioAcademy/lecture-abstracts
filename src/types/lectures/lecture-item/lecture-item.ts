@@ -1,4 +1,4 @@
-import { AuthorName } from '~/enums';
+import { AuthorName } from '~/enums/enums';
 
 type LectureItem = {
   slug: string;

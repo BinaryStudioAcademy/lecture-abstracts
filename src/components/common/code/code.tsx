@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { prism as syntaxHighlighterStyles } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CodeLanguage } from '~/enums/code-language/code-language';
-import { Copy } from '~/components/common';
+import { Copy } from '~/components/common/common';
 import * as styles from './code.module.scss';
 
 type Props = {

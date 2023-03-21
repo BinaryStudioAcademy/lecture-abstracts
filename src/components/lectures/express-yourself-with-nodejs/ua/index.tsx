@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
-import { Layout } from '~/layouts';
-import { SEO } from '~/partials';
+import { Layout } from '~/layout/layout';
+import { SEO } from '~/partials/partials';
 import {
   DetailsCard,
   IntroBlueBubble,
@@ -14,7 +14,7 @@ import {
   Code,
   Panels,
   ThatsAllFolks,
-} from '~/components/common';
+} from '~/components/common/common';
 import {
   introPayload,
   panelsPayload,
@@ -27,7 +27,7 @@ import {
   youAvatar,
   vitaliyOleynikovAvatar,
   alexandrTovmachAvatar,
-} from '~/assets/images/avatars/slack-squared';
+} from '~/assets/images/avatars/slack-squared/slack-squared';
 import networkImage from '../assets/images/network.png';
 import clientServerModelImage from '../assets/images/client-server-model.png';
 import serverRoomImage from '../assets/images/server-room.jpg';

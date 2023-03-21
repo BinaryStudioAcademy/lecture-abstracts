@@ -1,4 +1,4 @@
-import { ContactIcon } from '~/enums';
+import { ContactIcon } from '~/enums/enums';
 import { faGlobe } from '@fortawesome/pro-solid-svg-icons';
 import {
   faGithub,

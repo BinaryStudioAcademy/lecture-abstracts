@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import copy from 'copy-to-clipboard';
 import Chart from 'chart.js';
-import { isEqual, roundToTwoDecimals, createOptions } from './utils';
+import { isEqual, roundToTwoDecimals, createOptions } from './utils/utils';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faUndo } from '@fortawesome/pro-regular-svg-icons';
 import { feedbackStarters } from './data/feedback-starters';
-import { ChartDatasets } from '~/types';
+import { ChartDatasets } from '~/types/types';
 import 'chartjs-plugin-dragdata';
 
 import * as styles from './radar-chart.module.scss';

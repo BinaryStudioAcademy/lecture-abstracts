@@ -1,4 +1,4 @@
-import { DefaultMetadata } from '~/types';
+import { DefaultMetadata } from '~/types/types';
 
 const siteMetadata: DefaultMetadata = {
   title: 'Binary Studio Academy',

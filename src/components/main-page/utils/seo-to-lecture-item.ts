@@ -1,4 +1,4 @@
-import { SeoProps, LectureItem } from '~/types';
+import { SeoProps, LectureItem } from '~/types/types';
 
 const seoToLectureItem = ({
   author,

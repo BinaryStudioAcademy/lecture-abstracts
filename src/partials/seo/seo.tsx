@@ -1,5 +1,5 @@
 import React from 'react';
-import { SeoProps } from '~/types';
+import { SeoProps } from '~/types/types';
 import { siteMetadata } from './meta/default-meta';
 
 type Props = {

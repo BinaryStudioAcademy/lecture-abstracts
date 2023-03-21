@@ -12,9 +12,9 @@ import {
   ivanHedz2023Avatar,
   ulianaLobanova2021Avatar,
   serhiiYanchuk2023Avatar,
-} from '~/assets/images/avatars/intro-rounded';
+} from '~/assets/images/avatars/intro-rounded/intro-rounded';
 
-import { AuthorName } from '~/enums';
+import { AuthorName } from '~/enums/enums';
 
 const nameToImage = {
   [AuthorName.VIKTORIIA_VASYLENKO_EN]: viktoriiaVasylenko2021Avatar,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Footer, Header } from '~/partials';
+import { Footer, Header } from '~/partials/partials';
 
 import * as styles from './layout.module.scss';
 

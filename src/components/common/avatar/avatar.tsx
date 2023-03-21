@@ -1,6 +1,6 @@
 import React from 'react';
 import { nameToImage } from './utils/name-to-image';
-import { Author } from '~/types';
+import { Author } from '~/types/types';
 import classNames from 'classnames';
 
 import * as styles from './avatar.module.scss';

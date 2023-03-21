@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { TimelineProps as Props } from '~/types';
+import { TimelineProps as Props } from '~/types/types';
 import * as styles from './timeline-of-contents.module.scss';
 
 const TimelineOfContents: React.FC<Props> = ({
