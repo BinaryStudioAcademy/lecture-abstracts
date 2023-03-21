@@ -1,20 +1,11 @@
-type Meta = {
-  author: string;
-  orderId: number;
-  title: string;
-  duration: string;
-  description: string;
-  keywords: string[];
-  publishedAt: string;
-  hiddenFromMainPage: boolean;
-};
+import { SeoProps } from '../seo/seo-props';
 
 type LecturesContext = {
-  frontmatter: Meta;
+  frontmatter: SeoProps;
 };
 
 type PageContext = {
-  frontmatter?: Meta;
+  frontmatter?: SeoProps;
 };
 
 export { LecturesContext, PageContext };

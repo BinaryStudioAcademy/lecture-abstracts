@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.content ol,
+.content ul {
+  margin: 5px 0 10px;
+  padding: 0;
+  padding-left: 25px;
+  list-style: none outside none;
+}
+
+:global(.counted),
+:global(.inverted) {
+  list-style: outside decimal;
+  counter-reset: ol-counter;
+}
+
+.content ul {
+  list-style: outside disc;
+}
+
+.content li {
+  list-style: none outside none;
+}
+
+.content ol li,
+.content ul li {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.content :global(.regular) li {
+  list-style: decimal;
+}
+
+.content ol li:last-child,
+.content ul li:last-child {
+  margin-bottom: 0;
+}
+
+.content ol.compact,
+.content ol.compact li,
+.content ul.compact,
+.content ul.compact li {
+  margin: 0;
+}
+
+.content p {
+  margin-bottom: 5px;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+:global(ul:not(.timeline) li::before) {
+  float: left;
+  width: 25px;
+  margin-left: -25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  content: '●';
+}
+
+:global(:is(.counted, .inverted) > li::before) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  margin-left: -25px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 20px;
+  background: transparent;
+  border-radius: 4px;
+  counter-increment: ol-counter;
+  content: counter(ol-counter);
+}
+
+.content ol:is(.default-list) > li {
+  list-style-type: decimal;
+}
+
+.content :global(ol.inverted > li::before) {
+  padding-bottom: 2px;
+  color: white;
+  font-weight: normal;
+  background: black;
+}
+
+:not(pre) > code {
+  padding: 2px 4px;
+  color: #d73e48;
+  font-size: 85%;
+  line-height: 1.25;
+  background: #fcf2f2;
+  border-radius: 2px;
+}
+
+.content hr {
+  height: 2px;
+  margin: 40px 0;
+  background: var(--gray-100);
+  border: none;
+}
+
+.content table {
+  border: 2px solid rgb(201 209 217 / 50%);
+  border-style: hidden;
+  border-collapse: collapse;
+}
+
+.content table td {
+  padding: 10px;
+  border: 2px solid rgb(201 209 217 / 50%);
+}
+
+.content table th {
+  padding: 10px;
+  border: 2px solid rgb(201 209 217 / 50%);
+}
+
+.content td:first-child,
+.content th:first-child {
+  border-left: none;
+}
+
+.content thead {
+  background-color: rgb(201 209 217 / 50%);
+}

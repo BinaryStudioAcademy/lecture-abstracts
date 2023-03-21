@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '~/components';
+import { Avatar } from '~/components/common';
 import { Author } from '~/types';
 import { ContactIcon } from '~/enums';
 

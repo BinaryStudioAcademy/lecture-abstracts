@@ -1,7 +1,9 @@
+import classNames from 'classnames';
 import React from 'react';
 import { TimeUnit } from './constants/time-unit';
+import { getRandomNumber } from './utils/get-random-number';
 
-import './slack-message.css';
+import * as styles from './slack-message.module.scss';
 
 type Emotion = {
   emoji: string;
@@ -13,7 +15,7 @@ type ReplyAuthor = {
   avatarUrl: string;
 };
 
-type SlackMessageProps = {
+type Props = {
   senderId: string;
   senderName: string;
   senderAvatarUrl: string;
@@ -22,7 +24,7 @@ type SlackMessageProps = {
   senderDate?: number;
 };
 
-const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
+const SlackMessage: React.FC<React.PropsWithChildren<Props>> = ({
   senderId = '',
   senderName = '',
   senderAvatarUrl = '',
@@ -32,7 +34,7 @@ const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
   replies = [],
   ...rest
 }) => {
-  const repliesCount = Math.floor(Math.random() * 10) + 7;
+  const repliesCount = getRandomNumber(7, 16);
   const senderTime = new Date(senderDate - 130 * TimeUnit.MINUTE)
     .toTimeString()
     .slice(0, 5);
@@ -40,23 +42,23 @@ const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
     .toTimeString()
     .slice(0, 5);
   return (
-    <div className="message" data-from={senderId} {...rest}>
+    <div className={styles.message} data-from={senderId} {...rest}>
       <img
-        className="message__avatar message__avatar--big"
+        className={classNames(styles.avatar, styles.avatarBig)}
         src={senderAvatarUrl}
         alt=""
       />
-      <div className="message__content">
-        <div className="message__meta">
-          <span className="message__author">{senderName}</span>
-          <span className="message__timestamp">{senderTime}</span>
+      <div className={styles.content}>
+        <div>
+          <span className={styles.author}>{senderName}</span>
+          <span className={styles.timestamp}>{senderTime}</span>
         </div>
-        <div className="message__text">{children}</div>
-        <div className="message__reactions">
+        <div className={styles.text}>{children}</div>
+        <div className={styles.reactions}>
           {reactions.map(({ emoji, count }, index) => (
             <input
               key={`reactions-item-${index}`}
-              className="message__reaction"
+              className={styles.reaction}
               type="checkbox"
               data-before={emoji}
               data-after={count}
@@ -65,7 +67,7 @@ const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
           ))}
         </div>
         {replies && replies.length > 0 && (
-          <div className="message__replies">
+          <div className={styles.replies}>
             {replies
               .slice(0, replies.length - 1)
               .map(({ name, avatarUrl }, index) => (
@@ -75,29 +77,29 @@ const SlackMessage: React.FC<React.PropsWithChildren<SlackMessageProps>> = ({
                   data-tooltip={name}
                 >
                   <img
-                    className="message__reply message__avatar"
+                    className={classNames(styles.reply, styles.avatar)}
                     src={avatarUrl}
                     alt={name}
                   />
                 </span>
               ))}
             {repliesCount - replies.length > 0 && (
-              <div className="message__reply">
+              <div className={styles.reply}>
                 <img
-                  className="message__avatar"
+                  className={styles.avatar}
                   src={replies.slice(replies.length - 1)[0].avatarUrl}
                   alt=""
                 />
-                <span className="message__replies--count">
+                <span className={styles.replyCount}>
                   +{repliesCount - replies.length}
                 </span>
               </div>
             )}
-            <div className="message__replies--meta">
-              <span className="message__replies--total">
+            <div className={styles.replyMeta}>
+              <span className={styles.replyTotal}>
                 {Math.max(repliesCount, replies.length)} replies
               </span>
-              <span className="message__replies--last">
+              <span className={styles.replyLast}>
                 Last reply today at {lastReplyTime}
               </span>
             </div>

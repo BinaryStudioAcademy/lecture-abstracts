@@ -1,15 +1,13 @@
 import React from 'react';
-import { PageContext } from '~/types';
+import { SeoProps } from '~/types';
 import { siteMetadata } from './meta/default-meta';
 
-type SEOProps = {
-  pageContext?: PageContext;
+type Props = {
+  pageContext?: SeoProps;
+  children?: React.ReactNode;
 };
 
-const SEO: React.FC<React.PropsWithChildren<SEOProps>> = ({
-  pageContext,
-  children,
-}) => {
+const SEO: React.FC<Props> = ({ pageContext, children }) => {
   const {
     description: defaultDescription,
     title: defaultTitle,
@@ -17,10 +15,10 @@ const SEO: React.FC<React.PropsWithChildren<SEOProps>> = ({
   } = siteMetadata;
 
   const seo = {
-    title: pageContext?.frontmatter?.title || defaultTitle,
-    description: pageContext?.frontmatter?.description || defaultDescription,
-    author: pageContext?.frontmatter?.author || defaultAuthor,
-    keywords: pageContext?.frontmatter?.keywords || [],
+    title: pageContext?.title || defaultTitle,
+    description: pageContext?.description || defaultDescription,
+    author: pageContext?.author || defaultAuthor,
+    keywords: pageContext?.keywords || [],
   };
 
   return (

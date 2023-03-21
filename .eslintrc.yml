@@ -18,10 +18,9 @@ overrides:
     - gatsby-config.ts
     - index.d.ts
     - src/pages/**
-    - src/templates/**
     rules:
       import/no-default-export:
-      - off
+        - off
 
 rules:
   no-multiple-empty-lines:

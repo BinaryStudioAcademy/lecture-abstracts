@@ -1,0 +1,33 @@
+.bubble {
+  position: relative;
+  display: inline-block;
+  margin-top: 0;
+  padding: 7px 13px;
+  overflow: visible;
+  color: white;
+  background: linear-gradient(to right, #0084ff, #00c4ff);
+  border-radius: 4px 16px 16px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.small {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.small:hover {
+  opacity: 1;
+}
+
+.bubble a {
+  color: inherit;
+}
+
+p + div > .bubble:first-child {
+  margin-top: -5px;
+}
+
+.bubble + p,
+.bubble + div {
+  margin-top: 5px;
+}

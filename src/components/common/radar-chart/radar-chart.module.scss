@@ -1,0 +1,92 @@
+.radar-chart {
+  position: relative;
+  height: 500px;
+}
+
+.radar-chart .final-grade {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 20px 20px rgb(0 0 0 / 2.5%);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.radar-chart .final-grade:hover {
+  box-shadow: 0 0 20px 20px rgb(0 0 0 / 5%);
+}
+
+.radar-chart .final-grade:active {
+  color: rgb(0 173 238 / 100%);
+  transition: none;
+}
+
+.icon {
+  margin-right: 4px;
+  font-size: 12px;
+}
+
+.radar-chart .final-grade .icon {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.radar-chart .reset-grades {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.2s linear;
+}
+
+.radar-chart .reset-grades:hover {
+  opacity: 0.75;
+}
+
+.radar-chart .reset-grades:active {
+  opacity: 0.75;
+}
+
+.copy {
+  margin-right: 5px;
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.radar-chart .grades-by-categories {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: transparent;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: -1px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.radar-chart .grades-by-categories:hover {
+  color: black;
+}

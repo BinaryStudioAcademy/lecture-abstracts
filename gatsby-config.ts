@@ -1,31 +1,9 @@
 import { type GatsbyConfig } from 'gatsby';
-import remarkGfm from 'remark-gfm';
 
 const config: GatsbyConfig = {
   pathPrefix: '/lecture-abstracts',
   graphqlTypegen: true,
   plugins: [
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-prismjs',
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: '±',
-              aliases: {},
-              showLineNumbers: false,
-              noInlineHighlight: false,
-            },
-          },
-        ],
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-        },
-      },
-    },
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -53,7 +31,6 @@ const config: GatsbyConfig = {
       },
       __key: 'pages',
     },
-
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {

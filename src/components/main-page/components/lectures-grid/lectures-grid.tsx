@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar } from '~/components';
+import { Avatar } from '~/components/common';
 import { isDateInThePast } from '~/utils';
 import { LectureItem } from '~/types';
 import { Link } from 'gatsby';
