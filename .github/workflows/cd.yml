@@ -12,20 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install NodeJS
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version-file: .nvmrc
 
+      - name: Cache Dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install Dependencies
         run: |
-          yarn
+          npm install
 
       - name: Code Building
         run: |
-          yarn build
+          npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
