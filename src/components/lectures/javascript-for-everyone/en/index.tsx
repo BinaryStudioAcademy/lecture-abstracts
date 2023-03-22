@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
-import { Layout } from '~/layouts';
-import { SEO } from '~/partials';
+import { Layout } from '~/layout/layout';
+import { SEO } from '~/partials/partials';
 import { introPayload, seoPayload, slugPayload } from '../data/data';
 import {
   Language,
@@ -15,7 +15,7 @@ import {
   DetailsCard,
   ThatsAllFolks,
   Bubble,
-} from '~/components/common';
+} from '~/components/common/common';
 import {
   alexandrTovmachAvatar,
   alyonaRapovaAvatar,
@@ -27,7 +27,7 @@ import {
   ryuAvatar,
   youAvatar,
   yuriyStetsulaAvatar,
-} from '~/assets/images/avatars/slack-squared';
+} from '~/assets/images/avatars/slack-squared/slack-squared';
 import { CodeLanguage } from '~/enums/code-language/code-language';
 
 import * as styles from '../assets/stylesheets/javascript-for-everyone.module.scss';

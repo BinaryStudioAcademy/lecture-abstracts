@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Layout } from '~/layouts';
+import { Layout } from '~/layout/layout';
 import { LecturesGrid, LogoLink } from './components/components';
 
 import * as styles from './main-page.module.scss';

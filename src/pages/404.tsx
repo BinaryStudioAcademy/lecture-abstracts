@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { PageProps } from 'gatsby';
-import { SEO } from '~/partials';
+import { SEO } from '~/partials/partials';
 import { NotFoundPage as ErrorPage } from '~/components/not-found-page/not-found-page';
 
 const NotFoundPage: React.FC<PageProps> = () => <ErrorPage />;

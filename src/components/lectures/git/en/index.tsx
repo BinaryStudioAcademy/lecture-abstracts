@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
-import { Layout } from '~/layouts';
-import { SEO } from '~/partials';
+import { Layout } from '~/layout/layout';
+import { SEO } from '~/partials/partials';
 import {
   Accordion,
   Bubble,
@@ -13,7 +13,7 @@ import {
   Language,
   Level,
   TimelineOfContents,
-} from '~/components/common';
+} from '~/components/common/common';
 import resume_template from '~/assets/images/resume-template.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuestionCircle } from '@fortawesome/pro-solid-svg-icons';

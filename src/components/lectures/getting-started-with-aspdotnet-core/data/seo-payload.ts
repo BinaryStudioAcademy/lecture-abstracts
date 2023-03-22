@@ -1,5 +1,5 @@
-import { AuthorName } from '~/enums';
-import { SeoPayload, SeoProps } from '~/types';
+import { AuthorName } from '~/enums/enums';
+import { SeoPayload, SeoProps } from '~/types/types';
 import { slugPayload } from './slug-payload';
 
 const ua: SeoProps = {

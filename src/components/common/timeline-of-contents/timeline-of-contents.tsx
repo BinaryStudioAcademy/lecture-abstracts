@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimelineProps as Props } from '~/types';
+import { TimelineProps as Props } from '~/types/types';
 import { getValidClasses } from '~/helpers/helpers';
 
 import * as styles from './timeline-of-contents.module.scss';

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Avatar } from '~/components/common';
-import { Author } from '~/types';
-import { ContactIcon } from '~/enums';
+import { Avatar } from '~/components/common/common';
+import { Author } from '~/types/types';
+import { ContactIcon } from '~/enums/enums';
 
 import * as styles from './intro-blue-bubble.module.scss';
 import { nameToIcon } from './utils/name-to-icon';

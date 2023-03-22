@@ -1,6 +1,6 @@
 import { IntroBlueBubbleProps } from '~/components/common/intro-blue-bubble/intro-blue-bubble';
-import { AuthorName } from '~/enums';
-import { IntroPayload } from '~/types';
+import { AuthorName } from '~/enums/enums';
+import { IntroPayload } from '~/types/types';
 
 const introEN: IntroBlueBubbleProps = {
   author: AuthorName.VIKTORIIA_VASYLENKO_EN,

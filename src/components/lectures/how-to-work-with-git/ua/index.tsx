@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
-import { Layout } from '~/layouts';
-import { SEO } from '~/partials';
+import { Layout } from '~/layout/layout';
+import { SEO } from '~/partials/partials';
 import {
   Code,
   IntroBlueBubble,
@@ -9,7 +9,7 @@ import {
   Level,
   TimelineOfContents,
   VideoWrapper,
-} from '~/components/common';
+} from '~/components/common/common';
 import { introPayload, seoPayload, slugPayload } from '../data/data';
 
 const Page: React.FC = () => {
