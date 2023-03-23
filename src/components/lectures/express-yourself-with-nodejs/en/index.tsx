@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import { Layout } from '~/layout/layout';
-import { SEO } from '~/partials/partials';
 import {
   DetailsCard,
   IntroBlueBubble,
@@ -14,6 +13,7 @@ import {
   Code,
   Panels,
   ThatsAllFolks,
+  SEO,
 } from '~/components/common/common';
 import {
   introPayload,

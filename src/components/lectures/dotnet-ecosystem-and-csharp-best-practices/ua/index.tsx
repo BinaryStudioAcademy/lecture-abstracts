@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import { Layout } from '~/layout/layout';
-import { SEO } from '~/partials/partials';
 import {
   DetailsCard,
   IntroBlueBubble,
@@ -12,6 +11,7 @@ import {
   Bubble,
   Code,
   ThatsAllFolks,
+  SEO,
 } from '~/components/common/common';
 import { introPayload, seoPayload, slugPayload } from '../data/data';
 import stackAndHeap from '../assets/images/stack-and-heap.gif';

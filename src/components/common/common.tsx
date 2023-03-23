@@ -14,3 +14,6 @@ export { Code } from './code/code';
 export { Panels } from './panels/panels';
 export { Bubble } from './bubble/bubble';
 export { Copy } from './copy/copy';
+export { Header } from './header/header';
+export { Footer } from './footer/footer';
+export { SEO } from './seo/seo';
