@@ -1,7 +1,7 @@
 import React from 'react';
-import { nameToImage } from './utils/name-to-image';
-import { Author } from '~/types/types';
+import { Author } from '~/common/types/types';
 import { getValidClasses } from '~/helpers/helpers';
+import { nameToImage } from '~/common/maps/maps';
 
 import * as styles from './avatar.module.scss';
 

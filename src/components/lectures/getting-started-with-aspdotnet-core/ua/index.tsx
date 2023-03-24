@@ -21,7 +21,7 @@ import {
   slugPayload,
 } from '../data/data';
 
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 
 const Page: React.FC = () => {
   return (

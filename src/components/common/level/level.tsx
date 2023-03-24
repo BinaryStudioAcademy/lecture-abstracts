@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowUp } from '@fortawesome/pro-regular-svg-icons';
-import { LevelProps as Props } from '~/types/components/level/level';
+import { LevelProps as Props } from '~/common/types/types';
 import * as styles from './level.module.scss';
 
 const Level: React.FC<Props> = ({

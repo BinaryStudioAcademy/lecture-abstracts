@@ -51,7 +51,7 @@ import repository_testImg from '../assets/images/repository-test-en.png';
 import middleware_test1Img from '../assets/images/middleware-test1-en.png';
 import middleware_test2Img from '../assets/images/middleware-test2-en.png';
 import audio from '~/assets/audio/in-the-end.mp3';
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 
 const Page: React.FC = () => {
   return (

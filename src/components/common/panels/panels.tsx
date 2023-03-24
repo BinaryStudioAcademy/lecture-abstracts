@@ -1,16 +1,7 @@
 import * as React from 'react';
 import * as styles from './panels.module.scss';
 import { getValidClasses } from '~/helpers/helpers';
-
-type Panel = {
-  head: string;
-  body: string;
-};
-type Props = {
-  panels: Panel[];
-  columns?: number;
-  bodySize?: 'small' | 'regular';
-};
+import { PanelsProps as Props } from '~/common/types/types';
 
 const Panels: React.FC<Props> = ({
   panels,
@@ -35,4 +26,4 @@ const Panels: React.FC<Props> = ({
   );
 };
 
-export { Panels, type Props as PanelsProps };
+export { Panels };

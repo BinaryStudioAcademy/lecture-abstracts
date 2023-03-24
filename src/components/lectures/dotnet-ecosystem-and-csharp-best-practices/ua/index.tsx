@@ -25,7 +25,7 @@ import lambdaExpressionStructure from '../assets/images/lambda-expression-struct
 import delegateEventFlow from '../assets/images/delegate-event-flow.png';
 import collectionsHierarchy from '../assets/images/collections-hierarchy.jpg';
 import stack from '../assets/images/stack.jpg';
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 import * as styles from '../assets/styles/dotnet-ecosystem-and-csharp-best-practices.module.scss';
 
 const Page: React.FC = () => {

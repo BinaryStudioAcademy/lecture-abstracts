@@ -29,7 +29,7 @@ import {
   alyonaRapovaAvatar,
   nikitaSemenistyiAvatar,
 } from '~/assets/images/avatars/slack-squared/slack-squared';
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 import * as styles from '../assets/stylesheets/javascript-for-everyone.module.scss';
 
 const Page: React.FC = () => {

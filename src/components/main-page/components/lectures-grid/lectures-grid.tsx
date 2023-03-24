@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar } from '~/components/common/common';
-import { isDateInThePast } from '~/utils/utils';
-import { LectureItem } from '~/types/types';
+import { isDateInThePast } from '~/helpers/helpers';
+import { LectureItem } from '~/common/types/types';
 import { Link } from 'gatsby';
 
 import './lectures-grid.css';

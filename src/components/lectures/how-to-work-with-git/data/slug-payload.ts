@@ -1,4 +1,4 @@
-import { SlugPayload } from '~/types/types';
+import { SlugPayload } from '~/common/types/types';
 
 const slugPayload: SlugPayload = {
   en: 'lectures/how-to-work-with-git/en',

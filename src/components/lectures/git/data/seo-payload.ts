@@ -1,6 +1,6 @@
-import { SeoPayload, SeoProps } from '~/types/types';
+import { SeoPayload, SeoProps } from '~/common/types/types';
 import { slugPayload } from './slug-payload';
-import { AuthorName } from '~/enums/enums';
+import { AuthorName } from '~/common/enums/enums';
 
 const ua: SeoProps = {
   author: AuthorName.VIKTORIIA_VASYLENKO_UA,

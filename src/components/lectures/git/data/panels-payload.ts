@@ -1,5 +1,4 @@
-import { PanelsPayload } from '~/types/types';
-import { PanelsProps } from '~/components/common/panels/panels';
+import { PanelsPayload, PanelsProps } from '~/common/types/types';
 
 const en: PanelsProps = {
   panels: [

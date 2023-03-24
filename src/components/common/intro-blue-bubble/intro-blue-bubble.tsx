@@ -1,30 +1,12 @@
 import React from 'react';
 import { Avatar } from '~/components/common/common';
-import { Author } from '~/types/types';
-import { ContactIcon } from '~/enums/enums';
-
-import * as styles from './intro-blue-bubble.module.scss';
-import { nameToIcon } from './utils/name-to-icon';
+import { nameToIcon } from '~/common/maps/maps';
+import { IntroBlueBubbleProps as Props } from '~/common/types/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-type Contacts = {
-  ref: string;
-  iconColor?: 'darkBlue' | 'blue';
-  title: string;
-  iconName: ContactIcon;
-};
+import * as styles from './intro-blue-bubble.module.scss';
 
-type IntroBlueBubbleProps = {
-  author: Author;
-  about: string;
-  title: string;
-  subtitle: string;
-  listItems?: string[];
-  contacts?: Contacts[];
-  footer?: string;
-};
-
-const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
+const IntroBlueBubble: React.FC<Props> = ({
   about,
   author,
   subtitle,
@@ -87,4 +69,4 @@ const IntroBlueBubble: React.FC<IntroBlueBubbleProps> = ({
   );
 };
 
-export { IntroBlueBubble, type IntroBlueBubbleProps };
+export { IntroBlueBubble };

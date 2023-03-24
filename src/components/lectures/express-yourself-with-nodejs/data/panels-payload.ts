@@ -1,5 +1,4 @@
-import { PanelsPayload } from '~/types/types';
-import { PanelsProps } from '~/components/common/panels/panels';
+import { PanelsPayload, PanelsProps } from '~/common/types/types';
 
 import yarnLogoImage from '../assets/images/yarn.svg';
 import npmLogoImage from '../assets/images/npm.svg';
