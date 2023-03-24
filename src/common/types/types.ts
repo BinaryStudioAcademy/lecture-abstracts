@@ -13,6 +13,5 @@ export {
   TimelineProps,
   PanelsProps,
   IntroBlueBubbleProps,
-} from './props/props';
-export { Author } from './author/author';
+} from './components/components';
 export { LectureItem } from './lectures/lectures';

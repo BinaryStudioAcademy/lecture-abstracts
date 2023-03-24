@@ -1,4 +1,4 @@
-import { SeoProps } from '../props/seo-props.type';
+import { SeoProps } from '../components/seo-props.type';
 
 type LecturesContext = {
   frontmatter: SeoProps;

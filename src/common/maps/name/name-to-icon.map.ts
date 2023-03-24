@@ -1,4 +1,4 @@
-import { ContactIcon } from '~/common/enums/enums';
+import { IconName } from '~/common/enums/enums';
 import { faGlobe } from '@fortawesome/pro-solid-svg-icons';
 import {
   faGithub,
@@ -9,12 +9,12 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const nameToIcon = {
-  [ContactIcon.FACEBOOK]: faFacebook,
-  [ContactIcon.GITHUB]: faGithub,
-  [ContactIcon.GLOBE]: faGlobe,
-  [ContactIcon.STACK_OVERFLOW]: faStackOverflow,
-  [ContactIcon.LINKEDIN]: faLinkedin,
-  [ContactIcon.INSTAGRAM]: faInstagram,
+  [IconName.FACEBOOK]: faFacebook,
+  [IconName.GITHUB]: faGithub,
+  [IconName.GLOBE]: faGlobe,
+  [IconName.STACK_OVERFLOW]: faStackOverflow,
+  [IconName.LINKEDIN]: faLinkedin,
+  [IconName.INSTAGRAM]: faInstagram,
 };
 
 export { nameToIcon };

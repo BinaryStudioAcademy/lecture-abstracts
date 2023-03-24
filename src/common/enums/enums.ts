@@ -1,3 +1,3 @@
-export { AuthorName } from './author/author';
-export { CodeLanguage } from './code/code';
-export { ContactIcon } from './icon/icon';
+export { AuthorName } from './lectures/lectures';
+export { IconName, CodeLanguage } from './ui/ui';
+export { TimeUnit } from './time/time';

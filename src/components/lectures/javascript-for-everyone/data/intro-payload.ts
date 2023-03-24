@@ -1,4 +1,4 @@
-import { AuthorName, ContactIcon } from '~/common/enums/enums';
+import { AuthorName, IconName } from '~/common/enums/enums';
 import { IntroPayload, IntroBlueBubbleProps } from '~/common/types/types';
 
 const introEN: IntroBlueBubbleProps = {
@@ -10,7 +10,7 @@ const introEN: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       iconColor: 'blue',
       title: 'oleksandr-danylchenko',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
     },
   ],
   title: 'Hello, world!',
@@ -33,7 +33,7 @@ const introUA: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       iconColor: 'blue',
       title: 'oleksandr-danylchenko',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
     },
   ],
   title: 'Hello, world!',

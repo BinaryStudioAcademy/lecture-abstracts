@@ -1,15 +1,14 @@
-import { Author } from '~/common/types/types';
-import { ContactIcon } from '~/common/enums/enums';
+import { AuthorName, IconName } from '~/common/enums/enums';
 
 type Contacts = {
   ref: string;
   iconColor?: 'darkBlue' | 'blue';
   title: string;
-  iconName: ContactIcon;
+  iconName: IconName;
 };
 
 type IntroBlueBubbleProps = {
-  author: Author;
+  author: AuthorName;
   about: string;
   title: string;
   subtitle: string;

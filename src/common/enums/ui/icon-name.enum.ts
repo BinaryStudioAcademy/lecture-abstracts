@@ -1,4 +1,4 @@
-enum ContactIcon {
+enum IconName {
   STACK_OVERFLOW = 'stackOverflow',
   GLOBE = 'globe',
   GITHUB = 'github',
@@ -7,4 +7,4 @@ enum ContactIcon {
   INSTAGRAM = 'instagram',
 }
 
-export { ContactIcon };
+export { IconName };

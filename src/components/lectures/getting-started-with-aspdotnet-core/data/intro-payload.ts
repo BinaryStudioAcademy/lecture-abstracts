@@ -1,4 +1,4 @@
-import { AuthorName, ContactIcon } from '~/common/enums/enums';
+import { AuthorName, IconName } from '~/common/enums/enums';
 import { IntroPayload, IntroBlueBubbleProps } from '~/common/types/types';
 
 const introEN: IntroBlueBubbleProps = {
@@ -9,13 +9,13 @@ const introEN: IntroBlueBubbleProps = {
     {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
       iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',
       title: 'serhii._.yanchuk',
-      iconName: ContactIcon.INSTAGRAM,
+      iconName: IconName.INSTAGRAM,
     },
   ],
   title: 'Hello!',
@@ -35,13 +35,13 @@ const introUA: IntroBlueBubbleProps = {
     {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
       iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',
       title: 'serhii._.yanchuk',
-      iconName: ContactIcon.INSTAGRAM,
+      iconName: IconName.INSTAGRAM,
     },
   ],
   title: 'Привіт!',

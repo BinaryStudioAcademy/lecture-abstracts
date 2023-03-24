@@ -1,7 +1,7 @@
-import { Author } from '~/common/types/types';
+import { AuthorName } from '~/common/enums/enums';
 
 type SeoProps = {
-  author: Author;
+  author: AuthorName;
   title: string;
   slug: string;
   description: string;

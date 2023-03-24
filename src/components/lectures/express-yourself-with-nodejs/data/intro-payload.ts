@@ -1,4 +1,4 @@
-import { AuthorName, ContactIcon } from '~/common/enums/enums';
+import { AuthorName, IconName } from '~/common/enums/enums';
 import { IntroPayload, IntroBlueBubbleProps } from '~/common/types/types';
 
 const introEN: IntroBlueBubbleProps = {
@@ -9,7 +9,7 @@ const introEN: IntroBlueBubbleProps = {
     {
       ref: 'https://www.linkedin.com/in/uliana-l-b34129105/',
       title: 'uliana-l',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
       iconColor: 'blue',
     },
   ],
@@ -26,17 +26,17 @@ const introUA: IntroBlueBubbleProps = {
     {
       ref: 'https://ru.stackoverflow.com/users/312473/alexandr-tovmach?tab=profile',
       title: 'alexandr-tovmach',
-      iconName: ContactIcon.STACK_OVERFLOW,
+      iconName: IconName.STACK_OVERFLOW,
     },
     {
       ref: 'https://github.com/alexandrtovmach',
       title: 'alexandrtovmach',
-      iconName: ContactIcon.GITHUB,
+      iconName: IconName.GITHUB,
     },
     {
       ref: 'https://alexandrtovmach.com/',
       title: 'https://alexandrtovmach.com',
-      iconName: ContactIcon.GLOBE,
+      iconName: IconName.GLOBE,
     },
   ],
   title: 'Вітаю!',

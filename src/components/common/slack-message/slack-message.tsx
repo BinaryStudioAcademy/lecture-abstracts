@@ -1,5 +1,5 @@
 import React from 'react';
-import { TimeUnit } from '~/common/constants/constants';
+import { TimeUnit } from '~/common/enums/enums';
 import { getValidClasses, getRandomNumber } from '~/helpers/helpers';
 
 import * as styles from './slack-message.module.scss';
