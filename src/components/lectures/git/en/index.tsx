@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import { Layout } from '~/layout/layout';
-import { SEO } from '~/partials/partials';
 import {
   Accordion,
   Bubble,
@@ -13,6 +12,7 @@ import {
   Language,
   Level,
   TimelineOfContents,
+  SEO,
 } from '~/components/common/common';
 import resume_template from '~/assets/images/resume-template.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,7 +25,7 @@ import {
   slugPayload,
 } from '../data/data';
 import * as styles from '../assets/styles/git.module.scss';
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 
 const Page: React.FC = () => {
   return (

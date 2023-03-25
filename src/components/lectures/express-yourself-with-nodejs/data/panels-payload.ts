@@ -1,10 +1,9 @@
-import { PanelsPayload } from '~/types/types';
-import { PanelsProps } from '~/components/common/panels/panels';
+import { PanelsPayload, PanelsLocalizationKey } from '~/common/types/types';
 
 import yarnLogoImage from '../assets/images/yarn.svg';
 import npmLogoImage from '../assets/images/npm.svg';
 
-const historyEn: PanelsProps = {
+const historyEn: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>JavaScript — client-side language</strong><span class="text-gray"><small>#1</small></span></h6>',
@@ -21,7 +20,7 @@ const historyEn: PanelsProps = {
   ],
   columns: 3,
 };
-const historyUa: PanelsProps = {
+const historyUa: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>JavaScript — мова клієнта</strong><span class="text-gray"><small>#1</small></span></h6>',
@@ -39,7 +38,7 @@ const historyUa: PanelsProps = {
   columns: 3,
 };
 
-const installEn: PanelsProps = {
+const installEn: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>Restart your computer after installation</strong><span>🖥️</span></h6>',
@@ -56,7 +55,7 @@ const installEn: PanelsProps = {
   ],
   columns: 3,
 };
-const installUa: PanelsProps = {
+const installUa: PanelsLocalizationKey = {
   panels: [
     {
       head: "<h6><strong>Після інсталяції обов'язково перезавантажте комп'ютер</strong><span>🖥️</span></h6>",
@@ -74,7 +73,7 @@ const installUa: PanelsProps = {
   columns: 3,
 };
 
-const packetsEn: PanelsProps = {
+const packetsEn: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>npm</strong></h6>',
@@ -87,7 +86,7 @@ const packetsEn: PanelsProps = {
   ],
 };
 
-const packetsUa: PanelsProps = {
+const packetsUa: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>npm</strong></h6>',
@@ -100,7 +99,7 @@ const packetsUa: PanelsProps = {
   ],
 };
 
-const reasonsEn: PanelsProps = {
+const reasonsEn: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>Convenient</strong><span class="text-gray"><small>#1</small></span></h6>',
@@ -126,7 +125,7 @@ const reasonsEn: PanelsProps = {
   columns: 3,
 };
 
-const reasonsUa: PanelsProps = {
+const reasonsUa: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>Зручніть</strong><span class="text-gray"><small>#1</small></span></h6>',

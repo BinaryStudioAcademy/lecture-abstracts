@@ -1,8 +1,7 @@
-import { IntroBlueBubbleProps } from '~/components/common/intro-blue-bubble/intro-blue-bubble';
-import { AuthorName, ContactIcon } from '~/enums/enums';
-import { IntroPayload } from '~/types/types';
+import { AuthorName, IconName } from '~/common/enums/enums';
+import { IntroPayload, IntroLocalizationKey } from '~/common/types/types';
 
-const introEN: IntroBlueBubbleProps = {
+const introEN: IntroLocalizationKey = {
   author: AuthorName.OLEKSANDR_DANYLCHENKO_EN,
   about:
     "Full-stack developer at Binary Studio. Works on development of a new SPA framework, which generates complex visually-rich sites with just the simple declarative description in the few jsons. Likes to discover and experiment with the new web-platform features. <del>And doesn't like Safari for incompatibilities and obsolescence.</del>",
@@ -11,7 +10,7 @@ const introEN: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       iconColor: 'blue',
       title: 'oleksandr-danylchenko',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
     },
   ],
   title: 'Hello, world!',
@@ -25,7 +24,7 @@ const introEN: IntroBlueBubbleProps = {
   footer:
     'And another <strong>heads up</strong> - you will need your favorite <a href="https://www.jetbrains.com/products/#lang=js"><strong>IDE</strong></a>, <a href="https://nodejs.org/en/"><strong>Node.js</strong></a>, and download the <a href="/assets/zip/es6-for-everyone.zip">project starter</a>. Ready? Let\'s go!',
 };
-const introUA: IntroBlueBubbleProps = {
+const introUA: IntroLocalizationKey = {
   author: AuthorName.OLEKSANDR_DANYLCHENKO_UA,
   about:
     "Full-stack розробник у компанії Binary Studio. Працює над розробкою нового SPA фреймворку, який генерує складні візуально насичені сайти лише за простими декларативними описами у кількох json'ах. Любить відкривати та експериментувати з новими функціями веб-платформи. <del>І не любить Safari через несумісності та застарілість.</del>",
@@ -34,7 +33,7 @@ const introUA: IntroBlueBubbleProps = {
       ref: 'https://www.linkedin.com/in/oleksandr-danylchenko-a5a007170/',
       iconColor: 'blue',
       title: 'oleksandr-danylchenko',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
     },
   ],
   title: 'Hello, world!',

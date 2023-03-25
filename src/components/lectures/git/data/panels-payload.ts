@@ -1,7 +1,6 @@
-import { PanelsPayload } from '~/types/types';
-import { PanelsProps } from '~/components/common/panels/panels';
+import { PanelsPayload, PanelsLocalizationKey } from '~/common/types/types';
 
-const en: PanelsProps = {
+const en: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>Repository management</strong><span class="text-gray"><small>#1</small></span></h6>',
@@ -31,7 +30,7 @@ const en: PanelsProps = {
   columns: 3,
   bodySize: 'small',
 };
-const ua: PanelsProps = {
+const ua: PanelsLocalizationKey = {
   panels: [
     {
       head: '<h6><strong>Repository management</strong><span class="text-gray"><small>#1</small></span></h6>',

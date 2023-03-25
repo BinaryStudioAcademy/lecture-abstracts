@@ -1,19 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import copy from 'copy-to-clipboard';
 import Chart from 'chart.js';
-import { isEqual, roundToTwoDecimals, createOptions } from './utils/utils';
+import { createOptions } from './helpers/helpers';
+import { roundToTwoDecimals, isArrayEqual } from '~/helpers/helpers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faUndo } from '@fortawesome/pro-regular-svg-icons';
 import { feedbackStarters } from './data/feedback-starters';
-import { ChartDatasets } from '~/types/types';
+import { ChartConfig as Props } from './common/types/types';
 import 'chartjs-plugin-dragdata';
 
 import * as styles from './radar-chart.module.scss';
-
-type Props = {
-  labels: string[];
-  datasets: ChartDatasets[];
-};
 
 const RadarChart: React.FC<Props> = ({ labels, datasets }) => {
   const [chartData, setChartData] = useState({ labels, datasets });
@@ -45,7 +41,7 @@ const RadarChart: React.FC<Props> = ({ labels, datasets }) => {
   const myGradesAverage =
     myGrades.reduce((memo, value) => (memo += value), 0) / myGrades.length;
   const defaultGrades = chartData.datasets[1].data;
-  const areMyGradesDefault = isEqual(myGrades, defaultGrades);
+  const areMyGradesDefault = isArrayEqual(myGrades, defaultGrades);
 
   useEffect(() => {
     if (!initiated && chartElement.current) {

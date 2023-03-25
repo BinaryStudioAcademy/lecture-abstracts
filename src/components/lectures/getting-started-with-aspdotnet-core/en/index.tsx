@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { HeadFC } from 'gatsby';
 import { Layout } from '~/layout/layout';
-import { SEO } from '~/partials/partials';
 import {
   IntroBlueBubble,
   Language,
@@ -13,6 +12,7 @@ import {
   DetailsCard,
   Panels,
   ThatsAllFolks,
+  SEO,
 } from '~/components/common/common';
 import {
   introPayload,
@@ -20,7 +20,7 @@ import {
   seoPayload,
   slugPayload,
 } from '../data/data';
-import { CodeLanguage } from '~/enums/code-language/code-language';
+import { CodeLanguage } from '~/common/enums/enums';
 
 const Page: React.FC = () => {
   return (

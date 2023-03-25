@@ -1,8 +1,7 @@
-import { IntroBlueBubbleProps } from '~/components/common/intro-blue-bubble/intro-blue-bubble';
-import { AuthorName, ContactIcon } from '~/enums/enums';
-import { IntroPayload } from '~/types/types';
+import { AuthorName, IconName } from '~/common/enums/enums';
+import { IntroPayload, IntroLocalizationKey } from '~/common/types/types';
 
-const introEN: IntroBlueBubbleProps = {
+const introEN: IntroLocalizationKey = {
   author: AuthorName.SERHII_YANCHUK_EN,
   about:
     'Serhii works at <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> as backend developer. He enjoys coding and making three-point shots in basketball. Therefore, if you are from Kyiv and want to combine a conversation about code with a game in basketball, contact him :D',
@@ -10,13 +9,13 @@ const introEN: IntroBlueBubbleProps = {
     {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
       iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',
       title: 'serhii._.yanchuk',
-      iconName: ContactIcon.INSTAGRAM,
+      iconName: IconName.INSTAGRAM,
     },
   ],
   title: 'Hello!',
@@ -28,7 +27,7 @@ const introEN: IntroBlueBubbleProps = {
   ],
   footer: "Let's go!",
 };
-const introUA: IntroBlueBubbleProps = {
+const introUA: IntroLocalizationKey = {
   author: AuthorName.SERHII_YANCHUK_UA,
   about:
     'Сергій працює в <a href="https://binary-studio.com"><strong>Binary Studio</strong></a> backend розробником. Він полюбляє кодити та закидувати триочкові в баскетболі. Тому, якщо ти з Києва та хочеш поєднати розмову про програмування з грою у баскетбол, звертайся до нього :D',
@@ -36,13 +35,13 @@ const introUA: IntroBlueBubbleProps = {
     {
       ref: 'https://www.linkedin.com/in/serhii-yanchuk-b304331a6/',
       title: 'serhii-yanchuk',
-      iconName: ContactIcon.LINKEDIN,
+      iconName: IconName.LINKEDIN,
       iconColor: 'blue',
     },
     {
       ref: 'https://www.instagram.com/serhii._.yanchuk/',
       title: 'serhii._.yanchuk',
-      iconName: ContactIcon.INSTAGRAM,
+      iconName: IconName.INSTAGRAM,
     },
   ],
   title: 'Привіт!',

@@ -1,8 +1,7 @@
-import { IntroBlueBubbleProps } from '~/components/common/intro-blue-bubble/intro-blue-bubble';
-import { AuthorName } from '~/enums/enums';
-import { IntroPayload } from '~/types/types';
+import { AuthorName } from '~/common/enums/enums';
+import { IntroPayload, IntroLocalizationKey } from '~/common/types/types';
 
-const introEN: IntroBlueBubbleProps = {
+const introEN: IntroLocalizationKey = {
   author: AuthorName.IVAN_HEDZ,
   about:
     'Ivan workes as Full Stack Web Developer in <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>. Tech stack is C# and Typescript. Hobbies – listening to music, arcade games and yoga. Decided to record a lecture for the Academy for the first time so that it would be easier for you to understand the .NET ecosystem.',
@@ -17,7 +16,7 @@ const introEN: IntroBlueBubbleProps = {
   footer:
     'You will also need a .NET developer starter pack: <a href="https://dotnet.microsoft.com/download" title=".NET"><strong>.NET</strong></a>, <a href="https://git-scm.com/" title="Git"><strong>Git</strong></a>, <a href="https://visualstudio.microsoft.com/" title="Visual Studio"><strong>Visual Studio</strong></a> or <a href="https://www.jetbrains.com/rider/" title="Rider"><strong>Rider</strong></a>.',
 };
-const introUA: IntroBlueBubbleProps = {
+const introUA: IntroLocalizationKey = {
   author: AuthorName.IVAN_HEDZ,
   about:
     'Іван працює Full Stack веб-розробником у <a href="https://binary-studio.com"><strong>Binary Studio</strong></a>. Пише на C# і TypeScript. З хобі ― слухати музику, грати в аркади, займатися йогою. Вирішив вперше записати лекцію для Академії, щоб тобі було легше розібратися з екосистемою .NET.',

@@ -1,12 +1,12 @@
 import React from 'react';
-import { nameToImage } from './utils/name-to-image';
-import { Author } from '~/types/types';
+import { AuthorName } from '~/common/enums/enums';
 import { getValidClasses } from '~/helpers/helpers';
+import { nameToImage } from '~/common/maps/maps';
 
 import * as styles from './avatar.module.scss';
 
 type Props = {
-  name: Author;
+  name: AuthorName;
   size?: 'small' | 'medium';
 };
 

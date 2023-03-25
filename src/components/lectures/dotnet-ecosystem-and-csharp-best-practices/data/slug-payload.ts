@@ -1,4 +1,4 @@
-import { SlugPayload } from '~/types/types';
+import { SlugPayload } from '~/common/types/types';
 
 const slugPayload: SlugPayload = {
   en: 'lectures/dotnet-ecosystem-and-csharp-best-practices/en',
