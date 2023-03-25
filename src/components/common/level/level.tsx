@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowUp } from '@fortawesome/pro-regular-svg-icons';
-import { LevelProps as Props } from '~/common/types/types';
+
 import * as styles from './level.module.scss';
+
+type Labels = {
+  level: string;
+  difficulty: string;
+  objectives: string;
+  backToTop: string;
+};
+
+type Props = {
+  number: string;
+  name: string | ReactNode;
+  id?: string;
+  difficulty?: string | ReactNode;
+  objectives: string | ReactNode;
+  labels?: Labels;
+};
 
 const Level: React.FC<Props> = ({
   number = '',

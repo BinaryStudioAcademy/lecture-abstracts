@@ -7,7 +7,7 @@ type Contacts = {
   iconName: IconName;
 };
 
-type IntroBlueBubbleProps = {
+type IntroLocalizationKey = {
   author: AuthorName;
   about: string;
   title: string;
@@ -17,4 +17,4 @@ type IntroBlueBubbleProps = {
   footer?: string;
 };
 
-export { IntroBlueBubbleProps };
+export { IntroLocalizationKey };

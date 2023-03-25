@@ -6,7 +6,7 @@ import { roundToTwoDecimals, isArrayEqual } from '~/helpers/helpers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faUndo } from '@fortawesome/pro-regular-svg-icons';
 import { feedbackStarters } from './data/feedback-starters';
-import { ChartProps as Props } from '~/common/types/types';
+import { ChartConfig as Props } from './common/types/types';
 import 'chartjs-plugin-dragdata';
 
 import * as styles from './radar-chart.module.scss';

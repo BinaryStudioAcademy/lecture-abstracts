@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as styles from './panels.module.scss';
 import { getValidClasses } from '~/helpers/helpers';
-import { PanelsProps as Props } from '~/common/types/types';
+import { PanelsLocalizationKey as Props } from '~/common/types/types';
 
 const Panels: React.FC<Props> = ({
   panels,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar } from '~/components/common/common';
 import { nameToIcon } from '~/common/maps/maps';
-import { IntroBlueBubbleProps as Props } from '~/common/types/types';
+import { IntroLocalizationKey as Props } from '~/common/types/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import * as styles from './intro-blue-bubble.module.scss';

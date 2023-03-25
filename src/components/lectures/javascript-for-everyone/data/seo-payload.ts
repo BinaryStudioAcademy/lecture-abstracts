@@ -1,8 +1,8 @@
-import { SeoPayload, SeoProps } from '~/common/types/types';
+import { SeoPayload, SeoLocalizationKey } from '~/common/types/types';
 import { AuthorName } from '~/common/enums/enums';
 import { slugPayload } from './slug-payload';
 
-const ua: SeoProps = {
+const ua: SeoLocalizationKey = {
   author: AuthorName.OLEKSANDR_DANYLCHENKO_UA,
   title: 'Javascript for everyone',
   slug: slugPayload.ua,
@@ -13,7 +13,7 @@ const ua: SeoProps = {
   publishedAt: '2021-12-17T01:00:00',
   hiddenFromMainPage: false,
 };
-const en: SeoProps = {
+const en: SeoLocalizationKey = {
   author: AuthorName.OLEKSANDR_DANYLCHENKO_UA,
   title: 'Javascript for everyone',
   slug: slugPayload.en,

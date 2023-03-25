@@ -1,4 +1,4 @@
-import { ChartProps as ChartData } from '~/common/types/types';
+import { ChartConfig as ChartData } from '../../common/types/types';
 
 const createOptions = (
   chartData: ChartData,

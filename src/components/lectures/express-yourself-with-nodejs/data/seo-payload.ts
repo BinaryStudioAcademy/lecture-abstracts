@@ -1,8 +1,8 @@
 import { AuthorName } from '~/common/enums/enums';
-import { SeoPayload, SeoProps } from '~/common/types/types';
+import { SeoPayload, SeoLocalizationKey } from '~/common/types/types';
 import { slugPayload } from './slug-payload';
 
-const ua: SeoProps = {
+const ua: SeoLocalizationKey = {
   author: AuthorName.ALEXANDR_TOVMACH_UA,
   title: 'Express yourself with Node.js',
   slug: slugPayload.ua,
@@ -13,7 +13,7 @@ const ua: SeoProps = {
   publishedAt: '2021-12-20T00:00:00',
   hiddenFromMainPage: false,
 };
-const en: SeoProps = {
+const en: SeoLocalizationKey = {
   author: AuthorName.ULIANA_LOBANOVA,
   title: 'Express yourself with Node.js',
   slug: slugPayload.en,

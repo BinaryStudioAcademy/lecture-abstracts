@@ -1,7 +1,7 @@
-import { SeoProps } from '../components/seo-props.type';
+import { SeoLocalizationKey } from '~/common/types/types';
 
 type PageContext = {
-  frontmatter?: SeoProps;
+  frontmatter?: SeoLocalizationKey;
 };
 
 export { PageContext };

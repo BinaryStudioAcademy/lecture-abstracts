@@ -1,5 +1,5 @@
-import { SeoProps } from '../components/seo-props.type';
+import { SeoLocalizationKey } from '~/common/types/types';
 
-type SeoPayload = { en: SeoProps; ua: SeoProps };
+type SeoPayload = { en: SeoLocalizationKey; ua: SeoLocalizationKey };
 
 export { SeoPayload };

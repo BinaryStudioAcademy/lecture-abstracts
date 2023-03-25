@@ -1,6 +1,6 @@
 import { AuthorName } from '~/common/enums/enums';
 
-type SeoProps = {
+type SeoLocalizationKey = {
   author: AuthorName;
   title: string;
   slug: string;
@@ -11,4 +11,4 @@ type SeoProps = {
   hiddenFromMainPage: boolean;
 };
 
-export { SeoProps };
+export { SeoLocalizationKey };

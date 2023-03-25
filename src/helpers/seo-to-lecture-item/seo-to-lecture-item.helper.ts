@@ -1,4 +1,4 @@
-import { SeoProps, LectureItem } from '~/common/types/types';
+import { SeoLocalizationKey, LectureItem } from '~/common/types/types';
 
 const seoToLectureItem = ({
   author,
@@ -7,7 +7,7 @@ const seoToLectureItem = ({
   publishedAt,
   title,
   slug,
-}: SeoProps): LectureItem => {
+}: SeoLocalizationKey): LectureItem => {
   return {
     slug,
     author,

@@ -1,8 +1,8 @@
-import { IntroBlueBubbleProps } from '~/common/types/types';
+import { IntroLocalizationKey } from '~/common/types/types';
 
 type IntroPayload = {
-  ua: IntroBlueBubbleProps;
-  en: IntroBlueBubbleProps;
+  ua: IntroLocalizationKey;
+  en: IntroLocalizationKey;
 };
 
 export { IntroPayload };

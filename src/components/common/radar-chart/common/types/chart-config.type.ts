@@ -16,9 +16,9 @@ type ChartDataset = {
   pointHitRadius: number;
 };
 
-type ChartProps = {
+type ChartConfig = {
   datasets: ChartDataset[];
   labels: string[];
 };
 
-export { ChartProps };
+export { ChartConfig };

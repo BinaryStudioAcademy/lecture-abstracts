@@ -1,8 +1,8 @@
 import { AuthorName } from '~/common/enums/enums';
-import { SeoPayload, SeoProps } from '~/common/types/types';
+import { SeoPayload, SeoLocalizationKey } from '~/common/types/types';
 import { slugPayload } from './slug-payload';
 
-const ua: SeoProps = {
+const ua: SeoLocalizationKey = {
   author: AuthorName.IVAN_HEDZ,
   title: '.NET ecosystem and C# best practices',
   slug: slugPayload.ua,
@@ -13,7 +13,7 @@ const ua: SeoProps = {
   publishedAt: '2023-01-15T00:00:00',
   hiddenFromMainPage: true,
 };
-const en: SeoProps = {
+const en: SeoLocalizationKey = {
   author: AuthorName.IVAN_HEDZ,
   title: '.NET ecosystem and C# best practices',
   slug: slugPayload.en,

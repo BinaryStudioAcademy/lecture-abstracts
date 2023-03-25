@@ -1,8 +1,19 @@
 import React from 'react';
-import { TimelineProps as Props } from '~/common/types/types';
 import { getValidClasses } from '~/helpers/helpers';
 
 import * as styles from './timeline-of-contents.module.scss';
+
+type Timeline = {
+  linkTo: string;
+  title: string;
+  time?: string;
+};
+
+type Props = {
+  headerTitle?: string;
+  headerClass?: string;
+  timeline: Timeline[];
+};
 
 const TimelineOfContents: React.FC<Props> = ({
   timeline = [],

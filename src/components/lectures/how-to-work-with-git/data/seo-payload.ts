@@ -1,8 +1,8 @@
-import { SeoPayload, SeoProps } from '~/common/types/types';
+import { SeoPayload, SeoLocalizationKey } from '~/common/types/types';
 import { AuthorName } from '~/common/enums/enums';
 import { slugPayload } from './slug-payload';
 
-const en: SeoProps = {
+const en: SeoLocalizationKey = {
   author: AuthorName.VIKTORIIA_VASYLENKO_EN,
   slug: slugPayload.en,
   title: 'How to work with Git',
@@ -13,7 +13,7 @@ const en: SeoProps = {
   publishedAt: '2021-12-08T10:00:00',
   hiddenFromMainPage: true,
 };
-const ua: SeoProps = {
+const ua: SeoLocalizationKey = {
   author: AuthorName.VIKTORIIA_VASYLENKO_UA,
   title: 'How to work with Git',
   description:

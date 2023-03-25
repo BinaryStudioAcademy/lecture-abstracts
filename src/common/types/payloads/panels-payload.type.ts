@@ -1,8 +1,8 @@
-import { PanelsProps } from '~/common/types/types';
+import { PanelsLocalizationKey } from '~/common/types/types';
 
 type PanelsPayload = {
-  ua: PanelsProps;
-  en: PanelsProps;
+  ua: PanelsLocalizationKey;
+  en: PanelsLocalizationKey;
 };
 
 export { PanelsPayload };

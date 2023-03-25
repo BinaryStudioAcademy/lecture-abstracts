@@ -1,8 +1,8 @@
 import { AuthorName } from '~/common/enums/enums';
-import { SeoPayload, SeoProps } from '~/common/types/types';
+import { SeoPayload, SeoLocalizationKey } from '~/common/types/types';
 import { slugPayload } from './slug-payload';
 
-const ua: SeoProps = {
+const ua: SeoLocalizationKey = {
   author: AuthorName.SERHII_YANCHUK_UA,
   title: 'Getting started with ASP.NET Core',
   slug: slugPayload.ua,
@@ -13,7 +13,7 @@ const ua: SeoProps = {
   publishedAt: '2022-01-02T00:00:00',
   hiddenFromMainPage: false,
 };
-const en: SeoProps = {
+const en: SeoLocalizationKey = {
   author: AuthorName.SERHII_YANCHUK_EN,
   title: 'Getting started with ASP.NET Core',
   slug: slugPayload.en,

@@ -1,6 +1,6 @@
-import { PanelsPayload, PanelsProps } from '~/common/types/types';
+import { PanelsPayload, PanelsLocalizationKey } from '~/common/types/types';
 
-const ua: PanelsProps = {
+const ua: PanelsLocalizationKey = {
   panels: [
     {
       head: ' <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview"><strong>ASP.NET Core MVC</strong></a>  ',
@@ -13,7 +13,7 @@ const ua: PanelsProps = {
   ],
 };
 
-const en: PanelsProps = {
+const en: PanelsLocalizationKey = {
   panels: [
     {
       head: '<a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview"><strong>ASP.NET Core MVC</strong></a>',

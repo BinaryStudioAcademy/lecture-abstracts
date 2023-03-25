@@ -7,11 +7,8 @@ export {
   SlugPayload,
 } from './payloads/payloads';
 export {
-  ChartProps,
-  LevelProps,
-  SeoProps,
-  TimelineProps,
-  PanelsProps,
-  IntroBlueBubbleProps,
-} from './components/components';
+  IntroLocalizationKey,
+  PanelsLocalizationKey,
+  SeoLocalizationKey,
+} from './localization/localization';
 export { LectureItem } from './lectures/lectures';

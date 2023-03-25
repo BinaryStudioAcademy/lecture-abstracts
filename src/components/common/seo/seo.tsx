@@ -1,9 +1,9 @@
 import React from 'react';
-import { SeoProps } from '~/common/types/types';
+import { SeoLocalizationKey } from '~/common/types/types';
 import { siteMetadata } from './meta/default-meta';
 
 type Props = {
-  pageContext?: SeoProps;
+  pageContext?: SeoLocalizationKey;
   children?: React.ReactNode;
 };
 
