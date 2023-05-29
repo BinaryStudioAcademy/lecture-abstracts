@@ -19,12 +19,8 @@ const en: PanelsLocalizationKey = {
       body: 'Level 80 copypaste - valid HTML markup, CSS, and JS (if any) does normal things.',
     },
     {
-      head: '<h6><span><strong>UI</strong><span style={{ fontWeight: 300 }}> / </span><span style={{ fontWeight: 900 }}>UX</span></span><span class="text-gray"><small>#5</small></span></h6>',
-      body: 'The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast.',
-    },
-    {
-      head: '<h6><strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong><span class="text-gray"><small>#6</small></span></h6>',
-      body: 'Creativity, diligence, attention to detail, humor, originality, "wha-a-a-t ?!".',
+      head: '<h6><span><strong>UI</strong><span style={{ fontWeight: 300 }}> / </span><span style={{ fontWeight: 900 }}>UX</span></span><strong><span role="img" aria-label="rainbow">🌈</span><span>Aweso-oomeness!</span><span role="img" aria-label="rainbow">🌈</span></strong><span class="text-gray"><small>#5</small></span></h6>',
+      body: 'The page is accessible, informative, convenient, readable, clean, pleasant, interesting, fast. Also creativity, diligence, attention to detail, humor, originality, "wha-a-a-t ?!".',
     },
   ],
   columns: 3,
@@ -49,12 +45,8 @@ const ua: PanelsLocalizationKey = {
       body: 'Майстер копіпасту 80-го рівня — валідна HTML-розмітка, CSS, а JS (якщо є) робить нормальні речі.',
     },
     {
-      head: '<h6><span><strong>UI</strong><span style={{ fontWeight: 300 }}> / </span><span style={{ fontWeight: 900 }}>UX</span></span><span class="text-gray"><small>#5</small></span></h6>',
-      body: 'Сторінка доступна, інформативна, зручна, читабельна, чиста, приємна, цікава, швидка.',
-    },
-    {
-      head: '<h6><strong><span role="img" aria-label="rainbow">🌈</span>A-a-a-A-A-aweso-o-O-O-oomene-e-E-E-ess!</strong><span class="text-gray"><small>#6</small></span></h6>',
-      body: 'Творчість, старанність, увага до деталей, гумор, оригінальність, "што-о-о-о?!".',
+      head: '<h6><span><strong>UI</strong><span style={{ fontWeight: 300 }}> / </span><span style={{ fontWeight: 900 }}>UX</span></span><strong><span role="img" aria-label="rainbow">🌈</span><span>Aweso-oomeness!</span><span role="img" aria-label="rainbow">🌈</span></strong><span class="text-gray"><small>#5</small></span></h6>',
+      body: 'Сторінка доступна, інформативна, зручна, читабельна, чиста, приємна, цікава, швидка. А також: творчість, старанність, увага до деталей, гумор, оригінальність, "што-о-о-о?!".',
     },
   ],
   columns: 3,

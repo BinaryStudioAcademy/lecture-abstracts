@@ -151,7 +151,7 @@ const Page: React.FC = () => {
         <li>
           У випадку якщо ви забули додати файли до останнього коміту або зробили
           помилку в описі ви можете скористатися командою{' '}
-          <code>git commit --ammend</code>.
+          <code>git commit --amend</code>.
         </li>
       </ol>
 
