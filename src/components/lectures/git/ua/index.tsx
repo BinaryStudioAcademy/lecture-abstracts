@@ -316,16 +316,10 @@ const Page: React.FC = () => {
           </p>
           <blockquote>
             <p>
-              A typical résumé contains a &quot;summary&quot; of relevant job
-              experience and education, as its French origin implies. The résumé
-              is usually one of the first items, along with a cover letter and
-              sometimes an application for employment, which a potential
-              employer sees regarding the job seeker and is typically used to
-              screen applicants. *
-              <strong>
-                *The goal of this project is to create an online version of the
-                résumé using HTML, CSS, and the minimum amount of JavaScript.**
-              </strong>
+              A typical résumé contains a "summary" of relevant job experience
+              and education, as its French origin implies. The résumé is usually
+              one of the first items, which a potential employer sees regarding
+              the job seeker and is typically used to screen applicants.
             </p>
           </blockquote>
           <Bubble size="small">
@@ -1156,13 +1150,12 @@ body {
                 'Project management',
                 'git + GitFlow',
                 'HTML / CSS / JS',
-                'UI / UX',
-                'Awesomeness',
+                'UI / UX / Awesomeness',
               ]}
               datasets={[
                 {
                   label: 'You',
-                  data: [6, 5, 5, 5, 2, 0],
+                  data: [6, 5, 5, 5, 2],
                   dragData: true,
                   borderColor: 'rgba(0, 173, 238, 1)',
                   backgroundColor: 'rgba(0, 173, 238, 0.125)',
@@ -1184,7 +1177,7 @@ body {
                 },
                 {
                   label: 'Joe Average',
-                  data: [6, 5, 5, 5, 2, 0],
+                  data: [6, 5, 5, 5, 2],
                   dragData: false,
                   borderColor: 'rgba(0, 0, 0, 0.1)',
                   backgroundColor: 'rgba(0, 0, 0, 0.05)',

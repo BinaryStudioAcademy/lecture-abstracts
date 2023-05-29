@@ -153,7 +153,7 @@ const Page: React.FC = () => {
         </li>
         <li>
           In case you forgot to add some files to your last commit or noticed a
-          typo in a message you may use <code>git commit --ammend</code>.
+          typo in a message you may use <code>git commit --amend</code>.
         </li>
       </ol>
 
